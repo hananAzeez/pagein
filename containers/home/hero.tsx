@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { CustomEase } from "gsap/dist/CustomEase";
@@ -82,14 +83,46 @@ const Hero = () => {
             </span>
             <div
               ref={heroInfiniteRef}
-              className="absolute bottom-[-25vw] left-[25%] ml-10 -mr-10 h-8 w-40  overflow-hidden rounded-full border border-black text-xs font-normal uppercase opacity-0  md:left-[40%]   md:h-14  md:w-52 md:text-xl lg:relative lg:left-8 lg:bottom-1 lg:right-[1vw] lg:w-[16vw]  lg:leading-10 "
+              className="font_aeonik absolute bottom-[-35vw] left-[25%] ml-10 -mr-10 h-8 w-40  overflow-hidden rounded-2xl border border-black text-xs font-normal uppercase opacity-0  md:left-[40%]   md:h-16  md:w-52 md:text-xl lg:relative lg:left-8 lg:bottom-0 lg:right-[1vw] lg:w-[16vw]  lg:leading-10 bg-primary"
             >
               <div className="group flex h-full cursor-pointer items-center whitespace-nowrap">
                 <span className=" group-hover:pause animate-loopL">
-                  Get a quote&nbsp;
+                  <span className=" group-hover:pause flex items-center gap-2 ">
+                    Get a quote&nbsp;{" "}
+                    <img
+                      src="/icons/top-right-arrow.svg"
+                      alt="top-right-arrow"
+                      width={16}
+                      height={16}
+                    />
+                    Get a quote&nbsp;{" "}
+                    <img
+                      src="/icons/top-right-arrow.svg"
+                      alt="top-right-arrow"
+                      width={16}
+                      height={16}
+                    />
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{" "}
+                  </span>
                 </span>
                 <span className=" group-hover:pause animate-loopL">
-                  Get a quote&nbsp;
+                  <span className=" group-hover:pause flex items-center gap-2 ">
+                    Get a quote&nbsp;{" "}
+                    <img
+                      src="/icons/top-right-arrow.svg"
+                      alt="top-right-arrow"
+                      width={16}
+                      height={16}
+                    />
+                    Get a quote&nbsp;{" "}
+                    <img
+                      src="/icons/top-right-arrow.svg"
+                      alt="top-right-arrow"
+                      width={16}
+                      height={16}
+                    />
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{" "}
+                  </span>
                 </span>
               </div>
             </div>
@@ -97,8 +130,10 @@ const Hero = () => {
         </div>
 
         <div className="grid grid-cols-3 gap-5 h-96">
-          <div className="h-full col-span-2 bg-primary rounded-3xl"></div>
-          <div className="h-full w-full bg-black rounded-3xl"></div>
+          <div className="h-full col-span-2 rounded-3xl">
+            <img src="/images/hero-img-1.png" alt="" />
+          </div>
+          <div className="h-full w-full bg-offBlack rounded-3xl"></div>
         </div>
       </div>
     </section>
