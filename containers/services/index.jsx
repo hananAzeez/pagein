@@ -15,16 +15,26 @@ const Services = () => {
     const circ1 = document.querySelector(".circ1");
     const circ2 = document.querySelector(".circ2");
 
-    gsap.to(".circ1", {
+    gsap.to(circ1, {
       x: 300,
       duration: 1.5,
-      scrollTrigger: ".circ1",
+      scrollTrigger: {
+        trigger: ".circ1",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+      },
     });
 
-    gsap.to(".circ2", {
+    gsap.to(circ2, {
       x: -300,
       duration: 1.5,
-      scrollTrigger: ".circ2",
+      scrollTrigger: {
+        trigger: ".circ2",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+      },
     });
 
     // TITLE ANIMATION
@@ -90,7 +100,7 @@ const Services = () => {
           </h1>
           <h1 className="s_title relative w-full text-title-64 text-center">
             <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-              <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
+              <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform text-primary">
                 Web&nbsp;
               </span>
             </span>

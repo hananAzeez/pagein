@@ -97,3 +97,25 @@ body {
   line-height: normal;
   letter-spacing: -0.54px;
 }
+
+/* TYPEWRITER ANIMATION HERO */
+.highlight:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #eceef3;
+  border-left: 3px solid #d5ff3f;
+  animation: animate 4s steps(12) infinite;
+}
+@keyframes animate {
+  40%,
+  60% {
+    left: calc(100% + 4px);
+  }
+  100% {
+    left: 0%;
+  }
+}

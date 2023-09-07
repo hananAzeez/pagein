@@ -41,6 +41,18 @@ const Hero = () => {
       1.2
     );
 
+    const highlightText = document.querySelector(".highlight");
+    const textLoad = () => {
+      setTimeout(() => {
+        highlightText.textContent = "Web";
+      }, 0);
+      setTimeout(() => {
+        highlightText.textContent = "App";
+      }, 4000);
+    };
+    textLoad();
+    setInterval(textLoad, 8000);
+
     return () => {};
   }, []);
   return (
@@ -77,8 +89,13 @@ const Hero = () => {
           </h1>
           <h1 className="h_title relative flex w-full flex-col items-center  lg:flex-row hero-title ">
             <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+              <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform highlight">
+                Web
+              </span>
+            </span>
+            <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
               <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                Web Solutions
+                &nbsp;Solutions
               </span>
             </span>
             <div
