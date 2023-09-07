@@ -46,14 +46,14 @@ const Hero = () => {
   return (
     <section className="mx-auto px-28 bg-offWhite h-screen py-8">
       <header className="w-full px-10 py-4 flex justify-between items-center bg-white rounded-xl">
-        <div className="nav-links menu-links flex items-center gap-8">
-          <p>Works</p>
-          <p>Services</p>
+        <div className="nav-links flex items-center gap-8">
+          <p className="menu-links">Works</p>
+          <p className="menu-links">Services</p>
         </div>
         <h1 className="text-black text-3xl font-bold">Pagein</h1>
-        <div className="nav-links menu-links flex items-center gap-8">
-          <p>About</p>
-          <p>Contact</p>
+        <div className="nav-links flex items-center gap-8">
+          <p className="menu-links">About</p>
+          <p className="menu-links">Contact</p>
         </div>
       </header>
       <div className="max-w-7xl mx-auto">
