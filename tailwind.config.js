@@ -25,6 +25,9 @@ module.exports = {
       },
       backgroundColor: {
         offWhite: "#ECEEF3",
+        darkBg: "rgba(48,48,48,0.5)",
+        ellipse:
+          "radial-gradient(50% 50% at 50% 50%, #D5FF3F 0%, rgba(213, 255, 63, 0.00) 100%)",
       },
       colors: {
         primary: "#D5FF3F",
