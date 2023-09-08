@@ -426,7 +426,7 @@ const Hero = () => {
               {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
               <div className="h-screen w-full flex items-center justify-center relative">
-                <div className="h_container font_apoc flex flex-col   px-2 py-16">
+                <div className="h_container  flex flex-col   px-2 py-16">
                   <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
                     01
                   </h2>
@@ -461,6 +461,18 @@ const Hero = () => {
                       </span>
                     </span>
                   </h4>
+                </div>
+              </div>
+
+              {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+              {/* \\\ STEP ONE ILLUSTRATION SECTION */}
+              {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+
+              <div className="h-screen w-full flex items-center justify-center relative">
+                <div className="blueprints">
+                  <img src="/images/prototype1.png" alt="prototype1" className="max-w-[250px]"/>
+                  <img src="/images/prototype2.png" alt="prototype1" className="max-w-[250px]"/>
+                  <img src="/images/prototype3.png" alt="prototype1" className="max-w-[250px]"/>
                 </div>
               </div>
             </div>
