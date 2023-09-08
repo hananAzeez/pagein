@@ -7,30 +7,30 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(CustomEase);
 CustomEase.create("cubic-text", "0.25, 1, 0.5, 1");
 
-const Services = () => {
+const StepOne = () => {
   const scroller = useRef();
   const skills = useRef();
 
   useEffect(() => {
-    const circ1 = document.querySelector(".circ1");
-    const circ2 = document.querySelector(".circ2");
+    const circ3 = document.querySelector(".circ1");
+    const circ4 = document.querySelector(".circ2");
 
-    gsap.to(circ1, {
+    gsap.to(circ3, {
       x: 300,
       duration: 1.5,
       scrollTrigger: {
-        trigger: ".circ1",
+        trigger: ".circ3",
         start: "top 80%",
         end: "bottom 20%",
         scrub: true,
       },
     });
 
-    gsap.to(circ2, {
+    gsap.to(circ4, {
       x: -300,
       duration: 1.5,
       scrollTrigger: {
-        trigger: ".circ2",
+        trigger: ".circ4",
         start: "top 80%",
         end: "bottom 20%",
         scrub: true,
@@ -39,7 +39,7 @@ const Services = () => {
 
     // TITLE ANIMATION
 
-    const titles = document.querySelectorAll(".s_title");
+    const titles = document.querySelectorAll(".stepOneTitle");
     const tl = gsap.timeline({ defaults: { duration: 1 } });
 
     titles.forEach((title, index) => {
@@ -64,56 +64,49 @@ const Services = () => {
       });
     });
   }, []);
-
   return (
     <section className="services bg-black relative" ref={scroller}>
-      <div className="circ1 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72"></div>
-      <div className="circ2 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[600px]"></div>
+      <div className="circ3 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72"></div>
+      <div className="circ4 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[600px]"></div>
       <div className="h-screen w-full flex items-center justify-center bg-darkBg backdrop-blur-sm">
         <div className="h_container font_apoc flex flex-col   px-2 py-16">
-          <h1 className="s_title  relative w-full text-title-64  ">
+          <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
+            01
+          </h2>
+          <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
             <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
               <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
-                Are&nbsp;
+                Concept&nbsp;
               </span>
             </span>
             <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
               <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                you
+                to&nbsp;
               </span>
             </span>
             <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
               <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                &nbsp;looking
+                blueprint
               </span>
             </span>
+          </h2>
+          <h4 className="stepOneTitle relative w-full text-36 text-center">
             <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
               <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                &nbsp;for
+                Transforming ideas into Concrete Wireframes, Setting the&nbsp;
               </span>
             </span>
+            <br />
             <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
               <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                &nbsp;a
+                Foundation for Your Vision.
               </span>
             </span>
-          </h1>
-          <h1 className="s_title relative w-full text-title-64 text-center">
-            <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-              <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform text-primary">
-                Web&nbsp;
-              </span>
-            </span>
-            <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-              <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                Solution?
-              </span>
-            </span>
-          </h1>
+          </h4>
         </div>
       </div>
     </section>
   );
 };
 
-export default Services;
+export default StepOne;

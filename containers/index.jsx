@@ -5,7 +5,7 @@ const HomeContainer = () => {
   return (
     <div className="overflow-x-hidden">
       <Hero />
-      <Services />
+      {/* <Services /> */}
     </div>
   );
 };
