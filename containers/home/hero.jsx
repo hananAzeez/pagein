@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
+import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { CustomEase } from "gsap/dist/CustomEase";
 import Observer from "gsap/dist/Observer";
@@ -53,10 +54,20 @@ const Hero = () => {
       }, 0);
       setTimeout(() => {
         highlightText.textContent = "App";
-      }, 4000);
+      }, 3000);
     };
     textLoad();
-    setInterval(textLoad, 8000);
+    setInterval(textLoad, 6000);
+
+    // scroll smoother
+
+    // const smoother = ScrollSmoother.create({
+    //   content: ".services",
+    //   smooth: 3,
+    //   effects: true,
+    // });
+
+    // smoother.effects("h1", { speed: "auto" });
 
     // \\\\\\\\\\\\\\\\\\\\\\\
     // SERVICES SECTION
@@ -165,14 +176,87 @@ const Hero = () => {
       },
     });
 
+    // asfgdasdfasdfadsf
+    const animateTexts = document.querySelector(".animate-text").children,
+      textsLen = animateTexts.length;
+
+    let index = 0;
+
+    function animateText() {
+      // console.log(animateTexts[index]);
+      for (let i = 0; i < textsLen; i++) {
+        animateTexts[i].classList.remove("text-in");
+      }
+      animateTexts[index].classList.add("text-in");
+      if (index == textsLen - 1) {
+        index = 0;
+      } else {
+        index++;
+      }
+      setTimeout(animateText, 2000);
+    }
+    animateText();
+
+    // agdfs
+    const animatingTexts = document.querySelectorAll(".animatingText");
+    animatingTexts.forEach((title, index) => {
+      const delay = index * 0.08;
+
+      gsap.set(animatingTexts, { y: "100%" });
+
+      // Create a ScrollTrigger for each animatingText element
+      gsap.to(animatingTexts, {
+        y: 0,
+        duration: 1.5,
+        ease: "cubic-text",
+        scrollTrigger: {
+          trigger: title, // Specify the trigger element
+          start: "top 80%", // Adjust this value as needed
+          end: "bottom 20%", // Adjust this value as needed
+          scrub: true, // Scrub the animation as you scroll
+          toggleActions: "play none none reverse", // Control animation behavior
+        },
+        delay: delay,
+      });
+    });
+
+    // page scroll
+    const heroLeft = document.querySelector(".heroLeft");
+    const heroRight = document.querySelector(".heroRight");
+
+    gsap.to(heroLeft, {
+      x: -300, // Adjust the distance you want to move
+      duration: 2,
+      ease: 'power1.inOut', // Adjust the easing function
+      scrollTrigger: {
+        trigger: '.hero-container', // Use a class or ID for the trigger container
+        start: 'top center', // Adjust the start position
+        end: 'bottom center', // Adjust the end position
+        scrub: true, // Enable scrubbing for smooth animation
+      },
+    });
+
+    // Create a ScrollTrigger for heroRight to move it to the right
+    gsap.to(heroRight, {
+      x: 300, // Adjust the distance you want to move
+      duration: 2,
+      ease: 'power1.inOut', // Adjust the easing function
+      scrollTrigger: {
+        trigger: '.hero-container', // Use the same trigger container
+        start: 'top center', // Adjust the start position
+        end: 'bottom center', // Adjust the end position
+        scrub: true, // Enable scrubbing for smooth animation
+      },
+    });
+
     return () => {};
   }, []);
   return (
     <div className="section-container">
-      <section className="hero mx-auto px-28 bg-offWhite h-screen py-8">
+      <section className="hero mx-auto px-28 bg-offWhite h-screen py-8 scrollSection">
         <div className="outer">
           <div className="inner">
-            <header className="w-full px-10 py-4 flex justify-between items-center bg-white rounded-xl">
+            <header className="w-full px-10 py-4 flex justify-between items-center bg-white rounded-xl bg">
               <div className="nav-links flex items-center gap-8">
                 <p className="menu-links">Works</p>
                 <p className="menu-links">Services</p>
@@ -262,10 +346,10 @@ const Hero = () => {
               </div>
 
               <div className="grid grid-cols-3 gap-5 h-96">
-                <div className="h-full col-span-2 rounded-3xl">
+                <div className="heroLeft h-full col-span-2 rounded-3xl">
                   <img src="/images/hero-img-1.png" alt="" />
                 </div>
-                <div className="h-full w-full bg-offBlack rounded-3xl"></div>
+                <div className="heroRight h-full w-full bg-offBlack rounded-3xl"></div>
               </div>
             </div>
           </div>
@@ -276,14 +360,14 @@ const Hero = () => {
       {/* \\\ SERVICES SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-      <section className="services bg-black relative overflow-hidden">
+      <section className="services bg-black relative overflow-hidden scrollSection">
         <div className="outer">
           <div className="inner">
             <div className="circ1 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72"></div>
             <div className="circ2 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[600px]"></div>
             <div className="circ3 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[1000px]"></div>
             <div className="circ4 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[1700px]"></div>
-            <div className="h-full w-full  bg-darkBg backdrop-blur-sm z-100">
+            <div className="h-full w-full  bg-darkBg backdrop-blur-sm z-100 bg">
               <div className="h-screen w-full flex items-center justify-center">
                 <div className="h_container flex flex-col   px-2 py-16">
                   <h1 className="s_title  relative w-full text-title-64  ">
@@ -313,10 +397,19 @@ const Hero = () => {
                       </span>
                     </span>
                   </h1>
-                  <h1 className="s_title relative w-full text-title-64 text-center">
-                    <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                      <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform text-primary">
+                  <h1 className="s_title relative w-full text-title-64 text-center flex items-start justify-center">
+                    <span className="animate-text -mb-1.5 -mt-6 overflow-hidden align-bottom flex flex-col">
+                      <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
                         Web&nbsp;
+                      </span>
+                      <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
+                        App&nbsp;
+                      </span>
+                      <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
+                        UI&nbsp;
+                      </span>
+                      <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
+                        UX&nbsp;
                       </span>
                     </span>
                     <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
@@ -337,7 +430,7 @@ const Hero = () => {
                   <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
                     01
                   </h2>
-                  <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
+                  <h2 className="stepOneTitle  relative w-full text-title-64  text-center !font-semibold">
                     <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                       <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                         Concept&nbsp;
@@ -354,7 +447,7 @@ const Hero = () => {
                       </span>
                     </span>
                   </h2>
-                  <h4 className="stepOneTitle relative w-full text-36 text-center">
+                  <h4 className="stepOneTitle relative w-full text-36 text-center mt-6">
                     <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                       <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
                         Transforming ideas into Concrete Wireframes, Setting

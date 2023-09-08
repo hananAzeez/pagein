@@ -108,7 +108,7 @@ body {
   width: 100%;
   background-color: #eceef3;
   border-left: 3px solid #d5ff3f;
-  animation: animate 4s steps(12) infinite;
+  animation: animate 3s steps(8) infinite;
 }
 @keyframes animate {
   40%,
@@ -117,5 +117,20 @@ body {
   }
   100% {
     left: 0%;
+  }
+}
+
+/* services title text animation */
+.text-in {
+  display: block;
+  animation: textIn .3s ease;
+}
+
+@keyframes textIn {
+  0% {
+    transform: translateY(100%)
+  }
+  100% {
+    transform: translateY(0);
   }
 }
