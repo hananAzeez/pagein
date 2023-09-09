@@ -5,6 +5,7 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { CustomEase } from "gsap/dist/CustomEase";
 import Observer from "gsap/dist/Observer";
+import { starShape } from './../../components/hero/icons';
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 gsap.registerPlugin(Observer);
@@ -58,6 +59,27 @@ const Hero = () => {
     };
     textLoad();
     setInterval(textLoad, 6000);
+
+
+
+    // let sections = gsap.utils.toArray('.scrollSection');
+    const hero = document.querySelector('.hero')
+    const heroHeight = document.querySelector('.hero').scrollHeight
+    const containerHeight = document.querySelector('.section-container').scrollHeight
+
+    gsap.to(hero, {
+      ease: 'none',
+      scrollTrigger: {
+        trigger: ".hero",
+        pin: true,
+        scrub: true,
+        snap: 2,
+        preventOverlaps: true,
+        pinSpacer: 0,
+        pinSpacing: false,
+        end: "+=100%",
+      }
+    })
 
     // scroll smoother
 
@@ -122,6 +144,33 @@ const Hero = () => {
         delay: delay,
       });
     });
+
+    // HORIZONTAL SCROLL
+
+//     const steps = document.querySelector(".steps");
+// console.log(steps.offsetWidth)
+
+// function getScrollAmount() {
+// 	let stepsWidth = steps.scrollWidth;
+// 	return -(stepsWidth - window.innerWidth);
+// }
+
+// const tween = gsap.to(steps, {
+// 	x: getScrollAmount,
+// 	duration: 3,
+// 	ease: "none",
+// });
+
+
+// ScrollTrigger.create({
+// 	trigger:".services",
+// 	start:"top",
+// 	end: () => `+=${getScrollAmount() * -1}`,
+// 	pin:true,
+// 	animation:tween,
+// 	scrub:1,
+// 	invalidateOnRefresh:true,
+// })
 
     // \\\\\\\\\\\\\\\\\\\\\\\
     // STEP ONE SECTION
@@ -249,11 +298,53 @@ const Hero = () => {
       },
     });
 
+    // BLUEPRINTS SECTION
+
+    function setupScrollAnimation() {
+      // Select the blueprints container
+      const blueprints = document.querySelector('.blueprints');
+    
+      // Select the individual prototype images
+      const prototype = document.querySelectorAll('.prototype');
+    
+      ScrollTrigger.create({
+        	trigger:".blueprint",
+        	start:"top",
+        	end: "bottom",
+        	pin:true,
+        	scrub:1,
+        	invalidateOnRefresh:true,
+        })
+
+      // Add animation to each prototype image
+      prototype.forEach((title, index) => {
+        const delay = index * 2;
+  
+  
+        // Create a ScrollTrigger for each title element
+        gsap.to(title, {
+          y: 40,
+          opacity: 1,
+          duration: 1.5,
+          ease: "cubic-text",
+          scrollTrigger: {
+            trigger: title, // Specify the trigger element
+            start: "top 80%", // Adjust this value as needed
+            end: "bottom 20%", // Adjust this value as needed
+            scrub: true, // Scrub the animation as you scroll
+            toggleActions: "play none none reverse", // Control animation behavior
+          },
+          delay: delay,
+        });
+      });
+    }
+    setupScrollAnimation()
+
     return () => {};
   }, []);
   return (
     <div className="section-container">
-      <section className="hero mx-auto px-28 bg-offWhite h-screen py-8 scrollSection">
+      <section className="hero mx-auto px-28 bg-offWhite h-screen py-8 scrollSection z-auto">
         <div className="outer">
           <div className="inner">
             <header className="w-full px-10 py-4 flex justify-between items-center bg-white rounded-xl bg">
@@ -360,15 +451,14 @@ const Hero = () => {
       {/* \\\ SERVICES SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-      <section className="services bg-black relative overflow-hidden scrollSection">
-        <div className="outer">
-          <div className="inner">
+      <section className="services bg-black relative overflow-hidden scrollSection z-50">
             <div className="circ1 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72"></div>
             <div className="circ2 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[600px]"></div>
             <div className="circ3 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[1000px]"></div>
             <div className="circ4 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[1700px]"></div>
-            <div className="h-full w-full  bg-darkBg backdrop-blur-sm z-100 bg">
-              <div className="h-screen w-full flex items-center justify-center">
+            <div className="steps h-full w-fit  bg-darkBg backdrop-blur-sm z-100 bg z-50
+            ">
+              <div className="h-screen w-screen flex items-center justify-center">
                 <div className="h_container flex flex-col   px-2 py-16">
                   <h1 className="s_title  relative w-full text-title-64  ">
                     <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
@@ -425,10 +515,15 @@ const Hero = () => {
               {/* \\\ STEP ONE SECTION */}
               {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-              <div className="h-screen w-full flex items-center justify-center relative">
+              <div className="h-screen w-screen flex items-center justify-center relative">
+                <starShape />
                 <div className="h_container  flex flex-col   px-2 py-16">
                   <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
+                  <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                      <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     01
+                      </span>
+                    </span>
                   </h2>
                   <h2 className="stepOneTitle  relative w-full text-title-64  text-center !font-semibold">
                     <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
@@ -468,16 +563,35 @@ const Hero = () => {
               {/* \\\ STEP ONE ILLUSTRATION SECTION */}
               {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-              <div className="h-screen w-full flex items-center justify-center relative">
-                <div className="blueprints">
-                  <img src="/images/prototype1.png" alt="prototype1" className="max-w-[250px]"/>
-                  <img src="/images/prototype2.png" alt="prototype1" className="max-w-[250px]"/>
-                  <img src="/images/prototype3.png" alt="prototype1" className="max-w-[250px]"/>
+              <div className="blueprints h-screen w-screen flex items-center justify-center relative">
+                <div className="blueprints flex items-center justify-center gap-20">
+                  <img src="/images/prototype1.png" alt="prototype" className="prototype translate-y-10 max-w-[250px] opacity-0"/>
+                  <img src="/images/prototype2.png" alt="prototype" className="prototype translate-y-10 max-w-[250px] opacity-0"/>
+                  <img src="/images/prototype3.png" alt="prototype" className="prototype translate-y-10 max-w-[250px] opacity-0"/>
+                </div>
+              </div>
+
+
+              {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+              {/* \\\ STARTUPS SECTION */}
+              {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+
+              <div className="startups h-full max-w-7xl mx-auto relative">
+                <div className="">
+                  <h2 className="text-title-64 mt-16">We run startups that helps thousands</h2>
+                  <h6 className="mt-8 text-2xl font-saira max-w-4xl text-white">Empowering Solutions Through In-house Startup Ventures. We Ideate and create amazing tech products for solving user problems</h6>
+                  <div className="startup-container flex flex-col mt-12">
+                    <div className="grid grid-cols-5 gap-5 items-center justify-start p-10">
+                      <h3 className="text-48 col-span-2">Saav</h3>
+                      <p className="text-18 col-span-2">Saav is a platform where you can create your online store for your business within 30 seconds. Saav is founded in 2019 and has more than 1000 users.</p>
+                      <div className="flex items-center justify-end">
+                      <img src="/icons/top-right-arrow.svg" alt="arrow" className=""/>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
       </section>
     </div>
   );
