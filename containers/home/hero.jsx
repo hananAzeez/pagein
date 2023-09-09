@@ -95,30 +95,30 @@ const Hero = () => {
     // \\\\\\\\\\\\\\\\\\\\\\\
     // SERVICES SECTION
     // \\\\\\\\\\\\\\\\\\\\\\\
-    const circ1 = document.querySelector(".circ1");
-    const circ2 = document.querySelector(".circ2");
+    // const circ1 = document.querySelector(".circ1");
+    // const circ2 = document.querySelector(".circ2");
 
-    gsap.to(circ1, {
-      x: 300,
-      duration: 1.5,
-      scrollTrigger: {
-        trigger: ".circ1",
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-      },
-    });
+    // gsap.to(circ1, {
+    //   x: 300,
+    //   duration: 1.5,
+    //   scrollTrigger: {
+    //     trigger: ".circ1",
+    //     start: "top 80%",
+    //     end: "bottom 20%",
+    //     scrub: true,
+    //   },
+    // });
 
-    gsap.to(circ2, {
-      x: -300,
-      duration: 1.5,
-      scrollTrigger: {
-        trigger: ".circ2",
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-      },
-    });
+    // gsap.to(circ2, {
+    //   x: -300,
+    //   duration: 1.5,
+    //   scrollTrigger: {
+    //     trigger: ".circ2",
+    //     start: "top 80%",
+    //     end: "bottom 20%",
+    //     scrub: true,
+    //   },
+    // });
 
     // TITLE ANIMATION
 
@@ -201,30 +201,20 @@ const Hero = () => {
       );
     });
 
-    const circ3 = document.querySelector(".circ3");
-    const circ4 = document.querySelector(".circ4");
+    const circles = document.querySelectorAll(".circ");
 
-    gsap.to(circ3, {
-      x: 300,
-      duration: 1.5,
-      scrollTrigger: {
-        trigger: ".circ3",
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-      },
-    });
-
-    gsap.to(circ4, {
-      x: -300,
-      duration: 1.5,
-      scrollTrigger: {
-        trigger: ".circ4",
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-      },
-    });
+circles.forEach((circle, index) => {
+  gsap.to(circle, {
+    x: 300 * (index % 2 === 0 ? 1 : -1), // Alternate between left and right
+    duration: 1.5,
+    scrollTrigger: {
+      trigger: circle,
+      start: "top 80%",
+      end: "bottom 20%",
+      scrub: true,
+    },
+  });
+});
 
     // asfgdasdfasdfadsf
     const animateTexts = document.querySelector(".animate-text").children,
@@ -453,10 +443,14 @@ const Hero = () => {
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
       <section className="services bg-black relative overflow-hidden scrollSection z-50">
-            <div className="circ1 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72"></div>
-            <div className="circ2 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[600px]"></div>
-            <div className="circ3 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[1000px]"></div>
-            <div className="circ4 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[1700px]"></div>
+            <div className="circ circ1 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72"></div>
+            <div className="circ circ2 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[600px]"></div>
+            <div className="circ circ3 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[1000px]"></div>
+            <div className="circ circ4 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[1700px]"></div>
+            <div className="circ circ5 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[2400px]"></div>
+            <div className="circ circ6 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[3100px]"></div>
+            <div className="circ circ7 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[3800px]"></div>
+            <div className="circ circ8 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[4500px]"></div>
             <div className="steps h-full w-fit  bg-darkBg backdrop-blur-sm z-100 bg z-50
             ">
               <div className="h-screen w-screen flex items-center justify-center">
