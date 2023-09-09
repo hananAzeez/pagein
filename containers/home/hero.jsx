@@ -17,6 +17,8 @@ CustomEase.create("cubic-text", "0.25, 1, 0.5, 1");
 const Hero = () => {
   const heroInfiniteRef = useRef(null);
   const likeCrazyLottieRef = useRef(null);
+  const saavPopup = useRef()
+
 
   useEffect(() => {
     // \\\\\\\\\\\\\\\\\\\\\\\
@@ -78,16 +80,6 @@ const Hero = () => {
         end: "+=100%",
       },
     });
-
-    // scroll smoother
-
-    // const smoother = ScrollSmoother.create({
-    //   content: ".services",
-    //   smooth: 3,
-    //   effects: true,
-    // });
-
-    // smoother.effects("h1", { speed: "auto" });
 
     // \\\\\\\\\\\\\\\\\\\\\\\
     // SERVICES SECTION
@@ -231,33 +223,34 @@ const Hero = () => {
     });
 
     // page scroll
-    const heroLeft = document.querySelector(".heroLeft");
-    const heroRight = document.querySelector(".heroRight");
+    // const heroLeft = document.querySelector(".heroLeft");
+    // const heroRight = document.querySelector(".heroRight");
 
-    gsap.to(heroLeft, {
-      x: -300, // Adjust the distance you want to move
-      duration: 2,
-      ease: "power1.inOut", // Adjust the easing function
-      scrollTrigger: {
-        trigger: ".hero-container", // Use a class or ID for the trigger container
-        start: "top center", // Adjust the start position
-        end: "bottom center", // Adjust the end position
-        scrub: true, // Enable scrubbing for smooth animation
-      },
-    });
+    // gsap.to(heroLeft, {
+    //   x: -300, // Adjust the distance you want to move
+    //   duration: 2,
+    //   ease: "power1.inOut", // Adjust the easing function
+    //   scrollTrigger: {
+    //     trigger: ".hero-container", // Use a class or ID for the trigger container
+    //     start: "top center", // Adjust the start position
+    //     end: "bottom center", // Adjust the end position
+    //     scrub: true, // Enable scrubbing for smooth animation
+    //   },
+    // });
 
-    // Create a ScrollTrigger for heroRight to move it to the right
-    gsap.to(heroRight, {
-      x: 300, // Adjust the distance you want to move
-      duration: 2,
-      ease: "power1.inOut", // Adjust the easing function
-      scrollTrigger: {
-        trigger: ".hero-container", // Use the same trigger container
-        start: "top center", // Adjust the start position
-        end: "bottom center", // Adjust the end position
-        scrub: true, // Enable scrubbing for smooth animation
-      },
-    });
+    // // Create a ScrollTrigger for heroRight to move it to the right
+    // gsap.to(heroRight, {
+    //   x: 300, // Adjust the distance you want to move
+    //   duration: 2,
+    //   ease: "power1.inOut", // Adjust the easing function
+    //   scrollTrigger: {
+    //     trigger: ".hero-container", // Use the same trigger container
+    //     start: "top center", // Adjust the start position
+    //     end: "bottom center", // Adjust the end position
+    //     scrub: true, // Enable scrubbing for smooth animation
+    //   },
+    // });
+
 
     // BLUEPRINTS SECTION
 
@@ -300,6 +293,11 @@ const Hero = () => {
     }
     setupScrollAnimation();
 
+    // STARTUPS
+    const startup = document.querySelector('.startups')
+
+
+  
     return () => {};
   }, []);
   return (
@@ -416,6 +414,10 @@ const Hero = () => {
         <div className="circ circ6 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[3100px]"></div>
         <div className="circ circ7 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[3800px]"></div>
         <div className="circ circ8 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[4500px]"></div>
+        <div className="circ circ9 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[5200px]"></div>
+        <div className="circ circ10 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[5900px]"></div>
+        <div className="circ circ11 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[6500px]"></div>
+        <div className="circ circ12 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[7200px]"></div>
         <div
           className="steps h-full w-fit  bg-darkBg backdrop-blur-sm z-100 bg z-50
             "
@@ -478,7 +480,6 @@ const Hero = () => {
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
           <div className="h-screen w-screen flex items-center justify-center relative">
-            <starShape />
             <div className="h_container  flex flex-col   px-2 py-16">
               <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
@@ -546,6 +547,76 @@ const Hero = () => {
           </div>
 
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+          {/* \\\ STEP TWO SECTION */}
+          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+
+          <div className="h-screen w-screen flex items-center justify-center relative">
+            <div className="h_container  flex flex-col   px-2 py-16">
+              <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
+                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                  <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
+                    02
+                  </span>
+                </span>
+              </h2>
+              <h2 className="stepOneTitle  relative w-full text-title-64  text-center !font-semibold">
+                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                  <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
+                    Wireframe&nbsp;
+                  </span>
+                </span>
+                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
+                    to&nbsp;
+                  </span>
+                </span>
+                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
+                    wow
+                  </span>
+                </span>
+              </h2>
+              <h4 className="stepOneTitle relative w-full text-36 text-center mt-6">
+                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
+                  Elevating Wireframes into Intuitive UI/UX Designs,&nbsp;
+                  </span>
+                </span>
+                <br />
+                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
+                  Breathing Life into Your Concept.
+                  </span>
+                </span>
+              </h4>
+            </div>
+          </div>
+
+          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+          {/* \\\ STEP TWO IMAGES SECTION */}
+          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+
+          <div className="blueprints h-screen w-screen flex items-center justify-center relative">
+            <div className="blueprints flex items-center justify-center gap-20">
+              <img
+                src="/images/stepTwo1.png"
+                alt="stepTwoImg"
+                className="stepTwoImg translate-y-10 max-w-[250px]"
+              />
+              <img
+                src="/images/stepTwo2.png"
+                alt="stepTwoImg"
+                className="stepTwoImg translate-y-10 max-w-[250px]"
+              />
+              <img
+                src="/images/stepTwo3.png"
+                alt="stepTwoImg"
+                className="stepTwoImg translate-y-10 max-w-[250px]"
+              />
+            </div>
+          </div>
+
+          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           {/* \\\ STARTUPS SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
@@ -574,6 +645,7 @@ const Hero = () => {
                     </div>
                   </div>
                 ))}
+                {/* <img src="images/saavPopup.png" alt="product image" ref={saavPopup} className="w-[350px] startup-popup"/> */}
               </div>
             </div>
           </div>
@@ -621,14 +693,14 @@ const Hero = () => {
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
       <section className="services bg-black relative overflow-hidden scrollSection z-50">
-        <div className="circ circ9 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72"></div>
-        <div className="circ circ10 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[600px]"></div>
-        <div className="circ circ11 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[1000px]"></div>
-        <div className="circ circ12 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[1700px]"></div>
-        <div className="circ circ13 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[2400px]"></div>
-        <div className="circ circ14 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[3100px]"></div>
-        <div className="circ circ15 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[3800px]"></div>
-        <div className="circ circ16 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[4500px]"></div>
+        <div className="circ circ13 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72"></div>
+        <div className="circ circ14 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[600px]"></div>
+        <div className="circ circ15 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[1000px]"></div>
+        <div className="circ circ16 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[1700px]"></div>
+        <div className="circ circ17 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[2400px]"></div>
+        <div className="circ circ18 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[3100px]"></div>
+        <div className="circ circ19 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[3800px]"></div>
+        <div className="circ circ20 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[4500px]"></div>
         <div className="h-full w-full bg-darkBg backdrop-blur-sm z-100 bg z-50">
           <div className="testimonials py-24 w-screen h-full max-w-7xl mx-auto">
             <h2 className="font-saira text-2xl font-medium text-white">
@@ -647,6 +719,29 @@ const Hero = () => {
                   <h6 className="mt-16 font-saira text-2xl font-medium tracking-tight">Tom hales</h6>
                   <p className="opacity-70 mt-4 font-saira">Tech Entrepreneur</p>
                   <p className="opacity-70 mt-2 font-saira">Tripzigo</p>
+                  </div>
+                </div>
+                <div className="flex gap-4 items-center">
+                  <div className="h-full w-8 flex items-center justify-center">
+                    <img src="icons/leftSolidArrow.png" alt="current" className="w-8 h-8"/>
+                    <h1 className="opacity-0">p</h1>
+                  </div>
+                <div className="flex flex-col gap-8">
+                  <div className="w-28 h-28 rounded-full bg-grey"><img src="images/testimony1.png" alt="user" className="w-full h-full bg-cover"/></div>
+                  <div className="w-28 h-28 rounded-full bg-grey"><img src="images/testimony2.png" alt="user" className="w-full h-full bg-cover"/></div>
+                  <div className="w-28 h-28 rounded-full bg-grey"><img src="images/testimony3.png" alt="user" className="w-full h-full bg-cover"/></div>
+                </div>
+                </div>
+              </div>
+              <div className=" review flex items-center justify-between lg:gap-32 py-40 border-b-2 border-white border-opacity-20">
+                <div className="flex gap-10 items-start">
+                  <img src="icons/quote.svg" alt="quote" />
+                  <div className="text-white">
+
+                  <h4 className="text-48">The app they built for me exceeded my expectations in every way.</h4>
+                  <h6 className="mt-16 font-saira text-2xl font-medium tracking-tight">mohd salih</h6>
+                  <p className="opacity-70 mt-4 font-saira">Tech Entrepreneur</p>
+                  <p className="opacity-70 mt-2 font-saira">Themes</p>
                   </div>
                 </div>
                 <div className="flex gap-4 items-center">
