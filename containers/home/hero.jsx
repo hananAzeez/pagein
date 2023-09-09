@@ -5,7 +5,8 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { CustomEase } from "gsap/dist/CustomEase";
 import Observer from "gsap/dist/Observer";
-import { starShape } from './../../components/hero/icons';
+import ArrowRight from './../../components/icons/icons';
+import { Startups } from "../../utils/startups";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 gsap.registerPlugin(Observer);
@@ -75,7 +76,7 @@ const Hero = () => {
         scrub: true,
         snap: 2,
         preventOverlaps: true,
-        pinSpacer: 0,
+        pinSpacer: false,
         pinSpacing: false,
         end: "+=100%",
       }
@@ -576,18 +577,20 @@ const Hero = () => {
               {/* \\\ STARTUPS SECTION */}
               {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-              <div className="startups h-full max-w-7xl mx-auto relative">
+              <div className="startups h-full xl:h-screen xl:flex xl:items-center xl:justify-center max-w-7xl mx-auto relative">
                 <div className="">
                   <h2 className="text-title-64 mt-16">We run startups that helps thousands</h2>
                   <h6 className="mt-8 text-2xl font-saira max-w-4xl text-white">Empowering Solutions Through In-house Startup Ventures. We Ideate and create amazing tech products for solving user problems</h6>
-                  <div className="startup-container flex flex-col mt-12">
-                    <div className="grid grid-cols-5 gap-5 items-center justify-start p-10">
-                      <h3 className="text-48 col-span-2">Saav</h3>
-                      <p className="text-18 col-span-2">Saav is a platform where you can create your online store for your business within 30 seconds. Saav is founded in 2019 and has more than 1000 users.</p>
+                  <div className="startup-container flex flex-col py-16">
+                    {Startups.map(startup => (
+                    <div className={`grid grid-cols-5 gap-5 items-center justify-start p-10 hover:cursor-pointer ${startup.id === 1 ? 'border-y-2' : 'border-b-2'} border-white border-opacity-20 hover:bg-white hover:bg-opacity-5`} key={startup.id}>
+                      <h3 className="text-48 col-span-2">{startup.title}</h3>
+                      <p className="text-18 col-span-2">{startup.desc}</p>
                       <div className="flex items-center justify-end">
-                      <img src="/icons/top-right-arrow.svg" alt="arrow" className=""/>
+                      <ArrowRight />
                       </div>
                     </div>
+                    ))}
                   </div>
                 </div>
               </div>
