@@ -649,10 +649,16 @@ const Hero = () => {
                   <p className="opacity-70 mt-2 font-saira">Tripzigo</p>
                   </div>
                 </div>
+                <div className="flex gap-4 items-center">
+                  <div className="h-full w-8 flex items-center justify-center">
+                    <img src="icons/leftSolidArrow.png" alt="current" className="w-8 h-8"/>
+                    <h1 className="opacity-0">p</h1>
+                  </div>
                 <div className="flex flex-col gap-8">
-                  <div className="w-28 h-28 rounded-full bg-grey"></div>
-                  <div className="w-28 h-28 rounded-full bg-grey"></div>
-                  <div className="w-28 h-28 rounded-full bg-grey"></div>
+                  <div className="w-28 h-28 rounded-full bg-grey"><img src="images/testimony1.png" alt="user" className="w-full h-full bg-cover"/></div>
+                  <div className="w-28 h-28 rounded-full bg-grey"><img src="images/testimony2.png" alt="user" className="w-full h-full bg-cover"/></div>
+                  <div className="w-28 h-28 rounded-full bg-grey"><img src="images/testimony3.png" alt="user" className="w-full h-full bg-cover"/></div>
+                </div>
                 </div>
               </div>
             </div>
