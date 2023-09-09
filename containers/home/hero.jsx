@@ -630,6 +630,38 @@ const Hero = () => {
         <div className="circ circ15 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[3800px]"></div>
         <div className="circ circ16 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[4500px]"></div>
         <div className="h-full w-full bg-darkBg backdrop-blur-sm z-100 bg z-50">
+          <div className="testimonials py-24 w-screen h-full max-w-7xl mx-auto">
+            <h2 className="font-saira text-2xl font-medium text-white">
+              Trusted and Loved: Hear from Our Clients
+            </h2>
+            {/* <h2 className="text-title-64 w-full max-w-4xl">
+              Trusted and Loved: <br/>Hear from Our Clients
+            </h2> */}
+            <div className="reviews mt-10">
+              <div className=" review flex items-center justify-between lg:gap-32 py-40 border-y-2 border-white border-opacity-20">
+                <div className="flex gap-10 items-start">
+                  <img src="icons/quote.svg" alt="quote" />
+                  <div className="text-white">
+
+                  <h4 className="text-48">Their creative approach to web design gave my business a fresh online identity.</h4>
+                  <h6 className="mt-16 font-saira text-2xl font-medium tracking-tight">Tom hales</h6>
+                  <p className="opacity-70 mt-4 font-saira">Tech Entrepreneur</p>
+                  <p className="opacity-70 mt-2 font-saira">Tripzigo</p>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-8">
+                  <div className="w-28 h-28 rounded-full bg-grey"></div>
+                  <div className="w-28 h-28 rounded-full bg-grey"></div>
+                  <div className="w-28 h-28 rounded-full bg-grey"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+      {/* \\\ CTA SECTION */}
+      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           <div className="cta pt-24 w-screen h-screen max-w-7xl mx-auto">
             <div className="bg-primary w-full flex flex-col items-center justify-center gap-16 p-20 rounded-b-[128px]">
               <div className="flex items-center justify-center gap-14 w-full">
@@ -660,9 +692,9 @@ const Hero = () => {
               <div className="flex flex-col items-center justify-center mt-20 w-full">
                 <h1 className="text-primary text-5xl font-bold">Pagein</h1>
                 <div className="flex justify-between items-center w-full text-primary mt-16">
-                  <h6 className="text-2xl font-normal">TERMS AND CONDITION</h6>
-                  <h6 className="text-2xl">@2023 PAGEIN ALL RIGHTS RESERVED</h6>
-                  <h6 className="text-2xl">PRIVACY POLICY</h6>
+                  <h6 className="text-xl font-normal">TERMS AND CONDITION</h6>
+                  <h6 className="text-xl">@2023 PAGEIN ALL RIGHTS RESERVED</h6>
+                  <h6 className="text-xl">PRIVACY POLICY</h6>
                 </div>
               </div>
             </footer>
