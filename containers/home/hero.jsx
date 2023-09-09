@@ -5,7 +5,8 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { CustomEase } from "gsap/dist/CustomEase";
 import Observer from "gsap/dist/Observer";
-import ArrowRight from './../../components/icons/icons';
+import TopRightArrow from './../../components/icons/icons';
+import RightArrow from './../../components/icons/rightArrow';
 import { Startups } from "../../utils/startups";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
@@ -75,7 +76,6 @@ const Hero = () => {
         pin: true,
         scrub: true,
         snap: 2,
-        preventOverlaps: true,
         pinSpacer: false,
         pinSpacing: false,
         end: "+=100%",
@@ -336,8 +336,6 @@ circles.forEach((circle, index) => {
   return (
     <div className="section-container">
       <section className="hero mx-auto px-28 bg-offWhite h-screen py-8 scrollSection z-auto">
-        <div className="outer">
-          <div className="inner">
             <header className="w-full px-10 py-4 flex justify-between items-center bg-white rounded-xl bg">
               <div className="nav-links flex items-center gap-8">
                 <p className="menu-links">Works</p>
@@ -434,8 +432,6 @@ circles.forEach((circle, index) => {
                 <div className="heroRight h-full w-full bg-offBlack rounded-3xl"></div>
               </div>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
@@ -581,7 +577,7 @@ circles.forEach((circle, index) => {
                       <h3 className="text-48 col-span-2">{startup.title}</h3>
                       <p className="text-18 col-span-2">{startup.desc}</p>
                       <div className="flex items-center justify-end">
-                      <ArrowRight />
+                      <TopRightArrow />
                       </div>
                     </div>
                     ))}
@@ -589,7 +585,35 @@ circles.forEach((circle, index) => {
                 </div>
               </div>
             </div>
+
       </section>
+
+
+            {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+              {/* \\\ WORKS SECTION */}
+              {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+
+              <section className="bg-offWhite">
+                <div className="max-w-7xl mx-auto py-20">
+                <div className="flex items-center justify-between text-offBlack">
+                <h2 className="text-title-64 !text-offBlack w-full max-w-4xl">You might love what we built to our clients</h2>
+                <div className="flex items-center justify-end gap-3 w-fit">
+                <p className="text-4xl">See All</p>
+                <RightArrow />
+                </div>
+                </div>
+                <div className="works flex flex-col gap-6">
+                  <div className="grid grid-cols-5 gap-6 h-[480px]">
+                    <div className="work1 col-span-3"><img src="works/" alt="works" /></div>
+                    <div className="work1 col-span-2"><img src="works/" alt="works" /></div>
+                  </div>
+                  <div className="grid grid-cols-5 gap-6 h-[480px]">
+                    <div className="work1 col-span-2"><img src="works/" alt="works" /></div>
+                    <div className="work1 col-span-3"><img src="works/" alt="works" /></div>
+                  </div>
+                </div>
+                </div>
+              </section>
     </div>
   );
 };
