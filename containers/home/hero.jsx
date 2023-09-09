@@ -602,14 +602,14 @@ circles.forEach((circle, index) => {
                 <RightArrow />
                 </div>
                 </div>
-                <div className="works flex flex-col gap-6">
+                <div className="works flex flex-col gap-6 mt-16">
                   <div className="grid grid-cols-5 gap-6 h-[480px]">
-                    <div className="work1 col-span-3"><img src="works/" alt="works" /></div>
-                    <div className="work1 col-span-2"><img src="works/" alt="works" /></div>
+                    <div className="work1 col-span-3 cursor-pointer"><img src="works/exphone-tn.png" alt="works" /></div>
+                    <div className="work1 col-span-2 cursor-pointer"><img src="works/tripzigo-tn.png" alt="works" /></div>
                   </div>
                   <div className="grid grid-cols-5 gap-6 h-[480px]">
-                    <div className="work1 col-span-2"><img src="works/" alt="works" /></div>
-                    <div className="work1 col-span-3"><img src="works/" alt="works" /></div>
+                    <div className="work1 col-span-2 cursor-pointer"><img src="works/themesunited-tn.png" alt="works" /></div>
+                    <div className="work1 col-span-3 cursor-pointer"><img src="works/stewarts-tn.png" alt="works" /></div>
                   </div>
                 </div>
                 </div>
