@@ -588,9 +588,9 @@ const Hero = () => {
           className="steps panel h-full w-fit  bg-darkBg backdrop-blur-sm bg
             "
         >
-          <div className="h-screen w-screen flex items-center justify-center">
-            <div className="h_container flex flex-col   px-2 py-16">
-              <h1 className="s_title  relative w-full text-4xl lg:text-title-64  ">
+          <div className="px-5 lg:px-0 h-screen w-screen flex items-center justify-center">
+            <div className="h_container w-full flex flex-col   px-2 py-16 text-white font-bold text-center">
+              <h1 className="s_title  relative w-full text-5xl leading-[58px] lg:text-title-64  ">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     Are&nbsp;
@@ -617,7 +617,7 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1 className="s_title relative w-full text-title-64 text-center flex items-start justify-center">
+              <h1 className="s_title relative w-full text-5xl lg:text-title-64  text-center flex items-start justify-center leading-[58px]">
                 <span className="animate-text -mb-1.5 -mt-6 overflow-hidden align-bottom flex flex-col">
                   <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
                     Web&nbsp;
