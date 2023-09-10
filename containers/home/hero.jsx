@@ -297,16 +297,15 @@ const Hero = () => {
     const startup = document.querySelector('.startups')
 
 
-  
     return () => {};
   }, []);
   return (
     <div className="section-container">
-      <section className="hero mx-auto px-28 bg-offWhite h-screen py-8 scrollSection z-auto">
+      <section className="hero  px-5 mx-auto lg:px-28 bg-offWhite h-screen py-8 scrollSection z-auto">
         <header className="w-full px-10 py-4 flex justify-between items-center bg-white rounded-xl bg">
           <div className="nav-links flex items-center gap-8">
-            <p className="menu-links">Works</p>
-            <p className="menu-links">Services</p>
+            <p className="menu-links hover-this">Works</p>
+            <p className="menu-links hover-this">Services</p>
           </div>
           <h1 className="text-black text-3xl font-bold">Pagein</h1>
           <div className="nav-links flex items-center gap-8">
@@ -315,8 +314,8 @@ const Hero = () => {
           </div>
         </header>
         <div className="max-w-7xl mx-auto">
-          <div className="h_container font_apoc flex flex-col   px-2 py-16">
-            <h1 className="h_title  relative w-full  hero-title font-light leading-[90%]  ">
+          <div className="h_container  flex flex-col   px-2 py-16 ">
+            <h1 className="h_title  relative font-bold w-full  text-[64px] text-left lg:text-[104px] leading-[77px] lg:leading[117px] z-10">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                   We&nbsp;
@@ -324,24 +323,24 @@ const Hero = () => {
               </span>
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                  &nbsp;Make
+                  Make&nbsp;
                 </span>
               </span>
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                  &nbsp;Amazing
+                  Amazing&nbsp;
                 </span>
               </span>
             </h1>
-            <h1 className="h_title relative flex w-full flex-col items-center  lg:flex-row hero-title ">
+            <h1 className="h_title relative flex w-full flex-col items-start lg:items-center  lg:flex-row font-bold text-[64px] text-left lg:text-[104px] leading-[77px] lg:leading[117px] ">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block xl:w-[273px] translate-y-full pb-1.5 pt-6 will-change-transform highlight">
-                  Web
+                  Web&nbsp;
                 </span>
               </span>
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                  &nbsp;Solutions
+                  Solutions
                 </span>
               </span>
               <div
@@ -392,11 +391,11 @@ const Hero = () => {
             </h1>
           </div>
 
-          <div className="grid grid-cols-3 gap-5 h-96">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 h-96">
             <div className="heroLeft h-full col-span-2 rounded-3xl">
               <img src="/images/hero-img-1.png" alt="" />
             </div>
-            <div className="heroRight h-full w-full bg-offBlack rounded-3xl"></div>
+            <div className="heroRight hidden lg:block h-full w-full bg-offBlack rounded-3xl"></div>
           </div>
         </div>
       </section>
