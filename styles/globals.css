@@ -11,12 +11,16 @@
 }
 
 @font-face {
-  font-family: 'Benzin'; /* Give your font a name */
-  src: url('/utils/fonts/Benzin-Bold.ttf') format('truetype'); /* Corrected format */
-  font-weight: 700; font-style: normal;
+  font-family: 'benzin';
+  src: url('/public/fonts/Benzin-Bold.ttf');
+  font-weight: bold;
 }
 
-
+@font-face {
+  font-family: 'gilroy';
+  src: url('/public/fonts/Gilroy-Bold.ttf');
+  font-weight: bold;
+}
 
 body {
   font-family: "Syne", sans-serif;
@@ -335,4 +339,10 @@ svg path {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.show-menu-btn {
+  opacity: 1;
+  display: block;
+  transition: all ease-in;
 }

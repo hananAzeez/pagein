@@ -406,6 +406,7 @@ const Hero = () => {
 
       const power2 = "power2.inOut";
       const power4 = "power4.inOut";
+      menuTl.set('body', { overflow: 'hidden' });
 
       menuTl.to("#hamburger", {
         duration: 1.25,
@@ -414,6 +415,7 @@ const Hero = () => {
         y: 40,
         ease: power4,
       })
+
 
       menuTl.to("#hamburger span", {
         duration: 1,
@@ -461,6 +463,7 @@ const Hero = () => {
         visibility: "visible",
       }, "-=0.5");
 
+
       menuTl.to(".menu-item > a",{
         duration: 1,
         top: 0,
@@ -474,6 +477,17 @@ const Hero = () => {
     }
     // how to reveal
 
+    // gsap.set('#toggle-btn', opacity)
+    gsap.to('#toggle-btn', {
+      scrollTrigger: {
+        trigger: steps,
+        start: 'top center',
+        toggleActions: 'play none reverse none',
+      },
+      opacity: 1,
+      scrub: 1,
+    })
+
     return () => {};
   }, []);
   return (
@@ -481,7 +495,7 @@ const Hero = () => {
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite h-screen py-8 scrollSection">
         <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-white rounded-xl bg">
           <div className="nav-links flex items-center gap-8">
-            <p className="menu-links hover-this">Works</p>
+            <p className="menu-links hover-this ">Works</p>
             <p className="menu-links hover-this">Services</p>
           </div>
           <h1 className="text-black text-3xl font-bold">Pagein</h1>
@@ -492,7 +506,7 @@ const Hero = () => {
         </header>
 
         {/* MENU */}
-        <div className="btn  absolute top-0 right-0 w-24 h-24 flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn">
+        <div className="btn lg:opacity-0 fixed top-0 right-0 w-24 h-24 flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn">
           <div className="btn-outline btn-outline-1 bg-[#333]"></div>
           <div id="hamburger">
             <span></span>
@@ -506,7 +520,7 @@ const Hero = () => {
         <div className="menu z-30">
           <div className="primary-menu">
             <div className="menu-container">
-              <div className="wrapper">
+              <div className="wrapper font-extrabold">
                 <div className="menu-item">
                   <a href="#"><span>I</span>Work</a>
                   <div className="menu-item-revealer"></div>
@@ -697,7 +711,7 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1 className="s_title relative w-full font-semibold text-5xl leading-[58px] lg:text-[64px] lg:leading-[80px] text-center flex items-start justify-center ">
+              <h1 className="s_title relative w-full font-bold text-5xl leading-[58px] lg:text-[64px] lg:leading-[80px] text-center flex items-start justify-center ">
                 <span className="animate-text -mb-1.5 -mt-6 overflow-hidden align-bottom flex flex-col">
                   <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
                     Web&nbsp;
@@ -710,8 +724,8 @@ const Hero = () => {
                   </span>
                   <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
                     UX&nbsp;
-                  </span>
                 </span>
+                  </span>
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
                     Solution?
@@ -725,16 +739,16 @@ const Hero = () => {
           {/* \\\ STEP ONE SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="panel stepOne h-screen w-screen flex items-center justify-center relative">
-            <div className="h_container  flex flex-col   px-2 py-16">
-              <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
+          <div className="panel stepOne px-5 lg:px-0 h-screen w-screen flex items-center justify-center relative">
+            <div className="h_container  flex flex-col   px-2 py-16 text-white">
+              <h2 className="stepOneTitle  relative w-full font-semibold text-5xl leading-[58px] lg:text-[64px] lg:leading-[80px] text-center ">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     01
                   </span>
                 </span>
               </h2>
-              <h2 className="stepOneTitle  relative w-full text-title-64  text-center !font-semibold">
+              <h2 className="stepOneTitle  relative w-full font-semibold text-5xl leading-[58px] lg:text-[64px] lg:leading-[80px] text-center ">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     Concept&nbsp;
@@ -751,7 +765,7 @@ const Hero = () => {
                   </span>
                 </span>
               </h2>
-              <h4 className="stepOneTitle relative w-full text-36 text-center mt-6">
+              <h4 className="stepOneTitle relative w-full font-saira text-2xl leading-[38px] lg:text-4xl lg:tracking-[-2.16px] lg:leading-[57px] text-center mt-6">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
                     Transforming ideas into Concrete Wireframes, Setting
@@ -1009,26 +1023,26 @@ const Hero = () => {
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ CTA SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-          <div className="cta panel pt-24 w-screen h-screen max-w-7xl mx-auto">
-            <div className="bg-primary w-full flex flex-col items-center justify-center gap-16 p-20 rounded-b-[128px]">
-              <div className="flex items-center justify-center gap-14 w-full">
-                <div className="flex-1 w-full h-[1px] bg-grey" />
+          <div className="cta px-5 lg:px-0 panel pt-24 w-screen h-screen max-w-7xl mx-auto">
+            <div className="bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[128px]">
+              <div className="flex items-center justify-center gap-5 lg:gap-14 w-full">
+                <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
                 <div className="stars flex items-center gap-6">
-                  <img src="icons/star.svg" alt="star" />
-                  <img src="icons/star.svg" alt="star" />
-                  <img src="icons/star.svg" alt="star" />
+                  <img src="icons/star.svg" alt="star" className="w-6 lg:w-8"/>
+                  <img src="icons/star.svg" alt="star" className="w-6 lg:w-8"/>
+                  <img src="icons/star.svg" alt="star" className="w-6 lg:w-8"/>
                 </div>
-                <div className="flex-1 w-full h-[1px] bg-grey" />
+                <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
               </div>
-              <h2 className="text-center font-bold text-[90px] leading-[96px] max-w-4xl">
+              <h2 className="text-center font-bold text-4xl lg:text-[90px] lg:leading-[96px] max-w-4xl">
                 Let&apos;s Grow Your Digital Presence!
               </h2>
-              <div className="cta-buttons flex items-center gap-6">
-                <button className="py-4 px-10 bg-offBlack text-primary rounded-btn text-2xl">
+              <div className="cta-buttons flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
+                <button className="py-3 lg:py-4 px-10 bg-offBlack text-primary rounded-btn text-lg lg:text-2xl border border-offBlack w-full lg:w-auto">
                   Get a Quote
                 </button>
                 <button
-                  className="py-4 px-10  bg-primary text-offBlack border border-offBlack rounded-btn text-2xl"
+                  className="py-3 lg:py-4 px-10  bg-primary text-offBlack border border-offBlack rounded-btn text-lg lg:text-2xl w-full lg:w-auto"
                 >
                   Talk To Us
                 </button>
@@ -1036,12 +1050,12 @@ const Hero = () => {
             </div>
 
             <footer>
-              <div className="flex flex-col items-center justify-center mt-20 w-full">
-                <h1 className="text-primary text-5xl font-bold">Pagein</h1>
-                <div className="flex justify-between items-center w-full text-primary mt-16">
-                  <h6 className="text-xl font-normal">TERMS AND CONDITION</h6>
-                  <h6 className="text-xl">@2023 PAGEIN ALL RIGHTS RESERVED</h6>
-                  <h6 className="text-xl">PRIVACY POLICY</h6>
+              <div className="flex flex-col items-center justify-center mt-10 lg:mt-20 w-full">
+                <h1 className="text-primary text-3xl lg:text-5xl font-bold">Pagein</h1>
+                <div className="flex justify-between items-center w-full text-primary  mt-8 lg:mt-16">
+                  <h6 className="text-sm lg:text-xl font-normal">TERMS AND CONDITION</h6>
+                  <h6 className="text-sm lg:text-xl">@2023 PAGEIN ALL RIGHTS RESERVED</h6>
+                  <h6 className="text-sm lg:text-xl">PRIVACY POLICY</h6>
                 </div>
               </div>
             </footer>
