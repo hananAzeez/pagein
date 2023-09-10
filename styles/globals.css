@@ -117,9 +117,9 @@ body {
 .highlight:before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 8;
   left: 0;
-  height: 100%;
+  height: 80%;
   width: 100%;
   background-color: #eceef3;
   border-left: 3px solid #d5ff3f;
@@ -187,14 +187,14 @@ body {
 }
 
 svg path {
-  fill: var(--overlay-bg)
+  fill: var(--overlay-bg);
 }
 
 .btn-outline {
   position: absolute;
   width: 96px;
   height: 96px;
-  border: 1px solid var(--overlay-bg);
+  border: 1px solid white;
 }
 
 .btn-outline-1 {
@@ -208,7 +208,6 @@ svg path {
   position: relative;
   width: 20px;
   height: 20px;
-  z-index: 2;
 }
 
 #hamburger span {
@@ -218,7 +217,7 @@ svg path {
   display: inline-block;
   width: 24px;
   height: 1.25px;
-  background: var(--overlay-bg);
+  background: white;
   transition: transform 0.25s;
 }
 #hamburger span::before{
@@ -229,7 +228,7 @@ svg path {
   transform: translateY(-4px);
   width: 20px;
   height: 1.25px;
-  background: var(--overlay-bg);
+  background: white;
   transition: transform 0.25s;
 }
 

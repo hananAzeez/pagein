@@ -281,14 +281,31 @@ const Hero = () => {
     // STARTUPS
     const startup = document.querySelector('.startups')
 
+    // adf
+    // const sections = gsap.utils.toArray('.panel')
+    const hero = document.querySelector('.hero')
+    const steps = document.querySelector('.steps')
+
+    ScrollTrigger.create({
+      trigger: hero, // Trigger when the hero section is in view
+      start: 'top top',
+      endTrigger: steps, // End when the steps section is in view
+      end: 'top top',
+      snap: 1,
+      duration: 0.2
+    });
+    
+    // Add labels to define the snap points
+    gsap.set(hero, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'hero-start' } });
+    gsap.set(steps, { scrollTrigger: { trigger: steps, start: 'top top', end: 'top top', id: 'steps-start' } });
 
     // MENU
     // setup
     const menuTl = gsap.timeline({ paused: true});
     let path = document.querySelector("path")
-    let spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
+    let spanBefore = CSSRulePlugin.getRule("#hamburger span::before");
 
-    gsap.set(spanBefore, { background: "#000" });
+    gsap.set(spanBefore, { background: "#fff" });
     gsap.set(".menu", { visibility: "hidden"});
     // toggle menu
     function revealMenu() {
@@ -298,7 +315,7 @@ const Hero = () => {
 
       toggleBtn.onclick = function (e) {
         hamburger.classList.toggle("active");
-        menuTl.reversed(!menuTl.reversed)
+        menuTl.reversed(!menuTl.reversed())
       }
     }
     revealMenu();
@@ -310,61 +327,70 @@ const Hero = () => {
       const power2 = "power2.inOut";
       const power4 = "power4.inOut";
 
-      menuTl.to("#hamburger", 1.25, {
-        marginTOp: "-5px",
+      menuTl.to("#hamburger", {
+        duration: 1.25,
+        marginTop: "-5px",
         x: -40,
         y: 40,
         ease: power4,
       })
 
-      menuTl.to("#hamburger span", 1, {
-        background: "#e2e2dc",
+      menuTl.to("#hamburger span", {
+        duration: 1,
+        background: "#fff",
         ease: power2
       }, "<")
 
-      menuTl.to(spanBefore, 1, {
-        background: "#e2e2dc",
+      menuTl.to(spanBefore, {
+        duration: 1,
+        background: "#fff",
         ease: power2,
       },
       "<"
       )
 
-      menuTl.to(".btn .btn-outline", 1.25, {
+      menuTl.to(".btn .btn-outline", {
+        duration: 1.25,
         x: -40,
         y: 40,
         width: "140px",
         height: "140px",
-        border: "1px solid #e2e2dc",
+        border: "1px solid #fff",
         ease: power4,
       },
       "<"
       )
 
-      menuTl.to(path, 0.8, {
+      menuTl.to(path, {
+        duration: 0.8,
         attr: {
           d: start,
+
         },
         ease: power2.easeIn,
-      }, "<").to(path, 0.8, {
+      }, "<").to(path, {
+        duration: 0.8,
         attr: {
           d: end,
         },
         ease: power2.easeIn,
       })
 
-      menuTl.to(".menu", 1, {
+      menuTl.to(".menu",{
+        duration: 1,
         visibility: "visible",
       }, "-=0.5");
 
-      menuTl.to(".menu-item > a", 1, {
+      menuTl.to(".menu-item > a",{
+        duration: 1,
         top: 0,
         ease: "power3.out",
-        stagger: {
-          amount: 0.5,
-        }
+        // stagger: {
+        //   amount: 0.5,
+        // }
       },
       "-=1"
-      ).reverse()
+      ).reverse();
     }
     // how to reveal
 
@@ -372,7 +398,7 @@ const Hero = () => {
   }, []);
   return (
     <div className="section-container overflow-x-hidden">
-      <section className="hero  px-5 mx-auto lg:px-28 bg-offWhite h-screen py-8 scrollSection z-auto">
+      <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite h-screen py-8 scrollSection">
         <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-white rounded-xl bg">
           <div className="nav-links flex items-center gap-8">
             <p className="menu-links hover-this">Works</p>
@@ -386,19 +412,18 @@ const Hero = () => {
         </header>
 
         {/* MENU */}
-        <div className="btn absolute top-0 right-0 w-24 h-24 flex justify-center items-center m-[2em] cursor-pointer z-[150]" id="toggle-btn">
-          <div className="btn-outline btn-outline-1"></div>
-          <div className="btn-outline btn-outline-2"></div>
+        <div className="btn  absolute top-0 right-0 w-24 h-24 flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn">
+          <div className="btn-outline btn-outline-1 bg-[#333]"></div>
           <div id="hamburger">
             <span></span>
           </div>
         </div>
-        <div className="overlay z-[100]">
+        <div className="overlay z-10">
           <svg viewBox="0 0 1000 1000">
             <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
           </svg>
         </div>
-        <div className="menu z-[150]">
+        <div className="menu z-30">
           <div className="primary-menu">
             <div className="menu-container">
               <div className="wrapper">
@@ -425,7 +450,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="secondary-menu">
+          <div className="secondary-menu ">
             <div className="menu-container">
               <div className="wrapper">
                 <div className="menu-item">
@@ -457,7 +482,7 @@ const Hero = () => {
         {/* MENU */}
         <div className="max-w-7xl mx-auto">
           <div className="h_container  flex flex-col   px-2 py-16 ">
-          <h1 className="h_title  relative w-full  hero-title font-light leading-[90%]  ">
+          <h1 className="h_title  relative w-full text-black text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[104px] lg:leading-[117px] lg:tracking-[-1.04px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                   We&nbsp;
@@ -465,24 +490,24 @@ const Hero = () => {
               </span>
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                  &nbsp;Make
+                  Make&nbsp;
                 </span>
               </span>
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                  &nbsp;Amazing
+                  Amazing&nbsp;
                 </span>
               </span>
             </h1>
-            <h1 className="h_title relative flex w-full flex-col items-center  lg:flex-row hero-title ">
+            <h1 className="h_title relative flex w-full flex-col items-start lg:items-center  lg:flex-row text-black text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[104px] lg:leading-[117px] lg:tracking-[-1.04px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                <span className="inline-block xl:w-[273px] translate-y-full pb-1.5 pt-6 will-change-transform highlight">
-                  Web
+                <span className="inline-block xl:w-[286px] translate-y-full pb-1.5 pt-6 will-change-transform highlight">
+                  Web&nbsp;
                 </span>
               </span>
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                  &nbsp;Solutions
+                  Solutions
                 </span>
               </span>
               <div
@@ -560,12 +585,12 @@ const Hero = () => {
         <div className="circ circ11 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[6500px]"></div>
         <div className="circ circ12 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[7200px]"></div>
         <div
-          className="steps h-full w-fit  bg-darkBg backdrop-blur-sm z-100 bg
+          className="steps panel h-full w-fit  bg-darkBg backdrop-blur-sm bg
             "
         >
           <div className="h-screen w-screen flex items-center justify-center">
             <div className="h_container flex flex-col   px-2 py-16">
-              <h1 className="s_title  relative w-full text-title-64  ">
+              <h1 className="s_title  relative w-full text-4xl lg:text-title-64  ">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     Are&nbsp;
@@ -620,7 +645,7 @@ const Hero = () => {
           {/* \\\ STEP ONE SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="h-screen w-screen flex items-center justify-center relative">
+          <div className="panel h-screen w-screen flex items-center justify-center relative">
             <div className="h_container  flex flex-col   px-2 py-16">
               <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
@@ -667,7 +692,7 @@ const Hero = () => {
           {/* \\\ STEP ONE ILLUSTRATION SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="blueprints h-screen w-screen flex items-center justify-center relative">
+          <div className="panel blueprints h-screen w-screen flex items-center justify-center relative">
             <div className="blueprints flex items-center justify-center gap-20">
               <img
                 src="/images/prototype1.png"
@@ -691,7 +716,7 @@ const Hero = () => {
           {/* \\\ STEP TWO SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="h-screen w-screen flex items-center justify-center relative">
+          <div className="panel h-screen w-screen flex items-center justify-center relative">
             <div className="h_container  flex flex-col   px-2 py-16">
               <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
@@ -737,7 +762,7 @@ const Hero = () => {
           {/* \\\ STEP TWO IMAGES SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="blueprints h-screen w-screen flex items-center justify-center relative">
+          <div className="panel h-screen w-screen flex items-center justify-center relative">
             <div className="blueprints flex items-center justify-center gap-20">
               <img
                 src="/images/stepTwo1.png"
@@ -761,7 +786,7 @@ const Hero = () => {
           {/* \\\ STARTUPS SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="startups h-full xl:h-screen xl:flex xl:items-center xl:justify-center max-w-7xl mx-auto relative">
+          <div className="startups panel h-full xl:h-screen xl:flex xl:items-center xl:justify-center max-w-7xl mx-auto relative">
             <div className="">
               <h2 className="text-title-64 mt-16">
                 We run startups that helps thousands
@@ -797,7 +822,7 @@ const Hero = () => {
       {/* \\\ WORKS SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-      <section className="bg-offWhite">
+      <section className="panel bg-offWhite">
         <div className="max-w-7xl mx-auto py-20">
           <div className="flex items-center justify-between text-offBlack">
             <h2 className="text-title-64 !text-offBlack w-full max-w-4xl">
@@ -833,7 +858,7 @@ const Hero = () => {
       {/* \\\ TESTIMONIAL SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-      <section className="services bg-black relative overflow-hidden scrollSection z-50">
+      <section className=" bg-black relative overflow-hidden scrollSection">
         <div className="circ circ13 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72"></div>
         <div className="circ circ14 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[600px]"></div>
         <div className="circ circ15 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[1000px]"></div>
@@ -842,8 +867,8 @@ const Hero = () => {
         <div className="circ circ18 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[3100px]"></div>
         <div className="circ circ19 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[3800px]"></div>
         <div className="circ circ20 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[4500px]"></div>
-        <div className="h-full w-full bg-darkBg backdrop-blur-sm z-100 bg z-50">
-          <div className="testimonials py-24 w-screen h-full max-w-7xl mx-auto">
+        <div className="h-full w-full bg-darkBg backdrop-blur-sm bg ">
+          <div className="testimonials panel py-24 w-screen h-full max-w-7xl mx-auto">
             <h2 className="font-saira text-2xl font-medium text-white">
               Trusted and Loved: Hear from Our Clients
             </h2>
@@ -904,7 +929,7 @@ const Hero = () => {
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ CTA SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-          <div className="cta pt-24 w-screen h-screen max-w-7xl mx-auto">
+          <div className="cta panel pt-24 w-screen h-screen max-w-7xl mx-auto">
             <div className="bg-primary w-full flex flex-col items-center justify-center gap-16 p-20 rounded-b-[128px]">
               <div className="flex items-center justify-center gap-14 w-full">
                 <div className="flex-1 w-full h-[1px] bg-grey" />
