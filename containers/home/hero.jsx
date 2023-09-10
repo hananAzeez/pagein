@@ -387,6 +387,7 @@ const Hero = () => {
 
     gsap.set(spanBefore, { background: "#fff" });
     gsap.set(".menu", { visibility: "hidden"});
+    gsap.set(".overlay", { visibility: "hidden"});
     // toggle menu
     function revealMenu() {
       revealMenuItems();
@@ -407,6 +408,10 @@ const Hero = () => {
       const power2 = "power2.inOut";
       const power4 = "power4.inOut";
       menuTl.set('body', { overflow: 'hidden' });
+
+      menuTl.to(".overlay", {
+        visibility: "visible"
+      })
 
       menuTl.to("#hamburger", {
         duration: 1.25,
