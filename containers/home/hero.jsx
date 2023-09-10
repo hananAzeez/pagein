@@ -285,6 +285,14 @@ const Hero = () => {
     // const sections = gsap.utils.toArray('.panel')
     const hero = document.querySelector('.hero')
     const steps = document.querySelector('.steps')
+    const stepOne = document.querySelector('.stepOne')
+    const blueprints = document.querySelector('.blueprints')
+    const stepTwo = document.querySelector('.stepTwo')
+    const stepTwoImgs = document.querySelector('.stepTwoImgs')
+    const startups = document.querySelector('.startups')
+    const works = document.querySelector('.works')
+    const testimonials = document.querySelector('.testimonials')
+    const cta = document.querySelector('.cta')
 
     ScrollTrigger.create({
       trigger: hero, // Trigger when the hero section is in view
@@ -294,10 +302,82 @@ const Hero = () => {
       snap: 1,
       duration: 0.2
     });
+    ScrollTrigger.create({
+      trigger: steps, // Trigger when the hero section is in view
+      start: 'top top',
+      endTrigger: stepOne, // End when the steps section is in view
+      end: 'top top',
+      snap: 1,
+      duration: 0.2
+    });
+    ScrollTrigger.create({
+      trigger: stepOne, // Trigger when the hero section is in view
+      start: 'top top',
+      endTrigger: blueprints, // End when the steps section is in view
+      end: 'top top',
+      snap: 1,
+      duration: 0.2
+    });
+    ScrollTrigger.create({
+      trigger: blueprints, // Trigger when the hero section is in view
+      start: 'top top',
+      endTrigger: stepTwo, // End when the steps section is in view
+      end: 'top top',
+      snap: 1,
+      duration: 0.2
+    });
+    ScrollTrigger.create({
+      trigger: stepTwo, // Trigger when the hero section is in view
+      start: 'top top',
+      endTrigger: stepTwoImgs, // End when the steps section is in view
+      end: 'top top',
+      snap: 1,
+      duration: 0.2
+    });
+    ScrollTrigger.create({
+      trigger: stepTwoImgs, // Trigger when the hero section is in view
+      start: 'top top',
+      endTrigger: startups, // End when the steps section is in view
+      end: 'top top',
+      snap: 1,
+      duration: 0.2
+    });
+    ScrollTrigger.create({
+      trigger: startups, // Trigger when the hero section is in view
+      start: 'top top',
+      endTrigger: works, // End when the steps section is in view
+      end: 'top top',
+      snap: 1,
+      duration: 0.2
+    });
+    ScrollTrigger.create({
+      trigger: '.gridTrigger', // Trigger when the hero section is in view
+      start: 'center center',
+      endTrigger: testimonials, // End when the steps section is in view
+      end: 'top top',
+      snap: 1,
+      duration: 0.2
+    });
+    ScrollTrigger.create({
+      trigger: testimonials, // Trigger when the hero section is in view
+      start: 'bottom bottom',
+      endTrigger: cta, // End when the steps section is in view
+      end: 'top top',
+      snap: 1,
+      duration: 0.2
+    });
     
     // Add labels to define the snap points
     gsap.set(hero, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'hero-start' } });
     gsap.set(steps, { scrollTrigger: { trigger: steps, start: 'top top', end: 'top top', id: 'steps-start' } });
+    gsap.set(stepOne, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'stepOne-start' } });
+    gsap.set(blueprints, { scrollTrigger: { trigger: steps, start: 'top top', end: 'top top', id: 'blueprints-start' } });
+    gsap.set(stepTwo, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'stepTwo-start' } });
+    gsap.set(stepTwoImgs, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'stepTwoImgs-start' } });
+    gsap.set(startups, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'startups-start' } });
+    gsap.set(works, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'works-start' } });
+    gsap.set(testimonials, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'testimonials-start' } });
+    gsap.set(cta, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'cta-start' } });
 
     // MENU
     // setup
@@ -512,7 +592,7 @@ const Hero = () => {
               </span>
               <div
                 ref={heroInfiniteRef}
-                className="font_aeonik absolute bottom-[-35vw] left-[25%] ml-10 -mr-10 h-8 w-40  overflow-hidden rounded-2xl border border-black text-xs font-normal uppercase opacity-0  md:left-[40%]   md:h-16  md:w-52 md:text-xl lg:relative lg:left-8 lg:bottom-0 lg:right-[1vw] lg:w-[16vw]  lg:leading-10 bg-primary"
+                className=" absolute bottom-[-35vw] left-[25%] ml-10 -mr-10 h-8 w-40  overflow-hidden rounded-2xl border border-black text-xs font-normal uppercase opacity-0  md:left-[40%]   md:h-16  md:w-52 md:text-xl lg:relative lg:left-8 lg:bottom-0 lg:right-[1vw] lg:w-[16vw]  lg:leading-10 bg-primary"
               >
                 <div className="group flex h-full cursor-pointer items-center whitespace-nowrap">
                   <span className=" group-hover:pause animate-loopL">
@@ -590,7 +670,7 @@ const Hero = () => {
         >
           <div className="px-5 lg:px-0 h-screen w-screen flex items-center justify-center">
             <div className="h_container w-full flex flex-col   px-2 py-16 text-white font-bold text-center">
-              <h1 className="s_title  relative w-full text-5xl leading-[58px] lg:text-title-64  ">
+              <h1 className="s_title  relative w-full font-semibold text-5xl leading-[58px] lg:text-[64px] lg:leading-[80px] ">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     Are&nbsp;
@@ -617,7 +697,7 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1 className="s_title relative w-full text-5xl lg:text-title-64  text-center flex items-start justify-center leading-[58px]">
+              <h1 className="s_title relative w-full font-semibold text-5xl leading-[58px] lg:text-[64px] lg:leading-[80px] text-center flex items-start justify-center ">
                 <span className="animate-text -mb-1.5 -mt-6 overflow-hidden align-bottom flex flex-col">
                   <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
                     Web&nbsp;
@@ -645,7 +725,7 @@ const Hero = () => {
           {/* \\\ STEP ONE SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="panel h-screen w-screen flex items-center justify-center relative">
+          <div className="panel stepOne h-screen w-screen flex items-center justify-center relative">
             <div className="h_container  flex flex-col   px-2 py-16">
               <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
@@ -716,7 +796,7 @@ const Hero = () => {
           {/* \\\ STEP TWO SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="panel h-screen w-screen flex items-center justify-center relative">
+          <div className="stepTwo panel h-screen w-screen flex items-center justify-center relative">
             <div className="h_container  flex flex-col   px-2 py-16">
               <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
@@ -762,7 +842,7 @@ const Hero = () => {
           {/* \\\ STEP TWO IMAGES SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="panel h-screen w-screen flex items-center justify-center relative">
+          <div className="stepTwoImgs panel h-screen w-screen flex items-center justify-center relative">
             <div className="blueprints flex items-center justify-center gap-20">
               <img
                 src="/images/stepTwo1.png"
@@ -822,7 +902,7 @@ const Hero = () => {
       {/* \\\ WORKS SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-      <section className="panel bg-offWhite">
+      <section className="works panel bg-offWhite">
         <div className="max-w-7xl mx-auto py-20">
           <div className="flex items-center justify-between text-offBlack">
             <h2 className="text-title-64 !text-offBlack w-full max-w-4xl">
@@ -842,7 +922,7 @@ const Hero = () => {
                 <img src="works/tripzigo-tn.png" alt="works" />
               </div>
             </div>
-            <div className="grid grid-cols-5 gap-6 h-[480px]">
+            <div className="gridTrigger grid grid-cols-5 gap-6 h-[480px]">
               <div className="work1 col-span-2 cursor-pointer">
                 <img src="works/themesunited-tn.png" alt="works" />
               </div>
