@@ -383,11 +383,12 @@ const Hero = () => {
     // setup
     const menuTl = gsap.timeline({ paused: true});
     let path = document.querySelector("path")
-    let spanBefore = CSSRulePlugin.getRule("#hamburger span::before");
+    let spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
 
     gsap.set(spanBefore, { background: "#fff" });
     gsap.set(".menu", { visibility: "hidden"});
     gsap.set(".overlay", { visibility: "hidden"});
+    gsap.set(".toggle-btn-pc", { visibility: "hidden"})
     // toggle menu
     function revealMenu() {
       revealMenuItems();
@@ -403,7 +404,7 @@ const Hero = () => {
 
     function revealMenuItems() {
       const start = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
-      const end = "M0, 1005S175,955,500,995s500,5,500,5V0H0Z";
+      const end = "M0,1005S175,995,500,995s500,5,500,5V0H0Z";
 
       const power2 = "power2.inOut";
       const power4 = "power4.inOut";
@@ -473,9 +474,9 @@ const Hero = () => {
         duration: 1,
         top: 0,
         ease: "power3.out",
-        // stagger: {
-        //   amount: 0.5,
-        // }
+        stagger: {
+          amount: 0.5,
+        }
       },
       "-=1"
       ).reverse();
@@ -483,16 +484,27 @@ const Hero = () => {
     // how to reveal
 
     // gsap.set('#toggle-btn', opacity)
-    gsap.to('#toggle-btn', {
+    // gsap.to('#toggle-btn', {
+    //   scrollTrigger: {
+    //     trigger: steps,
+    //     start: 'top center',
+    //     toggleActions: 'play none reverse none',
+    //   },
+    //   opacity: 1,
+    //   scrub: 1,
+    // })
+
+    gsap.to(".toggle-btn-pc", {
+      duration: 1,
+      ease: "power2.inOut",
       scrollTrigger: {
         trigger: steps,
         start: 'top center',
-        toggleActions: 'play none reverse none',
+        scrub: true, // Scrub the animation as you scroll
+          toggleActions: "play none none reverse",
       },
-      opacity: 1,
-      scrub: 1,
+      visibility: "visible",
     })
-
     return () => {};
   }, []);
   return (
@@ -511,7 +523,13 @@ const Hero = () => {
         </header>
 
         {/* MENU */}
-        <div className="btn lg:opacity-0 fixed top-0 right-0 w-24 h-24 flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn">
+        <div className="btn toggle-btn-pc fixed top-0 right-0 w-24 h-24 flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn">
+          <div className="btn-outline btn-outline-1 bg-[#333]"></div>
+          <div id="hamburger">
+            <span></span>
+          </div>
+        </div>
+        <div className="btn lg:hidden fixed top-0 right-0 w-24 h-24 flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn">
           <div className="btn-outline btn-outline-1 bg-[#333]"></div>
           <div id="hamburger">
             <span></span>
