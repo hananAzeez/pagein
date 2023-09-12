@@ -741,19 +741,19 @@ startupDivs.forEach(startup => {
         >
           <div className="px-5 lg:px-0 h-screen w-screen flex items-center justify-center">
             <div className="h_container w-full flex flex-col   px-2 py-16 text-white font-bold text-center">
-              <h1 className="s_title  relative w-full font-bold text-5xl leading-[58px] lg:text-[64px] lg:leading-[80px] ">
+              <h1 className="s_title  relative w-full font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] ">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     Are&nbsp;
                   </span>
                 </span>
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
+                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     you
                   </span>
                 </span>
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
+                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     &nbsp;looking
                   </span>
                 </span>
@@ -768,7 +768,7 @@ startupDivs.forEach(startup => {
                   </span>
                 </span>
               </h1>
-              <h1 className="s_title relative w-full font-bold text-5xl leading-[58px] lg:text-[64px] lg:leading-[80px] text-center flex items-start justify-center ">
+              <h1 className="s_title relative w-full font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] text-center flex items-start justify-center ">
                 <span className="animate-text -mb-1.5 -mt-6 overflow-hidden align-bottom flex flex-col">
                   <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
                     Web&nbsp;
@@ -798,14 +798,14 @@ startupDivs.forEach(startup => {
 
           <div className="panel stepOne px-5 lg:px-0 h-screen w-screen flex items-center justify-center relative">
             <div className="h_container  flex flex-col   px-2 py-16 text-white">
-              <h2 className="stepOneTitle  relative w-full font-semibold text-5xl leading-[58px] lg:text-[64px] lg:leading-[80px] text-center ">
+              <h2 className="stepOneTitle  relative w-full font-semibold text-3xl leading-[43px] lg:text-[64px] lg:leading-[80px] text-center ">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     01
                   </span>
                 </span>
               </h2>
-              <h2 className="stepOneTitle  relative w-full font-semibold text-5xl leading-[58px] lg:text-[64px] lg:leading-[80px] text-center ">
+              <h2 className="stepOneTitle  relative w-full font-semibold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] text-center ">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     Concept&nbsp;
@@ -822,7 +822,7 @@ startupDivs.forEach(startup => {
                   </span>
                 </span>
               </h2>
-              <h4 className="stepOneTitle relative w-full font-saira text-2xl leading-[38px] lg:text-4xl lg:tracking-[-2.16px] lg:leading-[57px] text-center mt-6">
+              <h4 className="stepOneTitle relative w-full font-saira text-xl leading-[31px] lg:text-4xl lg:tracking-[-2.16px] lg:leading-[57px] text-center mt-6">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
                     Transforming ideas into Concrete Wireframes, Setting
