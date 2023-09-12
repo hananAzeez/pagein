@@ -236,10 +236,10 @@ svg path {
   transition: transform 0.25s;
 }
 
-#hamburger .active span {
+#hamburger.active span {
   transform: rotate(45deg);
 }
-#hamburger .active span::before {
+#hamburger.active span::before {
   top: unset;
   width: 24px;
   transform: rotate(-90deg);

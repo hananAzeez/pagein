@@ -396,6 +396,7 @@ const Hero = () => {
       const toggleBtn = document.getElementById("toggle-btn")
 
       toggleBtn.onclick = function (e) {
+        console.log('clicked')
         hamburger.classList.toggle("active");
         menuTl.reversed(!menuTl.reversed())
       }
@@ -521,17 +522,21 @@ const Hero = () => {
             <p className="menu-links">Contact</p>
           </div>
         </header>
+        <header className="lg:hidden">
+        <h1 className="text-black text-2xl font-bold">Pagein</h1>
+
+        </header>
 
         {/* MENU */}
-        <div className="btn toggle-btn-pc fixed top-0 right-0 w-24 h-24 flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn">
+        <div className="btn hidden toggle-btn-pc fixed top-0 right-0 w-24 h-24 lg:flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn">
           <div className="btn-outline btn-outline-1 bg-[#333]"></div>
           <div id="hamburger">
             <span></span>
           </div>
         </div>
-        <div className="btn lg:hidden fixed top-0 right-0 w-24 h-24 flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn">
+        <div className="btn lg:hidden fixed top-0 right-0 w-16 h-16 flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn">
           <div className="btn-outline btn-outline-1 bg-[#333]"></div>
-          <div id="hamburger">
+          <div id="hamburger" >
             <span></span>
           </div>
         </div>
