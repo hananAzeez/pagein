@@ -107,6 +107,26 @@ body {
   letter-spacing: -1.44px;
 }
 
+@media (max-width: 600px) {
+  .text-48 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.44px;
+  }
+
+  .text-18 {
+    color: #fff;
+    font-family: Saira;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* letter-spacing: -0.54px; */
+  }
+}
+
 .text-18 {
   color: #fff;
   font-family: Saira;
