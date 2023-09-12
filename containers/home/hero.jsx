@@ -22,6 +22,7 @@ const Hero = () => {
 
 
   useEffect(() => {
+
     // \\\\\\\\\\\\\\\\\\\\\\\
     // HERO SECTION
     // \\\\\\\\\\\\\\\\\\\\\\\
@@ -94,7 +95,6 @@ const Hero = () => {
     //   },
     // });
 
-    // TITLE ANIMATION
 
     const servicesTitle = document.querySelectorAll(".s_title");
 
@@ -104,8 +104,50 @@ const Hero = () => {
 
       gsap.set(el, { y: "100%" });
 
-      // Create a ScrollTrigger for each title element
       gsap.to(el, {
+        y: 0,
+        duration: 1.5,
+        ease: "cubic-text",
+        scrollTrigger: {
+          trigger: title, // Specify the trigger element
+          start: "top 80%", // Adjust this value as needed
+          end: "bottom 20%", // Adjust this value as needed
+          scrub: true, // Scrub the animation as you scroll
+          toggleActions: "play none none reverse", // Control animation behavior
+        },
+        delay: delay,
+      });
+    });
+
+    // animating text
+    const animateTexts = document.querySelector(".animate-text").children,
+      textsLen = animateTexts.length;
+
+    let index = 0;
+
+    function animateText() {
+      // console.log(animateTexts[index]);
+      for (let i = 0; i < textsLen; i++) {
+        animateTexts[i].classList.remove("text-in");
+      }
+      animateTexts[index].classList.add("text-in");
+      if (index == textsLen - 1) {
+        index = 0;
+      } else {
+        index++;
+      }
+      setTimeout(animateText, 2000);
+    }
+    animateText();
+
+    const animatingTexts = document.querySelectorAll(".animatingText");
+    animatingTexts.forEach((title, index) => {
+      const delay = index * 0.08;
+
+      gsap.set(animatingTexts, { y: "100%" });
+
+      // Create a ScrollTrigger for each animatingText element
+      gsap.to(animatingTexts, {
         y: 0,
         duration: 1.5,
         ease: "cubic-text",
@@ -162,82 +204,12 @@ const Hero = () => {
         },
       });
     });
+  
 
-    // asfgdasdfasdfadsf
-    const animateTexts = document.querySelector(".animate-text").children,
-      textsLen = animateTexts.length;
-
-    let index = 0;
-
-    function animateText() {
-      // console.log(animateTexts[index]);
-      for (let i = 0; i < textsLen; i++) {
-        animateTexts[i].classList.remove("text-in");
-      }
-      animateTexts[index].classList.add("text-in");
-      if (index == textsLen - 1) {
-        index = 0;
-      } else {
-        index++;
-      }
-      setTimeout(animateText, 2000);
-    }
-    animateText();
-
-    // agdfs
-    const animatingTexts = document.querySelectorAll(".animatingText");
-    animatingTexts.forEach((title, index) => {
-      const delay = index * 0.08;
-
-      gsap.set(animatingTexts, { y: "100%" });
-
-      // Create a ScrollTrigger for each animatingText element
-      gsap.to(animatingTexts, {
-        y: 0,
-        duration: 1.5,
-        ease: "cubic-text",
-        scrollTrigger: {
-          trigger: title, // Specify the trigger element
-          start: "top 80%", // Adjust this value as needed
-          end: "bottom 20%", // Adjust this value as needed
-          scrub: true, // Scrub the animation as you scroll
-          toggleActions: "play none none reverse", // Control animation behavior
-        },
-        delay: delay,
-      });
-    });
-
-    // page scroll
-    // const heroLeft = document.querySelector(".heroLeft");
-    // const heroRight = document.querySelector(".heroRight");
-
-    // gsap.to(heroLeft, {
-    //   x: -300, // Adjust the distance you want to move
-    //   duration: 2,
-    //   ease: "power1.inOut", // Adjust the easing function
-    //   scrollTrigger: {
-    //     trigger: ".hero-container", // Use a class or ID for the trigger container
-    //     start: "top center", // Adjust the start position
-    //     end: "bottom center", // Adjust the end position
-    //     scrub: true, // Enable scrubbing for smooth animation
-    //   },
-    // });
-
-    // // Create a ScrollTrigger for heroRight to move it to the right
-    // gsap.to(heroRight, {
-    //   x: 300, // Adjust the distance you want to move
-    //   duration: 2,
-    //   ease: "power1.inOut", // Adjust the easing function
-    //   scrollTrigger: {
-    //     trigger: ".hero-container", // Use the same trigger container
-    //     start: "top center", // Adjust the start position
-    //     end: "bottom center", // Adjust the end position
-    //     scrub: true, // Enable scrubbing for smooth animation
-    //   },
-    // });
-
-
+    
+    // \\\\\\\\\\\\\\\\\\\\\\\
     // BLUEPRINTS SECTION
+    // \\\\\\\\\\\\\\\\\\\\\\\
 
     function setupScrollAnimation() {
       // Select the blueprints container
@@ -281,8 +253,11 @@ const Hero = () => {
     // STARTUPS
     const startup = document.querySelector('.startups')
 
-    // adf
-    // const sections = gsap.utils.toArray('.panel')
+    
+    // \\\\\\\\\\\\\\\\\\\\\\\
+    // GENERAL
+    // \\\\\\\\\\\\\\\\\\\\\\\
+
     const hero = document.querySelector('.hero')
     const steps = document.querySelector('.steps')
     const stepOne = document.querySelector('.stepOne')
@@ -342,30 +317,30 @@ const Hero = () => {
       snap: 1,
       duration: 0.2
     });
-    ScrollTrigger.create({
-      trigger: startups, // Trigger when the hero section is in view
-      start: 'top top',
-      endTrigger: works, // End when the steps section is in view
-      end: 'top top',
-      snap: 1,
-      duration: 0.2
-    });
-    ScrollTrigger.create({
-      trigger: '.gridTrigger', // Trigger when the hero section is in view
-      start: 'center center',
-      endTrigger: testimonials, // End when the steps section is in view
-      end: 'top top',
-      snap: 1,
-      duration: 0.2
-    });
-    ScrollTrigger.create({
-      trigger: testimonials, // Trigger when the hero section is in view
-      start: 'bottom bottom',
-      endTrigger: cta, // End when the steps section is in view
-      end: 'top top',
-      snap: 1,
-      duration: 0.2
-    });
+    // ScrollTrigger.create({
+    //   trigger: startups, 
+    //   start: 'top top',
+    //   endTrigger: works, 
+    //   end: 'top top',
+    //   snap: 1,
+    //   duration: 0.2
+    // });
+    // ScrollTrigger.create({
+    //   trigger: '.gridTrigger', 
+    //   start: 'center center',
+    //   endTrigger: testimonials, 
+    //   end: 'top top',
+    //   snap: 1,
+    //   duration: 0.2
+    // });
+    // ScrollTrigger.create({
+    //   trigger: testimonials, 
+    //   start: 'bottom bottom',
+    //   endTrigger: cta, 
+    //   end: 'top top',
+    //   snap: 1,
+    //   duration: 0.2
+    // });
     
     // Add labels to define the snap points
     gsap.set(hero, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'hero-start' } });
@@ -379,8 +354,11 @@ const Hero = () => {
     gsap.set(testimonials, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'testimonials-start' } });
     gsap.set(cta, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'cta-start' } });
 
+    
+    // \\\\\\\\\\\\\\\\\\\\\\\
     // MENU
-    // setup
+    // \\\\\\\\\\\\\\\\\\\\\\\
+
     const menuTl = gsap.timeline({ paused: true});
     let path = document.querySelector("path")
     let spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
@@ -525,7 +503,10 @@ const Hero = () => {
     })
 
 
-    // JavaScript
+    
+    // \\\\\\\\\\\\\\\\\\\\\\\
+    // STARTUPS SECTION
+    // \\\\\\\\\\\\\\\\\\\\\\\
 const startupDivs = document.querySelectorAll('.startup');
 
 
