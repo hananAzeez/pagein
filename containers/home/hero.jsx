@@ -939,14 +939,15 @@ const Hero = () => {
               <div className="startup-container flex flex-col py-16">
                 {Startups.map((startup) => (
                   <div
-                    className={`grid xl:grid-cols-5 gap-5 items-center justify-start p-10 hover:cursor-pointer ${
+                    className={`grid grid-cols-1 xl:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer ${
                       startup.id === 1 ? "border-y-2" : "border-b-2"
                     } border-white border-opacity-20 hover:bg-white hover:bg-opacity-5`}
                     key={startup.id}
                   >
+                    <img src={`/startups/${startup.image}`} alt="startup img" className="xl:hidden"/>
                     <h3 className="text-48 col-span-2">{startup.title}</h3>
                     <p className="text-18 col-span-2">{startup.desc}</p>
-                    <div className="flex items-center justify-end">
+                    <div className="flex items-center justify-start xl:justify-end">
                       <TopRightArrow />
                     </div>
                   </div>
