@@ -926,12 +926,12 @@ const Hero = () => {
           {/* \\\ STARTUPS SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="startups panel h-full xl:h-screen xl:flex xl:items-center xl:justify-center max-w-7xl mx-auto relative">
+          <div className="startups panel h-full xl:h-screen xl:flex xl:items-center xl:justify-center max-w-7xl mx-auto relative px-5 xl:px-0">
             <div className="">
-              <h2 className="text-title-64 mt-16">
+              <h2 className="text-white font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] mt-16">
                 We run startups that helps thousands
               </h2>
-              <h6 className="mt-8 text-2xl font-saira max-w-4xl text-white">
+              <h6 className="mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-white">
                 Empowering Solutions Through In-house Startup Ventures. We
                 Ideate and create amazing tech products for solving user
                 problems
@@ -939,7 +939,7 @@ const Hero = () => {
               <div className="startup-container flex flex-col py-16">
                 {Startups.map((startup) => (
                   <div
-                    className={`grid grid-cols-5 gap-5 items-center justify-start p-10 hover:cursor-pointer ${
+                    className={`grid xl:grid-cols-5 gap-5 items-center justify-start p-10 hover:cursor-pointer ${
                       startup.id === 1 ? "border-y-2" : "border-b-2"
                     } border-white border-opacity-20 hover:bg-white hover:bg-opacity-5`}
                     key={startup.id}
@@ -957,6 +957,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
+      
 
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ WORKS SECTION */}
@@ -968,7 +969,7 @@ const Hero = () => {
             <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl">
               You might love what we built to our clients
             </h2>
-            <div className="flex items-center justify-end gap-3 w-full xl:w-fit hidden xl:block">
+            <div className=" items-center justify-end gap-3 w-full xl:w-fit hidden xl:flex">
               <p className="text-4xl text-right">See All</p>
               <RightArrow />
             </div>
