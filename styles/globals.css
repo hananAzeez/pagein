@@ -346,3 +346,10 @@ svg path {
   display: block;
   transition: all ease-in;
 }
+
+@media (max-width: 600px) {
+  svg path {
+    fill: var(--overlay-bg);
+    height: 100vh;
+  }
+}

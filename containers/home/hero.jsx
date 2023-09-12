@@ -394,9 +394,15 @@ const Hero = () => {
       revealMenuItems();
       const hamburger = document.getElementById("hamburger");
       const toggleBtn = document.getElementById("toggle-btn")
+      const toggleBtnPc = document.getElementById("toggle-btn-pc")
 
       toggleBtn.onclick = function (e) {
         console.log('clicked')
+        hamburger.classList.toggle("active");
+        menuTl.reversed(!menuTl.reversed())
+      }
+
+      toggleBtnPc.onclick = function (e) {
         hamburger.classList.toggle("active");
         menuTl.reversed(!menuTl.reversed())
       }
@@ -439,6 +445,17 @@ const Hero = () => {
       )
 
       menuTl.to(".btn .btn-outline", {
+        duration: 1.25,
+        x: -40,
+        y: 40,
+        width: "140px",
+        height: "140px",
+        border: "1px solid #fff",
+        ease: power4,
+      },
+      "<"
+      )
+      menuTl.to(".btn .btn-outline-mobile", {
         duration: 1.25,
         x: -40,
         y: 40,
@@ -528,20 +545,21 @@ const Hero = () => {
         </header>
 
         {/* MENU */}
-        <div className="btn hidden toggle-btn-pc fixed top-0 right-0 w-24 h-24 lg:flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn">
+        <div className="btn hidden toggle-btn-pc fixed top-0 right-0 w-24 h-24 lg:flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn-pc">
           <div className="btn-outline btn-outline-1 bg-[#333]"></div>
-          <div id="hamburger">
+          <div id="hamburger" className="hamburger">
             <span></span>
           </div>
         </div>
-        <div className="btn lg:hidden fixed top-0 right-0 w-16 h-16 flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn">
-          <div className="btn-outline btn-outline-1 bg-[#333]"></div>
-          <div id="hamburger" >
+        {/* mobile toggle menu icon */}
+        <div className="btn lg:hidden fixed top-0 right-0 w-16 h-16 flex justify-center items-center m-5 cursor-pointer z-[200]" id="toggle-btn">
+          <div className="btn-outline-mobile btn-outline-1 bg-[#333] absolute w-16 h-16 border border-white"></div>
+          <div id="hamburger" className="hamburger" >
             <span></span>
           </div>
         </div>
         <div className="overlay z-10">
-          <svg viewBox="0 0 1000 1000">
+          <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
             <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
           </svg>
         </div>
@@ -712,7 +730,7 @@ const Hero = () => {
         >
           <div className="px-5 lg:px-0 h-screen w-screen flex items-center justify-center">
             <div className="h_container w-full flex flex-col   px-2 py-16 text-white font-bold text-center">
-              <h1 className="s_title  relative w-full font-semibold text-5xl leading-[58px] lg:text-[64px] lg:leading-[80px] ">
+              <h1 className="s_title  relative w-full font-bold text-5xl leading-[58px] lg:text-[64px] lg:leading-[80px] ">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     Are&nbsp;
@@ -945,33 +963,35 @@ const Hero = () => {
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
       <section className="works panel bg-offWhite">
-        <div className="max-w-7xl mx-auto py-20">
-          <div className="flex items-center justify-between text-offBlack">
-            <h2 className="text-title-64 !text-offBlack w-full max-w-4xl">
+        <div className="max-w-7xl mx-auto py-20 px-5 xl:px-0">
+          <div className="flex flex-col xl:flex-row items-center justify-between text-offBlack">
+            <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl">
               You might love what we built to our clients
             </h2>
-            <div className="flex items-center justify-end gap-3 w-fit">
-              <p className="text-4xl">See All</p>
+            <div className="flex items-center justify-end gap-3 w-full xl:w-fit hidden xl:block">
+              <p className="text-4xl text-right">See All</p>
               <RightArrow />
             </div>
           </div>
-          <div className="works flex flex-col gap-6 mt-16">
-            <div className="grid grid-cols-5 gap-6 h-[480px]">
-              <div className="work1 col-span-3 cursor-pointer">
-                <img src="works/exphone-tn.png" alt="works" />
+          <div className="works flex flex-col gap-4 lg:gap-6 mt-8 xl:mt-16">
+            <div className="grid xl:grid-cols-5 gap-4 lg:gap-6 xl:h-[480px]">
+              <div className="work1 xl:col-span-3 cursor-pointer ">
+                <img src="works/exphone-tn.png" alt="works"  className="rounded-xl lg:rounded-2xl"/>
               </div>
-              <div className="work1 col-span-2 cursor-pointer">
-                <img src="works/tripzigo-tn.png" alt="works" />
-              </div>
-            </div>
-            <div className="gridTrigger grid grid-cols-5 gap-6 h-[480px]">
-              <div className="work1 col-span-2 cursor-pointer">
-                <img src="works/themesunited-tn.png" alt="works" />
-              </div>
-              <div className="work1 col-span-3 cursor-pointer">
-                <img src="works/stewarts-tn.png" alt="works" />
+              <div className="work1 xl:col-span-2 cursor-pointer ">
+                <img src="works/tripzigo-mobile.png" alt="works" className="xl:hidden rounded-xl lg:rounded-2xl" />
+                <img src="works/tripzigo-tn.png" alt="works" className="hidden xl:block rounded-xl lg:rounded-2xl" />
               </div>
             </div>
+            <div className="gridTrigger grid xl:grid-cols-5 gap-4 lg:gap-6 xl:h-[480px]">
+              <div className="work1 xl:col-span-2 cursor-pointer ">
+                <img src="works/themesunited-mobile1.png" alt="works"  className="xl:hidden rounded-xl lg:rounded-2xl"/>
+                <img src="works/themesunited-tn.png" alt="works"  className="hidden xl:block rounded-xl lg:rounded-2xl"/>
+              </div>
+              <div className="work1 xl:col-span-3 cursor-pointer ">
+                <img src="works/stewarts-tn.png" alt="works"  className="rounded-xl lg:rounded-2xl"/>
+              </div>
+            </div>        
           </div>
         </div>
       </section>
