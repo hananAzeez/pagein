@@ -523,6 +523,36 @@ const Hero = () => {
       },
       visibility: "visible",
     })
+
+
+    // JavaScript
+const startupDivs = document.querySelectorAll('.startup');
+
+
+startupDivs.forEach(startup => {
+  const imgWrapper = startup.querySelector('.img-wrapper');
+  const img = startup.querySelector('img');
+
+  startup.addEventListener('mouseenter', () => {
+    // Show the image
+    gsap.to(imgWrapper, { opacity: 1, duration: 0.5, scale: 1 });
+
+    // Add mousemove listener to the entire document
+    document.addEventListener('mousemove', (e) => {
+      const { left, top, width, height } = imgWrapper.getBoundingClientRect();
+      const x = (e.clientX - left) / width;
+      const y = (e.clientY - top) / height;
+
+      gsap.to(imgWrapper, { x: (x - 0.5) * 100, y: (y - 0.5) * 100, duration: 0.2 });
+    });
+  });
+
+
+    // Remove mousemove listener
+    document.removeEventListener('mousemove', () => {});
+});
+
+
     return () => {};
   }, []);
   return (
@@ -939,12 +969,12 @@ const Hero = () => {
               <div className="startup-container flex flex-col py-16">
                 {Startups.map((startup) => (
                   <div
-                    className={`grid grid-cols-1 xl:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer ${
+                    className={`startup  grid grid-cols-1 xl:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer relative ${
                       startup.id === 1 ? "border-y-2" : "border-b-2"
                     } border-white border-opacity-20 hover:bg-white hover:bg-opacity-5`}
                     key={startup.id}
                   >
-                    <img src={`/startups/${startup.image}`} alt="startup img" className="xl:hidden"/>
+                    <div className="img-wrapper"><img src={`/startups/${startup.image}`} alt="startup img" /></div>
                     <h3 className="text-48 col-span-2">{startup.title}</h3>
                     <p className="text-18 col-span-2">{startup.desc}</p>
                     <div className="flex items-center justify-start xl:justify-end">
