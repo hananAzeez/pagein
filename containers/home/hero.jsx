@@ -722,7 +722,7 @@ startupDivs.forEach(startup => {
       {/* \\\ SERVICES SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-      <section className="services bg-black relative overflow-hidden scrollSection">
+      <section className="services bg-black relative overflow-hidden scrollSection text-white">
         <div className="circ circ1 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72"></div>
         <div className="circ circ2 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[600px]"></div>
         <div className="circ circ3 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[1000px]"></div>
@@ -867,16 +867,16 @@ startupDivs.forEach(startup => {
           {/* \\\ STEP TWO SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="stepTwo panel h-screen w-screen flex items-center justify-center relative">
+          <div className="stepTwo panel h-screen w-screen flex items-center justify-center relative px-5 xl:px-0">
             <div className="h_container  flex flex-col   px-2 py-16">
-              <h2 className="stepOneTitle  relative w-full text-title-64  text-center">
+              <h2 className="stepOneTitle  relative w-full font-semibold text-3xl leading-[43px] lg:text-[64px] lg:leading-[80px] text-center">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     02
                   </span>
                 </span>
               </h2>
-              <h2 className="stepOneTitle  relative w-full text-title-64  text-center !font-semibold">
+              <h2 className="stepOneTitle  relative w-full  font-semibold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px]  text-center ">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                     Wireframe&nbsp;
@@ -893,7 +893,7 @@ startupDivs.forEach(startup => {
                   </span>
                 </span>
               </h2>
-              <h4 className="stepOneTitle relative w-full text-36 text-center mt-6">
+              <h4 className="stepOneTitle relative w-full font-saira text-xl leading-[31px] lg:text-4xl lg:tracking-[-2.16px] lg:leading-[57px] text-center mt-6">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
                   Elevating Wireframes into Intuitive UI/UX Designs,&nbsp;
