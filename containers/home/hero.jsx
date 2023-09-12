@@ -1023,57 +1023,57 @@ startupDivs.forEach(startup => {
         <div className="circ circ19 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[3800px]"></div>
         <div className="circ circ20 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[4500px]"></div>
         <div className="h-full w-full bg-darkBg backdrop-blur-sm bg ">
-          <div className="testimonials panel py-24 w-screen h-full max-w-7xl mx-auto">
-            <h2 className="font-saira text-2xl font-medium text-white">
+          <div className="testimonials panel py-14 xl:py-24 w-screen h-full max-w-7xl mx-auto px-5 xl:px-0">
+            <h2 className="font-saira text-lg xl:text-2xl font-medium text-white">
               Trusted and Loved: Hear from Our Clients
             </h2>
             {/* <h2 className="text-title-64 w-full max-w-4xl">
               Trusted and Loved: <br/>Hear from Our Clients
             </h2> */}
             <div className="reviews mt-10">
-              <div className=" review flex items-center justify-between lg:gap-32 py-40 border-y-2 border-white border-opacity-20">
-                <div className="flex gap-10 items-start">
-                  <img src="icons/quote.svg" alt="quote" />
+              <div className=" review flex items-center justify-between gap-5  lg:gap-32 py-20 lg:py-40 border-y-2 border-white border-opacity-10">
+                <div className="flex flex-col lg:flex-row gap-10 items-start">
+                  <img src="icons/quote.svg" alt="quote" className="w-10 h-10 lg:w-auto lg:h-auto" />
                   <div className="text-white">
 
                   <h4 className="text-48">Their creative approach to web design gave my business a fresh online identity.</h4>
-                  <h6 className="mt-16 font-saira text-2xl font-medium tracking-tight">Tom hales</h6>
-                  <p className="opacity-70 mt-4 font-saira">Tech Entrepreneur</p>
-                  <p className="opacity-70 mt-2 font-saira">Tripzigo</p>
+                  <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">Tom hales</h6>
+                  <p className="opacity-70 mt-3 lg:mt-4 text-sm lg:textt-base font-saira">Tech Entrepreneur</p>
+                  <p className="opacity-70 mt-1 lg:mt-2 text-sm lg:textt-base font-saira">Tripzigo</p>
                   </div>
                 </div>
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-2 lg:gap-4 items-center">
                   <div className="h-full w-8 flex items-center justify-center">
-                    <img src="icons/leftSolidArrow.png" alt="current" className="w-8 h-8"/>
+                    <img src="icons/leftSolidArrow.png" alt="current" className="w-5 lg:w-8 h-5 lg:h-8"/>
                     <h1 className="opacity-0">p</h1>
                   </div>
-                <div className="flex flex-col gap-8">
-                  <div className="w-28 h-28 rounded-full bg-grey"><img src="images/testimony1.png" alt="user" className="w-full h-full bg-cover"/></div>
-                  <div className="w-28 h-28 rounded-full bg-grey"><img src="images/testimony2.png" alt="user" className="w-full h-full bg-cover"/></div>
-                  <div className="w-28 h-28 rounded-full bg-grey"><img src="images/testimony3.png" alt="user" className="w-full h-full bg-cover"/></div>
+                <div className="flex flex-col gap-4 lg:gap-8">
+                  <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony1.png" alt="user" className="w-full h-full bg-cover"/></div>
+                  <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony2.png" alt="user" className="w-full h-full bg-cover"/></div>
+                  <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony3.png" alt="user" className="w-full h-full bg-cover"/></div>
                 </div>
                 </div>
               </div>
-              <div className=" review flex items-center justify-between lg:gap-32 py-40 border-b-2 border-white border-opacity-20">
-                <div className="flex gap-10 items-start">
-                  <img src="icons/quote.svg" alt="quote" />
+              <div className=" review flex items-center justify-between gap-5 lg:gap-32 py-20 lg:py-40 border-y-2 border-white border-opacity-10">
+                <div className="flex flex-col lg:flex-row gap-10 items-start">
+                  <img src="icons/quote.svg" alt="quote" className="w-10 h-10 lg:w-auto lg:h-auto" />
                   <div className="text-white">
 
                   <h4 className="text-48">The app they built for me exceeded my expectations in every way.</h4>
-                  <h6 className="mt-16 font-saira text-2xl font-medium tracking-tight">mohd salih</h6>
-                  <p className="opacity-70 mt-4 font-saira">Tech Entrepreneur</p>
-                  <p className="opacity-70 mt-2 font-saira">Themes</p>
+                  <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">mohd salih</h6>
+                  <p className="opacity-70 mt-3 lg:mt-4 text-sm lg:textt-base font-saira">Tech Entrepreneur</p>
+                  <p className="opacity-70 mt-1 lg:mt-2 text-sm lg:textt-base font-saira">Themes</p>
                   </div>
                 </div>
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-2 lg:gap-4 items-center">
                   <div className="h-full w-8 flex items-center justify-center">
-                    <img src="icons/leftSolidArrow.png" alt="current" className="w-8 h-8"/>
+                    <img src="icons/leftSolidArrow.png" alt="current" className="w-5 lg:w-8 h-5 lg:h-8"/>
                     <h1 className="opacity-0">p</h1>
                   </div>
-                <div className="flex flex-col gap-8">
-                  <div className="w-28 h-28 rounded-full bg-grey"><img src="images/testimony1.png" alt="user" className="w-full h-full bg-cover"/></div>
-                  <div className="w-28 h-28 rounded-full bg-grey"><img src="images/testimony2.png" alt="user" className="w-full h-full bg-cover"/></div>
-                  <div className="w-28 h-28 rounded-full bg-grey"><img src="images/testimony3.png" alt="user" className="w-full h-full bg-cover"/></div>
+                <div className="flex flex-col gap-4 lg:gap-8">
+                  <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony1.png" alt="user" className="w-full h-full bg-cover"/></div>
+                  <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony2.png" alt="user" className="w-full h-full bg-cover"/></div>
+                  <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony3.png" alt="user" className="w-full h-full bg-cover"/></div>
                 </div>
                 </div>
               </div>
