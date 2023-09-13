@@ -3,7 +3,7 @@ export const Startups = [
         id: 1,
         title: 'Saav',
         desc: 'Saav is a platform where you can create your online store for your business within 30 seconds. Saav is founded in 2019 and has more than 1000 users.',
-        image: 'saav-img.png'
+        image: 'saav-img2.png'
     },
     {
         id: 2,
