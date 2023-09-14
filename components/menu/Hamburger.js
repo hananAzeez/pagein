@@ -26,7 +26,7 @@ const Hamburger = ({ state }) => {
     // If the menu is open and we click the menu button to close it.
     if (state.clicked === false) {
       // If menu is closed and we want to open it.
-
+      gsap.set('body', { overflow: 'auto' });
       staggerRevealClose(reveal2, reveal1);
       // Set menu to display none
       gsap.to(menuLayer, { duration: 1, css: { display: "none" } });
@@ -35,6 +35,7 @@ const Hamburger = ({ state }) => {
       (state.clicked === true && state.initial === null)
     ) {
       // Set menu to display block
+      gsap.set('body', { overflow: 'hidden' });
       gsap.to(menuLayer, { duration: 0, css: { display: "block" } });
       //Allow menu to have height of 100%
       gsap.to([reveal1, reveal2], {
