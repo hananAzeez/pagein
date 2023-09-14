@@ -201,7 +201,6 @@ body {
  .container {
 	 width: 1280px;
 	 min-width: 1280px;
-   position: absolute;
 	 margin: 0 auto;
 }
  .container .wrapper {
@@ -295,12 +294,14 @@ body {
 }
  header .hamburger-menu .menu-layer .wrapper {
 	 position: relative;
+   width: 100%;
 }
  header .hamburger-menu .menu-layer .wrapper .menu-links {
 	 display: flex;
 	 justify-content: space-between;
 	 align-items: center;
 	 position: relative;
+   width: 100%;
 	 top: 200px;
 }
  header .hamburger-menu .menu-layer .wrapper .menu-links nav {
@@ -319,8 +320,10 @@ body {
 	 overflow: hidden;
 	 position: relative;
 	 width: 700px;
+   text-align: left;
 }
  header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li a {
+  font-family: 'Syne', 'Saira', sans-serif;
 	 position: absolute;
 	 color: #303030;
 	 text-decoration: none;
@@ -332,13 +335,17 @@ body {
 	 color: #303030;
 	 width: 300px;
 }
- header .hamburger-menu .menu-layer .wrapper .menu-links .info h3 {
-	 font-size: 1.2rem;
+ header .hamburger-menu .menu-layer .wrapper .menu-links .info h6 {
+	 font-size: 20px;
 	 margin: 8px auto;
+   font-family: 'Syne', 'Saira', sans-serif;
+   font-weight: 500;
+   text-align: left;
 }
  header .hamburger-menu .menu-layer .wrapper .menu-links .info p {
 	 margin: 0 auto;
 	 font-size: 0.8rem;
+
 }
 
 .toggle-btn-pc {

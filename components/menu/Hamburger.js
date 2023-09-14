@@ -55,6 +55,7 @@ const Hamburger = ({ state }) => {
         ref={el => (reveal1 = el)}
         className='menu-secondary-background-color'></div>
       <div ref={el => (reveal2 = el)} className='menu-layer'>
+        <h1 className="text-offBlack absolute left-20 top-10 text-2xl font-bold">Pagein</h1>
         <div className='container'>
           <div className='wrapper'>
             <div className='menu-links'>
@@ -99,13 +100,10 @@ const Hamburger = ({ state }) => {
                 </ul>
               </nav>
               <div ref={el => (info = el)} className='info'>
-                <h3>Our Promise</h3>
-                <p>
-                  The passage experienced a surge in popularity during the 1960s
-                  when Letraset used it on their dry-transfer sheets, and again
-                  during the 90s as desktop publishers bundled the text with
-                  their software.
-                </p>
+                <h6>pagein@gmail.com</h6>
+                <h6>990 757 8965</h6>
+                <h6>Koduvally, kozhikode <br />
+Kerala, India 673572</h6>
               </div>
             </div>
           </div>
