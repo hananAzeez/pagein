@@ -196,7 +196,231 @@ body {
 
 
 /* MENU */
-:root {
+
+
+ .container {
+	 width: 1280px;
+	 min-width: 1280px;
+   position: absolute;
+	 margin: 0 auto;
+}
+ .container .wrapper {
+	 padding: 0 48px;
+}
+ .container .wrapper .home {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 height: 100%;
+	 width: 100%;
+}
+ .container .wrapper .home p {
+	 font-size: 0.75rem;
+	 letter-spacing: 0.3rem;
+	 text-transform: uppercase;
+	 font-weight: 500;
+}
+ .container .wrapper .home h5 {
+	 margin-top: 260px;
+	 font-size: 24px;
+	 font-weight: 600;
+	 padding-right: 360px;
+}
+ /* header {
+	 height: 100px;
+} */
+ header .inner-header {
+	 position: relative;
+	 z-index: 10;
+	 /* height: 100px; */
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+}
+ header .inner-header .logo a {
+	 font-weight: 700;
+	 font-size: 1rem;
+	 text-decoration: none;
+	 color: #303030;
+}
+ header .inner-header .menu button {
+	 border: none;
+	 background: none;
+	 outline: none;
+	 cursor: pointer;
+	 font-size: 0.8rem;
+	 mix-blend-mode: difference;
+}
+ header .hamburger-menu {
+	 display: none;
+	 z-index: 9;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 position: fixed;
+	 height: 100%;
+	 width: 100%;
+}
+ header .hamburger-menu .menu-secondary-background-color {
+	 background: #303030;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 position: fixed;
+	 height: 100%;
+	 width: 100%;
+	 z-index: -1;
+}
+ header .hamburger-menu .menu-layer {
+	 position: relative;
+	 background: #d5ff3f;
+	 height: 100%;
+	 overflow: hidden;
+}
+ header .hamburger-menu .menu-layer .menu-city-background {
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 position: absolute;
+	 height: 100%;
+	 width: 100%;
+	 opacity: 0;
+	 background-size: cover;
+	 background-repeat: no-repeat;
+	 animation-name: backgroundEffect;
+	 animation-duration: 30s;
+	 animation-iteration-count: infinite;
+}
+ header .hamburger-menu .menu-layer .wrapper {
+	 position: relative;
+}
+ header .hamburger-menu .menu-layer .wrapper .menu-links {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 position: relative;
+	 top: 200px;
+}
+ header .hamburger-menu .menu-layer .wrapper .menu-links nav {
+	 display: block;
+}
+ header .hamburger-menu .menu-layer .wrapper .menu-links nav ul {
+	 margin: 0;
+	 padding: 0;
+}
+ header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li {
+	 list-style: none;
+	 font-size: 6rem;
+	 font-weight: 700;
+	 cursor: pointer;
+	 height: 135px;
+	 overflow: hidden;
+	 position: relative;
+	 width: 700px;
+}
+ header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li a {
+	 position: absolute;
+	 color: #303030;
+	 text-decoration: none;
+}
+ header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li a:hover {
+	 color: #303030;
+}
+ header .hamburger-menu .menu-layer .wrapper .menu-links .info {
+	 color: #303030;
+	 width: 300px;
+}
+ header .hamburger-menu .menu-layer .wrapper .menu-links .info h3 {
+	 font-size: 1.2rem;
+	 margin: 8px auto;
+}
+ header .hamburger-menu .menu-layer .wrapper .menu-links .info p {
+	 margin: 0 auto;
+	 font-size: 0.8rem;
+}
+
+.toggle-btn-pc {
+  position: fixed;
+  top:0;
+  right: 0;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px;
+  z-index: 10;
+}
+
+.btn-outline {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  border: 1px solid white;
+}
+
+.btn-outline-1 {
+  border-radius: 50%;
+  background-color: #333333;
+}
+
+#hamburger {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+#hamburger span {
+  display: inline-block;
+  width: 24px;
+  height: 1.25px;
+  background: white;
+  transition: transform 0.25s;
+}
+#hamburger span::before{
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 1.25px;
+  background: white;
+  transform: translateY(-4px);
+  transition: transform 0.25s;
+}
+
+#hamburger.active span {
+  transform: rotate(45deg);
+}
+#hamburger.active span::before {
+  top: unset;
+  width: 24px;
+  transform: rotate(-90deg);
+}
+
+
+
+ @keyframes backgroundEffect {
+	 0% {
+		 background-position: 0% 0%;
+	}
+	 25% {
+		 background-position: 40% 10%;
+	}
+	 50% {
+		 background-position: 0 10%;
+	}
+	 75% {
+		 background-position: 10% 40%;
+	}
+	 100% {
+		 background-position: 0% 0%;
+	}
+}
+ 
+/* :root {
   --bg: #ECEEF3;
   --link-color: #303030;
   --overlay-bg: #D5FF3F;
@@ -349,7 +573,7 @@ svg path {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .menu {
@@ -392,7 +616,7 @@ svg path {
   display: block;
   transition: all ease-in;
 }
-
+ */
 
 /* STARTUP HOVER */
 

@@ -7,7 +7,7 @@ import { CustomEase } from "gsap/dist/CustomEase";
 import Observer from "gsap/dist/Observer";
 import TopRightArrow from "./../../components/icons/icons";
 import RightArrow from "./../../components/icons/rightArrow";
-import Star from "./../../components/icons/star";
+import Header from "./../../components/menu/Header"
 import { Startups } from "../../utils/startups";
 import CSSRulePlugin from "gsap/dist/CSSRulePlugin";
 
@@ -359,124 +359,129 @@ const Hero = () => {
     // MENU
     // \\\\\\\\\\\\\\\\\\\\\\\
 
-    const menuTl = gsap.timeline({ paused: true});
-    let path = document.querySelector("path")
-    let spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
+    // const menuTl = gsap.timeline({ paused: true});
+    // let path = document.querySelector("path")
+    // let spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
 
-    gsap.set(spanBefore, { background: "#fff" });
-    gsap.set(".menu", { visibility: "hidden"});
-    gsap.set(".overlay", { visibility: "hidden"});
-    gsap.set(".toggle-btn-pc", { visibility: "hidden"})
-    // toggle menu
-    function revealMenu() {
-      revealMenuItems();
-      const hamburger = document.getElementById("hamburger");
-      const toggleBtn = document.getElementById("toggle-btn")
-      const toggleBtnPc = document.getElementById("toggle-btn-pc")
+    // gsap.set(spanBefore, { background: "#fff" });
+    // gsap.set(".menu", { visibility: "hidden"});
+    // gsap.set(".overlay", { visibility: "hidden"});
+    // gsap.set(".toggle-btn-pc", { visibility: "hidden"})
+    // // toggle menu
+    // function revealMenu() {
+    //   revealMenuItems();
+    //   const hamburger = document.getElementById("hamburger");
+    //   const toggleBtn = document.getElementById("toggle-btn")
+    //   const toggleBtnPc = document.getElementById("toggle-btn-pc")
 
-      toggleBtn.onclick = function (e) {
-        console.log('clicked')
-        hamburger.classList.toggle("active");
-        menuTl.reversed(!menuTl.reversed())
-      }
+    //   toggleBtn.onclick = function (e) {
+    //     console.log('clicked')
+    //     hamburger.classList.toggle("active");
+    //     menuTl.reversed(!menuTl.reversed())
+    //   }
 
-      toggleBtnPc.onclick = function (e) {
-        hamburger.classList.toggle("active");
-        menuTl.reversed(!menuTl.reversed())
-      }
-    }
-    revealMenu();
+    //   toggleBtnPc.onclick = function (e) {
+    //     hamburger.classList.toggle("active");
+    //     menuTl.reversed(!menuTl.reversed())
+    //   }
+    // }
 
-    function revealMenuItems() {
-      const start = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
-      const end = "M0,1005S175,995,500,995s500,5,500,5V0H0Z";
+    // function revealMenuItems() {
+    //   const start = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+    //   const end = "M0,1005S175,995,500,995s500,5,500,5V0H0Z";
 
-      const power2 = "power2.inOut";
-      const power4 = "power4.inOut";
-      menuTl.set('body', { overflow: 'hidden' });
+    //   const power2 = "power2.inOut";
+    //   const power4 = "power4.inOut";
+    //   menuTl.set('body', { overflow: 'hidden' });
 
-      menuTl.to(".overlay", {
-        visibility: "visible"
-      })
+    //   menuTl.to(".overlay", {
+    //     visibility: "visible"
+    //   }, "-=0.5")
 
-      menuTl.to("#hamburger", {
-        duration: 1.25,
-        marginTop: "-5px",
-        x: -40,
-        y: 40,
-        ease: power4,
-      })
-
-
-      menuTl.to("#hamburger span", {
-        duration: 1,
-        background: "#fff",
-        ease: power2
-      }, "<")
-
-      menuTl.to(spanBefore, {
-        duration: 1,
-        background: "#fff",
-        ease: power2,
-      },
-      "<"
-      )
-
-      menuTl.to(".btn .btn-outline", {
-        duration: 1.25,
-        x: -40,
-        y: 40,
-        width: "140px",
-        height: "140px",
-        border: "1px solid #fff",
-        ease: power4,
-      },
-      "<"
-      )
-      menuTl.to(".btn .btn-outline-mobile", {
-        duration: 1.25,
-        x: -40,
-        y: 40,
-        width: "140px",
-        height: "140px",
-        border: "1px solid #fff",
-        ease: power4,
-      },
-      "<"
-      )
-
-      menuTl.to(path, {
-        duration: 0.8,
-        attr: {
-          d: start,
-
-        },
-        ease: power2.easeIn,
-      }, "<").to(path, {
-        duration: 0.8,
-        attr: {
-          d: end,
-        },
-        ease: power2.easeIn,
-      })
-
-      menuTl.to(".menu",{
-        duration: 1,
-        visibility: "visible",
-      }, "-=0.5");
+    //   menuTl.to("#hamburger", {
+    //     duration: 1.25,
+    //     marginTop: "-5px",
+    //     x: -40,
+    //     y: 40,
+    //     ease: power4,
+    //   })
 
 
-      menuTl.to(".menu-item > a",{
-        duration: 1,
-        top: 0,
-        ease: "power3.out",
-        stagger: {
-          amount: 0.5,
-        }
-      },
-      "-=1"
-      ).reverse();
-    }
+    //   menuTl.to("#hamburger span", {
+    //     duration: 1,
+    //     background: "#fff",
+    //     ease: power2
+    //   }, "<")
+
+    //   menuTl.to(spanBefore, {
+    //     duration: 1,
+    //     background: "#fff",
+    //     ease: power2,
+    //   },
+    //   "<"
+    //   )
+
+    //   menuTl.to(".btn .btn-outline", {
+    //     duration: 1.25,
+    //     x: -40,
+    //     y: 40,
+    //     width: "140px",
+    //     height: "140px",
+    //     border: "1px solid #fff",
+    //     ease: power4,
+    //   },
+    //   "<"
+    //   )
+    //   menuTl.to(".btn .btn-outline-mobile", {
+    //     duration: 1.25,
+    //     x: -40,
+    //     y: 40,
+    //     width: "140px",
+    //     height: "140px",
+    //     border: "1px solid #fff",
+    //     ease: power4,
+    //   },
+    //   "<"
+    //   )
+
+    //   menuTl.to(path, {
+    //     duration: 0.8,
+    //     attr: {
+    //       d: start,
+
+    //     },
+    //     ease: power2.easeIn,
+    //   }, "<").to(path, {
+    //     duration: 0.8,
+    //     attr: {
+    //       d: end,
+    //     },
+    //     ease: power2.easeIn,
+    //   })
+
+    //   menuTl.to(".menu",{
+    //     duration: 1,
+    //     visibility: "visible",
+    //   }, "-=0.5");
+
+
+    //   menuTl.to(".menu-item > a",{
+    //     duration: 1,
+    //     top: 0,
+    //     ease: "power3.out",
+    //     stagger: {
+    //       amount: 0.5,
+    //     }
+    //   },
+    //   "-=1"
+    //   ).reverse();
+    // }
+
+    // revealMenu();
+
+
+
+
     // how to reveal
 
     // gsap.set('#toggle-btn', opacity)
@@ -490,17 +495,17 @@ const Hero = () => {
     //   scrub: 1,
     // })
 
-    gsap.to(".toggle-btn-pc", {
-      duration: 1,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: steps,
-        start: 'top center',
-        scrub: true, // Scrub the animation as you scroll
-          toggleActions: "play none none reverse",
-      },
-      visibility: "visible",
-    })
+    // gsap.to(".toggle-btn-pc", {
+    //   duration: 1,
+    //   ease: "power2.inOut",
+    //   scrollTrigger: {
+    //     trigger: steps,
+    //     start: 'top center',
+    //     scrub: true, // Scrub the animation as you scroll
+    //       toggleActions: "play none none reverse",
+    //   },
+    //   visibility: "visible",
+    // })
 
 
     
@@ -537,7 +542,7 @@ startupDivs.forEach(startup => {
     return () => {};
   }, []);
   return (
-    <div className="section-container overflow-x-hidden">
+    <div className="section-container overflow-x-hidden relative">
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite h-screen py-8 scrollSection">
         <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-white rounded-xl bg">
           <div className="nav-links flex items-center gap-8">
@@ -556,14 +561,16 @@ startupDivs.forEach(startup => {
         </header>
 
         {/* MENU */}
-        <div className="btn hidden toggle-btn-pc fixed top-0 right-0 w-24 h-24 lg:flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn-pc">
+        
+        <Header />    
+        {/* <div className="btn hidden toggle-btn-pc fixed top-0 right-0 w-24 h-24 lg:flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn-pc">
           <div className="btn-outline btn-outline-1 bg-[#333]"></div>
-          <div id="hamburger" className="hamburger">
+          <div id="hamburger" className="hamburger-btn">
             <span></span>
           </div>
-        </div>
+        </div> */}
         {/* mobile toggle menu icon */}
-        <div className="btn lg:hidden fixed top-0 right-0 w-16 h-16 flex justify-center items-center m-5 cursor-pointer z-[200]" id="toggle-btn">
+        {/* <div className="btn lg:hidden fixed top-0 right-0 w-16 h-16 flex justify-center items-center m-5 cursor-pointer z-[200]" id="toggle-btn">
           <div className="btn-outline-mobile btn-outline-1 bg-[#333] absolute w-16 h-16 border border-white"></div>
           <div id="hamburger" className="hamburger" >
             <span></span>
@@ -618,18 +625,10 @@ startupDivs.forEach(startup => {
                   <a href="#">Koduvally, kozhikode <br />Kerala 673572</a>
                   <div className="menu-item-revealer"></div>
                 </div>
-
-                {/* <div className="wrapper">
-                <div className="menu-item">
-                  <a href="#">Credits</a>
-                  <div className="menu-item-revealer"></div>
-                </div>
-
-                </div> */}
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* MENU */}
         <div className="max-w-7xl mx-auto">
           <div className="h_container  flex flex-col   px-2 py-16 ">
