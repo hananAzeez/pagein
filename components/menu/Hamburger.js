@@ -55,7 +55,7 @@ const Hamburger = ({ state }) => {
         ref={el => (reveal1 = el)}
         className='menu-secondary-background-color'></div>
       <div ref={el => (reveal2 = el)} className='menu-layer'>
-        <h1 className="text-offBlack absolute left-20 top-10 text-2xl font-bold">Pagein</h1>
+        <h1 className="text-offBlack absolute left-10 lg:left-20 top-10 text-2xl font-bold">Pagein</h1>
         <div className='container'>
           <div className='wrapper'>
             <div className='menu-links'>
