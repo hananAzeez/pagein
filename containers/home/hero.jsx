@@ -448,8 +448,8 @@ startupDivs.forEach(startup => {
         
         <Header />    
         <div className="max-w-7xl mx-auto">
-          <div className="h_container  flex flex-col   px-2 py-16 ">
-          <h1 className="h_title text-center relative w-full text-black text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[104px] lg:leading-[117px] lg:tracking-[-1.04px]">
+          <div className="h_container  flex flex-col   px-2 pt-16 ">
+          <h1 className="h_title text-center relative w-full text-black text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[106px] lg:tracking-[-3.84px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                   We&nbsp;
@@ -466,7 +466,7 @@ startupDivs.forEach(startup => {
                 </span>
               </span>
             </h1>
-            <h1 className="h_title text-center relative flex w-full flex-col justify-center items-center lg:items-center  lg:flex-row text-black text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[104px] lg:leading-[117px] lg:tracking-[-1.04px]">
+            <h1 className="h_title text-center relative flex w-full flex-col justify-center items-center lg:items-center  lg:flex-row text-black text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[117px] lg:tracking-[-3.84px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block xl:w-[286px] translate-y-full pb-1.5 pt-6 will-change-transform highlight">
                   Web&nbsp;
@@ -477,52 +477,44 @@ startupDivs.forEach(startup => {
                   Solutions
                 </span>
               </span>
-              {/* <div
-                ref={heroInfiniteRef}
-                className=" absolute bottom-[-35vw] left-[25%] ml-10 -mr-10 h-8 w-40  overflow-hidden rounded-2xl border border-black text-xs font-normal uppercase opacity-0  md:left-[40%]   md:h-16  md:w-52 md:text-xl lg:relative lg:left-8 lg:bottom-0 lg:right-[1vw] lg:w-[16vw]  lg:leading-10 bg-primary"
-              >
-                <div className="group flex h-full cursor-pointer items-center whitespace-nowrap">
-                  <span className=" group-hover:pause animate-loopL">
-                    <span className=" group-hover:pause flex items-center gap-2 ">
-                      Get a quote&nbsp;{" "}
-                      <img
-                        src="/icons/top-right-arrow.svg"
-                        alt="top-right-arrow"
-                        width={16}
-                        height={16}
-                      />
-                      Get a quote&nbsp;{" "}
-                      <img
-                        src="/icons/top-right-arrow.svg"
-                        alt="top-right-arrow"
-                        width={16}
-                        height={16}
-                      />
-                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{" "}
-                    </span>
-                  </span>
-                  <span className=" group-hover:pause animate-loopL">
-                    <span className=" group-hover:pause flex items-center gap-2 ">
-                      Get a quote&nbsp;{" "}
-                      <img
-                        src="/icons/top-right-arrow.svg"
-                        alt="top-right-arrow"
-                        width={16}
-                        height={16}
-                      />
-                      Get a quote&nbsp;{" "}
-                      <img
-                        src="/icons/top-right-arrow.svg"
-                        alt="top-right-arrow"
-                        width={16}
-                        height={16}
-                      />
-                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{" "}
-                    </span>
-                  </span>
-                </div>
-              </div> */}
             </h1>
+          </div>
+
+          <div className="h_container  flex flex-col   px-2 py-9 ">
+          <h6 className="h_title text-center relative w-full text-black text-xl font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
+              <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
+                Transforming Ideas into Seamless&nbsp;
+                </span>
+              </span>
+              <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
+                Interfaces Since 2019.&nbsp;
+                </span>
+              </span>
+              <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
+                Partner with Us to Design, &nbsp;
+                </span>
+              </span>
+            </h6>
+            <h6 className="h_title text-center relative w-full text-black text-xl font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
+              <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                <span className="inline-block translate-y-full pb-1.5 pt-6 will-change-transform">
+                Build, and Deliver&nbsp;
+                </span>
+              </span>
+              <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
+                Extraordinary Digital&nbsp;
+                </span>
+              </span>
+              <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
+                Products and Services.&nbsp;
+                </span>
+              </span>
+            </h6>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 h-96">
