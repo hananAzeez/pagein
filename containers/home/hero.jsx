@@ -359,15 +359,7 @@ const Hero = () => {
     // MENU
     // \\\\\\\\\\\\\\\\\\\\\\\
 
-    // const menuTl = gsap.timeline({ paused: true});
-    // let path = document.querySelector("path")
-    // let spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
-
-    // gsap.set(spanBefore, { background: "#fff" });
-    // gsap.set(".menu", { visibility: "hidden"});
-    // gsap.set(".overlay", { visibility: "hidden"});
     // gsap.set(".toggle-btn-pc", { visibility: "hidden"})
-    // // toggle menu
     // function revealMenu() {
     //   revealMenuItems();
     //   const hamburger = document.getElementById("hamburger");
@@ -385,129 +377,6 @@ const Hero = () => {
     //     menuTl.reversed(!menuTl.reversed())
     //   }
     // }
-
-    // function revealMenuItems() {
-    //   const start = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
-    //   const end = "M0,1005S175,995,500,995s500,5,500,5V0H0Z";
-
-    //   const power2 = "power2.inOut";
-    //   const power4 = "power4.inOut";
-    //   menuTl.set('body', { overflow: 'hidden' });
-
-    //   menuTl.to(".overlay", {
-    //     visibility: "visible"
-    //   }, "-=0.5")
-
-    //   menuTl.to("#hamburger", {
-    //     duration: 1.25,
-    //     marginTop: "-5px",
-    //     x: -40,
-    //     y: 40,
-    //     ease: power4,
-    //   })
-
-
-    //   menuTl.to("#hamburger span", {
-    //     duration: 1,
-    //     background: "#fff",
-    //     ease: power2
-    //   }, "<")
-
-    //   menuTl.to(spanBefore, {
-    //     duration: 1,
-    //     background: "#fff",
-    //     ease: power2,
-    //   },
-    //   "<"
-    //   )
-
-    //   menuTl.to(".btn .btn-outline", {
-    //     duration: 1.25,
-    //     x: -40,
-    //     y: 40,
-    //     width: "140px",
-    //     height: "140px",
-    //     border: "1px solid #fff",
-    //     ease: power4,
-    //   },
-    //   "<"
-    //   )
-    //   menuTl.to(".btn .btn-outline-mobile", {
-    //     duration: 1.25,
-    //     x: -40,
-    //     y: 40,
-    //     width: "140px",
-    //     height: "140px",
-    //     border: "1px solid #fff",
-    //     ease: power4,
-    //   },
-    //   "<"
-    //   )
-
-    //   menuTl.to(path, {
-    //     duration: 0.8,
-    //     attr: {
-    //       d: start,
-
-    //     },
-    //     ease: power2.easeIn,
-    //   }, "<").to(path, {
-    //     duration: 0.8,
-    //     attr: {
-    //       d: end,
-    //     },
-    //     ease: power2.easeIn,
-    //   })
-
-    //   menuTl.to(".menu",{
-    //     duration: 1,
-    //     visibility: "visible",
-    //   }, "-=0.5");
-
-
-    //   menuTl.to(".menu-item > a",{
-    //     duration: 1,
-    //     top: 0,
-    //     ease: "power3.out",
-    //     stagger: {
-    //       amount: 0.5,
-    //     }
-    //   },
-    //   "-=1"
-    //   ).reverse();
-    // }
-
-    // revealMenu();
-
-
-
-
-    // how to reveal
-
-    // gsap.set('#toggle-btn', opacity)
-    // gsap.to('#toggle-btn', {
-    //   scrollTrigger: {
-    //     trigger: steps,
-    //     start: 'top center',
-    //     toggleActions: 'play none reverse none',
-    //   },
-    //   opacity: 1,
-    //   scrub: 1,
-    // })
-
-    // gsap.to(".toggle-btn-pc", {
-    //   duration: 1,
-    //   ease: "power2.inOut",
-    //   scrollTrigger: {
-    //     trigger: steps,
-    //     start: 'top center',
-    //     scrub: true, // Scrub the animation as you scroll
-    //       toggleActions: "play none none reverse",
-    //   },
-    //   visibility: "visible",
-    // })
-
-
     
     // \\\\\\\\\\\\\\\\\\\\\\\
     // STARTUPS SECTION
@@ -539,6 +408,21 @@ startupDivs.forEach(startup => {
 });
 
 
+// \\\\\\\\\\\\\\\\\\\\\\\
+    // TESTIMONIALS SECTION
+    // \\\\\\\\\\\\\\\\\\\\\\\
+
+    const reviewProfiles = document.querySelector(".review-profiles")
+
+    gsap.to(reviewProfiles, {
+      position: "fixed",
+      scrollTrigger: {
+        trigger: testimonials,
+        start: "top top",
+        end: "bottom bottom"
+      }
+    })
+
     return () => {};
   }, []);
   return (
@@ -565,7 +449,7 @@ startupDivs.forEach(startup => {
         <Header />    
         <div className="max-w-7xl mx-auto">
           <div className="h_container  flex flex-col   px-2 py-16 ">
-          <h1 className="h_title  relative w-full text-black text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[104px] lg:leading-[117px] lg:tracking-[-1.04px]">
+          <h1 className="h_title text-center relative w-full text-black text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[104px] lg:leading-[117px] lg:tracking-[-1.04px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                   We&nbsp;
@@ -582,7 +466,7 @@ startupDivs.forEach(startup => {
                 </span>
               </span>
             </h1>
-            <h1 className="h_title relative flex w-full flex-col items-start lg:items-center  lg:flex-row text-black text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[104px] lg:leading-[117px] lg:tracking-[-1.04px]">
+            <h1 className="h_title text-center relative flex w-full flex-col justify-center items-center lg:items-center  lg:flex-row text-black text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[104px] lg:leading-[117px] lg:tracking-[-1.04px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block xl:w-[286px] translate-y-full pb-1.5 pt-6 will-change-transform highlight">
                   Web&nbsp;
@@ -593,7 +477,7 @@ startupDivs.forEach(startup => {
                   Solutions
                 </span>
               </span>
-              <div
+              {/* <div
                 ref={heroInfiniteRef}
                 className=" absolute bottom-[-35vw] left-[25%] ml-10 -mr-10 h-8 w-40  overflow-hidden rounded-2xl border border-black text-xs font-normal uppercase opacity-0  md:left-[40%]   md:h-16  md:w-52 md:text-xl lg:relative lg:left-8 lg:bottom-0 lg:right-[1vw] lg:w-[16vw]  lg:leading-10 bg-primary"
               >
@@ -637,7 +521,7 @@ startupDivs.forEach(startup => {
                     </span>
                   </span>
                 </div>
-              </div>
+              </div> */}
             </h1>
           </div>
 
@@ -979,7 +863,7 @@ startupDivs.forEach(startup => {
                     <img src="icons/leftSolidArrow.png" alt="current" className="w-5 lg:w-8 h-5 lg:h-8"/>
                     <h1 className="opacity-0">p</h1>
                   </div>
-                <div className="flex flex-col gap-4 lg:gap-8">
+                <div className="review-profiles flex flex-col gap-4 lg:gap-8">
                   <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony1.png" alt="user" className="w-full h-full bg-cover"/></div>
                   <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony2.png" alt="user" className="w-full h-full bg-cover"/></div>
                   <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony3.png" alt="user" className="w-full h-full bg-cover"/></div>
