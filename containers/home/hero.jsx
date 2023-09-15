@@ -427,7 +427,7 @@ startupDivs.forEach(startup => {
   }, []);
   return (
     <div className="section-container overflow-x-hidden relative">
-      <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite h-screen py-8 scrollSection">
+      <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection">
         <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-white rounded-xl bg">
           <div className="nav-links flex items-center gap-8">
             <p className="menu-links hover-this ">Works</p>
@@ -518,8 +518,15 @@ startupDivs.forEach(startup => {
           </div>
 
           <div className="flex items-center justify-center gap-5">
-            <button className="bg-primary py-4 px-8 rounded-2xl text-lg font-bold">Get a quote</button>
+            <button className="bg-primary border border-primary py-4 px-8 rounded-2xl text-lg font-bold">Get a quote</button>
             <button className="bg-offBlack text-white border border-white border-opacity-50 py-4 px-8 rounded-2xl text-lg font-bold">Talk to us</button>
+          </div>
+
+          <div className="my-16 flex items-center justify-center">
+            <img src="/images/hero-1.png" alt="mockup" className="mr-3 mb-9"/>
+            <img src="/images/hero-2.png" alt="mockup" className="mr-4"/>
+            <img src="/images/hero-3.png" alt="mockup" className="mb-9"/>
+            <img src="/images/hero-4.png" alt="mockup" className="ml-1"/>
           </div>
 
           
