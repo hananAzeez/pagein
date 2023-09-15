@@ -269,14 +269,14 @@ const Hero = () => {
     const testimonials = document.querySelector('.testimonials')
     const cta = document.querySelector('.cta')
 
-    ScrollTrigger.create({
-      trigger: hero, // Trigger when the hero section is in view
-      start: 'top top',
-      endTrigger: steps, // End when the steps section is in view
-      end: 'top top',
-      snap: 1,
-      duration: 0.2
-    });
+    // ScrollTrigger.create({
+    //   trigger: hero, // Trigger when the hero section is in view
+    //   start: 'top top',
+    //   endTrigger: steps, // End when the steps section is in view
+    //   end: 'top top',
+    //   snap: 1,
+    //   duration: 0.2
+    // });
     ScrollTrigger.create({
       trigger: steps, // Trigger when the hero section is in view
       start: 'top top',
@@ -427,7 +427,8 @@ startupDivs.forEach(startup => {
   }, []);
   return (
     <div className="section-container overflow-x-hidden relative">
-      <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection">
+      <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
+        <div className="hero-clipath"><div className="clip-pathcontainer"></div><div className="clip-path"></div></div>
         <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-white rounded-xl bg">
           <div className="nav-links flex items-center gap-8">
             <p className="menu-links hover-this ">Works</p>
@@ -440,7 +441,7 @@ startupDivs.forEach(startup => {
           </div>
         </header>
         <header className="lg:hidden">
-        <h1 className="text-black text-2xl font-bold">Pagein</h1>
+        <h1 className="text-white text-2xl font-bold">Pagein</h1>
 
         </header>
 
@@ -523,14 +524,47 @@ startupDivs.forEach(startup => {
           </div>
 
           <div className="my-16 flex items-center justify-center">
-            <img src="/images/hero-1.png" alt="mockup" className="mr-3 mb-9"/>
-            <img src="/images/hero-2.png" alt="mockup" className="mr-4"/>
-            <img src="/images/hero-3.png" alt="mockup" className="mb-9"/>
-            <img src="/images/hero-4.png" alt="mockup" className="ml-1"/>
+            <img src="/images/hero-1.png" alt="mockup" className="mr-3 mb-9 rotate-6 z-[1]"/>
+            <img src="/images/hero-2.png" alt="mockup" className="mr-4 -rotate-[8deg]"/>
+            <img src="/images/hero-3.png" alt="mockup" className="mb-9 rotate-3"/>
+            <img src="/images/hero-4.png" alt="mockup" className="ml-[1px] -rotate-[8deg]"/>
           </div>
 
           
         </div>
+      </section>
+
+      <section className="bg-offWhite">
+      <div className="startups panel h-full xl:h-screen xl:flex xl:items-center xl:justify-center max-w-7xl mx-auto relative px-5 xl:px-0 ">
+            <div className="">
+              <h2 className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] mt-16">
+                We run startups that helps thousands
+              </h2>
+              <h6 className="mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-offBlack">
+                Empowering Solutions Through In-house Startup Ventures. We
+                Ideate and create amazing tech products for solving user
+                problems
+              </h6>
+              <div className="startup-container flex flex-col py-16">
+                {Startups.map((startup) => (
+                  <div
+                    className={`startup  grid grid-cols-1 xl:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer relative ${
+                      startup.id === 1 ? "border-y" : "border-b"
+                    } border-offBlack border-opacity-20 hover:bg-offBlack hover:bg-opacity-5`}
+                    key={startup.id}
+                  >
+                    <div className="img-wrapper"><img src={`/startups/${startup.image}`} alt="startup img" /></div>
+                    <h3 className="text-48 col-span-2 !text-offBlack">{startup.title}</h3>
+                    <p className="text-18 col-span-2 !text-offBlack">{startup.desc}</p>
+                    <div className="flex items-center justify-start xl:justify-end">
+                      <TopRightArrow />
+                    </div>
+                  </div>
+                ))}
+                {/* <img src="images/saavPopup.png" alt="product image" ref={saavPopup} className="w-[350px] startup-popup"/> */}
+              </div>
+            </div>
+          </div>
       </section>
 
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
