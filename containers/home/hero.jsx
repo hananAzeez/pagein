@@ -517,12 +517,12 @@ startupDivs.forEach(startup => {
             </h6>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 h-96">
-            <div className="heroLeft h-full col-span-2 rounded-3xl">
-              <img src="/images/hero-img-1.png" alt="" />
-            </div>
-            <div className="heroRight hidden lg:block h-full w-full bg-offBlack rounded-3xl"></div>
+          <div className="flex items-center justify-center gap-5">
+            <button className="bg-primary py-4 px-8 rounded-2xl text-lg font-bold">Get a quote</button>
+            <button className="bg-offBlack text-white border border-white border-opacity-50 py-4 px-8 rounded-2xl text-lg font-bold">Talk to us</button>
           </div>
+
+          
         </div>
       </section>
 
