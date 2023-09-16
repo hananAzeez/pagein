@@ -521,7 +521,7 @@ body {
 }
 
 /* new hero */
-/* .hero::before {
+.hero::before {
   content: "";
   width: 100%;
   height:100%;
@@ -531,4 +531,16 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 70%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 70%);
 background: black;
-} */
+}
+.hero-clipath::before {
+  content: "";
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 70%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 70%);
+background: #303030;
+opacity: 0.5;
+}

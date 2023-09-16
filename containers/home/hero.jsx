@@ -428,8 +428,8 @@ startupDivs.forEach(startup => {
   return (
     <div className="section-container overflow-x-hidden relative">
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
-        <div className="hero-clipath"><div className="clip-pathcontainer"></div><div className="clip-path"></div></div>
-        <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-white rounded-xl bg">
+        <div className="hero-clipath"></div>
+        <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-white rounded-xl bg relative">
           <div className="nav-links flex items-center gap-8">
             <p className="menu-links hover-this ">Works</p>
             <p className="menu-links hover-this">Services</p>
@@ -450,7 +450,7 @@ startupDivs.forEach(startup => {
         <Header />    
         <div className="max-w-7xl mx-auto">
           <div className="h_container  flex flex-col   px-2 pt-16 ">
-          <h1 className="h_title text-center relative w-full text-black text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[106px] lg:tracking-[-3.84px]">
+          <h1 className="h_title text-center relative w-full text-white text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[106px] lg:tracking-[-3.84px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                   We&nbsp;
@@ -467,7 +467,7 @@ startupDivs.forEach(startup => {
                 </span>
               </span>
             </h1>
-            <h1 className="h_title text-center relative flex w-full flex-col justify-center items-center lg:items-center  lg:flex-row text-black text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[117px] lg:tracking-[-3.84px]">
+            <h1 className="h_title text-center relative flex w-full flex-col justify-center items-center lg:items-center  lg:flex-row text-white text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[117px] lg:tracking-[-3.84px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block xl:w-[286px] translate-y-full pb-1.5 pt-6 will-change-transform highlight">
                   Web&nbsp;
@@ -482,7 +482,7 @@ startupDivs.forEach(startup => {
           </div>
 
           <div className="h_container  flex flex-col   px-2 py-9 ">
-          <h6 className="h_title text-center relative w-full text-black text-xl font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
+          <h6 className="h_title text-center relative w-full text-white text-xl font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                 Transforming Ideas into Seamless&nbsp;
@@ -499,7 +499,7 @@ startupDivs.forEach(startup => {
                 </span>
               </span>
             </h6>
-            <h6 className="h_title text-center relative w-full text-black text-xl font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
+            <h6 className="h_title text-center relative w-full text-white text-xl font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block translate-y-full pb-1.5 pt-6 will-change-transform">
                 Build, and Deliver&nbsp;
@@ -518,7 +518,7 @@ startupDivs.forEach(startup => {
             </h6>
           </div>
 
-          <div className="flex items-center justify-center gap-5">
+          <div className="flex items-center justify-center gap-5 relative">
             <button className="bg-primary border border-primary py-4 px-8 rounded-2xl text-lg font-bold">Get a quote</button>
             <button className="bg-offBlack text-white border border-white border-opacity-50 py-4 px-8 rounded-2xl text-lg font-bold">Talk to us</button>
           </div>
