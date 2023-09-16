@@ -25,23 +25,20 @@ const Header = () => {
       setState({ clicked: false, menuName: "Menu" });
     });
 
-    const toggleButton = document.querySelector('.toggle-btn-pc');
+    const toggleButton = document.getElementById('toggle-btn-pc');
 
-    if (window.innerWidth >= 768) {
-      gsap.to(toggleButton,
-        {
-          opacity: 1,
-          duration: 1,
-          visibility: 'visible',
-          scrollTrigger: {
-            trigger: toggleButton, // Element that triggers the animation
-            start: "top 800px",
-            scrub: true,
-            toggleActions: "play none none none", // Control when the animation plays and reverses
-          },
-        }
-      );
-    }
+    gsap.set(toggleButton, { visibility: "hidden"})
+
+          gsap.to(toggleButton, {
+        duration: 1,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: '.startups',
+          start: 'top center',
+          scrub: 1, // Scrub the animation as you scroll
+        },
+        visibility: "visible",
+      })
 
     // Clean up the event listener when the component unmounts.
     return () => {
@@ -91,12 +88,21 @@ const Header = () => {
             <div className="menu">
               <button disabled={disabled} onClick={handleMenu}>
                 {/* {state.menuName} */}
-                <div className="btn toggle-btn-pc fixed top-0 right-0 w-24 h-24 flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn-pc">
+                <div className="btn toggle-btn-pc lg:hidden fixed top-0 right-0 w-24 h-24 flex justify-center items-center m-[2em] cursor-pointer z-[200]">
                   <div className="btn-outline btn-outline-1 bg-[#333]"></div>
-                <div id="hamburger" className="hamburger">
-            <span></span>
-          </div>
-        </div>
+                  <div id="hamburger" className="hamburger">
+                    <span></span>
+                  </div>
+                 </div>
+              </button>
+              <button disabled={disabled} onClick={handleMenu}>
+                {/* {state.menuName} */}
+                <div className="btn hidden toggle-btn-pc fixed top-0 right-0 w-24 h-24 lg:flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn-pc">
+                  <div className="btn-outline btn-outline-1 bg-[#333]"></div>
+                  <div id="hamburger" className="hamburger">
+                    <span></span>
+                  </div>
+                 </div>
               </button>
             </div>
           </div>

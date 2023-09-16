@@ -277,46 +277,46 @@ const Hero = () => {
     //   snap: 1,
     //   duration: 0.2
     // });
-    ScrollTrigger.create({
-      trigger: steps, // Trigger when the hero section is in view
-      start: 'top top',
-      endTrigger: stepOne, // End when the steps section is in view
-      end: 'top top',
-      snap: 1,
-      duration: 0.2
-    });
-    ScrollTrigger.create({
-      trigger: stepOne, // Trigger when the hero section is in view
-      start: 'top top',
-      endTrigger: blueprints, // End when the steps section is in view
-      end: 'top top',
-      snap: 1,
-      duration: 0.2
-    });
-    ScrollTrigger.create({
-      trigger: blueprints, // Trigger when the hero section is in view
-      start: 'top top',
-      endTrigger: stepTwo, // End when the steps section is in view
-      end: 'top top',
-      snap: 1,
-      duration: 0.2
-    });
-    ScrollTrigger.create({
-      trigger: stepTwo, // Trigger when the hero section is in view
-      start: 'top top',
-      endTrigger: stepTwoImgs, // End when the steps section is in view
-      end: 'top top',
-      snap: 1,
-      duration: 0.2
-    });
-    ScrollTrigger.create({
-      trigger: stepTwoImgs, // Trigger when the hero section is in view
-      start: 'top top',
-      endTrigger: startups, // End when the steps section is in view
-      end: 'top top',
-      snap: 1,
-      duration: 0.2
-    });
+    // ScrollTrigger.create({
+    //   trigger: steps, // Trigger when the hero section is in view
+    //   start: 'top top',
+    //   endTrigger: stepOne, // End when the steps section is in view
+    //   end: 'top top',
+    //   snap: 1,
+    //   duration: 0.2
+    // });
+    // ScrollTrigger.create({
+    //   trigger: stepOne, // Trigger when the hero section is in view
+    //   start: 'top top',
+    //   endTrigger: blueprints, // End when the steps section is in view
+    //   end: 'top top',
+    //   snap: 1,
+    //   duration: 0.2
+    // });
+    // ScrollTrigger.create({
+    //   trigger: blueprints, // Trigger when the hero section is in view
+    //   start: 'top top',
+    //   endTrigger: stepTwo, // End when the steps section is in view
+    //   end: 'top top',
+    //   snap: 1,
+    //   duration: 0.2
+    // });
+    // ScrollTrigger.create({
+    //   trigger: stepTwo, // Trigger when the hero section is in view
+    //   start: 'top top',
+    //   endTrigger: stepTwoImgs, // End when the steps section is in view
+    //   end: 'top top',
+    //   snap: 1,
+    //   duration: 0.2
+    // });
+    // ScrollTrigger.create({
+    //   trigger: stepTwoImgs, // Trigger when the hero section is in view
+    //   start: 'top top',
+    //   endTrigger: startups, // End when the steps section is in view
+    //   end: 'top top',
+    //   snap: 1,
+    //   duration: 0.2
+    // });
     // ScrollTrigger.create({
     //   trigger: startups, 
     //   start: 'top top',
@@ -356,29 +356,6 @@ const Hero = () => {
 
     
     // \\\\\\\\\\\\\\\\\\\\\\\
-    // MENU
-    // \\\\\\\\\\\\\\\\\\\\\\\
-
-    // gsap.set(".toggle-btn-pc", { visibility: "hidden"})
-    // function revealMenu() {
-    //   revealMenuItems();
-    //   const hamburger = document.getElementById("hamburger");
-    //   const toggleBtn = document.getElementById("toggle-btn")
-    //   const toggleBtnPc = document.getElementById("toggle-btn-pc")
-
-    //   toggleBtn.onclick = function (e) {
-    //     console.log('clicked')
-    //     hamburger.classList.toggle("active");
-    //     menuTl.reversed(!menuTl.reversed())
-    //   }
-
-    //   toggleBtnPc.onclick = function (e) {
-    //     hamburger.classList.toggle("active");
-    //     menuTl.reversed(!menuTl.reversed())
-    //   }
-    // }
-    
-    // \\\\\\\\\\\\\\\\\\\\\\\
     // STARTUPS SECTION
     // \\\\\\\\\\\\\\\\\\\\\\\
 const startupDivs = document.querySelectorAll('.startup');
@@ -414,14 +391,15 @@ startupDivs.forEach(startup => {
 
     const reviewProfiles = document.querySelector(".review-profiles")
 
-    gsap.to(reviewProfiles, {
-      position: "fixed",
-      scrollTrigger: {
-        trigger: testimonials,
-        start: "top top",
-        end: "bottom bottom"
-      }
-    })
+    // gsap.to(reviewProfiles, {
+    //   position: "fixed",
+    //   scrollTrigger: {
+    //     trigger: testimonials,
+    //     start: "top top",
+    //     end: "bottom bottom",
+    //     scrub: true
+    //   }
+    // })
 
     return () => {};
   }, []);
@@ -443,7 +421,6 @@ startupDivs.forEach(startup => {
         <header className="lg:hidden relative flex items-center justify-between">
         <h1 className="text-white text-2xl font-bold">Pagein</h1>
 
-        <Header />    
         </header>
         <div className="absolute">
         <Header />    
@@ -521,6 +498,7 @@ startupDivs.forEach(startup => {
               </span>
             </h6>
           </div>
+          {/* mobile description */}
           <div className="h_container md:hidden  flex flex-col   px-2 py-9 ">
           <h6 className="h_title  text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
@@ -550,7 +528,7 @@ startupDivs.forEach(startup => {
       <section className="bg-offWhite">
       <div className="startups panel h-full xl:h-screen xl:flex xl:items-center xl:justify-center max-w-7xl mx-auto relative px-5 xl:px-0 ">
             <div className="">
-              <h2 className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] mt-16">
+              <h2 className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16">
                 We run startups that helps thousands
               </h2>
               <h6 className="mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-offBlack">
@@ -794,41 +772,6 @@ startupDivs.forEach(startup => {
               />
             </div>
           </div>
-
-          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-          {/* \\\ STARTUPS SECTION */}
-          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-
-          <div className="startups panel h-full xl:h-screen xl:flex xl:items-center xl:justify-center max-w-7xl mx-auto relative px-5 xl:px-0">
-            <div className="">
-              <h2 className="text-white font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] mt-16">
-                We run startups that helps thousands
-              </h2>
-              <h6 className="mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-white">
-                Empowering Solutions Through In-house Startup Ventures. We
-                Ideate and create amazing tech products for solving user
-                problems
-              </h6>
-              <div className="startup-container flex flex-col py-16">
-                {Startups.map((startup) => (
-                  <div
-                    className={`startup  grid grid-cols-1 xl:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer relative ${
-                      startup.id === 1 ? "border-y-2" : "border-b-2"
-                    } border-white border-opacity-20 hover:bg-white hover:bg-opacity-5`}
-                    key={startup.id}
-                  >
-                    <div className="img-wrapper"><img src={`/startups/${startup.image}`} alt="startup img" /></div>
-                    <h3 className="text-48 col-span-2">{startup.title}</h3>
-                    <p className="text-18 col-span-2">{startup.desc}</p>
-                    <div className="flex items-center justify-start xl:justify-end">
-                      <TopRightArrow />
-                    </div>
-                  </div>
-                ))}
-                {/* <img src="images/saavPopup.png" alt="product image" ref={saavPopup} className="w-[350px] startup-popup"/> */}
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       
@@ -946,8 +889,8 @@ startupDivs.forEach(startup => {
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ CTA SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-          <div className="cta px-5 lg:px-0 panel pt-24 w-screen h-screen max-w-7xl mx-auto">
-            <div className="bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[128px]">
+          <div className="cta px-5 lg:px-0 panel pt-12 lg:pt-24 w-screen lg:h-screen max-w-7xl mx-auto">
+            <div className="bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[80px] lg:rounded-b-[128px]">
               <div className="flex items-center justify-center gap-5 lg:gap-14 w-full">
                 <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
                 <div className="stars flex items-center gap-6">
@@ -974,12 +917,12 @@ startupDivs.forEach(startup => {
 
             <footer>
               <div className="flex flex-col items-center justify-center mt-10 lg:mt-20 w-full">
-                <h1 className="text-primary text-3xl lg:text-5xl font-bold">Pagein</h1>
-                <div className="flex justify-between items-center w-full text-primary  mt-8 lg:mt-16">
+                <h1 className="text-primary text-3xl lg:text-5xl font-bold pb-10">Pagein</h1>
+                {/* <div className="flex justify-between items-center w-full text-primary  mt-8 lg:mt-16">
                   <h6 className="text-sm lg:text-xl font-normal">TERMS AND CONDITION</h6>
                   <h6 className="text-sm lg:text-xl">@2023 PAGEIN ALL RIGHTS RESERVED</h6>
                   <h6 className="text-sm lg:text-xl">PRIVACY POLICY</h6>
-                </div>
+                </div> */}
               </div>
             </footer>
           </div>
