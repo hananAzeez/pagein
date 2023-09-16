@@ -68,7 +68,7 @@ const Hamburger = ({ state }) => {
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line1 = el)}
                       href='/opportunities'>
-                      WORK
+                      Work
                     </Link>
                   </li>
                   <li>
@@ -77,7 +77,7 @@ const Hamburger = ({ state }) => {
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line2 = el)}
                       href='/solutions'>
-                      SERVICES
+                      Services
                     </Link>
                   </li>
                   <li>
@@ -86,7 +86,7 @@ const Hamburger = ({ state }) => {
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line3 = el)}
                       href='/contact-us'>
-                      ABOUT
+                      About
                     </Link>
                   </li>
                   <li>
@@ -95,7 +95,7 @@ const Hamburger = ({ state }) => {
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line4 = el)}
                       href='/contact-us'>
-                      CONTACT
+                      Contact
                     </Link>
                   </li>
                 </ul>

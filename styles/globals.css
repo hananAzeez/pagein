@@ -508,16 +508,6 @@ body {
   padding: 0 48px;
   /* height: 100vh; */
  }
-
-  .slider {
-    overflow: hidden;
-  }
-  
-  .slider .slide-track {
-    -webkit-animation: scroll 20s linear infinite;
-    animation: scroll 20s linear infinite;
-    width: calc(330 * 4);
-  }
   
   header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li {
     font-size: 3rem;
@@ -590,8 +580,8 @@ opacity: 0.5;
   width: max-content;
 }
 
-img {
-  flex: 0 0 auto;
+.slide-track img {
+  /* flex: 0 0 auto; */
   max-width: 100%;
   height: auto;
   display: block;

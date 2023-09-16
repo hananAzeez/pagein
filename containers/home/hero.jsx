@@ -615,22 +615,22 @@ const Hero = () => {
                 <img
                   src="/images/hero-1.png"
                   alt="mockup"
-                  className="mr-3 rotate-6 z-[1]"
+                  className="mr-3 rotate-6 z-[1] w-4/5"
                 />
                 <img
                   src="/images/hero-2.png"
                   alt="mockup"
-                  className="mr-4 -rotate-[8deg]"
+                  className="mr-4 -rotate-[8deg] w-4/5"
                 />
                 <img
                   src="/images/hero-3.png"
                   alt="mockup"
-                  className="rotate-3"
+                  className="rotate-3 w-4/5"
                 />
                 <img
                   src="/images/hero-4.png"
                   alt="mockup"
-                  className="ml-[1px] -rotate-[8deg]"
+                  className="ml-[1px] -rotate-[8deg] w-4/5"
                 />
               </div>
             </div>
