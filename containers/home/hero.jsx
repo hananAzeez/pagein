@@ -429,12 +429,12 @@ startupDivs.forEach(startup => {
     <div className="section-container overflow-x-hidden relative">
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
         <div className="hero-clipath"></div>
-        <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-white rounded-xl bg relative">
+        <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-black bg-opacity-40 text-white rounded-xl bg relative">
           <div className="nav-links flex items-center gap-8">
             <p className="menu-links hover-this ">Works</p>
             <p className="menu-links hover-this">Services</p>
           </div>
-          <h1 className="text-black text-3xl font-bold">Pagein</h1>
+          <h1 className="text-3xl font-bold">Pagein</h1>
           <div className="nav-links flex items-center gap-8">
             <p className="menu-links">About</p>
             <p className="menu-links">Contact</p>
