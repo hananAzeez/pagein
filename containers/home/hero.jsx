@@ -429,21 +429,24 @@ const Hero = () => {
 
       startup.addEventListener("mouseenter", () => {
         // Show the image
-        gsap.to(imgWrapper, { opacity: 1, duration: 0.5, scale: 1 });
+        if (window.innerWidth >= 800) {
 
-        // Add mousemove listener to the entire document
-        document.addEventListener("mousemove", (e) => {
-          const { left, top, width, height } =
+          gsap.to(imgWrapper, { opacity: 1, duration: 0.5, scale: 1 });
+          
+          // Add mousemove listener to the entire document
+          document.addEventListener("mousemove", (e) => {
+            const { left, top, width, height } =
             imgWrapper.getBoundingClientRect();
-          const x = (e.clientX - left) / width;
-          const y = (e.clientY - top) / height;
-
-          gsap.to(imgWrapper, {
-            x: (x - 0.5) * 100,
-            y: (y - 0.5) * 100,
-            duration: 0.2,
+            const x = (e.clientX - left) / width;
+            const y = (e.clientY - top) / height;
+            
+            gsap.to(imgWrapper, {
+              x: (x - 0.5) * 100,
+              y: (y - 0.5) * 100,
+              duration: 0.2,
+            });
           });
-        });
+        }
       });
 
       // Remove mousemove listener
@@ -665,9 +668,11 @@ const Hero = () => {
                   <p className="text-18 col-span-2 !text-offBlack">
                     {startup.desc}
                   </p>
+                  <a href={startup.link} target="_blank">
                   <div className="flex items-center justify-start xl:justify-end">
                     <TopRightArrow />
                   </div>
+                  </a>
                 </div>
               ))}
               {/* <img src="images/saavPopup.png" alt="product image" ref={saavPopup} className="w-[350px] startup-popup"/> */}
