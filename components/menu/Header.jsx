@@ -50,9 +50,9 @@ const Header = () => {
 
   // Toggle menu
   const handleMenu = () => {
-    const hamburger = document.getElementById("hamburger")
+    const hamburger = document.querySelectorAll(".hamburger")
     disableMenu();
-    hamburger.classList.toggle("active");
+    hamburger.forEach(ham => ham.classList.toggle("active"))
     if (state.initial === false) {
       setState({
         initial: null,
@@ -96,7 +96,6 @@ const Header = () => {
                  </div>
               </button>
               <button disabled={disabled} onClick={handleMenu}>
-                {/* {state.menuName} */}
                 <div className="btn hidden toggle-btn-pc fixed top-0 right-0 w-24 h-24 lg:flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn-pc">
                   <div className="btn-outline btn-outline-1 bg-[#333]"></div>
                   <div id="hamburger" className="hamburger">
