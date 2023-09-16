@@ -806,22 +806,22 @@ const Hero = () => {
           {/* \\\ STEP ONE ILLUSTRATION SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="panel blueprints h-screen w-screen flex items-center justify-center relative">
-            <div className="blueprints flex items-center justify-center gap-20">
+          <div className="panel blueprints lg:h-screen w-screen flex items-center justify-center relative">
+            <div className="blueprints flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
               <img
                 src="/images/prototype1.png"
                 alt="prototype"
-                className="prototype translate-y-10 max-w-[250px] opacity-0"
+                className="prototype translate-y-10 w-2/3 max-w-[250px] opacity-0"
               />
               <img
                 src="/images/prototype2.png"
                 alt="prototype"
-                className="prototype translate-y-10 max-w-[250px] opacity-0"
+                className="prototype hidden lg:block translate-y-10 w-2/3 max-w-[250px] opacity-0"
               />
               <img
                 src="/images/prototype3.png"
                 alt="prototype"
-                className="prototype translate-y-10 max-w-[250px] opacity-0"
+                className="prototype translate-y-10 w-2/3 max-w-[250px] opacity-0"
               />
             </div>
           </div>
@@ -876,22 +876,22 @@ const Hero = () => {
           {/* \\\ STEP TWO IMAGES SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="stepTwoImgs panel h-screen w-screen flex items-center justify-center relative">
-            <div className="blueprints flex items-center justify-center gap-20">
+          <div className="stepTwoImgs panel lg:h-screen w-screen flex items-center justify-center relative pb-32 lg:pb-0">
+            <div className="results flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 ">
               <img
                 src="/images/stepTwo1.png"
                 alt="stepTwoImg"
-                className="stepTwoImg translate-y-10 max-w-[250px]"
+                className="stepTwoImg translate-y-10 max-w-[250px] w-2/3"
               />
               <img
                 src="/images/stepTwo2.png"
                 alt="stepTwoImg"
-                className="stepTwoImg translate-y-10 max-w-[250px]"
+                className="stepTwoImg translate-y-10 max-w-[250px] hidden lg:block"
               />
               <img
                 src="/images/stepTwo3.png"
                 alt="stepTwoImg"
-                className="stepTwoImg translate-y-10 max-w-[250px]"
+                className="stepTwoImg translate-y-10 max-w-[250px] w-2/3"
               />
             </div>
           </div>
