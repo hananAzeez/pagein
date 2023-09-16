@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Hamburger from "./Hamburger";
+import gsap from "gsap";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"; // Import ScrollTrigger
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
   const router = useRouter();
@@ -20,6 +24,24 @@ const Header = () => {
     router.events.on("routeChangeStart", () => {
       setState({ clicked: false, menuName: "Menu" });
     });
+
+    const toggleButton = document.querySelector('.toggle-btn-pc');
+
+    if (window.innerWidth >= 768) {
+      gsap.to(toggleButton,
+        {
+          opacity: 1,
+          duration: 1,
+          visibility: 'visible',
+          scrollTrigger: {
+            trigger: toggleButton, // Element that triggers the animation
+            start: "top 800px",
+            scrub: true,
+            toggleActions: "play none none none", // Control when the animation plays and reverses
+          },
+        }
+      );
+    }
 
     // Clean up the event listener when the component unmounts.
     return () => {
@@ -69,9 +91,9 @@ const Header = () => {
             <div className="menu">
               <button disabled={disabled} onClick={handleMenu}>
                 {/* {state.menuName} */}
-                <div className="btn hidden toggle-btn-pc fixed top-0 right-0 w-24 h-24 lg:flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn-pc">
-          <div className="btn-outline btn-outline-1 bg-[#333]"></div>
-          <div id="hamburger" className="hamburger">
+                <div className="btn toggle-btn-pc fixed top-0 right-0 w-24 h-24 flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn-pc">
+                  <div className="btn-outline btn-outline-1 bg-[#333]"></div>
+                <div id="hamburger" className="hamburger">
             <span></span>
           </div>
         </div>

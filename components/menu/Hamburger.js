@@ -21,6 +21,7 @@ const Hamburger = ({ state }) => {
   let line3 = useRef(null);
   let line4 = useRef(null);
   let info = useRef(null);
+  
 
   useEffect(() => {
     // If the menu is open and we click the menu button to close it.

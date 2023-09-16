@@ -440,17 +440,21 @@ startupDivs.forEach(startup => {
             <p className="menu-links">Contact</p>
           </div>
         </header>
-        <header className="lg:hidden">
+        <header className="lg:hidden relative flex items-center justify-between">
         <h1 className="text-white text-2xl font-bold">Pagein</h1>
 
+        <Header />    
         </header>
+        <div className="absolute">
+        <Header />    
+
+        </div>
 
         {/* MENU */}
         
-        <Header />    
         <div className="max-w-7xl mx-auto">
           <div className="h_container  flex flex-col   px-2 pt-16 ">
-          <h1 className="h_title text-center relative w-full text-white text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[106px] lg:tracking-[-3.84px]">
+          <h1 className="h_title text-center relative w-full text-white text-5xl font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[106px] lg:tracking-[-3.84px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                   We&nbsp;
@@ -467,7 +471,7 @@ startupDivs.forEach(startup => {
                 </span>
               </span>
             </h1>
-            <h1 className="h_title text-center relative flex w-full flex-col justify-center items-center lg:items-center  lg:flex-row text-white text-[64px] leading-[77px] font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[117px] lg:tracking-[-3.84px]">
+            <h1 className="h_title text-center relative flex w-full flex-col justify-center items-center lg:items-center  lg:flex-row text-white text-5xl font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[117px] lg:tracking-[-3.84px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block xl:w-[286px] translate-y-full pb-1.5 pt-6 will-change-transform highlight">
                   Web&nbsp;
@@ -481,8 +485,8 @@ startupDivs.forEach(startup => {
             </h1>
           </div>
 
-          <div className="h_container  flex flex-col   px-2 py-9 ">
-          <h6 className="h_title text-center relative w-full text-white text-xl font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
+          <div className="h_container hidden md:flex flex-col   px-2 py-9 ">
+          <h6 className="h_title text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                 Transforming Ideas into Seamless&nbsp;
@@ -499,7 +503,7 @@ startupDivs.forEach(startup => {
                 </span>
               </span>
             </h6>
-            <h6 className="h_title text-center relative w-full text-white text-xl font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
+            <h6 className="h_title text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block translate-y-full pb-1.5 pt-6 will-change-transform">
                 Build, and Deliver&nbsp;
@@ -517,10 +521,19 @@ startupDivs.forEach(startup => {
               </span>
             </h6>
           </div>
+          <div className="h_container md:hidden  flex flex-col   px-2 py-9 ">
+          <h6 className="h_title  text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
+              <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
+                <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
+                Transforming Ideas into Seamless Interfaces Since 2019. Partner with Us to Design, Build, and Deliver Extraordinary Digital Products and Services.&nbsp;
+                </span>
+              </span>
+            </h6>
+            </div>
 
-          <div className="flex items-center justify-center gap-5 relative">
-            <button className="bg-primary border border-primary py-4 px-8 rounded-2xl text-lg font-bold">Get a quote</button>
-            <button className="bg-offBlack text-white border border-white border-opacity-50 py-4 px-8 rounded-2xl text-lg font-bold">Talk to us</button>
+          <div className="flex items-center justify-center gap-4 lg:gap-5 relative">
+            <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold">Get a quote</button>
+            <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold">Talk to us</button>
           </div>
 
           <div className="my-16 flex items-center justify-center">

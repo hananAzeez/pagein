@@ -488,6 +488,12 @@ body {
 
 }
 
+@media (min-width: 800px) {
+  /* #toggle-btn-pc {
+    visibility: hidden;
+  } */
+}
+
 
 @media (max-width: 800px) {
   header .hamburger-menu .menu-layer .wrapper .menu-links .info {
