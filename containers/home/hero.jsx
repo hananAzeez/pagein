@@ -7,7 +7,7 @@ import { CustomEase } from "gsap/dist/CustomEase";
 import Observer from "gsap/dist/Observer";
 import TopRightArrow from "./../../components/icons/icons";
 import RightArrow from "./../../components/icons/rightArrow";
-import Header from "./../../components/menu/Header"
+import Header from "./../../components/menu/Header";
 import { Startups } from "../../utils/startups";
 import CSSRulePlugin from "gsap/dist/CSSRulePlugin";
 
@@ -18,11 +18,9 @@ CustomEase.create("cubic-text", "0.25, 1, 0.5, 1");
 const Hero = () => {
   const heroInfiniteRef = useRef(null);
   const likeCrazyLottieRef = useRef(null);
-  const saavPopup = useRef()
-
+  const saavPopup = useRef();
 
   useEffect(() => {
-
     // \\\\\\\\\\\\\\\\\\\\\\\
     // HERO SECTION
     // \\\\\\\\\\\\\\\\\\\\\\\
@@ -94,7 +92,6 @@ const Hero = () => {
     //     scrub: true,
     //   },
     // });
-
 
     const servicesTitle = document.querySelectorAll(".s_title");
 
@@ -204,9 +201,7 @@ const Hero = () => {
         },
       });
     });
-  
 
-    
     // \\\\\\\\\\\\\\\\\\\\\\\
     // BLUEPRINTS SECTION
     // \\\\\\\\\\\\\\\\\\\\\\\
@@ -251,23 +246,22 @@ const Hero = () => {
     setupScrollAnimation();
 
     // STARTUPS
-    const startup = document.querySelector('.startups')
+    const startup = document.querySelector(".startups");
 
-    
     // \\\\\\\\\\\\\\\\\\\\\\\
     // GENERAL
     // \\\\\\\\\\\\\\\\\\\\\\\
 
-    const hero = document.querySelector('.hero')
-    const steps = document.querySelector('.steps')
-    const stepOne = document.querySelector('.stepOne')
-    const blueprints = document.querySelector('.blueprints')
-    const stepTwo = document.querySelector('.stepTwo')
-    const stepTwoImgs = document.querySelector('.stepTwoImgs')
-    const startups = document.querySelector('.startups')
-    const works = document.querySelector('.works')
-    const testimonials = document.querySelector('.testimonials')
-    const cta = document.querySelector('.cta')
+    const hero = document.querySelector(".hero");
+    const steps = document.querySelector(".steps");
+    const stepOne = document.querySelector(".stepOne");
+    const blueprints = document.querySelector(".blueprints");
+    const stepTwo = document.querySelector(".stepTwo");
+    const stepTwoImgs = document.querySelector(".stepTwoImgs");
+    const startups = document.querySelector(".startups");
+    const works = document.querySelector(".works");
+    const testimonials = document.querySelector(".testimonials");
+    const cta = document.querySelector(".cta");
 
     // ScrollTrigger.create({
     //   trigger: hero, // Trigger when the hero section is in view
@@ -318,78 +312,149 @@ const Hero = () => {
     //   duration: 0.2
     // });
     // ScrollTrigger.create({
-    //   trigger: startups, 
+    //   trigger: startups,
     //   start: 'top top',
-    //   endTrigger: works, 
+    //   endTrigger: works,
     //   end: 'top top',
     //   snap: 1,
     //   duration: 0.2
     // });
     // ScrollTrigger.create({
-    //   trigger: '.gridTrigger', 
+    //   trigger: '.gridTrigger',
     //   start: 'center center',
-    //   endTrigger: testimonials, 
+    //   endTrigger: testimonials,
     //   end: 'top top',
     //   snap: 1,
     //   duration: 0.2
     // });
     // ScrollTrigger.create({
-    //   trigger: testimonials, 
+    //   trigger: testimonials,
     //   start: 'bottom bottom',
-    //   endTrigger: cta, 
+    //   endTrigger: cta,
     //   end: 'top top',
     //   snap: 1,
     //   duration: 0.2
     // });
-    
-    // Add labels to define the snap points
-    gsap.set(hero, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'hero-start' } });
-    gsap.set(steps, { scrollTrigger: { trigger: steps, start: 'top top', end: 'top top', id: 'steps-start' } });
-    gsap.set(stepOne, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'stepOne-start' } });
-    gsap.set(blueprints, { scrollTrigger: { trigger: steps, start: 'top top', end: 'top top', id: 'blueprints-start' } });
-    gsap.set(stepTwo, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'stepTwo-start' } });
-    gsap.set(stepTwoImgs, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'stepTwoImgs-start' } });
-    gsap.set(startups, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'startups-start' } });
-    gsap.set(works, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'works-start' } });
-    gsap.set(testimonials, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'testimonials-start' } });
-    gsap.set(cta, { scrollTrigger: { trigger: hero, start: 'top top', end: 'top top', id: 'cta-start' } });
 
-    
+    // Add labels to define the snap points
+    gsap.set(hero, {
+      scrollTrigger: {
+        trigger: hero,
+        start: "top top",
+        end: "top top",
+        id: "hero-start",
+      },
+    });
+    gsap.set(steps, {
+      scrollTrigger: {
+        trigger: steps,
+        start: "top top",
+        end: "top top",
+        id: "steps-start",
+      },
+    });
+    gsap.set(stepOne, {
+      scrollTrigger: {
+        trigger: hero,
+        start: "top top",
+        end: "top top",
+        id: "stepOne-start",
+      },
+    });
+    gsap.set(blueprints, {
+      scrollTrigger: {
+        trigger: steps,
+        start: "top top",
+        end: "top top",
+        id: "blueprints-start",
+      },
+    });
+    gsap.set(stepTwo, {
+      scrollTrigger: {
+        trigger: hero,
+        start: "top top",
+        end: "top top",
+        id: "stepTwo-start",
+      },
+    });
+    gsap.set(stepTwoImgs, {
+      scrollTrigger: {
+        trigger: hero,
+        start: "top top",
+        end: "top top",
+        id: "stepTwoImgs-start",
+      },
+    });
+    gsap.set(startups, {
+      scrollTrigger: {
+        trigger: hero,
+        start: "top top",
+        end: "top top",
+        id: "startups-start",
+      },
+    });
+    gsap.set(works, {
+      scrollTrigger: {
+        trigger: hero,
+        start: "top top",
+        end: "top top",
+        id: "works-start",
+      },
+    });
+    gsap.set(testimonials, {
+      scrollTrigger: {
+        trigger: hero,
+        start: "top top",
+        end: "top top",
+        id: "testimonials-start",
+      },
+    });
+    gsap.set(cta, {
+      scrollTrigger: {
+        trigger: hero,
+        start: "top top",
+        end: "top top",
+        id: "cta-start",
+      },
+    });
+
     // \\\\\\\\\\\\\\\\\\\\\\\
     // STARTUPS SECTION
     // \\\\\\\\\\\\\\\\\\\\\\\
-const startupDivs = document.querySelectorAll('.startup');
+    const startupDivs = document.querySelectorAll(".startup");
 
+    startupDivs.forEach((startup) => {
+      const imgWrapper = startup.querySelector(".img-wrapper");
+      const img = startup.querySelector("img");
 
-startupDivs.forEach(startup => {
-  const imgWrapper = startup.querySelector('.img-wrapper');
-  const img = startup.querySelector('img');
+      startup.addEventListener("mouseenter", () => {
+        // Show the image
+        gsap.to(imgWrapper, { opacity: 1, duration: 0.5, scale: 1 });
 
-  startup.addEventListener('mouseenter', () => {
-    // Show the image
-    gsap.to(imgWrapper, { opacity: 1, duration: 0.5, scale: 1 });
+        // Add mousemove listener to the entire document
+        document.addEventListener("mousemove", (e) => {
+          const { left, top, width, height } =
+            imgWrapper.getBoundingClientRect();
+          const x = (e.clientX - left) / width;
+          const y = (e.clientY - top) / height;
 
-    // Add mousemove listener to the entire document
-    document.addEventListener('mousemove', (e) => {
-      const { left, top, width, height } = imgWrapper.getBoundingClientRect();
-      const x = (e.clientX - left) / width;
-      const y = (e.clientY - top) / height;
+          gsap.to(imgWrapper, {
+            x: (x - 0.5) * 100,
+            y: (y - 0.5) * 100,
+            duration: 0.2,
+          });
+        });
+      });
 
-      gsap.to(imgWrapper, { x: (x - 0.5) * 100, y: (y - 0.5) * 100, duration: 0.2 });
+      // Remove mousemove listener
+      document.removeEventListener("mousemove", () => {});
     });
-  });
 
-
-    // Remove mousemove listener
-    document.removeEventListener('mousemove', () => {});
-});
-
-
-// \\\\\\\\\\\\\\\\\\\\\\\
+    // \\\\\\\\\\\\\\\\\\\\\\\
     // TESTIMONIALS SECTION
     // \\\\\\\\\\\\\\\\\\\\\\\
 
-    const reviewProfiles = document.querySelector(".review-profiles")
+    const reviewProfiles = document.querySelector(".review-profiles");
 
     // gsap.to(reviewProfiles, {
     //   position: "fixed",
@@ -400,6 +465,7 @@ startupDivs.forEach(startup => {
     //     scrub: true
     //   }
     // })
+
 
     return () => {};
   }, []);
@@ -419,19 +485,17 @@ startupDivs.forEach(startup => {
           </div>
         </header>
         <header className="lg:hidden relative flex items-center justify-between">
-        <h1 className="text-white text-2xl font-bold">Pagein</h1>
-
+          <h1 className="text-white text-2xl font-bold">Pagein</h1>
         </header>
         <div className="absolute">
-        <Header />    
-
+          <Header />
         </div>
 
         {/* MENU */}
-        
+
         <div className="max-w-7xl mx-auto">
           <div className="h_container  flex flex-col   px-2 pt-16 ">
-          <h1 className="h_title text-center relative w-full text-white text-5xl font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[106px] lg:tracking-[-3.84px]">
+            <h1 className="h_title text-center relative w-full text-white text-5xl font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[106px] lg:tracking-[-3.84px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                   We&nbsp;
@@ -463,99 +527,153 @@ startupDivs.forEach(startup => {
           </div>
 
           <div className="h_container hidden md:flex flex-col   px-2 py-9 ">
-          <h6 className="h_title text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
+            <h6 className="h_title text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
-                Transforming Ideas into Seamless&nbsp;
+                  Transforming Ideas into Seamless&nbsp;
                 </span>
               </span>
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                Interfaces Since 2019.&nbsp;
+                  Interfaces Since 2019.&nbsp;
                 </span>
               </span>
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                Partner with Us to Design, &nbsp;
+                  Partner with Us to Design, &nbsp;
                 </span>
               </span>
             </h6>
             <h6 className="h_title text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block translate-y-full pb-1.5 pt-6 will-change-transform">
-                Build, and Deliver&nbsp;
+                  Build, and Deliver&nbsp;
                 </span>
               </span>
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                Extraordinary Digital&nbsp;
+                  Extraordinary Digital&nbsp;
                 </span>
               </span>
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                Products and Services.&nbsp;
+                  Products and Services.&nbsp;
                 </span>
               </span>
             </h6>
           </div>
           {/* mobile description */}
           <div className="h_container md:hidden  flex flex-col   px-2 py-9 ">
-          <h6 className="h_title  text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
+            <h6 className="h_title  text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
-                Transforming Ideas into Seamless Interfaces Since 2019. Partner with Us to Design, Build, and Deliver Extraordinary Digital Products and Services.&nbsp;
+                  Transforming Ideas into Seamless Interfaces Since 2019.
+                  Partner with Us to Design, Build, and Deliver Extraordinary
+                  Digital Products and Services.&nbsp;
                 </span>
               </span>
             </h6>
-            </div>
+          </div>
 
           <div className="flex items-center justify-center gap-4 lg:gap-5 relative">
-            <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold">Get a quote</button>
-            <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold">Talk to us</button>
+            <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold">
+              Get a quote
+            </button>
+            <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold">
+              Talk to us
+            </button>
           </div>
 
-          <div className="my-16 flex items-center justify-center">
-            <img src="/images/hero-1.png" alt="mockup" className="mr-3 mb-9 rotate-6 z-[1]"/>
-            <img src="/images/hero-2.png" alt="mockup" className="mr-4 -rotate-[8deg]"/>
-            <img src="/images/hero-3.png" alt="mockup" className="mb-9 rotate-3"/>
-            <img src="/images/hero-4.png" alt="mockup" className="ml-[1px] -rotate-[8deg]"/>
+          <div className=" my-16 hidden lg:flex items-center justify-center ">
+            <img
+              src="/images/hero-1.png"
+              alt="mockup"
+              className="mr-3 mb-9 rotate-6 z-[1]"
+            />
+            <img
+              src="/images/hero-2.png"
+              alt="mockup"
+              className="mr-4 -rotate-[8deg]"
+            />
+            <img
+              src="/images/hero-3.png"
+              alt="mockup"
+              className="mb-9 rotate-3"
+            />
+            <img
+              src="/images/hero-4.png"
+              alt="mockup"
+              className="ml-[1px] -rotate-[8deg]"
+            />
           </div>
 
-          
+          <div
+            class="lg:hidden  hero-images slider my-16 "
+          >
+            <div className="group flex cursor-pointer items-center ">
+              <div class="w-full slide-track">
+                <img
+                  src="/images/hero-1.png"
+                  alt="mockup"
+                  className="mr-3 rotate-6 z-[1]"
+                />
+                <img
+                  src="/images/hero-2.png"
+                  alt="mockup"
+                  className="mr-4 -rotate-[8deg]"
+                />
+                <img
+                  src="/images/hero-3.png"
+                  alt="mockup"
+                  className="rotate-3"
+                />
+                <img
+                  src="/images/hero-4.png"
+                  alt="mockup"
+                  className="ml-[1px] -rotate-[8deg]"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="bg-offWhite">
-      <div className="startups panel h-full xl:h-screen xl:flex xl:items-center xl:justify-center max-w-7xl mx-auto relative px-5 xl:px-0 ">
-            <div className="">
-              <h2 className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16">
-                We run startups that helps thousands
-              </h2>
-              <h6 className="mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-offBlack">
-                Empowering Solutions Through In-house Startup Ventures. We
-                Ideate and create amazing tech products for solving user
-                problems
-              </h6>
-              <div className="startup-container flex flex-col py-16">
-                {Startups.map((startup) => (
-                  <div
-                    className={`startup  grid grid-cols-1 xl:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer relative ${
-                      startup.id === 1 ? "border-y" : "border-b"
-                    } border-offBlack border-opacity-20 hover:bg-offBlack hover:bg-opacity-5`}
-                    key={startup.id}
-                  >
-                    <div className="img-wrapper"><img src={`/startups/${startup.image}`} alt="startup img" /></div>
-                    <h3 className="text-48 col-span-2 !text-offBlack">{startup.title}</h3>
-                    <p className="text-18 col-span-2 !text-offBlack">{startup.desc}</p>
-                    <div className="flex items-center justify-start xl:justify-end">
-                      <TopRightArrow />
-                    </div>
+        <div className="startups panel h-full xl:h-screen xl:flex xl:items-center xl:justify-center max-w-7xl mx-auto relative px-5 xl:px-0 ">
+          <div className="">
+            <h2 className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16">
+              We run startups that helps thousands
+            </h2>
+            <h6 className="mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-offBlack">
+              Empowering Solutions Through In-house Startup Ventures. We Ideate
+              and create amazing tech products for solving user problems
+            </h6>
+            <div className="startup-container flex flex-col py-16">
+              {Startups.map((startup) => (
+                <div
+                  className={`startup  grid grid-cols-1 xl:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer relative ${
+                    startup.id === 1 ? "border-y" : "border-b"
+                  } border-offBlack border-opacity-20 hover:bg-offBlack hover:bg-opacity-5`}
+                  key={startup.id}
+                >
+                  <div className="img-wrapper">
+                    <img src={`/startups/${startup.image}`} alt="startup img" />
                   </div>
-                ))}
-                {/* <img src="images/saavPopup.png" alt="product image" ref={saavPopup} className="w-[350px] startup-popup"/> */}
-              </div>
+                  <h3 className="text-48 col-span-2 !text-offBlack">
+                    {startup.title}
+                  </h3>
+                  <p className="text-18 col-span-2 !text-offBlack">
+                    {startup.desc}
+                  </p>
+                  <div className="flex items-center justify-start xl:justify-end">
+                    <TopRightArrow />
+                  </div>
+                </div>
+              ))}
+              {/* <img src="images/saavPopup.png" alt="product image" ref={saavPopup} className="w-[350px] startup-popup"/> */}
             </div>
           </div>
+        </div>
       </section>
 
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
@@ -621,8 +739,8 @@ startupDivs.forEach(startup => {
                   </span>
                   <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
                     UX&nbsp;
-                </span>
                   </span>
+                </span>
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
                     Solution?
@@ -736,13 +854,13 @@ startupDivs.forEach(startup => {
               <h4 className="stepOneTitle relative w-full font-saira text-xl leading-[31px] lg:text-4xl lg:tracking-[-2.16px] lg:leading-[57px] text-center mt-6">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                  Elevating Wireframes into Intuitive UI/UX Designs,&nbsp;
+                    Elevating Wireframes into Intuitive UI/UX Designs,&nbsp;
                   </span>
                 </span>
                 <br />
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                   <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                  Breathing Life into Your Concept.
+                    Breathing Life into Your Concept.
                   </span>
                 </span>
               </h4>
@@ -774,7 +892,6 @@ startupDivs.forEach(startup => {
           </div>
         </div>
       </section>
-      
 
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ WORKS SECTION */}
@@ -794,22 +911,46 @@ startupDivs.forEach(startup => {
           <div className="works flex flex-col gap-4 lg:gap-6 mt-8 xl:mt-16">
             <div className="grid xl:grid-cols-5 gap-4 lg:gap-6 xl:h-[480px]">
               <div className="work1 xl:col-span-3 cursor-pointer ">
-                <img src="works/exphone-tn.png" alt="works"  className="rounded-xl lg:rounded-2xl"/>
+                <img
+                  src="works/exphone-tn.png"
+                  alt="works"
+                  className="rounded-xl lg:rounded-2xl"
+                />
               </div>
               <div className="work1 xl:col-span-2 cursor-pointer ">
-                <img src="works/tripzigo-mobile.png" alt="works" className="xl:hidden rounded-xl lg:rounded-2xl" />
-                <img src="works/tripzigo-tn.png" alt="works" className="hidden xl:block rounded-xl lg:rounded-2xl" />
+                <img
+                  src="works/tripzigo-mobile.png"
+                  alt="works"
+                  className="xl:hidden rounded-xl lg:rounded-2xl"
+                />
+                <img
+                  src="works/tripzigo-tn.png"
+                  alt="works"
+                  className="hidden xl:block rounded-xl lg:rounded-2xl"
+                />
               </div>
             </div>
             <div className="gridTrigger grid xl:grid-cols-5 gap-4 lg:gap-6 xl:h-[480px]">
               <div className="work1 xl:col-span-2 cursor-pointer ">
-                <img src="works/themesunited-mobile1.png" alt="works"  className="xl:hidden rounded-xl lg:rounded-2xl"/>
-                <img src="works/themesunited-tn.png" alt="works"  className="hidden xl:block rounded-xl lg:rounded-2xl"/>
+                <img
+                  src="works/themesunited-mobile1.png"
+                  alt="works"
+                  className="xl:hidden rounded-xl lg:rounded-2xl"
+                />
+                <img
+                  src="works/themesunited-tn.png"
+                  alt="works"
+                  className="hidden xl:block rounded-xl lg:rounded-2xl"
+                />
               </div>
               <div className="work1 xl:col-span-3 cursor-pointer ">
-                <img src="works/stewarts-tn.png" alt="works"  className="rounded-xl lg:rounded-2xl"/>
+                <img
+                  src="works/stewarts-tn.png"
+                  alt="works"
+                  className="rounded-xl lg:rounded-2xl"
+                />
               </div>
-            </div>        
+            </div>
           </div>
         </div>
       </section>
@@ -838,65 +979,132 @@ startupDivs.forEach(startup => {
             <div className="reviews mt-10">
               <div className=" review flex items-center justify-between gap-5  lg:gap-32 py-20 lg:py-40 border-y-2 border-white border-opacity-10">
                 <div className="flex flex-col lg:flex-row gap-10 items-start">
-                  <img src="icons/quote.svg" alt="quote" className="w-10 h-10 lg:w-auto lg:h-auto" />
+                  <img
+                    src="icons/quote.svg"
+                    alt="quote"
+                    className="w-10 h-10 lg:w-auto lg:h-auto"
+                  />
                   <div className="text-white">
-
-                  <h4 className="text-48">Their creative approach to web design gave my business a fresh online identity.</h4>
-                  <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">Tom hales</h6>
-                  <p className="opacity-70 mt-3 lg:mt-4 text-sm lg:textt-base font-saira">Tech Entrepreneur</p>
-                  <p className="opacity-70 mt-1 lg:mt-2 text-sm lg:textt-base font-saira">Tripzigo</p>
+                    <h4 className="text-48">
+                      Their creative approach to web design gave my business a
+                      fresh online identity.
+                    </h4>
+                    <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
+                      Tom hales
+                    </h6>
+                    <p className="opacity-70 mt-3 lg:mt-4 text-sm lg:textt-base font-saira">
+                      Tech Entrepreneur
+                    </p>
+                    <p className="opacity-70 mt-1 lg:mt-2 text-sm lg:textt-base font-saira">
+                      Tripzigo
+                    </p>
                   </div>
                 </div>
                 <div className="flex gap-2 lg:gap-4 items-center">
                   <div className="h-full w-8 flex items-center justify-center">
-                    <img src="icons/leftSolidArrow.png" alt="current" className="w-5 lg:w-8 h-5 lg:h-8"/>
+                    <img
+                      src="icons/leftSolidArrow.png"
+                      alt="current"
+                      className="w-5 lg:w-8 h-5 lg:h-8"
+                    />
                     <h1 className="opacity-0">p</h1>
                   </div>
-                <div className="review-profiles flex flex-col gap-4 lg:gap-8">
-                  <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony1.png" alt="user" className="w-full h-full bg-cover"/></div>
-                  <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony2.png" alt="user" className="w-full h-full bg-cover"/></div>
-                  <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony3.png" alt="user" className="w-full h-full bg-cover"/></div>
-                </div>
+                  <div className="review-profiles flex flex-col gap-4 lg:gap-8">
+                    <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey">
+                      <img
+                        src="images/testimony1.png"
+                        alt="user"
+                        className="w-full h-full bg-cover"
+                      />
+                    </div>
+                    <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey">
+                      <img
+                        src="images/testimony2.png"
+                        alt="user"
+                        className="w-full h-full bg-cover"
+                      />
+                    </div>
+                    <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey">
+                      <img
+                        src="images/testimony3.png"
+                        alt="user"
+                        className="w-full h-full bg-cover"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className=" review flex items-center justify-between gap-5 lg:gap-32 py-20 lg:py-40 border-y-2 border-white border-opacity-10">
                 <div className="flex flex-col lg:flex-row gap-10 items-start">
-                  <img src="icons/quote.svg" alt="quote" className="w-10 h-10 lg:w-auto lg:h-auto" />
+                  <img
+                    src="icons/quote.svg"
+                    alt="quote"
+                    className="w-10 h-10 lg:w-auto lg:h-auto"
+                  />
                   <div className="text-white">
-
-                  <h4 className="text-48">The app they built for me exceeded my expectations in every way.</h4>
-                  <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">mohd salih</h6>
-                  <p className="opacity-70 mt-3 lg:mt-4 text-sm lg:textt-base font-saira">Tech Entrepreneur</p>
-                  <p className="opacity-70 mt-1 lg:mt-2 text-sm lg:textt-base font-saira">Themes</p>
+                    <h4 className="text-48">
+                      The app they built for me exceeded my expectations in
+                      every way.
+                    </h4>
+                    <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
+                      mohd salih
+                    </h6>
+                    <p className="opacity-70 mt-3 lg:mt-4 text-sm lg:textt-base font-saira">
+                      Tech Entrepreneur
+                    </p>
+                    <p className="opacity-70 mt-1 lg:mt-2 text-sm lg:textt-base font-saira">
+                      Themes
+                    </p>
                   </div>
                 </div>
                 <div className="flex gap-2 lg:gap-4 items-center">
                   <div className="h-full w-8 flex items-center justify-center">
-                    <img src="icons/leftSolidArrow.png" alt="current" className="w-5 lg:w-8 h-5 lg:h-8"/>
+                    <img
+                      src="icons/leftSolidArrow.png"
+                      alt="current"
+                      className="w-5 lg:w-8 h-5 lg:h-8"
+                    />
                     <h1 className="opacity-0">p</h1>
                   </div>
-                <div className="flex flex-col gap-4 lg:gap-8">
-                  <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony1.png" alt="user" className="w-full h-full bg-cover"/></div>
-                  <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony2.png" alt="user" className="w-full h-full bg-cover"/></div>
-                  <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey"><img src="images/testimony3.png" alt="user" className="w-full h-full bg-cover"/></div>
-                </div>
+                  <div className="flex flex-col gap-4 lg:gap-8">
+                    <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey">
+                      <img
+                        src="images/testimony1.png"
+                        alt="user"
+                        className="w-full h-full bg-cover"
+                      />
+                    </div>
+                    <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey">
+                      <img
+                        src="images/testimony2.png"
+                        alt="user"
+                        className="w-full h-full bg-cover"
+                      />
+                    </div>
+                    <div className="w-12 lg:w-28 h-12 lg:h-28 rounded-full bg-grey">
+                      <img
+                        src="images/testimony3.png"
+                        alt="user"
+                        className="w-full h-full bg-cover"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-      {/* \\\ CTA SECTION */}
-      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+          {/* \\\ CTA SECTION */}
+          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           <div className="cta px-5 lg:px-0 panel pt-12 lg:pt-24 w-screen lg:h-screen max-w-7xl mx-auto">
             <div className="bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[80px] lg:rounded-b-[128px]">
               <div className="flex items-center justify-center gap-5 lg:gap-14 w-full">
                 <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
                 <div className="stars flex items-center gap-6">
-                  <img src="icons/star.svg" alt="star" className="w-6 lg:w-8"/>
-                  <img src="icons/star.svg" alt="star" className="w-6 lg:w-8"/>
-                  <img src="icons/star.svg" alt="star" className="w-6 lg:w-8"/>
+                  <img src="icons/star.svg" alt="star" className="w-6 lg:w-8" />
+                  <img src="icons/star.svg" alt="star" className="w-6 lg:w-8" />
+                  <img src="icons/star.svg" alt="star" className="w-6 lg:w-8" />
                 </div>
                 <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
               </div>
@@ -907,9 +1115,7 @@ startupDivs.forEach(startup => {
                 <button className="py-3 lg:py-4 px-10 bg-offBlack text-primary rounded-btn text-lg lg:text-2xl border border-offBlack w-full lg:w-auto">
                   Get a Quote
                 </button>
-                <button
-                  className="py-3 lg:py-4 px-10  bg-primary text-offBlack border border-offBlack rounded-btn text-lg lg:text-2xl w-full lg:w-auto"
-                >
+                <button className="py-3 lg:py-4 px-10  bg-primary text-offBlack border border-offBlack rounded-btn text-lg lg:text-2xl w-full lg:w-auto">
                   Talk To Us
                 </button>
               </div>
@@ -917,7 +1123,9 @@ startupDivs.forEach(startup => {
 
             <footer>
               <div className="flex flex-col items-center justify-center mt-10 lg:mt-20 w-full">
-                <h1 className="text-primary text-3xl lg:text-5xl font-bold pb-10">Pagein</h1>
+                <h1 className="text-primary text-3xl lg:text-5xl font-bold pb-10">
+                  Pagein
+                </h1>
                 {/* <div className="flex justify-between items-center w-full text-primary  mt-8 lg:mt-16">
                   <h6 className="text-sm lg:text-xl font-normal">TERMS AND CONDITION</h6>
                   <h6 className="text-sm lg:text-xl">@2023 PAGEIN ALL RIGHTS RESERVED</h6>
