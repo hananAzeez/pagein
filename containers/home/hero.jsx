@@ -9,11 +9,13 @@ import TopRightArrow from "./../../components/icons/icons";
 import RightArrow from "./../../components/icons/rightArrow";
 import Header from "./../../components/menu/Header";
 import { Startups } from "../../utils/startups";
-import CSSRulePlugin from "gsap/dist/CSSRulePlugin";
+import Lenis from '@studio-freight/lenis'
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 gsap.registerPlugin(Observer);
 CustomEase.create("cubic-text", "0.25, 1, 0.5, 1");
+
+
 
 const Hero = () => {
   const heroInfiniteRef = useRef(null);
@@ -21,6 +23,18 @@ const Hero = () => {
   const saavPopup = useRef();
 
   useEffect(() => {
+    const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
     // \\\\\\\\\\\\\\\\\\\\\\\
     // HERO SECTION
     // \\\\\\\\\\\\\\\\\\\\\\\
@@ -592,10 +606,10 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center justify-center gap-4 lg:gap-5 relative">
-            <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold">
+            <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
               Get a quote
             </button>
-            <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold">
+            <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
               Talk to us
             </button>
           </div>
