@@ -596,3 +596,30 @@ opacity: 0.5;
     transform: translateX(-230%);
   }
 }
+
+
+/* .cursor{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #d5ff3f;
+  z-index: 2000;
+  user-select: none;
+  pointer-events: none;
+}
+
+.follower{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: #d5ff3f;
+  border-radius: 50%;
+  opacity: 1;
+  user-select: none;
+  pointer-events: none;
+} */

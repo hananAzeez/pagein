@@ -470,6 +470,19 @@ const Hero = () => {
     // })
 
 
+    // MOUSE CURSOR
+
+//     gsap.set('.follower',{xPercent:-50,yPercent:-50});
+// gsap.set('.cursor',{xPercent:-50,yPercent:-50});
+
+// var follow = document.querySelector('.follower');
+// var cur = document.querySelector('.cursor');
+
+// window.addEventListener('mousemove',e => {
+//     gsap.to(cur, {duration: 0.2, x:e.clientX,y:e.clientY});
+//     gsap.to(follow, {duration: 0.9, x:e.clientX,y:e.clientY});
+// });
+
     return () => {};
   }, []);
   return (
@@ -641,7 +654,9 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="bg-offWhite">
+      <section className="bg-offWhite relative">
+      {/* <div class="cursor"></div>
+<div class="follower"></div> */}
         <div className="startups panel h-full xl:h-screen xl:flex xl:items-center xl:justify-center max-w-7xl mx-auto relative px-5 xl:px-0 ">
           <div className="">
             <h2 className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16">
