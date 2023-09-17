@@ -10,6 +10,7 @@ import RightArrow from "./../../components/icons/rightArrow";
 import Header from "./../../components/menu/Header";
 import { Startups } from "../../utils/startups";
 import Lenis from '@studio-freight/lenis'
+import SplitType from 'split-type'
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 gsap.registerPlugin(Observer);
@@ -21,6 +22,10 @@ const Hero = () => {
   const heroInfiniteRef = useRef(null);
   const likeCrazyLottieRef = useRef(null);
   const saavPopup = useRef();
+  const navWorks = useRef()
+  const navServices = useRef()
+  const navAbout = useRef()
+  const navContact = useRef()
 
   useEffect(() => {
     const lenis = new Lenis()
@@ -497,11 +502,57 @@ requestAnimationFrame(raf)
 //     gsap.to(follow, {duration: 0.9, x:e.clientX,y:e.clientY});
 // });
 
+// FIXED CTA
+const fixedCta = document.querySelector('.fixed-cta')
+const sectionContainer = document.querySelector('.section-container')
+
+gsap.set(fixedCta, { visibility: "hidden"})
+
+          gsap.to(fixedCta, {
+            scrollTrigger: {
+              trigger: sectionContainer,
+              start: '800px center',
+              scrub: true,
+              markers: false
+            },
+            ease: "power1.out",
+        visibility: "visible",
+      })
+
+// TEXT REVEAL
+const splitTypes = document.querySelectorAll('.revealType')
+
+splitTypes.forEach((char, i) => {
+  const text = new SplitType(char, { types: 'words'})
+
+  gsap.from(text.words, {
+    scrollTrigger: {
+      trigger: char,
+      start: 'top 80%',
+      end: 'top 40%',
+      scrub: true,
+      markers: false
+    },
+    opacity: 0,
+    y: 15,
+    stagger: 0.1
+  })
+})
+
     return () => {};
   }, []);
+
   return (
     <div className="section-container overflow-x-hidden relative">
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
+      <div className="fixed-cta fixed bg-black bg-opacity-30 left-0 py-3 w-screen bottom-0 flex items-center justify-center gap-4 lg:gap-5 z-[100000]">
+            <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
+              Get a quote
+            </button>
+            <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
+              Talk to us
+            </button>
+          </div>
         <div className="hero-clipath"></div>
         <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-black bg-opacity-40 text-white rounded-xl bg relative">
           <div className="nav-links flex items-center gap-8">
@@ -523,9 +574,9 @@ requestAnimationFrame(raf)
 
         {/* MENU */}
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl 2xl:max-w-7xl mx-auto">
           <div className="h_container  flex flex-col   px-2 pt-16 ">
-            <h1 className="h_title text-center relative w-full text-white text-5xl font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[106px] lg:tracking-[-3.84px]">
+            <h1 className="h_title text-center relative w-full text-white text-5xl font-bold tracking-[0.64px] lg:text-6xl xl:text-[80px] 2xl:text-[96px] xl:leading-[92px] 2xl:leading-[106px] lg:tracking-[-2.56px] xl::tracking-[-3.84px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                   We&nbsp;
@@ -542,9 +593,9 @@ requestAnimationFrame(raf)
                 </span>
               </span>
             </h1>
-            <h1 className="h_title text-center relative flex w-full flex-col justify-center items-center lg:items-center  lg:flex-row text-white text-5xl font-bold tracking-[0.64px]  lg:text-[96px] lg:leading-[117px] lg:tracking-[-3.84px]">
+            <h1 className="h_title text-center relative flex w-full flex-col justify-center items-center lg:items-center  lg:flex-row text-white text-5xl font-bold tracking-[0.64px] lg:text-6xl xl:text-[80px] 2xl:text-[96px] xl:leading-[92px] 2xl:leading-[106px] lg:tracking-[-2.56px] xl::tracking-[-3.84px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                <span className="inline-block xl:w-[286px] translate-y-full pb-1.5 pt-6 will-change-transform highlight">
+                <span className="inline-block lg:w-[190px] xl:w-[250px] 2xl:w-[286px] translate-y-full pb-1.5 pt-6 will-change-transform highlight">
                   Web&nbsp;
                 </span>
               </span>
@@ -557,7 +608,7 @@ requestAnimationFrame(raf)
           </div>
 
           <div className="h_container hidden md:flex flex-col   px-2 py-9 ">
-            <h6 className="h_title text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
+            <h6 className="h_title text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px] lg:text-xl 2xl:text-2xl lg:tracking-[-0.72px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
                   Transforming Ideas into Seamless&nbsp;
@@ -574,7 +625,7 @@ requestAnimationFrame(raf)
                 </span>
               </span>
             </h6>
-            <h6 className="h_title text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:tracking-[-0.72px]">
+            <h6 className="h_title text-center relative w-full text-white text-base font-saira font-normal tracking-[0.64px] lg:text-xl 2xl:text-2xl lg:tracking-[-0.72px]">
               <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
                 <span className="inline-block translate-y-full pb-1.5 pt-6 will-change-transform">
                   Build, and Deliver&nbsp;
@@ -613,6 +664,7 @@ requestAnimationFrame(raf)
               Talk to us
             </button>
           </div>
+          
 
           <div className=" my-16 hidden lg:flex items-center justify-center ">
             <img
@@ -671,19 +723,19 @@ requestAnimationFrame(raf)
       <section className="bg-offWhite relative">
       {/* <div class="cursor"></div>
 <div class="follower"></div> */}
-        <div className="startups panel h-full xl:h-screen xl:flex xl:items-center xl:justify-center max-w-7xl mx-auto relative px-5 xl:px-0 ">
+        <div className="startups panel h-full 2xl:h-screen xl:flex xl:items-center xl:justify-center max-w-6xl 2xl:max-w-7xl mx-auto relative px-5 xl:px-0 ">
           <div className="">
-            <h2 className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16">
+            <h2 className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16 revealType">
               We run startups that helps thousands
             </h2>
-            <h6 className="mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-offBlack">
+            <h6 className="revealType mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-offBlack">
               Empowering Solutions Through In-house Startup Ventures. We Ideate
               and create amazing tech products for solving user problems
             </h6>
             <div className="startup-container flex flex-col py-16">
               {Startups.map((startup) => (
                 <div
-                  className={`startup  grid grid-cols-1 xl:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer relative ${
+                  className={`startup  grid grid-cols-1 lg:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer relative ${
                     startup.id === 1 ? "border-y" : "border-b"
                   } border-offBlack border-opacity-20 hover:bg-offBlack hover:bg-opacity-5`}
                   key={startup.id}
@@ -691,14 +743,14 @@ requestAnimationFrame(raf)
                   <div className="img-wrapper">
                     <img src={`/startups/${startup.image}`} alt="startup img" />
                   </div>
-                  <h3 className="text-48 col-span-2 !text-offBlack">
+                  <h3 className="text-48 col-span-2 !text-offBlack revealType">
                     {startup.title}
                   </h3>
-                  <p className="text-18 col-span-2 !text-offBlack">
+                  <p className="text-18 col-span-2 !text-offBlack revealType">
                     {startup.desc}
                   </p>
                   <a href={startup.link} target="_blank">
-                  <div className="flex items-center justify-start xl:justify-end">
+                  <div className="flex items-center justify-start lg:justify-end">
                     <TopRightArrow />
                   </div>
                   </a>
@@ -788,7 +840,7 @@ requestAnimationFrame(raf)
           {/* \\\ STEP ONE SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="panel stepOne px-5 lg:px-0 h-screen w-screen flex items-center justify-center relative">
+          <div className="panel stepOne px-5 lg:px-0 h-screen w-screen flex items-center justify-center relative" ref={navAbout}>
             <div className="h_container  flex flex-col   px-2 py-16 text-white">
               <h2 className="stepOneTitle  relative w-full font-semibold text-3xl leading-[43px] lg:text-[64px] lg:leading-[80px] text-center ">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
@@ -932,7 +984,7 @@ requestAnimationFrame(raf)
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
       <section className="works panel bg-offWhite">
-        <div className="max-w-7xl mx-auto py-20 px-5 xl:px-0">
+        <div className="max-w-6xl 2xl:max-w-7xl mx-auto py-20 px-5 xl:px-0">
           <div className="flex flex-col xl:flex-row items-center justify-between text-offBlack">
             <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl">
               You might love what we built to our clients
@@ -1003,7 +1055,7 @@ requestAnimationFrame(raf)
         <div className="circ circ19 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[3800px]"></div>
         <div className="circ circ20 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[4500px]"></div>
         <div className="h-full w-full bg-darkBg backdrop-blur-sm bg ">
-          <div className="testimonials panel py-14 xl:py-24 w-screen h-full max-w-7xl mx-auto px-5 xl:px-0">
+          <div className="testimonials panel py-14 xl:py-24 w-screen h-full max-w-6xl 2xl:max-w-7xl mx-auto px-5 xl:px-0">
             <h2 className="font-saira text-lg xl:text-2xl font-medium text-white">
               Trusted and Loved: Hear from Our Clients
             </h2>
@@ -1019,7 +1071,7 @@ requestAnimationFrame(raf)
                     className="w-10 h-10 lg:w-auto lg:h-auto"
                   />
                   <div className="text-white">
-                    <h4 className="text-48">
+                    <h4 className="text-48 revealType">
                       Their creative approach to web design gave my business a
                       fresh online identity.
                     </h4>
@@ -1076,7 +1128,7 @@ requestAnimationFrame(raf)
                     className="w-10 h-10 lg:w-auto lg:h-auto"
                   />
                   <div className="text-white">
-                    <h4 className="text-48">
+                    <h4 className="text-48 revealType">
                       The app they built for me exceeded my expectations in
                       every way.
                     </h4>
@@ -1131,7 +1183,7 @@ requestAnimationFrame(raf)
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           {/* \\\ CTA SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-          <div className="cta px-5 lg:px-0 panel pt-12 lg:pt-24 w-screen lg:h-screen max-w-7xl mx-auto">
+          <div className="cta px-5 lg:px-0 panel pt-12 lg:pt-24 w-screen lg:h-screen max-w-6xl 2xl:max-w-7xl mx-auto">
             <div className="bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[80px] lg:rounded-b-[128px]">
               <div className="flex items-center justify-center gap-5 lg:gap-14 w-full">
                 <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />

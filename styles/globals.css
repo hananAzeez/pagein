@@ -456,7 +456,7 @@ body {
 
 /* STARTUP HOVER */
 
-@media (min-width: 1025px) {
+@media (min-width: 1020px) {
   .startup .img-wrapper {
     position: absolute;
     top: -50%;
