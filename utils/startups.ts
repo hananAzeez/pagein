@@ -21,3 +21,30 @@ export const Startups = [
         link: '#'
     },
 ]
+
+export const Steps = [
+    {
+        id: 1,
+        step: '01',
+        title: 'Concept to blueprint',
+        desc: 'Transforming ideas into concrete wireframes, setting the foundation for your vision.'
+    },
+    {
+        id: 2,
+        step: '02',
+        title: 'Wireframe to WOW',
+        desc: 'Elevating Wireframes into Intuitive UI/UX Designs, Breathing Life into Your Concept.'
+    },
+    {
+        id: 3,
+        step: '03',
+        title: 'Culmination of Excellence',
+        desc: 'From Blueprint to Reality, Delivering a Polished and Fully Functional Final Product.'
+    },
+    {
+        id: 4,
+        step: '04',
+        title: 'Unceasing Refinements',
+        desc: 'Continuously Enhancing Your Product to Keep It Sharp, Relevant, and Ahead of the Curve.'
+    },
+]

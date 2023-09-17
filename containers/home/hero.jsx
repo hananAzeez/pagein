@@ -8,38 +8,36 @@ import Observer from "gsap/dist/Observer";
 import TopRightArrow from "./../../components/icons/icons";
 import RightArrow from "./../../components/icons/rightArrow";
 import Header from "./../../components/menu/Header";
-import { Startups } from "../../utils/startups";
-import Lenis from '@studio-freight/lenis'
-import SplitType from 'split-type'
+import { Startups, Steps } from "../../utils/startups";
+import Lenis from "@studio-freight/lenis";
+import SplitType from "split-type";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 gsap.registerPlugin(Observer);
 CustomEase.create("cubic-text", "0.25, 1, 0.5, 1");
 
-
-
 const Hero = () => {
   const heroInfiniteRef = useRef(null);
   const likeCrazyLottieRef = useRef(null);
   const saavPopup = useRef();
-  const navWorks = useRef()
-  const navServices = useRef()
-  const navAbout = useRef()
-  const navContact = useRef()
+  const navWorks = useRef();
+  const navServices = useRef();
+  const navAbout = useRef();
+  const navContact = useRef();
 
   useEffect(() => {
-    const lenis = new Lenis()
+    const lenis = new Lenis();
 
-lenis.on('scroll', (e) => {
-  console.log(e)
-})
+    lenis.on("scroll", (e) => {
+      console.log(e);
+    });
 
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
 
-requestAnimationFrame(raf)
+    requestAnimationFrame(raf);
     // \\\\\\\\\\\\\\\\\\\\\\\
     // HERO SECTION
     // \\\\\\\\\\\\\\\\\\\\\\\
@@ -449,16 +447,15 @@ requestAnimationFrame(raf)
       startup.addEventListener("mouseenter", () => {
         // Show the image
         if (window.innerWidth >= 800) {
-
           gsap.to(imgWrapper, { opacity: 1, duration: 0.5, scale: 1 });
-          
+
           // Add mousemove listener to the entire document
           document.addEventListener("mousemove", (e) => {
             const { left, top, width, height } =
-            imgWrapper.getBoundingClientRect();
+              imgWrapper.getBoundingClientRect();
             const x = (e.clientX - left) / width;
             const y = (e.clientY - top) / height;
-            
+
             gsap.to(imgWrapper, {
               x: (x - 0.5) * 100,
               y: (y - 0.5) * 100,
@@ -488,56 +485,57 @@ requestAnimationFrame(raf)
     //   }
     // })
 
-
     // MOUSE CURSOR
 
-//     gsap.set('.follower',{xPercent:-50,yPercent:-50});
-// gsap.set('.cursor',{xPercent:-50,yPercent:-50});
+    //     gsap.set('.follower',{xPercent:-50,yPercent:-50});
+    // gsap.set('.cursor',{xPercent:-50,yPercent:-50});
 
-// var follow = document.querySelector('.follower');
-// var cur = document.querySelector('.cursor');
+    // var follow = document.querySelector('.follower');
+    // var cur = document.querySelector('.cursor');
 
-// window.addEventListener('mousemove',e => {
-//     gsap.to(cur, {duration: 0.2, x:e.clientX,y:e.clientY});
-//     gsap.to(follow, {duration: 0.9, x:e.clientX,y:e.clientY});
-// });
+    // window.addEventListener('mousemove',e => {
+    //     gsap.to(cur, {duration: 0.2, x:e.clientX,y:e.clientY});
+    //     gsap.to(follow, {duration: 0.9, x:e.clientX,y:e.clientY});
+    // });
 
-// FIXED CTA
-const fixedCta = document.querySelector('.fixed-cta')
-const sectionContainer = document.querySelector('.section-container')
+    // FIXED CTA
+    const fixedCta = document.querySelector(".fixed-cta");
+    const sectionContainer = document.querySelector(".section-container");
 
-gsap.set(fixedCta, { visibility: "hidden"})
+    gsap.set(fixedCta, { visibility: "hidden" });
 
-          gsap.to(fixedCta, {
-            scrollTrigger: {
-              trigger: sectionContainer,
-              start: '800px center',
-              scrub: true,
-              markers: false
-            },
-            ease: "power1.out",
-        visibility: "visible",
-      })
+    gsap.to(fixedCta, {
+      scrollTrigger: {
+        trigger: sectionContainer,
+        start: "800px center",
+        scrub: true,
+        markers: false,
+      },
+      ease: "power1.out",
+      visibility: "visible",
+    });
 
-// TEXT REVEAL
-const splitTypes = document.querySelectorAll('.revealType')
+    // TEXT REVEAL
+    const splitTypes = document.querySelectorAll(".revealType");
 
-splitTypes.forEach((char, i) => {
-  const text = new SplitType(char, { types: 'words'})
+    splitTypes.forEach((char, i) => {
+      const text = new SplitType(char, { types: "words" });
 
-  gsap.from(text.words, {
-    scrollTrigger: {
-      trigger: char,
-      start: 'top 80%',
-      end: 'top 40%',
-      scrub: true,
-      markers: false
-    },
-    opacity: 0,
-    y: 15,
-    stagger: 0.1
-  })
-})
+      gsap.from(text.words, {
+        scrollTrigger: {
+          trigger: char,
+          start: "top 90%",
+          end: "top 75%",
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        y: 10,
+        stagger: 0.1,
+      });
+    });
+
+    // services
 
     return () => {};
   }, []);
@@ -545,14 +543,14 @@ splitTypes.forEach((char, i) => {
   return (
     <div className="section-container overflow-x-hidden relative">
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
-      <div className="fixed-cta fixed bg-black bg-opacity-30 left-0 py-3 w-screen bottom-0 flex items-center justify-center gap-4 lg:gap-5 z-[100000]">
-            <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
-              Get a quote
-            </button>
-            <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
-              Talk to us
-            </button>
-          </div>
+        <div className="fixed-cta fixed bg-black bg-opacity-30 left-0 py-3 w-screen bottom-0 flex items-center justify-center gap-4 lg:gap-5 z-[100000]">
+          <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
+            Get a quote
+          </button>
+          <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
+            Talk to us
+          </button>
+        </div>
         <div className="hero-clipath"></div>
         <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-black bg-opacity-40 text-white rounded-xl bg relative">
           <div className="nav-links flex items-center gap-8">
@@ -664,7 +662,6 @@ splitTypes.forEach((char, i) => {
               Talk to us
             </button>
           </div>
-          
 
           <div className=" my-16 hidden lg:flex items-center justify-center ">
             <img
@@ -689,9 +686,7 @@ splitTypes.forEach((char, i) => {
             />
           </div>
 
-          <div
-            class="lg:hidden  hero-images slider my-16 "
-          >
+          <div class="lg:hidden  hero-images slider my-16 ">
             <div className="group flex cursor-pointer items-center ">
               <div class="w-full slide-track">
                 <img
@@ -721,7 +716,7 @@ splitTypes.forEach((char, i) => {
       </section>
 
       <section className="bg-offWhite relative">
-      {/* <div class="cursor"></div>
+        {/* <div class="cursor"></div>
 <div class="follower"></div> */}
         <div className="startups panel h-full 2xl:h-screen xl:flex xl:items-center xl:justify-center max-w-6xl 2xl:max-w-7xl mx-auto relative px-5 xl:px-0 ">
           <div className="">
@@ -750,9 +745,9 @@ splitTypes.forEach((char, i) => {
                     {startup.desc}
                   </p>
                   <a href={startup.link} target="_blank">
-                  <div className="flex items-center justify-start lg:justify-end">
-                    <TopRightArrow />
-                  </div>
+                    <div className="flex items-center justify-start lg:justify-end">
+                      <TopRightArrow />
+                    </div>
                   </a>
                 </div>
               ))}
@@ -783,56 +778,49 @@ splitTypes.forEach((char, i) => {
           className="steps panel h-full w-fit  bg-darkBg backdrop-blur-sm bg
             "
         >
-          <div className="px-5 lg:px-0 h-screen w-screen flex items-center justify-center">
-            <div className="h_container w-full flex flex-col   px-2 py-16 text-white font-bold text-center">
-              <h1 className="s_title  relative w-full font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] ">
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
-                    Are&nbsp;
-                  </span>
-                </span>
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
-                    you
-                  </span>
-                </span>
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
-                    &nbsp;looking
-                  </span>
-                </span>
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                    &nbsp;for
-                  </span>
-                </span>
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                    &nbsp;a
-                  </span>
-                </span>
-              </h1>
-              <h1 className="s_title relative w-full font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] text-center flex items-start justify-center ">
-                <span className="animate-text -mb-1.5 -mt-6 overflow-hidden align-bottom flex flex-col">
-                  <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
+          <div className="px-5 lg:px-0 w-screen py-20 xl:py-32">
+            <div className=" w-full flex flex-col items-center px-2 text-white text-center">
+              <h2 className="font-bold text-4xl leading-[43px] lg:text-5xl xl:text-6xl xl:leading-[70px] text-center revealType">
+                Are you looking for a{" "}
+              </h2>
+              <h2 className="relative w-full font-bold text-4xl leading-[43px] lg:text-5xl  xl:text-6xl xl:leading-[70px] text-center flex items-start justify-center ">
+                <span className="animate-text overflow-hidden align-bottom flex flex-col">
+                  <span className=" text-primary hidden animatingText ">
                     Web&nbsp;
                   </span>
-                  <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
+                  <span className=" text-primary hidden animatingText ">
                     App&nbsp;
                   </span>
-                  <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
+                  <span className=" text-primary hidden animatingText ">
                     UI&nbsp;
                   </span>
-                  <span className="translate-y-full pb-1.5 pt-6 will-change-transform text-primary hidden animatingText">
+                  <span className="text-primary hidden animatingText ">
                     UX&nbsp;
                   </span>
                 </span>
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                    Solution?
-                  </span>
+                <span className=" inline-block overflow-hidden align-bottom">
+                  <span className="inline-block revealType">Solution?</span>
                 </span>
-              </h1>
+              </h2>
+              <h6 className="text-2xl pt-8 font-saira max-w-3xl text-center revealType">
+                We just don&apos;t ghost you after delivering, we are committed
+                to make the product a success from the beginning to the end
+              </h6>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-10 max-w-6xl 2xl:max-w-7xl mx-auto px-5 xl:px-0 pt-6 lg:pt-12 2xl:pt-16">
+              {Steps.map(step => (
+              <div className="px-10 py-14 flex flex-col text-left bg-black bg-opacity-40 rounded-[36px] bg-blur-sm" key={step.id}>
+                <h6 className="text-3xl opacity-30 font-medium font-benzin revealType">{step.step}</h6>
+                <div className="my-8 flex items-center justify-center gap-5 w-full h-64 bg-offBlack rounded-3xl"></div>
+                <h6 className="text-4xl font-semibold revealType">{step.title}</h6>
+                <p className="text-xl font-saira pt-6 revealType">
+                  {step.desc}
+                </p>
+              </div>
+
+              ))}
+              
             </div>
           </div>
 
@@ -840,7 +828,7 @@ splitTypes.forEach((char, i) => {
           {/* \\\ STEP ONE SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="panel stepOne px-5 lg:px-0 h-screen w-screen flex items-center justify-center relative" ref={navAbout}>
+          {/* <div className="panel stepOne px-5 lg:px-0 h-screen w-screen flex items-center justify-center relative" ref={navAbout}>
             <div className="h_container  flex flex-col   px-2 py-16 text-white">
               <h2 className="stepOneTitle  relative w-full font-semibold text-3xl leading-[43px] lg:text-[64px] lg:leading-[80px] text-center ">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
@@ -881,13 +869,13 @@ splitTypes.forEach((char, i) => {
                 </span>
               </h4>
             </div>
-          </div>
+          </div> */}
 
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           {/* \\\ STEP ONE ILLUSTRATION SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="panel blueprints lg:h-screen w-screen flex items-center justify-center relative">
+          {/* <div className="panel blueprints lg:h-screen w-screen flex items-center justify-center relative">
             <div className="blueprints flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
               <img
                 src="/images/prototype1.png"
@@ -905,13 +893,13 @@ splitTypes.forEach((char, i) => {
                 className="prototype translate-y-10 w-2/3 max-w-[250px] opacity-0"
               />
             </div>
-          </div>
+          </div> */}
 
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           {/* \\\ STEP TWO SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="stepTwo panel h-screen w-screen flex items-center justify-center relative px-5 xl:px-0">
+          {/* <div className="stepTwo panel h-screen w-screen flex items-center justify-center relative px-5 xl:px-0">
             <div className="h_container  flex flex-col   px-2 py-16">
               <h2 className="stepOneTitle  relative w-full font-semibold text-3xl leading-[43px] lg:text-[64px] lg:leading-[80px] text-center">
                 <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
@@ -951,13 +939,13 @@ splitTypes.forEach((char, i) => {
                 </span>
               </h4>
             </div>
-          </div>
+          </div> */}
 
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           {/* \\\ STEP TWO IMAGES SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-          <div className="stepTwoImgs panel lg:h-screen w-screen flex items-center justify-center relative pb-32 lg:pb-0">
+          {/* <div className="stepTwoImgs panel lg:h-screen w-screen flex items-center justify-center relative pb-32 lg:pb-0">
             <div className="results flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 ">
               <img
                 src="/images/stepTwo1.png"
@@ -975,7 +963,7 @@ splitTypes.forEach((char, i) => {
                 className="stepTwoImg translate-y-10 max-w-[250px] w-2/3"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 

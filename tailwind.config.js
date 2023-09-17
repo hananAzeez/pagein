@@ -39,6 +39,7 @@ module.exports = {
       fontFamily: {
         saira: "Saira",
         syne: "Syne",
+        benzin: "Benzin-Medium"
       },
       borderRadius: {
         btn: "64px",
