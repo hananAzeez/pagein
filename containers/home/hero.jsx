@@ -903,60 +903,73 @@ const Hero = () => {
                 <h6 className="text-2xl xl:text-4xl font-semibold revealType">
                   Optimech
                 </h6>
-                
-              <div className="mt-3 flex gap-2">
-                <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
-                  Mobile app
-                </p>
-                <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
-                  UI/UX
-                </p>
-                <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
-                  React Native
-                </p>
+
+                <div className="mt-3 flex gap-2">
+                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
+                    Mobile app
+                  </p>
+                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
+                    UI/UX
+                  </p>
+                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
+                    React Native
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="grid xl:grid-cols-5 gap-4 lg:gap-6 xl:h-[480px]">
-              <div className="work1 xl:col-span-3 cursor-pointer ">
+            <div className="grid xl:grid-cols-2 gap-4 lg:gap-6">
+              <div className="work1 cursor-pointer ">
                 <img
-                  src="works/exphone-tn.png"
+                  src="works/fonetaps-1.png"
                   alt="works"
                   className="rounded-xl lg:rounded-2xl"
                 />
+                <div className="mt-6">
+                <h6 className="text-2xl xl:text-4xl font-semibold revealType">
+                  Fonetaps
+                </h6>
+
+                <div className="mt-3 flex gap-2">
+                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
+                    Mobile app
+                  </p>
+                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
+                    UI/UX
+                  </p>
+                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
+                    React Native
+                  </p>
+                </div>
               </div>
-              <div className="work1 xl:col-span-2 cursor-pointer ">
+              </div>
+              <div className="work1 cursor-pointer ">
                 <img
                   src="works/tripzigo-mobile.png"
                   alt="works"
                   className="xl:hidden rounded-xl lg:rounded-2xl"
                 />
                 <img
-                  src="works/tripzigo-tn.png"
+                  src="works/abony-1.png"
                   alt="works"
                   className="hidden xl:block rounded-xl lg:rounded-2xl"
                 />
+                <div className="mt-6">
+                <h6 className="text-2xl xl:text-4xl font-semibold revealType">
+                  Abony
+                </h6>
+
+                <div className="mt-3 flex gap-2">
+                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
+                    Ecommerce website
+                  </p>
+                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
+                    UI/UX
+                  </p>
+                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
+                    Nextjs
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="gridTrigger grid xl:grid-cols-5 gap-4 lg:gap-6 xl:h-[480px]">
-              <div className="work1 xl:col-span-2 cursor-pointer ">
-                <img
-                  src="works/themesunited-mobile1.png"
-                  alt="works"
-                  className="xl:hidden rounded-xl lg:rounded-2xl"
-                />
-                <img
-                  src="works/themesunited-tn.png"
-                  alt="works"
-                  className="hidden xl:block rounded-xl lg:rounded-2xl"
-                />
-              </div>
-              <div className="work1 xl:col-span-3 cursor-pointer ">
-                <img
-                  src="works/stewarts-tn.png"
-                  alt="works"
-                  className="rounded-xl lg:rounded-2xl"
-                />
               </div>
             </div>
           </div>
