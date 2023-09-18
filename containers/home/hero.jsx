@@ -802,17 +802,17 @@ const Hero = () => {
                   <span className="inline-block revealType">Solution?</span>
                 </span>
               </h2>
-              <h6 className="text-2xl pt-8 font-saira max-w-3xl text-center revealType">
+              <h6 className="text-lg md:text-2xl pt-8 font-saira max-w-3xl text-center revealType">
                 We just don&apos;t ghost you after delivering, we are committed
                 to make the product a success from the beginning to the end
               </h6>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-10 max-w-6xl 2xl:max-w-7xl mx-auto px-5 xl:px-0 pt-6 lg:pt-12 2xl:pt-16">
+            <div className="grid lg:grid-cols-2 gap-6 2xl:gap-10 max-w-6xl 2xl:max-w-7xl mx-auto pt-6 lg:pt-12 2xl:pt-16">
               {Steps.map(step => (
-              <div className="px-10 py-14 flex flex-col text-left bg-black bg-opacity-40 rounded-[36px] bg-blur-sm" key={step.id}>
-                <h6 className="text-3xl opacity-30 font-medium font-benzin revealType">{step.step}</h6>
-                <div className="my-8 flex items-center justify-center gap-5 w-full h-64 bg-offBlack rounded-3xl"></div>
+              <div className="px-6 2xl:px-10 py-7 2xl:py-14 flex flex-col text-left bg-black bg-opacity-40 rounded-[36px] bg-blur-sm" key={step.id}>
+                <h6 className="text-3xl opacity-30 font-medium font-syne revealType">{step.step}</h6>
+                <div className="my-8 flex items-center justify-center gap-5 w-full h-64 bg-offBlack rounded-3xl"><img src={step.image} alt="process" className="bg-cover w-full rounded-3xl" /></div>
                 <h6 className="text-4xl font-semibold revealType">{step.title}</h6>
                 <p className="text-xl font-saira pt-6 revealType">
                   {step.desc}
