@@ -758,7 +758,7 @@ const Hero = () => {
       </section>
 
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-      {/* \\\ SERVICES SECTION */}
+      {/* \\\ STEPS SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
       <section className="services bg-black relative overflow-hidden scrollSection text-white">
@@ -810,11 +810,11 @@ const Hero = () => {
 
             <div className="grid lg:grid-cols-2 gap-6 2xl:gap-10 max-w-6xl 2xl:max-w-7xl mx-auto pt-6 lg:pt-12 2xl:pt-16">
               {Steps.map(step => (
-              <div className="px-6 2xl:px-10 py-7 2xl:py-14 flex flex-col text-left bg-black bg-opacity-40 rounded-[36px] bg-blur-sm" key={step.id}>
+              <div className="px-6 md:px-8 xl:px-10 py-7 md:py-10 xl:py-14 flex flex-col text-left bg-black bg-opacity-40 rounded-[36px] bg-blur-sm" key={step.id}>
                 <h6 className="text-3xl opacity-30 font-medium font-syne revealType">{step.step}</h6>
-                <div className="my-8 flex items-center justify-center gap-5 w-full h-64 bg-offBlack rounded-3xl"><img src={step.image} alt="process" className="bg-cover w-full rounded-3xl" /></div>
-                <h6 className="text-4xl font-semibold revealType">{step.title}</h6>
-                <p className="text-xl font-saira pt-6 revealType">
+                <div className="my-6 md:my-8 flex items-center justify-center gap-5 w-full h-64 bg-offBlack rounded-3xl"><img src={step.image} alt="process" className="bg-cover w-full h-full rounded-3xl" /></div>
+                <h6 className="text-2xl xl:text-4xl font-semibold revealType">{step.title}</h6>
+                <p className="text-base md:text-lg xl:text-xl font-saira pt-4 md:pt-6 revealType">
                   {step.desc}
                 </p>
               </div>
@@ -823,147 +823,6 @@ const Hero = () => {
               
             </div>
           </div>
-
-          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-          {/* \\\ STEP ONE SECTION */}
-          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-
-          {/* <div className="panel stepOne px-5 lg:px-0 h-screen w-screen flex items-center justify-center relative" ref={navAbout}>
-            <div className="h_container  flex flex-col   px-2 py-16 text-white">
-              <h2 className="stepOneTitle  relative w-full font-semibold text-3xl leading-[43px] lg:text-[64px] lg:leading-[80px] text-center ">
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
-                    01
-                  </span>
-                </span>
-              </h2>
-              <h2 className="stepOneTitle  relative w-full font-semibold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] text-center ">
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
-                    Concept&nbsp;
-                  </span>
-                </span>
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                    to&nbsp;
-                  </span>
-                </span>
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                    blueprint
-                  </span>
-                </span>
-              </h2>
-              <h4 className="stepOneTitle relative w-full font-saira text-xl leading-[31px] lg:text-4xl lg:tracking-[-2.16px] lg:leading-[57px] text-center mt-6">
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                    Transforming ideas into Concrete Wireframes, Setting
-                    the&nbsp;
-                  </span>
-                </span>
-                <br />
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                    Foundation for Your Vision.
-                  </span>
-                </span>
-              </h4>
-            </div>
-          </div> */}
-
-          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-          {/* \\\ STEP ONE ILLUSTRATION SECTION */}
-          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-
-          {/* <div className="panel blueprints lg:h-screen w-screen flex items-center justify-center relative">
-            <div className="blueprints flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
-              <img
-                src="/images/prototype1.png"
-                alt="prototype"
-                className="prototype translate-y-10 w-2/3 max-w-[250px] opacity-0"
-              />
-              <img
-                src="/images/prototype2.png"
-                alt="prototype"
-                className="prototype hidden lg:block translate-y-10 w-2/3 max-w-[250px] opacity-0"
-              />
-              <img
-                src="/images/prototype3.png"
-                alt="prototype"
-                className="prototype translate-y-10 w-2/3 max-w-[250px] opacity-0"
-              />
-            </div>
-          </div> */}
-
-          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-          {/* \\\ STEP TWO SECTION */}
-          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-
-          {/* <div className="stepTwo panel h-screen w-screen flex items-center justify-center relative px-5 xl:px-0">
-            <div className="h_container  flex flex-col   px-2 py-16">
-              <h2 className="stepOneTitle  relative w-full font-semibold text-3xl leading-[43px] lg:text-[64px] lg:leading-[80px] text-center">
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
-                    02
-                  </span>
-                </span>
-              </h2>
-              <h2 className="stepOneTitle  relative w-full  font-semibold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px]  text-center ">
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className=" inline-block  translate-y-full pb-1.5 pt-6 will-change-transform ">
-                    Wireframe&nbsp;
-                  </span>
-                </span>
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                    to&nbsp;
-                  </span>
-                </span>
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                    wow
-                  </span>
-                </span>
-              </h2>
-              <h4 className="stepOneTitle relative w-full font-saira text-xl leading-[31px] lg:text-4xl lg:tracking-[-2.16px] lg:leading-[57px] text-center mt-6">
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                    Elevating Wireframes into Intuitive UI/UX Designs,&nbsp;
-                  </span>
-                </span>
-                <br />
-                <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">
-                  <span className="inline-block  translate-y-full pb-1.5 pt-6 will-change-transform">
-                    Breathing Life into Your Concept.
-                  </span>
-                </span>
-              </h4>
-            </div>
-          </div> */}
-
-          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-          {/* \\\ STEP TWO IMAGES SECTION */}
-          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-
-          {/* <div className="stepTwoImgs panel lg:h-screen w-screen flex items-center justify-center relative pb-32 lg:pb-0">
-            <div className="results flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 ">
-              <img
-                src="/images/stepTwo1.png"
-                alt="stepTwoImg"
-                className="stepTwoImg translate-y-10 max-w-[250px] w-2/3"
-              />
-              <img
-                src="/images/stepTwo2.png"
-                alt="stepTwoImg"
-                className="stepTwoImg translate-y-10 max-w-[250px] hidden lg:block"
-              />
-              <img
-                src="/images/stepTwo3.png"
-                alt="stepTwoImg"
-                className="stepTwoImg translate-y-10 max-w-[250px] w-2/3"
-              />
-            </div>
-          </div> */}
         </div>
       </section>
 
@@ -1167,6 +1026,25 @@ const Hero = () => {
               </div>
             </div>
           </div>
+
+          <section className="bg-primary py-20 xl:py-32">
+          <div className="flex items-start gap-10 max-w-6xl 2xl:max-w-7xl mx-auto">
+    <img
+      src="icons/quote.svg"
+      alt="quote"
+      className="w-10 h-10 lg:w-16 lg:h-auto bg-cover bg-offBlack p-6 rounded-full"
+    />
+  <div className="font-semibold text-6xl leading-[77px] text-offBlack">
+    <h2>Our vision is to collaborate with founders who are tackling big problems that affect a lot of people. Startups, in particular, are our sweet spot because we believe in getting things out there fast.</h2>
+    <div className="w-full h-[1px] bg-white mt-10"></div>
+    <div className="flex justify-between items-center mt-6">
+      <h5 className="font-saira font-medium text-2xl">HADI ABDUL AZEEZ</h5>
+      <h6 className="font-saira text-xl font-regular">Founder's Note</h6>
+    </div>
+  </div>
+</div>
+
+          </section>
 
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           {/* \\\ CTA SECTION */}
