@@ -1036,10 +1036,10 @@ const Hero = () => {
     />
   <div className=" text-offBlack">
     <h2 className="font-semibold text-3xl leading-[40px] xl:text-6xl xl:leading-[77px]">Our vision is to collaborate with founders who are tackling big problems that affect a lot of people. Startups, in particular, are our sweet spot because we believe in getting things out there fast.</h2>
-    <div className="w-full h-[1px] bg-white mt-10"></div>
+    <div className="w-full h-[2px] bg-offBlack bg-opacity-40 mt-10"></div>
     <div className="flex justify-between items-center mt-6">
       <h5 className="font-saira font-medium text-lg md:text-xl xl:text-2xl">HADI ABDUL AZEEZ</h5>
-      <h6 className="font-saira text-base md:text-lg xl:text-xl font-regular">Founder's Note</h6>
+      <h6 className="font-saira text-base md:text-lg xl:text-xl font-regular">Founder&apos;s Note</h6>
     </div>
   </div>
 </div>
