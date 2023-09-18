@@ -8,7 +8,7 @@ import Observer from "gsap/dist/Observer";
 import TopRightArrow from "./../../components/icons/icons";
 import RightArrow from "./../../components/icons/rightArrow";
 import Header from "./../../components/menu/Header";
-import { Startups, Steps } from "../../utils/startups";
+import { Startups, Steps, works } from "../../utils/startups";
 import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
 
@@ -892,86 +892,31 @@ const Hero = () => {
               <RightArrow />
             </div>
           </div>
-          <div className="works flex flex-col gap-4 lg:gap-6 mt-8 xl:mt-16">
-            <div className="">
-              <img
-                src="/works/optimech-1.png"
-                alt="optimech"
-                className="rounded-2xl"
-              />
-              <div className="mt-6">
-                <h6 className="text-2xl xl:text-4xl font-semibold revealType">
-                  Optimech
-                </h6>
 
-                <div className="mt-3 flex gap-2">
-                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
-                    Mobile app
-                  </p>
-                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
-                    UI/UX
-                  </p>
-                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
-                    React Native
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="grid xl:grid-cols-2 gap-4 lg:gap-6">
-              <div className="work1 cursor-pointer ">
+            <div className="grid xl:grid-cols-2 gap-8 lg:gap-6 mt-8 md:mt-10">
+              {works.map(work => (
+              <div className="work1 cursor-pointer " key={work.id}>
                 <img
-                  src="works/fonetaps-1.png"
+                  src={`works/${work.image}`}
                   alt="works"
                   className="rounded-xl lg:rounded-2xl"
                 />
-                <div className="mt-6">
+                <div className="mt-3 md:mt-6">
                 <h6 className="text-2xl xl:text-4xl font-semibold revealType">
-                  Fonetaps
+                  {work.title}
                 </h6>
 
-                <div className="mt-3 flex gap-2">
-                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
-                    Mobile app
+                <div className="mt-3 flex gap-2 flex-wrap">
+                  {work.tags.map(tag => (
+                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block" key={tag.id}>
+                    {tag.title}
                   </p>
-                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
-                    UI/UX
-                  </p>
-                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
-                    React Native
-                  </p>
+                  ))}
                 </div>
               </div>
               </div>
-              <div className="work1 cursor-pointer ">
-                <img
-                  src="works/tripzigo-mobile.png"
-                  alt="works"
-                  className="xl:hidden rounded-xl lg:rounded-2xl"
-                />
-                <img
-                  src="works/abony-1.png"
-                  alt="works"
-                  className="hidden xl:block rounded-xl lg:rounded-2xl"
-                />
-                <div className="mt-6">
-                <h6 className="text-2xl xl:text-4xl font-semibold revealType">
-                  Abony
-                </h6>
+              ))}
 
-                <div className="mt-3 flex gap-2">
-                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
-                    Ecommerce website
-                  </p>
-                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
-                    UI/UX
-                  </p>
-                  <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
-                    Nextjs
-                  </p>
-                </div>
-              </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
