@@ -1027,19 +1027,19 @@ const Hero = () => {
             </div>
           </div>
 
-          <section className="bg-primary py-20 xl:py-32">
-          <div className="flex items-start gap-10 max-w-6xl 2xl:max-w-7xl mx-auto">
+          <section className="bg-primary py-14 md:py-20 xl:py-32">
+          <div className="flex flex-col lg:flex-row items-start gap-10 md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0">
     <img
       src="icons/quote.svg"
       alt="quote"
-      className="w-10 h-10 lg:w-16 lg:h-auto bg-cover bg-offBlack p-6 rounded-full"
+      className="w-10 h-10 lg:w-20 lg:h-20 bg-cover bg-offBlack p-2 lg:p-5 rounded-full"
     />
-  <div className="font-semibold text-6xl leading-[77px] text-offBlack">
-    <h2>Our vision is to collaborate with founders who are tackling big problems that affect a lot of people. Startups, in particular, are our sweet spot because we believe in getting things out there fast.</h2>
+  <div className=" text-offBlack">
+    <h2 className="font-semibold text-3xl leading-[40px] xl:text-6xl xl:leading-[77px]">Our vision is to collaborate with founders who are tackling big problems that affect a lot of people. Startups, in particular, are our sweet spot because we believe in getting things out there fast.</h2>
     <div className="w-full h-[1px] bg-white mt-10"></div>
     <div className="flex justify-between items-center mt-6">
-      <h5 className="font-saira font-medium text-2xl">HADI ABDUL AZEEZ</h5>
-      <h6 className="font-saira text-xl font-regular">Founder's Note</h6>
+      <h5 className="font-saira font-medium text-lg md:text-xl xl:text-2xl">HADI ABDUL AZEEZ</h5>
+      <h6 className="font-saira text-base md:text-lg xl:text-xl font-regular">Founder's Note</h6>
     </div>
   </div>
 </div>
