@@ -544,9 +544,14 @@ const Hero = () => {
     <div className="section-container overflow-x-hidden relative">
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
         <div className="fixed-cta fixed bg-black bg-opacity-30 left-0 py-3 w-screen bottom-0 flex items-center justify-center gap-4 lg:gap-5 z-[100000]">
-          <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
-            Get a quote
-          </button>
+          <a
+            href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
+            target="_blank"
+          >
+            <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
+              Get a quote
+            </button>
+          </a>
           <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
             Talk to us
           </button>
@@ -758,6 +763,41 @@ const Hero = () => {
       </section>
 
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+      {/* \\\ NOTE SECTION */}
+      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+
+      <section className="bg-black ">
+        <div className=" bg-darkBg backdrop-blur-sm">
+          <div className="bg-primary py-14 md:py-20 xl:py-32">
+            <div className="flex flex-col lg:flex-row items-start gap-10 md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0">
+              <img
+                src="icons/quote.svg"
+                alt="quote"
+                className="w-10 h-10 lg:w-20 lg:h-20 bg-cover bg-offBlack p-2 lg:p-5 rounded-full"
+              />
+              <div className=" text-offBlack">
+                <h2 className="font-semibold text-3xl leading-[40px] xl:text-6xl xl:leading-[77px]">
+                  Our vision is to collaborate with founders who are tackling
+                  big problems that affect a lot of people. Startups, in
+                  particular, are our sweet spot because we believe in getting
+                  things out there fast.
+                </h2>
+                <div className="w-full h-[2px] bg-offBlack bg-opacity-40 mt-10"></div>
+                <div className="flex justify-between items-center mt-6">
+                  <h5 className="font-saira font-medium text-lg md:text-xl xl:text-2xl">
+                    HADI ABDUL AZEEZ
+                  </h5>
+                  <h6 className="font-saira text-base md:text-lg xl:text-xl font-regular">
+                    Founder&apos;s Note
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ STEPS SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
@@ -809,18 +849,29 @@ const Hero = () => {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-6 2xl:gap-10 max-w-6xl 2xl:max-w-7xl mx-auto pt-6 lg:pt-12 2xl:pt-16">
-              {Steps.map(step => (
-              <div className="px-6 md:px-8 xl:px-10 py-7 md:py-10 xl:py-14 flex flex-col text-left bg-black bg-opacity-40 rounded-[36px] bg-blur-sm" key={step.id}>
-                <h6 className="text-3xl opacity-30 font-medium font-syne revealType">{step.step}</h6>
-                <div className="my-6 md:my-8 flex items-center justify-center gap-5 w-full h-64 bg-offBlack rounded-3xl"><img src={step.image} alt="process" className="bg-cover w-full h-full rounded-3xl" /></div>
-                <h6 className="text-2xl xl:text-4xl font-semibold revealType">{step.title}</h6>
-                <p className="text-base md:text-lg xl:text-xl font-saira pt-4 md:pt-6 revealType">
-                  {step.desc}
-                </p>
-              </div>
-
+              {Steps.map((step) => (
+                <div
+                  className="px-6 md:px-8 xl:px-10 py-7 md:py-10 xl:py-14 flex flex-col text-left bg-black bg-opacity-40 rounded-[36px] bg-blur-sm"
+                  key={step.id}
+                >
+                  <h6 className="text-3xl opacity-30 font-medium font-syne revealType">
+                    {step.step}
+                  </h6>
+                  <div className="my-6 md:my-8 flex items-center justify-center gap-5 w-full h-64 bg-offBlack rounded-3xl">
+                    <img
+                      src={step.image}
+                      alt="process"
+                      className="bg-cover w-full h-full rounded-3xl"
+                    />
+                  </div>
+                  <h6 className="text-2xl xl:text-4xl font-semibold revealType">
+                    {step.title}
+                  </h6>
+                  <p className="text-base md:text-lg xl:text-xl font-saira pt-4 md:pt-6 revealType">
+                    {step.desc}
+                  </p>
+                </div>
               ))}
-              
             </div>
           </div>
         </div>
@@ -842,6 +893,30 @@ const Hero = () => {
             </div>
           </div>
           <div className="works flex flex-col gap-4 lg:gap-6 mt-8 xl:mt-16">
+            <div className="">
+              <img
+                src="/works/optimech-1.png"
+                alt="optimech"
+                className="rounded-2xl"
+              />
+              <div className="mt-6">
+                <h6 className="text-2xl xl:text-4xl font-semibold revealType">
+                  Optimech
+                </h6>
+                
+              <div className="mt-3 flex gap-2">
+                <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
+                  Mobile app
+                </p>
+                <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
+                  UI/UX
+                </p>
+                <p className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block">
+                  React Native
+                </p>
+                </div>
+              </div>
+            </div>
             <div className="grid xl:grid-cols-5 gap-4 lg:gap-6 xl:h-[480px]">
               <div className="work1 xl:col-span-3 cursor-pointer ">
                 <img
@@ -1026,25 +1101,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
-          <section className="bg-primary py-14 md:py-20 xl:py-32">
-          <div className="flex flex-col lg:flex-row items-start gap-10 md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0">
-    <img
-      src="icons/quote.svg"
-      alt="quote"
-      className="w-10 h-10 lg:w-20 lg:h-20 bg-cover bg-offBlack p-2 lg:p-5 rounded-full"
-    />
-  <div className=" text-offBlack">
-    <h2 className="font-semibold text-3xl leading-[40px] xl:text-6xl xl:leading-[77px]">Our vision is to collaborate with founders who are tackling big problems that affect a lot of people. Startups, in particular, are our sweet spot because we believe in getting things out there fast.</h2>
-    <div className="w-full h-[2px] bg-offBlack bg-opacity-40 mt-10"></div>
-    <div className="flex justify-between items-center mt-6">
-      <h5 className="font-saira font-medium text-lg md:text-xl xl:text-2xl">HADI ABDUL AZEEZ</h5>
-      <h6 className="font-saira text-base md:text-lg xl:text-xl font-regular">Founder&apos;s Note</h6>
-    </div>
-  </div>
-</div>
-
-          </section>
 
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           {/* \\\ CTA SECTION */}
