@@ -520,9 +520,9 @@ const Hero = () => {
     // FIXED CTA
 
 
-    gsap.set(fixedCtaPc, { visibility: "hidden" });
+    gsap.set(fixedCtaPc.current, { visibility: "hidden" });
 
-    gsap.to(fixedCtaPc, {
+    gsap.to(fixedCtaPc.current, {
       scrollTrigger: {
         trigger: sectionContainer,
         start: "800px center",
@@ -565,6 +565,7 @@ function changeServiceImage(newImageSrc) {
   return (
     <div className="section-container overflow-x-hidden relative">
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
+        {/* fixed cta👇 */}
         <div className="fixed-cta fixed lg:hidden bg-black bg-opacity-30 left-0 py-3 w-screen bottom-0 flex items-center justify-center gap-4 lg:gap-5 z-[100000]">
           <a
             href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
@@ -580,6 +581,7 @@ function changeServiceImage(newImageSrc) {
           </button>
           </a>
         </div>
+
         <div className="fixed-cta-pc fixed hidden top-7 right-36 py-3 bottom-0 lg:flex items-center justify-center h-fit gap-4 lg:gap-5 z-[100000]" ref={fixedCtaPc} >
           <a
             href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
@@ -595,6 +597,7 @@ function changeServiceImage(newImageSrc) {
           </button>
           </a>
         </div>
+        {/* fixed cta👆 */}
         <div className="hero-clipath"></div>
         <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-black bg-opacity-40 text-white rounded-xl bg relative">
           <div className="nav-links flex items-center gap-8">
