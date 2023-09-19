@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Hamburger from "./Hamburger";
 import gsap from "gsap";
 import Link from "next/link";
@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
   const router = useRouter();
+  const toggleButton = useRef()
   // State of our Menu
   const [state, setState] = useState({
     initial: false,
@@ -25,16 +26,12 @@ const Header = () => {
       setState({ clicked: false, menuName: "Menu" });
     });
 
-    const toggleButton = document.getElementById('toggle-btn-pc');
+    gsap.set(toggleButton.current, { visibility: "hidden"})
 
-    gsap.set(toggleButton, { visibility: "hidden"})
-
-          gsap.to(toggleButton, {
-        duration: 1,
-        ease: "power2.inOut",
+          gsap.to(toggleButton.current, {
         scrollTrigger: {
-          trigger: '.startups',
-          start: 'top center',
+          trigger: '.section-container',
+          start: '800px center',
           scrub: 1, // Scrub the animation as you scroll
         },
         visibility: "visible",
@@ -96,7 +93,7 @@ const Header = () => {
                  </div>
               </button>
               <button disabled={disabled} onClick={handleMenu}>
-                <div className="btn hidden toggle-btn-pc fixed top-0 right-0 w-24 h-24 lg:flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn-pc">
+                <div className="btn hidden toggle-btn-pc fixed top-0 right-0 w-24 h-24 lg:flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn-pc" ref={toggleButton}>
                   <div className="btn-outline btn-outline-1 bg-[#333]"></div>
                   <div id="hamburger" className="hamburger">
                     <span></span>
