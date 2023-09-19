@@ -28,28 +28,28 @@ export const Steps = [
     step: "01",
     title: "Concept to blueprint",
     desc: "Transforming ideas into concrete wireframes, setting the foundation for your vision.",
-    image: "/steps/step1.png",
+    image: "/steps/step1-3.png",
   },
   {
     id: 2,
     step: "02",
     title: "Wireframe to WOW",
     desc: "Elevating Wireframes into Intuitive UI/UX Designs, Breathing Life into Your Concept.",
-    image: "/steps/step2.png",
+    image: "/steps/step2-3.png",
   },
   {
     id: 3,
     step: "03",
     title: "Culmination of Excellence",
     desc: "From Blueprint to Reality, Delivering a Polished and Fully Functional Final Product.",
-    image: "/steps/step3.png",
+    image: "/steps/step3-3.png",
   },
   {
     id: 4,
     step: "04",
     title: "Unceasing Refinements",
     desc: "Continuously Enhancing Your Product to Keep It Sharp, Relevant, and Ahead of the Curve.",
-    image: "/steps/step4.png",
+    image: "/steps/step4-3.png",
   },
 ];
 

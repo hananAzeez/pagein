@@ -893,30 +893,53 @@ function changeServiceImage(newImageSrc) {
         </div>
       </section>
 
-
+      
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+      {/* \\\ SERVICES SECTION */}
+      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+
+      <section className="bg-black !text-offWhite">
+      <div
+          className="steps panel h-full  bg-darkBg backdrop-blur-sm bg
+            "
+        >
+        <div className="md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0 py-20">
+      <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px]w-full max-w-4xl tracking-tight">
+              Our Services
+            </h2>
+            <div className="grid lg:grid-cols-3 gap-14 py-16">
+              <div className="service-img col-span-1 bg-white rounded-3xl overflow-hidden ">
+                <img src="services/ui-ux-1.png" alt="service" className="bg-cover w-full h-full rounded-3xl" id="mainServiceImage" ref={mainServiceImage}/>
+              </div>
+              <div className="col-span-2 grid gap-10 h-fit !text-offWhite">
+                {services.map(service => (
+                  <div className="service flex gap-5 border-b border-offWhite border-opacity-30 py-6" key={service.id} onMouseEnter={() => changeServiceImage(service.image)}>
+                    <h3 className="text-4xl">0{service.id}</h3>
+                    <div className="flex flex-col">
+                      <h3 className="text-4xl font-semibold tracking-[-1.44px] md:text-5xl col-span-2 revealType">
+                        {service.title}
+                      </h3>
+                      <p className="text-18 col-span-2  revealType mt-6 !text-offWhite">
+                        {service.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            </div>
+            </div>
+      </section>
+
+
+{/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ STEPS SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-      <section className="services bg-black relative overflow-hidden scrollSection text-white">
-        <div className="circ circ1 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72"></div>
-        <div className="circ circ2 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[600px]"></div>
-        <div className="circ circ3 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[1000px]"></div>
-        <div className="circ circ4 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[1700px]"></div>
-        <div className="circ circ5 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[2400px]"></div>
-        <div className="circ circ6 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[3100px]"></div>
-        <div className="circ circ7 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[3800px]"></div>
-        <div className="circ circ8 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[4500px]"></div>
-        <div className="circ circ9 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[5200px]"></div>
-        <div className="circ circ10 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[5900px]"></div>
-        <div className="circ circ11 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[6500px]"></div>
-        <div className="circ circ12 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[7200px]"></div>
-        <div
-          className="steps panel h-full w-fit  bg-darkBg backdrop-blur-sm bg
-            "
-        >
+      <section className="services bg-offWhite relative overflow-hidden scrollSection text-offBlack">
+       
           <div className="px-5 lg:px-0 w-screen py-20 xl:py-32">
-            <div className=" w-full flex flex-col items-center px-2 text-white text-center">
+            <div className=" w-full flex flex-col items-center px-2  text-center">
               <h2 className="font-bold text-4xl leading-[43px] lg:text-5xl xl:text-6xl xl:leading-[70px] text-center revealType">
                 Are you looking for a{" "}
               </h2>
@@ -945,10 +968,10 @@ function changeServiceImage(newImageSrc) {
               </h6>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-6 2xl:gap-10 max-w-6xl 2xl:max-w-7xl mx-auto pt-6 lg:pt-12 2xl:pt-16">
+            <div className="grid lg:grid-cols-2 gap-6 2xl:gap-10 max-w-6xl 2xl:max-w-7xl mx-auto pt-6 lg:pt-12 2xl:pt-16 text-offWhite">
               {Steps.map((step) => (
                 <div
-                  className="px-6 md:px-8 xl:px-10 py-7 md:py-10 xl:py-14 flex flex-col text-left bg-black bg-opacity-40 rounded-[36px] bg-blur-sm"
+                  className="px-6 md:px-8 xl:px-10 py-7 md:py-10 xl:py-14 flex flex-col text-left bg-offBlack  rounded-[36px]"
                   key={step.id}
                 >
                   <h6 className="text-3xl opacity-30 font-medium font-syne revealType">
@@ -971,43 +994,7 @@ function changeServiceImage(newImageSrc) {
               ))}
             </div>
           </div>
-        </div>
       </section>
-
-      
-      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-      {/* \\\ SERVICES SECTION */}
-      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-
-      <section className="bg-offWhite">
-        <div className="md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0 py-20">
-      <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight">
-              Our Services
-            </h2>
-            <div className="grid lg:grid-cols-3 gap-14 py-16">
-              <div className="service-img col-span-1 bg-white rounded-3xl overflow-hidden max-h-">
-                <img src="services/ui-ux-1.png" alt="service" className="bg-cover w-full h-full rounded-3xl" id="mainServiceImage" ref={mainServiceImage}/>
-              </div>
-              <div className="col-span-2 grid gap-10 h-fit">
-                {services.map(service => (
-                  <div className="service flex gap-5 border-b border-offBlack border-opacity-50 py-6" key={service.id} onMouseEnter={() => changeServiceImage(service.image)}>
-                    <h3 className="text-4xl">0{service.id}</h3>
-                    <div className="flex flex-col">
-                      <h3 className="text-4xl font-semibold tracking-[-1.44px] md:text-5xl col-span-2 text-offBlack revealType">
-                        {service.title}
-                      </h3>
-                      <p className="text-18 col-span-2 !text-offBlack revealType mt-6">
-                        {service.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            </div>
-      </section>
-
-
 
 
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
