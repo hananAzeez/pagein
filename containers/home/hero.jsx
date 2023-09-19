@@ -522,7 +522,7 @@ const Hero = () => {
     // FIXED CTA
 
 
-    gsap.set(fixedCtaPc.current, { visibility: "hidden" });
+    // gsap.set(fixedCtaPc.current, { visibility: "hidden" });
 
     gsap.to(fixedCtaPc.current, {
       scrollTrigger: {
@@ -585,7 +585,7 @@ function changeServiceImage(newImageSrc) {
           </a>
         </div>
 
-        <div className="fixed-cta-pc fixed hidden top-7 right-36 py-3 bottom-0 lg:flex items-center justify-center h-fit gap-4 lg:gap-5 z-[100000]" ref={fixedCtaPc} >
+        <div className="fixed-cta-pc fixed hidden top-7 right-36 py-3 bottom-0 lg:flex items-center justify-center h-fit gap-4 lg:gap-5 z-[100000]" style={{ visibility: "hidden"}} ref={fixedCtaPc} >
           <a
             href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
             target="_blank"
