@@ -544,8 +544,8 @@ const Hero = () => {
           scrub: true,
           markers: false,
         },
-        opacity: 0,
-        y: 10,
+        opacity: 0.2,
+        // y: 10,
         stagger: 0.1,
       });
     });
