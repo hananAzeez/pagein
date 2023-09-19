@@ -18,6 +18,7 @@ const Header = () => {
   });
   // State of our button
   const [disabled, setDisabled] = useState(false);
+  const [showMenuButton, setShowMenuButton] = useState(false);
 
   //Use Effect
   useEffect(() => {
@@ -26,16 +27,19 @@ const Header = () => {
       setState({ clicked: false, menuName: "Menu" });
     });
 
-    gsap.set(toggleButton.current, { visibility: "hidden"})
+    function toggleMenuButtonVisibility() {
+      if (window.scrollY >= 600) {
+        setShowMenuButton(true);
+      } else {
+        setShowMenuButton(false);
+      }
+    }
 
-          gsap.to(toggleButton.current, {
-        scrollTrigger: {
-          trigger: '.section-container',
-          start: '800px center',
-          scrub: 1, // Scrub the animation as you scroll
-        },
-        visibility: "visible",
-      })
+    // Add a scroll event listener to toggle the visibility
+    window.addEventListener('scroll', toggleMenuButtonVisibility);
+
+    // Initially hide the CTA element
+    setShowMenuButton(false);
 
     // Clean up the event listener when the component unmounts.
     return () => {
@@ -93,7 +97,7 @@ const Header = () => {
                  </div>
               </button>
               <button disabled={disabled} onClick={handleMenu}>
-                <div className="btn hidden toggle-btn-pc fixed top-0 right-0 w-24 h-24 lg:flex justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn-pc" ref={toggleButton}>
+                <div className={`btn hidden toggle-btn-pc fixed top-0 right-0 w-24 h-24 ${showMenuButton ? 'lg:flex' : 'lg:hidden'} justify-center items-center m-[2em] cursor-pointer z-[200]" id="toggle-btn-pc`} ref={toggleButton}>
                   <div className="btn-outline btn-outline-1 bg-[#333]"></div>
                   <div id="hamburger" className="hamburger">
                     <span></span>

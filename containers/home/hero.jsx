@@ -536,7 +536,7 @@ const Hero = () => {
     //     visibility: "visible",
     //   })
     function toggleCtaVisibility() {
-      if (window.scrollY >= 800) {
+      if (window.scrollY >= 600) {
         setShowCta(true);
       } else {
         setShowCta(false);
