@@ -123,3 +123,26 @@ export const works = [
     ],
   },
 ];
+
+export const services = [
+  {
+    id: 1,
+    title: 'UI/UX Design',
+    desc: 'Enhancing User Experiences: We specialize in designing interfaces that prioritize user satisfaction, ensuring intuitive navigation and engaging interactions.'
+  },
+  {
+    id: 2,
+    title: 'Web Development',
+    desc: 'Building Digital Solutions: Our web development team creates robust websites using cutting-edge technologies for a responsive and scalable online presence.'
+  },
+  {
+    id: 3,
+    title: 'App Development',
+    desc: 'Innovative App Solutions: We deliver custom mobile and web applications that provide compelling user experiences and drive business growth.'
+  },
+  {
+    id: 4,
+    title: 'Digital Marketing',
+    desc: 'Boosting Online Visibility: Our digital marketing strategies are designed to amplify your online presence, engage your target audience, and increase conversions.'
+  },
+]

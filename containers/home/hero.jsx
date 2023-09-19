@@ -8,7 +8,7 @@ import Observer from "gsap/dist/Observer";
 import TopRightArrow from "./../../components/icons/icons";
 import RightArrow from "./../../components/icons/rightArrow";
 import Header from "./../../components/menu/Header";
-import { Startups, Steps, works } from "../../utils/startups";
+import { Startups, Steps, services, works } from "../../utils/startups";
 import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
 
@@ -951,6 +951,39 @@ const Hero = () => {
       </section>
 
       
+      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+      {/* \\\ SERVICES SECTION */}
+      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+
+      <section className="bg-offWhite">
+        <div className="md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0 py-20">
+      <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight">
+              Our Services
+            </h2>
+            <div className="grid lg:grid-cols-3">
+              <div className="col-span-1"></div>
+              <div className="col-span-2 flex flex-col gap-10 py-16">
+                {services.map(service => (
+                  <div className="flex gap-5 border-b border-offBlack border-opacity-50 py-6" key={service.id}>
+                    <h3 className="text-4xl">0{service.id}</h3>
+                    <div className="flex flex-col">
+                      <h3 className="text-48 col-span-2 !text-offBlack revealType">
+                        {service.title}
+                      </h3>
+                      <p className="text-18 col-span-2 !text-offBlack revealType mt-6">
+                        {service.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            </div>
+      </section>
+
+
+
+
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ TESTIMONIAL SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
