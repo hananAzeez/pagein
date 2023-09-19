@@ -524,16 +524,16 @@ const Hero = () => {
 
     // gsap.set(fixedCtaPc.current, { visibility: "hidden" });
 
-    gsap.to(fixedCtaPc.current, {
-      scrollTrigger: {
-        trigger: sectionContainer,
-        start: "800px center",
-        scrub: true,
-        markers: false,
-      },
-      ease: "power1.out",
-      visibility: "visible",
-    });
+    gsap.set(fixedCtaPc.current, { visibility: "hidden"})
+
+          gsap.to(fixedCtaPc.current, {
+        scrollTrigger: {
+          trigger: '.section-container',
+          start: '800px center',
+          scrub: 1, // Scrub the animation as you scroll
+        },
+        visibility: "visible",
+      })
 
     // TEXT REVEAL
     const splitTypes = document.querySelectorAll(".revealType");
@@ -569,7 +569,7 @@ function changeServiceImage(newImageSrc) {
     <div className="section-container overflow-x-hidden relative">
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
         {/* fixed cta👇 */}
-        <div className="fixed-cta fixed lg:hidden bg-black bg-opacity-30 left-0 py-3 w-screen bottom-0 flex items-center justify-center gap-4 lg:gap-5 z-[100000]">
+        <div className="fixed-cta fixed lg:hidden bg-black bg-opacity-30 left-0 py-3 w-screen bottom-0 flex items-center justify-center gap-4 lg:gap-5 z-[100]">
           <a
             href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
             target="_blank"
@@ -585,7 +585,7 @@ function changeServiceImage(newImageSrc) {
           </a>
         </div>
 
-        <div className="fixed-cta-pc fixed hidden top-7 right-36 py-3 bottom-0 lg:flex items-center justify-center h-fit gap-4 lg:gap-5 z-[100000]" style={{ visibility: "hidden"}} ref={fixedCtaPc} >
+        <div className="fixed-cta-pc fixed hidden top-7 right-36 py-3 bottom-0 lg:flex items-center justify-center h-fit gap-4 lg:gap-5 z-[100]"  ref={fixedCtaPc} >
           <a
             href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
             target="_blank"
