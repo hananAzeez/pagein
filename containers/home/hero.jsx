@@ -514,6 +514,21 @@ const Hero = () => {
       ease: "power1.out",
       visibility: "visible",
     });
+    // FIXED CTA
+    const fixedCtaPc = document.querySelector(".fixed-cta-pc");
+
+    gsap.set(fixedCtaPc, { visibility: "hidden" });
+
+    gsap.to(fixedCtaPc, {
+      scrollTrigger: {
+        trigger: sectionContainer,
+        start: "800px center",
+        scrub: true,
+        markers: false,
+      },
+      ease: "power1.out",
+      visibility: "visible",
+    });
 
     // TEXT REVEAL
     const splitTypes = document.querySelectorAll(".revealType");
@@ -543,12 +558,25 @@ const Hero = () => {
   return (
     <div className="section-container overflow-x-hidden relative">
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
-        <div className="fixed-cta fixed bg-black bg-opacity-30 left-0 py-3 w-screen bottom-0 flex items-center justify-center gap-4 lg:gap-5 z-[100000]">
+        <div className="fixed-cta fixed lg:hidden bg-black bg-opacity-30 left-0 py-3 w-screen bottom-0 flex items-center justify-center gap-4 lg:gap-5 z-[100000]">
           <a
             href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
             target="_blank"
           >
             <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
+              Get a quote
+            </button>
+          </a>
+          <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
+            Talk to us
+          </button>
+        </div>
+        <div className="fixed-cta-pc fixed hidden top-7 right-36 py-3 bottom-0 lg:flex items-center justify-center h-fit gap-4 lg:gap-5 z-[100000]">
+          <a
+            href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
+            target="_blank"
+          >
+            <button className="bg-primary border border-offBlack py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
               Get a quote
             </button>
           </a>
