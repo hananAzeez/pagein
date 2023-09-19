@@ -573,9 +573,11 @@ function changeServiceImage(newImageSrc) {
               Get a quote
             </button>
           </a>
+          <a href="https://wa.link/pg09my" target="_blank" rel="noopener noreferrer">
           <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
             Talk to us
           </button>
+          </a>
         </div>
         <div className="fixed-cta-pc fixed hidden top-7 right-36 py-3 bottom-0 lg:flex items-center justify-center h-fit gap-4 lg:gap-5 z-[100000]">
           <a
@@ -586,9 +588,11 @@ function changeServiceImage(newImageSrc) {
               Get a quote
             </button>
           </a>
+          <a href="https://wa.link/pg09my" target="_blank" rel="noopener noreferrer">
           <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
             Talk to us
           </button>
+          </a>
         </div>
         <div className="hero-clipath"></div>
         <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-black bg-opacity-40 text-white rounded-xl bg relative">
@@ -694,12 +698,19 @@ function changeServiceImage(newImageSrc) {
           </div>
 
           <div className="flex items-center justify-center gap-4 lg:gap-5 relative">
-            <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
+          <a
+            href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
+            target="_blank"
+          >
+            <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300" href="">
               Get a quote
             </button>
+            </a>
+            <a href="https://wa.link/pg09my" target="_blank" rel="noopener noreferrer">
             <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
               Talk to us
             </button>
+            </a>
           </div>
 
           <div className=" my-16 hidden lg:flex items-center justify-center ">
@@ -1149,12 +1160,19 @@ function changeServiceImage(newImageSrc) {
                 Let&apos;s Grow Your Digital Presence!
               </h2>
               <div className="cta-buttons flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
+              <a
+            href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
+            target="_blank"
+          >
                 <button className="py-3 lg:py-4 px-10 bg-offBlack text-primary rounded-btn text-lg lg:text-2xl border border-offBlack w-full lg:w-auto">
                   Get a Quote
                 </button>
+                </a>
+                <a href="https://wa.link/pg09my" target="_blank" rel="noopener noreferrer">
                 <button className="py-3 lg:py-4 px-10  bg-primary text-offBlack border border-offBlack rounded-btn text-lg lg:text-2xl w-full lg:w-auto">
                   Talk To Us
                 </button>
+                </a>
               </div>
             </div>
 
