@@ -804,7 +804,7 @@ const Hero = () => {
                 className="w-10 h-10 lg:w-20 lg:h-20 bg-cover bg-offBlack p-2 lg:p-5 rounded-full"
               />
               <div className=" text-offBlack">
-                <h2 className="font-semibold text-3xl leading-[40px] xl:text-6xl xl:leading-[77px]">
+                <h2 className="font-semibold text-3xl leading-[40px] xl:text-6xl xl:leading-[77px] revealType">
                   Our vision is to collaborate with founders who are tackling
                   big problems that affect a lot of people. Startups, in
                   particular, are our sweet spot because we believe in getting
@@ -832,7 +832,7 @@ const Hero = () => {
       <section className="works panel bg-offWhite">
         <div className="max-w-6xl 2xl:max-w-7xl mx-auto py-20 px-5 xl:px-0">
           <div className="flex flex-col xl:flex-row items-center justify-between text-offBlack">
-            <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight">
+            <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight revealType">
               You might love what we built to our clients
             </h2>
             <div className=" items-center justify-end gap-3 w-full xl:w-fit hidden xl:flex py-3 px-6 border border-offBlack rounded-full hover:bg-primary cursor-pointer transition-all duration-300">
@@ -960,9 +960,11 @@ const Hero = () => {
       <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight">
               Our Services
             </h2>
-            <div className="grid lg:grid-cols-3">
-              <div className="col-span-1"></div>
-              <div className="col-span-2 flex flex-col gap-10 py-16">
+            <div className="grid lg:grid-cols-3 gap-14 py-16">
+              <div className="col-span-1 bg-white rounded-3xl overflow-hidden">
+                <img src="services/ui-ux-1.png" alt="service" className="bg-cover w-full h-full rounded-3xl" />
+              </div>
+              <div className="col-span-2 flex flex-col gap-10 ">
                 {services.map(service => (
                   <div className="flex gap-5 border-b border-offBlack border-opacity-50 py-6" key={service.id}>
                     <h3 className="text-4xl">0{service.id}</h3>

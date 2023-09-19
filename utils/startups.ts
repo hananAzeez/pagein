@@ -128,21 +128,25 @@ export const services = [
   {
     id: 1,
     title: 'UI/UX Design',
-    desc: 'Enhancing User Experiences: We specialize in designing interfaces that prioritize user satisfaction, ensuring intuitive navigation and engaging interactions.'
+    desc: 'Enhancing User Experiences: We specialize in designing interfaces that prioritize user satisfaction, ensuring intuitive navigation and engaging interactions.',
+    image: 'ui-ux-1.png'
   },
   {
     id: 2,
     title: 'Web Development',
-    desc: 'Building Digital Solutions: Our web development team creates robust websites using cutting-edge technologies for a responsive and scalable online presence.'
+    desc: 'Building Digital Solutions: Our web development team creates robust websites using cutting-edge technologies for a responsive and scalable online presence.',
+    image: 'web-development.png'
   },
   {
     id: 3,
     title: 'App Development',
-    desc: 'Innovative App Solutions: We deliver custom mobile and web applications that provide compelling user experiences and drive business growth.'
+    desc: 'Innovative App Solutions: We deliver custom mobile and web applications that provide compelling user experiences and drive business growth.',
+    image: 'app-development.png'
   },
   {
     id: 4,
-    title: 'Digital Marketing',
-    desc: 'Boosting Online Visibility: Our digital marketing strategies are designed to amplify your online presence, engage your target audience, and increase conversions.'
+    title: 'Tech Solutions',
+    desc: 'Driving Digital Transformation: Our tech solutions empower businesses through innovative technology, facilitating digital transformation to enhance efficiency, competitiveness, and growth.',
+    image: 'tech-solutions-1.png'
   },
 ]
