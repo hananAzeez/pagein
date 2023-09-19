@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 // import { gsap } from "gsap";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -25,10 +25,12 @@ const Hero = () => {
   const navAbout = useRef();
   const navContact = useRef();
   const fixedCtaPc = useRef()
+  const revealType = useRef()
   let mainServiceImage;
 
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
     const lenis = new Lenis();
 
     lenis.on("scroll", (e) => {
@@ -555,8 +557,9 @@ const Hero = () => {
 
     // services
     mainServiceImage = document.getElementById('mainServiceImage');
-    return () => {};
-  }, []);
+  }); // <- Scope!
+  return () => ctx.revert(); // <- Cleanup!
+}, []);
   
 
 function changeServiceImage(newImageSrc) {
@@ -774,7 +777,7 @@ function changeServiceImage(newImageSrc) {
 <div class="follower"></div> */}
         <div className="startups panel h-full 2xl:h-screen xl:flex xl:items-center xl:justify-center max-w-6xl 2xl:max-w-7xl mx-auto relative px-5 xl:px-0 ">
           <div className="">
-            <h2 className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16 revealType">
+            <h2 className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16 revealType" ref={revealType}>
               We run startups that helps thousands
             </h2>
             <h6 className="revealType mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-offBlack">
