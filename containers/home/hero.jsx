@@ -24,6 +24,7 @@ const Hero = () => {
   const navServices = useRef();
   const navAbout = useRef();
   const navContact = useRef();
+  const fixedCtaPc = useRef()
   let mainServiceImage;
 
 
@@ -517,7 +518,7 @@ const Hero = () => {
       visibility: "visible",
     });
     // FIXED CTA
-    const fixedCtaPc = document.querySelector(".fixed-cta-pc");
+
 
     gsap.set(fixedCtaPc, { visibility: "hidden" });
 
@@ -579,7 +580,7 @@ function changeServiceImage(newImageSrc) {
           </button>
           </a>
         </div>
-        <div className="fixed-cta-pc fixed hidden top-7 right-36 py-3 bottom-0 lg:flex items-center justify-center h-fit gap-4 lg:gap-5 z-[100000]">
+        <div className="fixed-cta-pc fixed hidden top-7 right-36 py-3 bottom-0 lg:flex items-center justify-center h-fit gap-4 lg:gap-5 z-[100000]" ref={fixedCtaPc} >
           <a
             href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
             target="_blank"
@@ -1034,21 +1035,20 @@ function changeServiceImage(newImageSrc) {
                   />
                   <div className="text-white">
                     <h4 className="text-48 revealType">
-                      Their creative approach to web design gave my business a
-                      fresh online identity.
+                    Revolutionized our brand! Pagein transformed our website into a sales powerhouse. Exceptional work!
                     </h4>
                     <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
                       Tom hales
                     </h6>
                     <p className="opacity-70 mt-3 lg:mt-4 text-sm lg:textt-base font-saira">
-                      Tech Entrepreneur
+                      Entrepreneur
                     </p>
                     <p className="opacity-70 mt-1 lg:mt-2 text-sm lg:textt-base font-saira">
-                      Tripzigo
+                      Abony
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-2 lg:gap-4 items-center">
+                {/* <div className="flex gap-2 lg:gap-4 items-center">
                   <div className="h-full w-8 flex items-center justify-center">
                     <img
                       src="icons/leftSolidArrow.png"
@@ -1080,7 +1080,7 @@ function changeServiceImage(newImageSrc) {
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className=" review flex items-center justify-between gap-5 lg:gap-32 py-20 lg:py-40 border-y-2 border-white border-opacity-10">
                 <div className="flex flex-col lg:flex-row gap-10 items-start">
@@ -1105,7 +1105,7 @@ function changeServiceImage(newImageSrc) {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-2 lg:gap-4 items-center">
+                {/* <div className="flex gap-2 lg:gap-4 items-center">
                   <div className="h-full w-8 flex items-center justify-center">
                     <img
                       src="icons/leftSolidArrow.png"
@@ -1137,7 +1137,7 @@ function changeServiceImage(newImageSrc) {
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
