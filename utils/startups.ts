@@ -106,7 +106,7 @@ export const works = [
   {
     id: 4,
     title: "Optimech",
-    image: "optimech-2.png",
+    image: "optimech-3.png",
     tags: [
       {
         id: 1,
