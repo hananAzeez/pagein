@@ -944,17 +944,17 @@ function changeServiceImage(newImageSrc) {
                 Are you looking for a{" "}
               </h2>
               <h2 className="relative w-full font-bold text-4xl leading-[43px] lg:text-5xl  xl:text-6xl xl:leading-[70px] text-center flex items-start justify-center ">
-                <span className="animate-text overflow-hidden align-bottom flex flex-col">
-                  <span className=" text-primary hidden animatingText ">
+                <span className="animate-text overflow-hidden align-bottom flex flex-col text-[#B3E208]">
+                  <span className=" hidden animatingText ">
                     Web&nbsp;
                   </span>
-                  <span className=" text-primary hidden animatingText ">
+                  <span className=" hidden animatingText ">
                     App&nbsp;
                   </span>
-                  <span className=" text-primary hidden animatingText ">
+                  <span className=" hidden animatingText ">
                     UI&nbsp;
                   </span>
-                  <span className="text-primary hidden animatingText ">
+                  <span className=" hidden animatingText ">
                     UX&nbsp;
                   </span>
                 </span>
@@ -977,7 +977,7 @@ function changeServiceImage(newImageSrc) {
                   <h6 className="text-3xl opacity-30 font-medium font-syne revealType">
                     {step.step}
                   </h6>
-                  <div className="my-6 md:my-8 flex items-center justify-center gap-5 w-full h-64 bg-offBlack rounded-3xl">
+                  <div className="my-6 md:my-8 flex items-center justify-center gap-5 w-full lg:h-64 bg-offBlack rounded-3xl">
                     <img
                       src={step.image}
                       alt="process"
