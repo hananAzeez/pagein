@@ -621,3 +621,7 @@ header .hamburger-menu .menu-layer .wrapper .menu-links .info p {
 .service:hover h3 {
   color: #d5ff3f;
 }
+
+.hideCta {
+  display: none;
+}
