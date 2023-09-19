@@ -24,6 +24,8 @@ const Hero = () => {
   const navServices = useRef();
   const navAbout = useRef();
   const navContact = useRef();
+  let mainServiceImage;
+
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -551,10 +553,14 @@ const Hero = () => {
     });
 
     // services
-
+    mainServiceImage = document.getElementById('mainServiceImage');
     return () => {};
   }, []);
+  
 
+function changeServiceImage(newImageSrc) {
+  mainServiceImage.src = newImageSrc;
+}
   return (
     <div className="section-container overflow-x-hidden relative">
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
@@ -961,15 +967,15 @@ const Hero = () => {
               Our Services
             </h2>
             <div className="grid lg:grid-cols-3 gap-14 py-16">
-              <div className="col-span-1 bg-white rounded-3xl overflow-hidden">
-                <img src="services/ui-ux-1.png" alt="service" className="bg-cover w-full h-full rounded-3xl" />
+              <div className="service-img col-span-1 bg-white rounded-3xl overflow-hidden max-h-">
+                <img src="services/ui-ux-1.png" alt="service" className="bg-cover w-full h-full rounded-3xl" id="mainServiceImage" ref={mainServiceImage}/>
               </div>
-              <div className="col-span-2 flex flex-col gap-10 ">
+              <div className="col-span-2 grid gap-10 h-fit">
                 {services.map(service => (
-                  <div className="flex gap-5 border-b border-offBlack border-opacity-50 py-6" key={service.id}>
+                  <div className="service flex gap-5 border-b border-offBlack border-opacity-50 py-6" key={service.id} onMouseEnter={() => changeServiceImage(service.image)}>
                     <h3 className="text-4xl">0{service.id}</h3>
                     <div className="flex flex-col">
-                      <h3 className="text-48 col-span-2 !text-offBlack revealType">
+                      <h3 className="text-4xl font-semibold tracking-[-1.44px] md:text-5xl col-span-2 text-offBlack revealType">
                         {service.title}
                       </h3>
                       <p className="text-18 col-span-2 !text-offBlack revealType mt-6">

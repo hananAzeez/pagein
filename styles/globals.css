@@ -617,3 +617,7 @@ header .hamburger-menu .menu-layer .wrapper .menu-links .info p {
   user-select: none;
   pointer-events: none;
 } */
+
+.service:hover h3 {
+  color: #b6da34;
+}
