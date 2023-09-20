@@ -726,7 +726,7 @@ function changeServiceImage(newImageSrc) {
                     <h3 className="text-4xl">0{service.id}</h3>
                     <div className="h-56 overflow-hidden lg:hidden">
 
-                    <img src={service.image} alt="service" className=" w-full bg-bottom " />
+                    <img src={service.mobile} alt="service" className=" w-full bg-bottom " />
                     </div>
                     <div className="flex flex-col">
                       <h3 className="text-4xl font-semibold tracking-[-1.44px] md:text-5xl col-span-2 revealType">
