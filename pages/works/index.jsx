@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Navbar from './../../components/navbar';
 import { works } from './../../utils/startups';
+import Footer from './../../components/footer';
 
 const Works = () => {
     return ( 
@@ -46,6 +47,7 @@ const Works = () => {
       </section>
 
             </section>
+            <Footer />
             </div>
         </main>
      );
