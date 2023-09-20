@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { CustomEase } from "gsap/dist/CustomEase";
 import Observer from "gsap/dist/Observer";
 import TopRightArrow from "./../../components/icons/icons";
-import RightArrow from "./../../components/icons/rightArrow";
+import RightArrow, { RightArrowPrimary } from "./../../components/icons/rightArrow";
 import Header from "./../../components/menu/Header";
 import { Startups, Steps, services, works } from "../../utils/startups";
 import Lenis from "@studio-freight/lenis";
@@ -26,7 +26,8 @@ const Hero = () => {
   const navContact = useRef();
   const fixedCtaPc = useRef()
   const revealType = useRef()
-  let mainServiceImage;
+  const mainServiceImage = useRef()
+  // let mainServiceImage;
   const [showCta, setShowCta] = useState(false);
 
 
@@ -570,14 +571,14 @@ const Hero = () => {
     });
 
     // services
-    mainServiceImage = document.getElementById('mainServiceImage');
+    // mainServiceImage = document.getElementById('mainServiceImage');
   }); // <- Scope!
   return () => ctx.revert(); // <- Cleanup!
 }, []);
   
 
 function changeServiceImage(newImageSrc) {
-  mainServiceImage.src = newImageSrc;
+  mainServiceImage.current.src = newImageSrc;
 }
   return (
     <div className="section-container overflow-x-hidden relative">
@@ -843,18 +844,24 @@ function changeServiceImage(newImageSrc) {
               <div className=" text-offBlack">
                 <h2 className="font-semibold text-3xl leading-[40px] xl:text-6xl xl:leading-[77px] revealType">
                   Our vision is to collaborate with founders who are tackling
-                  big problems that affect a lot of people. Startups, in
-                  particular, are our sweet spot because we believe in getting
-                  things out there fast.
+                  big problems that affect a lot of people. 
                 </h2>
-                <div className="w-full h-[2px] bg-offBlack bg-opacity-40 mt-10"></div>
+                <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end gap-10 mt-10 w-full">
+                  <div className="max-w-xl">
+                  <h3 className="font-medium text-2xl revealType ">Startups, in
+                  particular, are our sweet spot because we believe in getting
+                  things out there fast.</h3>
+                  <div className="w-full h-[2px] bg-offBlack bg-opacity-20 mt-10"></div>
                 <div className="flex justify-between items-center mt-6">
-                  <h5 className="font-saira font-medium text-lg md:text-xl xl:text-2xl">
+                  <h5 className="font-saira font-medium text-base md:text-lg xl:text-xl">
                     HADI ABDUL AZEEZ
                   </h5>
                   <h6 className="font-saira text-base md:text-lg xl:text-xl font-regular">
                     Founder&apos;s Note
                   </h6>
+                </div>
+                </div>
+                <button className="w-fit py-4 lg:py-7 px-10 lg:px-16 rounded-2xl bg-offBlack text-primary text-lg  lg:text-2xl flex items-center gap-2">Know more <RightArrowPrimary /> </button>
                 </div>
               </div>
             </div>
@@ -913,21 +920,23 @@ function changeServiceImage(newImageSrc) {
 
       <section className="bg-black !text-offWhite">
       <div
-          className="steps panel h-full  bg-darkBg backdrop-blur-sm bg
-            "
-        >
+          className="steps panel h-full  bg-darkBg backdrop-blur-sm bg">
         <div className="md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0 py-20">
       <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px]w-full max-w-4xl tracking-tight">
               Our Services
             </h2>
-            <div className="grid lg:grid-cols-3 gap-14 py-16">
-              <div className="service-img col-span-1 bg-white rounded-3xl overflow-hidden ">
+            <div className="grid lg:grid-cols-3 gap-14 py-10 md:py-16">
+              <div className="service-img col-span-1 bg-white rounded-3xl overflow-hidden hidden lg:block">
                 <img src="services/ui-ux-1.png" alt="service" className="bg-cover w-full h-full rounded-3xl" id="mainServiceImage" ref={mainServiceImage}/>
               </div>
               <div className="col-span-2 grid gap-10 h-fit !text-offWhite">
                 {services.map(service => (
-                  <div className="service flex gap-5 border-b border-offWhite border-opacity-30 py-6" key={service.id} onMouseEnter={() => changeServiceImage(service.image)}>
+                  <div className="service flex flex-col lg:flex-row gap-5 border-b border-offWhite border-opacity-30 pt-6 pb-12" key={service.id} onMouseEnter={() => changeServiceImage(service.image)}>
                     <h3 className="text-4xl">0{service.id}</h3>
+                    <div className="h-56 overflow-hidden lg:hidden">
+
+                    <img src={service.image} alt="service" className=" w-full bg-bottom " />
+                    </div>
                     <div className="flex flex-col">
                       <h3 className="text-4xl font-semibold tracking-[-1.44px] md:text-5xl col-span-2 revealType">
                         {service.title}
@@ -945,7 +954,7 @@ function changeServiceImage(newImageSrc) {
       </section>
 
 
-{/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ STEPS SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
@@ -990,7 +999,7 @@ function changeServiceImage(newImageSrc) {
                   <h6 className="text-3xl opacity-30 font-medium font-syne revealType">
                     {step.step}
                   </h6>
-                  <div className="my-6 md:my-8 flex items-center justify-center gap-5 w-full lg:h-64 bg-offBlack rounded-3xl">
+                  <div className="my-6 md:my-8 flex items-center justify-center gap-5 w-full lg:h-64 bg-offBlack rounded-2xl">
                     <img
                       src={step.image}
                       alt="process"
