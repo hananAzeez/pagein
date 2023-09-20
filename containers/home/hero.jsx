@@ -7,10 +7,10 @@ import { CustomEase } from "gsap/dist/CustomEase";
 import Observer from "gsap/dist/Observer";
 import TopRightArrow from "./../../components/icons/icons";
 import RightArrow, { RightArrowPrimary } from "./../../components/icons/rightArrow";
-import Header from "./../../components/menu/Header";
 import { Startups, Steps, services, works } from "../../utils/startups";
 import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
+import Navbar from "../../components/navbar";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 gsap.registerPlugin(Observer);
@@ -28,7 +28,6 @@ const Hero = () => {
   const revealType = useRef()
   const mainServiceImage = useRef()
   // let mainServiceImage;
-  const [showCta, setShowCta] = useState(false);
 
 
   useLayoutEffect(() => {
@@ -536,19 +535,7 @@ const Hero = () => {
     //     },
     //     visibility: "visible",
     //   })
-    function toggleCtaVisibility() {
-      if (window.scrollY >= 600) {
-        setShowCta(true);
-      } else {
-        setShowCta(false);
-      }
-    }
-
-    // Add a scroll event listener to toggle the visibility
-    window.addEventListener('scroll', toggleCtaVisibility);
-
-    // Initially hide the CTA element
-    setShowCta(false);
+    
 
     // TEXT REVEAL
     const splitTypes = document.querySelectorAll(".revealType");
@@ -584,55 +571,7 @@ function changeServiceImage(newImageSrc) {
     <div className="section-container overflow-x-hidden relative">
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
         {/* fixed cta👇 */}
-        <div className={`fixed-cta fixed lg:hidden bg-black bg-opacity-30 left-0 py-3 w-screen bottom-0 ${showCta ? 'flex': 'hidden'} items-center justify-center gap-4 lg:gap-5 z-[100]`}>
-          <a
-            href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
-            target="_blank"
-          >
-            <button className="bg-primary border border-primary py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
-              Get a quote
-            </button>
-          </a>
-          <a href="https://wa.link/pg09my" target="_blank" rel="noopener noreferrer">
-          <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
-            Talk to us
-          </button>
-          </a>
-        </div>
-
-        <div
-      className={`fixed-cta-pc hidden fixed top-7 right-36 py-3 bottom-0  items-center justify-center h-fit gap-4 lg:gap-5 z-[100] ${showCta ? 'lg:flex' : 'lg:hidden'}`}
-    >
-      <a href="https://hf612bf58kc.typeform.com/to/UXwICQZ7" target="_blank">
-        <button className="bg-primary border border-offBlack py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
-          Get a quote
-        </button>
-      </a>
-      <a href="https://wa.link/pg09my" target="_blank" rel="noopener noreferrer">
-        <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
-          Talk to us
-        </button>
-      </a>
-    </div>
-        {/* fixed cta👆 */}
-        <div className="hero-clipath"></div>
-        <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-black bg-opacity-40 text-white rounded-xl bg relative">
-          <div className="nav-links flex items-center gap-8">
-            <p className="menu-links hover-this ">Works</p>
-            <p className="menu-links hover-this">Services</p>
-          </div>
-          <h1 className="text-3xl font-bold">Pagein</h1>
-          <div className="nav-links flex items-center gap-8">
-            <p className="menu-links">About</p>
-            <p className="menu-links">Contact</p>
-          </div>
-        </header>
-        <header className="lg:hidden relative flex items-center justify-between">
-          <h1 className="text-white text-2xl font-bold">Pagein</h1>
-        </header>
-        <div className="absolute">
-          <Header />
-        </div>
+        <Navbar />
 
         {/* MENU */}
 
