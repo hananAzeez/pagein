@@ -583,7 +583,7 @@ function changeServiceImage(newImageSrc) {
     <div className="section-container overflow-x-hidden relative">
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
         {/* fixed cta👇 */}
-        <div className="fixed-cta fixed lg:hidden bg-black bg-opacity-30 left-0 py-3 w-screen bottom-0 flex items-center justify-center gap-4 lg:gap-5 z-[100]">
+        <div className={`fixed-cta fixed lg:hidden bg-black bg-opacity-30 left-0 py-3 w-screen bottom-0 ${showCta ? 'flex': 'hidden'} items-center justify-center gap-4 lg:gap-5 z-[100]`}>
           <a
             href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
             target="_blank"
