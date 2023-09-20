@@ -652,7 +652,7 @@ function changeServiceImage(newImageSrc) {
                   </h6>
                 </div>
                 </div>
-                <button className="w-fit py-4 lg:py-7 px-10 lg:px-16 rounded-2xl bg-offBlack text-primary text-lg  lg:text-2xl flex items-center gap-2">Know more <RightArrowPrimary /> </button>
+                <Link href="/about"><button className="w-fit py-4 lg:py-7 px-10 lg:px-16 rounded-2xl bg-offBlack text-primary text-lg  lg:text-2xl flex items-center gap-2">Know more <RightArrowPrimary /> </button></Link>
                 </div>
               </div>
             </div>
@@ -670,20 +670,22 @@ function changeServiceImage(newImageSrc) {
             <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight revealType">
               You might love what we built to our clients
             </h2>
-            <div className=" items-center justify-end gap-3 w-full xl:w-fit hidden xl:flex py-3 px-6 border border-offBlack rounded-full hover:bg-primary cursor-pointer transition-all duration-300">
+            <Link href="/works"><div className=" items-center justify-end gap-3 w-full xl:w-fit hidden xl:flex py-3 px-6 border border-offBlack rounded-full hover:bg-primary cursor-pointer transition-all duration-300">
               <p className="text-xl text-right">View all</p>
               <RightArrow />
             </div>
+            </Link>
           </div>
 
             <div className="grid xl:grid-cols-2 gap-8 lg:gap-x-8 lg:gap-y-10 mt-8 md:mt-10">
-              {works.map(work => (
+              {works.slice(0,4).map(work => (
               <div className="work1 cursor-pointer " key={work.id}>
+                <a href={work.link} target="_blank">
                 <img
                   src={`works/${work.image}`}
                   alt="works"
                   className="rounded-xl lg:rounded-2xl"
-                />
+                /></a>
                 <div className="mt-3 md:mt-6">
                 <h6 className="text-2xl xl:text-4xl font-semibold revealType">
                   {work.title}
@@ -969,19 +971,19 @@ Build, and Deliver Extraordinary Digital Products and Services.</p>
 
                 <ul class="mt-6 space-y-5 text-offWhite text-opacity-90">
                     <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> About </Link>
+                        <Link href="/about" title="" class="flex text-sm transition-all duration-200 "> About </Link>
                     </li>
 
                     <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> Features </Link>
+                        <Link href="/works" title="" class="flex text-sm transition-all duration-200 "> Works </Link>
                     </li>
 
                     <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> Works </Link>
+                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> Services </Link>
                     </li>
 
                     <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> Career </Link>
+                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> Contact </Link>
                     </li>
                 </ul>
             </div>
@@ -1020,6 +1022,9 @@ Build, and Deliver Extraordinary Digital Products and Services.</p>
 
                     <li>
                         <Link href="#" title="" class="flex text-sm transition-all duration-200 "> +91 70121 79326 </Link>
+                    </li>
+                    <li>
+                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> Koduvally, Kozhikode , <br/> 673572</Link>
                     </li>
                 </ul>
             </div>

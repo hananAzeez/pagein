@@ -67,7 +67,7 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line1 = el)}
-                      href='/opportunities'>
+                      href='/work'>
                       Work
                     </Link>
                   </li>
@@ -76,7 +76,7 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line2 = el)}
-                      href='/solutions'>
+                      href='#'>
                       Services
                     </Link>
                   </li>
@@ -85,7 +85,7 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line3 = el)}
-                      href='/contact-us'>
+                      href='/about'>
                       About
                     </Link>
                   </li>
@@ -94,7 +94,7 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line4 = el)}
-                      href='/contact-us'>
+                      href='#'>
                       Contact
                     </Link>
                   </li>
@@ -102,7 +102,7 @@ const Hamburger = ({ state }) => {
               </nav>
               <div ref={el => (info = el)} className='info'>
                 <h6>pagein@gmail.com</h6>
-                <h6>990 757 8965</h6>
+                <h6>+91 70121 79326</h6>
                 <h6>Koduvally, kozhikode <br />
 Kerala, India 673572</h6>
               </div>
