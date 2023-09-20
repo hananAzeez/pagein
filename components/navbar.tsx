@@ -1,11 +1,11 @@
 import Link from "next/link";
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from './menu/Header';
 
 
 
 
-const Navbar = () => {
+const Navbar = ({ color }: { color: string }) => {
   const [showCta, setShowCta] = useState(false);
   useEffect(() => {
     function toggleCtaVisibility() {
@@ -55,13 +55,12 @@ const Navbar = () => {
       </a>
     </div>
         {/* fixed cta👆 */}
-        <div className="hero-clipath"></div>
-        <header className="hidden lg:flex w-full px-10 py-4  justify-between items-center bg-black bg-opacity-40 text-white rounded-xl bg relative">
+        <header className={`hidden lg:flex w-full px-10 py-4  justify-between items-center ${color === 'black' ? 'bg-black bg-opacity-40 text-white' : 'bg-white text-offBlack'}  rounded-xl bg relative`}>
           <div className="nav-links flex items-center gap-8">
-            <a href=""> <p className="menu-links hover-this ">Works</p></a>
+            <Link href="/works"> <p className="menu-links hover-this ">Works</p></Link>
             <a href=""> <p className="menu-links hover-this">Services</p></a>
           </div>
-          <h1 className="text-3xl font-bold">Pagein</h1>
+          <Link href='/'><h1 className="text-3xl font-bold">Pagein</h1></Link>
           <div className="nav-links flex items-center gap-8">
             <Link href="/about"> <p className="menu-links">About</p></Link>
             <a href=""> <p className="menu-links">Contact</p></a>

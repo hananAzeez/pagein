@@ -56,6 +56,25 @@ export const Steps = [
 export const works = [
   {
     id: 1,
+    title: "Optimech",
+    image: "optimech-3.png",
+    tags: [
+      {
+        id: 1,
+        title: "Mobile app",
+      },
+      {
+        id: 2,
+        title: "UI/UX",
+      },
+      {
+        id: 3,
+        title: "React Native",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "Fonetaps",
     image: "fonetaps-1.png",
     tags: [
@@ -74,7 +93,7 @@ export const works = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Kardano",
     image: "kardano-1.png",
     tags: [
@@ -89,7 +108,7 @@ export const works = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Abony",
     image: "abony-1.png",
     tags: [
@@ -103,25 +122,7 @@ export const works = [
       },
     ],
   },
-  {
-    id: 4,
-    title: "Optimech",
-    image: "optimech-3.png",
-    tags: [
-      {
-        id: 1,
-        title: "Mobile app",
-      },
-      {
-        id: 2,
-        title: "UI/UX",
-      },
-      {
-        id: 3,
-        title: "React Native",
-      },
-    ],
-  },
+
 ];
 
 export const services = [
