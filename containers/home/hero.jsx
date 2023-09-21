@@ -652,7 +652,7 @@ function changeServiceImage(newImageSrc) {
                   </h6>
                 </div>
                 </div>
-                <Link href="/about"><button className="w-fit py-4 lg:py-7 px-10 lg:px-16 rounded-2xl bg-offBlack text-primary text-lg  lg:text-2xl flex items-center gap-2">Know more <RightArrowPrimary /> </button></Link>
+                <Link href="/about"><button className="w-fit py-4 lg:py-7 px-10 lg:px-16 rounded-2xl bg-offBlack hover:bg-black transition-all duration-300 text-primary text-lg  lg:text-2xl flex items-center gap-2">Know more <RightArrowPrimary /> </button></Link>
                 </div>
               </div>
             </div>

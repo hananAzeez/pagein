@@ -142,6 +142,22 @@ export const works = [
       },
     ],
   },
+  {
+    id: 6,
+    title: "Tripzigo",
+    image: "tripzigo-1.png",
+    link: 'https://tripzigo.com/',
+    tags: [
+      {
+        id: 1,
+        title: "Website",
+      },
+      {
+        id: 2,
+        title: "UI/UX",
+      },
+    ],
+  },
 
 ];
 
