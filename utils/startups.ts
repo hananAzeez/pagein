@@ -78,7 +78,7 @@ export const works = [
     id: 2,
     title: "Fonetaps",
     image: "fonetaps-1.png",
-    link: 'https://apps.apple.com/in/app/fonetaps/id6453763228?platform=iphone',
+    link: "https://apps.apple.com/in/app/fonetaps/id6453763228?platform=iphone",
     tags: [
       {
         id: 1,
@@ -114,7 +114,7 @@ export const works = [
     id: 4,
     title: "Stewarts Academy",
     image: "stewarts-2.png",
-    link: 'https://abony.in/',
+    link: "https://abony.in/",
     tags: [
       {
         id: 1,
@@ -130,7 +130,7 @@ export const works = [
     id: 5,
     title: "Abony",
     image: "abony-1.png",
-    link: 'https://abony.in/',
+    link: "https://abony.in/",
     tags: [
       {
         id: 1,
@@ -146,7 +146,7 @@ export const works = [
     id: 6,
     title: "Tripzigo",
     image: "tripzigo-1.png",
-    link: 'https://tripzigo.com/',
+    link: "https://tripzigo.com/",
     tags: [
       {
         id: 1,
@@ -158,36 +158,51 @@ export const works = [
       },
     ],
   },
-
+  {
+    id: 7,
+    title: "Laropa",
+    image: "laropa-1.png",
+    link: "https://laropa.in/",
+    tags: [
+      {
+        id: 1,
+        title: "Ecommerce Website",
+      },
+      {
+        id: 2,
+        title: "UI/UX",
+      },
+    ],
+  },
 ];
 
 export const services = [
   {
     id: 1,
-    title: 'UI/UX Design',
-    desc: 'Enhancing User Experiences: We specialize in designing interfaces that prioritize user satisfaction, ensuring intuitive navigation and engaging interactions.',
-    image: 'services/ui-ux-1.png',
-    mobile: 'services/ui-ux-m.png'
+    title: "UI/UX Design",
+    desc: "Enhancing User Experiences: We specialize in designing interfaces that prioritize user satisfaction, ensuring intuitive navigation and engaging interactions.",
+    image: "services/ui-ux-1.png",
+    mobile: "services/ui-ux-m.png",
   },
   {
     id: 2,
-    title: 'Web Development',
-    desc: 'Building Digital Solutions: Our web development team creates robust websites using cutting-edge technologies for a responsive and scalable online presence.',
-    image: 'services/web-development-1.png',
-    mobile: 'services/web-development-m.png'
+    title: "Web Development",
+    desc: "Building Digital Solutions: Our web development team creates robust websites using cutting-edge technologies for a responsive and scalable online presence.",
+    image: "services/web-development-1.png",
+    mobile: "services/web-development-m.png",
   },
   {
     id: 3,
-    title: 'App Development',
-    desc: 'Innovative App Solutions: We deliver custom mobile and web applications that provide compelling user experiences and drive business growth.',
-    image: 'services/app-development-1.png',
-    mobile: 'services/app-development-m.png'
+    title: "App Development",
+    desc: "Innovative App Solutions: We deliver custom mobile and web applications that provide compelling user experiences and drive business growth.",
+    image: "services/app-development-1.png",
+    mobile: "services/app-development-m.png",
   },
   {
     id: 4,
-    title: 'Tech Solutions',
-    desc: 'Driving Digital Transformation: Our tech solutions empower businesses through innovative technology, facilitating digital transformation to enhance efficiency, competitiveness, and growth.',
-    image: 'services/tech-solutions-2.png',
-    mobile: 'services/tech-solutions-m.png'
+    title: "Tech Solutions",
+    desc: "Driving Digital Transformation: Our tech solutions empower businesses through innovative technology, facilitating digital transformation to enhance efficiency, competitiveness, and growth.",
+    image: "services/tech-solutions-2.png",
+    mobile: "services/tech-solutions-m.png",
   },
-]
+];
