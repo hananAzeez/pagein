@@ -8,8 +8,8 @@ const Home: NextPage = () => {
   return (
     <div className="m-0 p-0 box-border">
       <Head>
-      <link rel="icon" type="image/x-icon" href="/pagein-icon-3.png" />
-        <title>Pagein</title>
+      <link rel="icon" type="image/x-icon" href="/fiveweeks-icon-3.png" />
+        <title>fiveweeks</title>
       </Head>
       <HomeContainer />
     </div>

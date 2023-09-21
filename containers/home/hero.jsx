@@ -34,18 +34,18 @@ const Hero = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-    const lenis = new Lenis();
+    // const lenis = new Lenis();
 
-    lenis.on("scroll", (e) => {
-      console.log(e);
-    });
+    // lenis.on("scroll", (e) => {
+    //   console.log(e);
+    // });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    // function raf(time) {
+    //   lenis.raf(time);
+    //   requestAnimationFrame(raf);
+    // }
 
-    requestAnimationFrame(raf);
+    // requestAnimationFrame(raf);
     // \\\\\\\\\\\\\\\\\\\\\\\
     // HERO SECTION
     // \\\\\\\\\\\\\\\\\\\\\\\
@@ -591,6 +591,7 @@ function changeServiceImage(newImageSrc) {
             </h6>
             <div className="startup-container flex flex-col py-16">
               {Startups.map((startup) => (
+                <a href={startup.link} target="_blank" key={startup.id}>
                 <div
                   className={`startup  grid grid-cols-1 lg:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer relative ${
                     startup.id === 1 ? "border-y" : "border-b"
@@ -612,6 +613,7 @@ function changeServiceImage(newImageSrc) {
                     </div>
                   </a>
                 </div>
+                </a>
               ))}
               {/* <img src="images/saavPopup.png" alt="product image" ref={saavPopup} className="w-[350px] startup-popup"/> */}
             </div>
@@ -843,7 +845,7 @@ function changeServiceImage(newImageSrc) {
                   />
                   <div className="text-white">
                     <h4 className="text-48 revealType">
-                    Revolutionized our brand! Pagein transformed our website into a sales powerhouse. Exceptional work!
+                    Revolutionized our brand! fiveweeks transformed our website into a sales powerhouse. Exceptional work!
                     </h4>
                     <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
                       Tom hales
@@ -956,7 +958,7 @@ function changeServiceImage(newImageSrc) {
                 <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-10 gap-y-12 gap-x-8 xl:gap-x-12">
                         <div class="col-span-2 md:col-span-4 xl:pr-8">
-                        <h1 className="text-3xl text-primary font-bold">Pagein</h1>
+                        <h1 className="text-3xl text-primary font-bold">fiveweeks</h1>
 
                             <p class="text-base leading-relaxed  mt-7">Partner with Us to Design,  
             Build, and Deliver Extraordinary Digital Products and Services.</p>
@@ -1017,7 +1019,7 @@ function changeServiceImage(newImageSrc) {
 
                 <ul class="mt-6 space-y-5 text-offWhite text-opacity-90">
                     <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> pagein@gmail.com</Link>
+                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> fiveweeks@gmail.com</Link>
                     </li>
 
                     <li>
@@ -1033,7 +1035,7 @@ function changeServiceImage(newImageSrc) {
         <hr class="mt-16 mb-10 border-gray-200" />
 
         <div class="sm:flex sm:items-center sm:justify-between">
-            <p class="text-sm ">© Copyright 2023, All Rights Reserved by Pagein</p>
+            <p class="text-sm ">© Copyright 2023, All Rights Reserved by fiveweeks</p>
         </div>
     </div>
 </section>

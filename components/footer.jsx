@@ -41,7 +41,7 @@ const Footer = () => {
                 <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-10 gap-y-12 gap-x-8 xl:gap-x-12">
                         <div class="col-span-2 md:col-span-4 xl:pr-8">
-                        <h1 className="text-3xl text-primary font-bold">Pagein</h1>
+                        <h1 className="text-3xl text-primary font-bold">fiveweeks</h1>
 
                             <p class="text-base leading-relaxed  mt-7">Partner with Us to Design,  
             Build, and Deliver Extraordinary Digital Products and Services.</p>
@@ -102,7 +102,7 @@ const Footer = () => {
 
                 <ul class="mt-6 space-y-5 text-offWhite text-opacity-90">
                     <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> pagein@gmail.com</Link>
+                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> fiveweeks@gmail.com</Link>
                     </li>
 
                     <li>
@@ -118,7 +118,7 @@ const Footer = () => {
         <hr class="mt-16 mb-10 border-gray-200" />
 
         <div class="sm:flex sm:items-center sm:justify-between">
-            <p class="text-sm ">© Copyright 2023, All Rights Reserved by Pagein</p>
+            <p class="text-sm ">© Copyright 2023, All Rights Reserved by fiveweeks</p>
 
             {/* <ul class="flex items-center mt-5 space-x-3 md:order-3 sm:mt-0">
                 <li>

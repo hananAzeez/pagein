@@ -60,14 +60,14 @@ const Navbar = ({ color }: { color: string }) => {
             <Link href="/works"> <p className="menu-links hover-this ">Works</p></Link>
             <a href=""> <p className="menu-links hover-this">Services</p></a>
           </div>
-          <Link href='/'><h1 className="text-3xl font-bold">Pagein</h1></Link>
+          <Link href='/'><h1 className="text-3xl font-bold">fiveweeks</h1></Link>
           <div className="nav-links flex items-center gap-8">
             <Link href="/about"> <p className="menu-links">About</p></Link>
             <a href=""> <p className="menu-links">Contact</p></a>
           </div>
         </header>
         <header className="lg:hidden relative flex items-center justify-between">
-          <h1 className="text-white text-2xl font-bold">Pagein</h1>
+          <h1 className="text-white text-2xl font-bold">fiveweeks</h1>
         </header>
         <div className="absolute">
           <Header />

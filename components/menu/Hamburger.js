@@ -56,7 +56,7 @@ const Hamburger = ({ state }) => {
         ref={el => (reveal1 = el)}
         className='menu-secondary-background-color'></div>
       <div ref={el => (reveal2 = el)} className='menu-layer'>
-        <h1 className="text-offBlack absolute left-10 lg:left-20 top-10 text-2xl font-bold">Pagein</h1>
+        <h1 className="text-offBlack absolute left-10 lg:left-20 top-10 text-2xl font-bold">fiveweeks</h1>
         <div className='container'>
           <div className='wrapper'>
             <div className='menu-links'>
@@ -101,7 +101,7 @@ const Hamburger = ({ state }) => {
                 </ul>
               </nav>
               <div ref={el => (info = el)} className='info'>
-                <h6>pagein@gmail.com</h6>
+                <h6>fiveweeks@gmail.com</h6>
                 <h6>+91 70121 79326</h6>
                 <h6>Koduvally, kozhikode <br />
 Kerala, India 673572</h6>
