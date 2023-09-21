@@ -1,126 +1,216 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
-
 const Footer = () => {
-    return ( 
-        <div className="cta  w-screen  bg-black ">
-            <div className="h-full w-full bg-darkBg backdrop-blur-sm bg px-5 lg:px-0 pt-10 md:pt-20">
-            <div className=" panel pt-12 lg:pt-24 max-w-6xl 2xl:max-w-7xl mx-auto bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[80px] lg:rounded-b-[128px]">
-              <div className="flex items-center justify-center gap-5 lg:gap-14 w-full">
-                <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
-                <div className="stars flex items-center gap-6">
-                  <img src="icons/star.svg" alt="star" className="w-6 lg:w-8" />
-                  <img src="icons/star.svg" alt="star" className="w-6 lg:w-8" />
-                  <img src="icons/star.svg" alt="star" className="w-6 lg:w-8" />
-                </div>
-                <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
-              </div>
-              <h2 className="text-center font-bold text-4xl lg:text-[90px] lg:leading-[96px] max-w-4xl">
-                Let&apos;s Grow Your Digital Presence!
-              </h2>
-              <div className="cta-buttons flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
-              <a
-                href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
-                target="_blank"
-              >
-                <button className="py-3 lg:py-4 px-10 bg-offBlack text-primary rounded-btn text-lg lg:text-2xl border border-offBlack w-full lg:w-auto">
-                  Get a Quote
-                </button>
-                </a>
-                <a href="https://wa.link/pg09my" target="_blank" rel="noopener noreferrer">
-                <button className="py-3 lg:py-4 px-10  bg-primary text-offBlack border border-offBlack rounded-btn text-lg lg:text-2xl w-full lg:w-auto">
-                  Talk To Us
-                </button>
-                </a>
-              </div>
+  return (
+    <div className="cta  w-screen  bg-black pb-14 lg:pb-0">
+      <div className="h-full w-full bg-darkBg backdrop-blur-sm bg px-5 lg:px-0 pt-10 md:pt-20">
+        <div className=" panel pt-12 lg:pt-24 max-w-6xl 2xl:max-w-7xl mx-auto bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[80px] lg:rounded-b-[128px]">
+          <div className="flex items-center justify-center gap-5 lg:gap-14 w-full">
+            <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
+            <div className="stars flex items-center gap-6">
+              <img src="icons/star.svg" alt="star" className="w-6 lg:w-8" />
+              <img src="icons/star.svg" alt="star" className="w-6 lg:w-8" />
+              <img src="icons/star.svg" alt="star" className="w-6 lg:w-8" />
             </div>
-
-            <footer>
-            <section class="py-10 !text-white sm:pt-16 lg:pt-24">
-                <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-10 gap-y-12 gap-x-8 xl:gap-x-12">
-                        <div class="col-span-2 md:col-span-4 xl:pr-8">
-                        <h1 className="text-3xl text-primary font-bold">fiveweeks</h1>
-
-                            <p class="text-base leading-relaxed  mt-7">Partner with Us to Design,  
-            Build, and Deliver Extraordinary Digital Products and Services.</p>
-
-                <a href="#" title="" class="inline-flex items-center justify-center px-6 py-4 font-semibold text-offBlack rounded-2xl transition-all duration-200 bg-primary mt-7">
-                    Get a quote
-                </a>
-            </div>
-
-            <div class="lg:col-span-2">
-                <p class="text-base font-semibold text-offWhite ">Menu</p>
-
-                <ul class="mt-6 space-y-5 text-offWhite text-opacity-90">
-                    <li>
-                        <Link href="/about" title="" class="flex text-sm transition-all duration-200 "> About </Link>
-                    </li>
-
-                    <li>
-                        <Link href="/works" title="" class="flex text-sm transition-all duration-200 "> Works </Link>
-                    </li>
-
-                    <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> Services </Link>
-                    </li>
-
-                    <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> Contact </Link>
-                    </li>
-                </ul>
-            </div>
-
-            
-
-            <div class="lg:col-span-2">
-                <p class="text-base font-semibold  ">Services</p>
-
-                <ul class="mt-6 space-y-5 text-offWhite text-opacity-90">
-                    <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> Web Development </Link>
-                    </li>
-
-                    <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> App Development </Link>
-                    </li>
-
-                    <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> UI/UX Design </Link>
-                    </li>
-
-                    <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> Tech Solutions </Link>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="lg:col-span-2">
-                <p class="text-base font-semibold ">Contact</p>
-
-                <ul class="mt-6 space-y-5 text-offWhite text-opacity-90">
-                    <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> fiveweeks@gmail.com</Link>
-                    </li>
-
-                    <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> +91 70121 79326 </Link>
-                    </li>
-                    <li>
-                        <Link href="#" title="" class="flex text-sm transition-all duration-200 "> Koduvally, Kozhikode , <br/> 673572</Link>
-                    </li>
-                </ul>
-            </div>
+            <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
+          </div>
+          <h2 className="text-center font-bold text-4xl lg:text-[90px] lg:leading-[96px] max-w-4xl">
+            Let&apos;s Grow Your Digital Presence!
+          </h2>
+          <div className="cta-buttons flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
+            <a
+              href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
+              target="_blank"
+            >
+              <button className="py-3 lg:py-4 px-10 bg-offBlack text-primary rounded-btn text-lg lg:text-2xl border border-offBlack w-full lg:w-auto">
+                Get a Quote
+              </button>
+            </a>
+            <a
+              href="https://wa.link/pg09my"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="py-3 lg:py-4 px-10  bg-primary text-offBlack border border-offBlack rounded-btn text-lg lg:text-2xl w-full lg:w-auto">
+                Talk To Us
+              </button>
+            </a>
+          </div>
         </div>
 
-        <hr class="mt-16 mb-10 border-gray-200" />
+        <footer>
+          <section class="py-10 !text-white sm:pt-16 lg:pt-24">
+            <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+              <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-10 gap-y-12 gap-x-8 xl:gap-x-12">
+                <div class="col-span-2 md:col-span-4 xl:pr-8">
+                  <Link href="/">
+                    <h1 className="text-3xl text-primary font-bold">
+                      fiveweeks
+                    </h1>
+                  </Link>
 
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <p class="text-sm ">© Copyright 2023, All Rights Reserved by fiveweeks</p>
+                  <p class="text-base leading-relaxed  mt-7">
+                    Partner with Us to Design, Build, and Deliver Extraordinary
+                    Digital Products and Services.
+                  </p>
 
-            {/* <ul class="flex items-center mt-5 space-x-3 md:order-3 sm:mt-0">
+                  <a
+                    href="#"
+                    title=""
+                    class="inline-flex items-center justify-center px-6 py-4 font-semibold text-offBlack rounded-2xl transition-all duration-200 bg-primary mt-7"
+                  >
+                    Get a quote
+                  </a>
+                </div>
+
+                <div class="lg:col-span-2">
+                  <p class="text-base font-semibold text-offWhite ">Menu</p>
+
+                  <ul class="mt-6 space-y-5 text-offWhite text-opacity-90">
+                    <li>
+                      <Link
+                        href="/about"
+                        title=""
+                        class="flex text-sm transition-all duration-200 "
+                      >
+                        {" "}
+                        About{" "}
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="/works"
+                        title=""
+                        class="flex text-sm transition-all duration-200 "
+                      >
+                        {" "}
+                        Works{" "}
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="#"
+                        title=""
+                        class="flex text-sm transition-all duration-200 "
+                      >
+                        {" "}
+                        Services{" "}
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="#"
+                        title=""
+                        class="flex text-sm transition-all duration-200 "
+                      >
+                        {" "}
+                        Contact{" "}
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                  <p class="text-base font-semibold  ">Services</p>
+
+                  <ul class="mt-6 space-y-5 text-offWhite text-opacity-90">
+                    <li>
+                      <Link
+                        href="#"
+                        title=""
+                        class="flex text-sm transition-all duration-200 "
+                      >
+                        {" "}
+                        Web Development{" "}
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="#"
+                        title=""
+                        class="flex text-sm transition-all duration-200 "
+                      >
+                        {" "}
+                        App Development{" "}
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="#"
+                        title=""
+                        class="flex text-sm transition-all duration-200 "
+                      >
+                        {" "}
+                        UI/UX Design{" "}
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="#"
+                        title=""
+                        class="flex text-sm transition-all duration-200 "
+                      >
+                        {" "}
+                        Tech Solutions{" "}
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                  <p class="text-base font-semibold ">Contact</p>
+
+                  <ul class="mt-6 space-y-5 text-offWhite text-opacity-90">
+                    <li>
+                      <Link
+                        href="#"
+                        title=""
+                        class="flex text-sm transition-all duration-200 "
+                      >
+                        {" "}
+                        fiveweeks@gmail.com
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="#"
+                        title=""
+                        class="flex text-sm transition-all duration-200 "
+                      >
+                        {" "}
+                        +91 70121 79326{" "}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="#"
+                        title=""
+                        class="flex text-sm transition-all duration-200 "
+                      >
+                        {" "}
+                        Koduvally, Kozhikode , <br /> 673572
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <hr class="mt-16 mb-10 border-gray-200" />
+
+              <div class="sm:flex sm:items-center sm:justify-between">
+                <p class="text-sm ">
+                  © Copyright 2023, All Rights Reserved by fiveweeks
+                </p>
+
+                {/* <ul class="flex items-center mt-5 space-x-3 md:order-3 sm:mt-0">
                 <li>
                     <Link
                         href="#"
@@ -179,14 +269,13 @@ const Footer = () => {
                     </Link>
                 </li>
             </ul> */}
-        </div>
+              </div>
+            </div>
+          </section>
+        </footer>
+      </div>
     </div>
-</section>
+  );
+};
 
-            </footer>
-          </div>
-          </div>
-     );
-}
- 
 export default Footer;
