@@ -864,6 +864,9 @@ const Hero = () => {
                       website into a sales powerhouse. Exceptional work!
                     </h4>
                     <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
+                      Upwork client
+                    </h6>
+                    {/* <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
                       Tom hales
                     </h6>
                     <p className="opacity-70 mt-3 lg:mt-4 text-sm lg:textt-base font-saira">
@@ -871,7 +874,7 @@ const Hero = () => {
                     </p>
                     <p className="opacity-70 mt-1 lg:mt-2 text-sm lg:textt-base font-saira">
                       Abony
-                    </p>
+                    </p> */}
                   </div>
                 </div>
                 {/* <div className="flex gap-2 lg:gap-4 items-center">
@@ -921,6 +924,9 @@ const Hero = () => {
                       every way.
                     </h4>
                     <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
+                      Upwork client
+                    </h6>
+                    {/* <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
                       mohd salih
                     </h6>
                     <p className="opacity-70 mt-3 lg:mt-4 text-sm lg:textt-base font-saira">
@@ -928,7 +934,7 @@ const Hero = () => {
                     </p>
                     <p className="opacity-70 mt-1 lg:mt-2 text-sm lg:textt-base font-saira">
                       Themes
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </div>
