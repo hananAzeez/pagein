@@ -577,102 +577,6 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="bg-offWhite relative">
-        {/* <div class="cursor"></div>
-<div class="follower"></div> */}
-        <div className="startups panel h-full 2xl:h-screen xl:flex xl:items-center xl:justify-center max-w-6xl 2xl:max-w-7xl mx-auto relative px-5 xl:px-0 ">
-          <div className="">
-            <h2
-              className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16 revealType"
-              ref={revealType}
-            >
-              We run startups that helps thousands
-            </h2>
-            <h6 className="revealType mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-offBlack">
-              Empowering Solutions Through In-house Startup Ventures. We Ideate
-              and create amazing tech products for solving user problems
-            </h6>
-            <div className="startup-container flex flex-col py-16">
-              {Startups.map((startup) => (
-                <a href={startup.link} target="_blank" key={startup.id}>
-                  <div
-                    className={`startup  grid grid-cols-1 lg:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer relative ${
-                      startup.id === 1 ? "border-y" : "border-b"
-                    } border-offBlack border-opacity-20 hover:bg-offBlack hover:bg-opacity-5`}
-                    key={startup.id}
-                  >
-                    <div className="img-wrapper">
-                      <img
-                        src={`/startups/${startup.image}`}
-                        alt="startup img"
-                      />
-                    </div>
-                    <h3 className="text-48 col-span-2 !text-offBlack revealType">
-                      {startup.title}
-                    </h3>
-                    <p className="text-18 col-span-2 !text-offBlack revealType">
-                      {startup.desc}
-                    </p>
-                    <a href={startup.link} target="_blank">
-                      <div className="flex items-center justify-start lg:justify-end">
-                        <TopRightArrow />
-                      </div>
-                    </a>
-                  </div>
-                </a>
-              ))}
-              {/* <img src="images/saavPopup.png" alt="product image" ref={saavPopup} className="w-[350px] startup-popup"/> */}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-      {/* \\\ NOTE SECTION */}
-      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-
-      <section className="bg-black ">
-        <div className=" bg-darkBg backdrop-blur-sm">
-          <div className="bg-primary py-14 md:py-20 xl:py-32">
-            <div className="flex flex-col lg:flex-row items-start gap-10 md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0">
-              <img
-                src="icons/quote.svg"
-                alt="quote"
-                className="w-10 h-10 lg:w-20 lg:h-20 bg-cover bg-offBlack p-2 lg:p-5 rounded-full"
-              />
-              <div className=" text-offBlack">
-                <h2 className="font-semibold text-3xl leading-[40px] xl:text-6xl xl:leading-[77px] revealType">
-                  Our vision is to collaborate with founders who are tackling
-                  big problems that affect a lot of people.
-                </h2>
-                <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end gap-10 mt-10 w-full">
-                  <div className="max-w-xl">
-                    <h3 className="font-medium text-2xl revealType ">
-                      Startups, in particular, are our sweet spot because we
-                      believe in getting things out there fast.
-                    </h3>
-                    <div className="w-full h-[2px] bg-offBlack bg-opacity-20 mt-10"></div>
-                    <div className="flex justify-between items-center mt-6">
-                      <h5 className="font-saira font-medium text-base md:text-lg xl:text-xl">
-                        HADI ABDUL AZEEZ
-                      </h5>
-                      <h6 className="font-saira text-base md:text-lg xl:text-xl font-regular">
-                        Founder&apos;s Note
-                      </h6>
-                    </div>
-                  </div>
-                  <Link href="/about">
-                    <button className="w-fit py-4 lg:py-7 px-10 lg:px-16 rounded-2xl bg-offBlack hover:bg-black transition-all duration-300 text-primary text-lg  lg:text-2xl flex items-center gap-2">
-                      Know more <RightArrowPrimary />{" "}
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ WORKS SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
@@ -728,6 +632,108 @@ const Hero = () => {
           </div>
         </Link>
       </section>
+
+      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+      {/* \\\ NOTE SECTION */}
+      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+
+      <section className="bg-black ">
+        <div className=" bg-darkBg backdrop-blur-sm">
+          <div className="bg-primary py-14 md:py-20 xl:py-32">
+            <div className="flex flex-col lg:flex-row items-start gap-10 md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0">
+              <img
+                src="icons/quote.svg"
+                alt="quote"
+                className="w-10 h-10 lg:w-20 lg:h-20 bg-cover bg-offBlack p-2 lg:p-5 rounded-full"
+              />
+              <div className=" text-offBlack">
+                <h2 className="font-semibold text-3xl leading-[40px] xl:text-6xl xl:leading-[77px] revealType">
+                  Our vision is to collaborate with founders who are tackling
+                  big problems that affect a lot of people.
+                </h2>
+                <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end gap-10 mt-10 w-full">
+                  <div className="max-w-xl">
+                    <h3 className="font-medium text-2xl revealType ">
+                      Startups, in particular, are our sweet spot because we
+                      believe in getting things out there fast.
+                    </h3>
+                    <div className="w-full h-[2px] bg-offBlack bg-opacity-20 mt-10"></div>
+                    <div className="flex justify-between items-center mt-6">
+                      <h5 className="font-saira font-medium text-base md:text-lg xl:text-xl">
+                        HADI ABDUL AZEEZ
+                      </h5>
+                      <h6 className="font-saira text-base md:text-lg xl:text-xl font-regular">
+                        Founder&apos;s Note
+                      </h6>
+                    </div>
+                  </div>
+                  <Link href="/about">
+                    <button className="w-fit py-4 lg:py-7 px-10 lg:px-16 rounded-2xl bg-offBlack hover:bg-black transition-all duration-300 text-primary text-lg  lg:text-2xl flex items-center gap-2">
+                      Know more <RightArrowPrimary />{" "}
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+      {/* \\\ STARTUPS SECTION */}
+      {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
+
+      <section className="bg-offWhite relative">
+        {/* <div class="cursor"></div>
+<div class="follower"></div> */}
+        <div className="startups panel h-full 2xl:h-screen xl:flex xl:items-center xl:justify-center max-w-6xl 2xl:max-w-7xl mx-auto relative px-5 xl:px-0 ">
+          <div className="">
+            <h2
+              className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16 revealType"
+              ref={revealType}
+            >
+              We run startups that helps thousands
+            </h2>
+            <h6 className="revealType mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-offBlack">
+              Empowering Solutions Through In-house Startup Ventures. We Ideate
+              and create amazing tech products for solving user problems
+            </h6>
+            <div className="startup-container flex flex-col py-16">
+              {Startups.map((startup) => (
+                <a href={startup.link} target="_blank" key={startup.id}>
+                  <div
+                    className={`startup  grid grid-cols-1 lg:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer relative ${
+                      startup.id === 1 ? "border-y" : "border-b"
+                    } border-offBlack border-opacity-20 hover:bg-offBlack hover:bg-opacity-5`}
+                    key={startup.id}
+                  >
+                    <div className="img-wrapper">
+                      <img
+                        src={`/startups/${startup.image}`}
+                        alt="startup img"
+                      />
+                    </div>
+                    <h3 className="text-48 col-span-2 !text-offBlack revealType">
+                      {startup.title}
+                    </h3>
+                    <p className="text-18 col-span-2 !text-offBlack revealType">
+                      {startup.desc}
+                    </p>
+                    <a href={startup.link} target="_blank">
+                      <div className="flex items-center justify-start lg:justify-end">
+                        <TopRightArrow />
+                      </div>
+                    </a>
+                  </div>
+                </a>
+              ))}
+              {/* <img src="images/saavPopup.png" alt="product image" ref={saavPopup} className="w-[350px] startup-popup"/> */}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ SERVICES SECTION */}
