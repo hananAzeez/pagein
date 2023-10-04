@@ -822,7 +822,7 @@ const Hero = () => {
                 <h6 className="text-3xl opacity-30 font-medium font-syne revealType">
                   {step.step}
                 </h6>
-                <div className="my-6 md:my-8 flex items-center justify-center gap-5 w-full lg:h-64 bg-offBlack rounded-2xl">
+                <div className="my-6 md:my-8 flex items-center justify-center gap-5 w-full  bg-offBlack rounded-2xl">
                   <img
                     src={step.image}
                     alt="process"
