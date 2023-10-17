@@ -57,7 +57,7 @@ export const works = [
   {
     id: 1,
     title: "Optimech",
-    image: "optimech-3.png",
+    image: "optimech-1.png",
     link: "#",
     tags: [
       {
@@ -113,7 +113,7 @@ export const works = [
   {
     id: 4,
     title: "Stewarts Academy",
-    image: "stewarts-2.png",
+    image: "stewarts-1.png",
     link: "https://abony.in/",
     tags: [
       {
