@@ -174,6 +174,22 @@ export const works = [
       },
     ],
   },
+  {
+    id: 7,
+    title: "Viewfinders ",
+    image: "viewfinders-1.png",
+    link: "https://https://viewfinderswedding.com/",
+    tags: [
+      {
+        id: 1,
+        title: "Website",
+      },
+      {
+        id: 2,
+        title: "UI/UX",
+      },
+    ],
+  },
 ];
 
 export const services = [
