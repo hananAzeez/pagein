@@ -190,6 +190,22 @@ export const works = [
       },
     ],
   },
+  {
+    id: 8,
+    title: "Themesunited ",
+    image: "themesunited-1.png",
+    link: "https://https://themesunited.com/",
+    tags: [
+      {
+        id: 1,
+        title: "Website",
+      },
+      {
+        id: 2,
+        title: "UI/UX",
+      },
+    ],
+  },
 ];
 
 export const services = [
