@@ -76,10 +76,10 @@ const Post = ({ post }: { post: Post }) => {
   } = post;
 
   return (
-    <main className='px-5 mx-auto lg:px-28 xl:px-0 py-8 overflow-hidden'>
-      <div className="max-w-7xl mx-auto">
+    <main className=' overflow-hidden'>
+      <div className="py-8 max-w-7xl mx-auto">
         <Navbar color='black' />
-        <article className={styles.article}>
+        <article className='flex flex-col items-center my-10  px-5 lg:px-28 xl:px-0 gap-5 lg:gap-10'>
           <h1 className={`${styles.title}`}>{title}</h1>
           {categories && (
             <ul>
@@ -87,7 +87,7 @@ const Post = ({ post }: { post: Post }) => {
               {categories.map(category => <li key={category}>{category}</li>)}
             </ul>
           )}
-          {authorImage && (
+          {/* {authorImage && (
             <div>
               <img
                 src={urlFor(authorImage)
@@ -96,7 +96,7 @@ const Post = ({ post }: { post: Post }) => {
                 alt={`${name}'s picture`}
               />
             </div>
-          )}
+          )} */}
           <PortableText
             value={body}
             components={ptComponents}
@@ -116,6 +116,7 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
   "authorImage": author->image,
   body
 }`
+
 export async function getStaticPaths() {
   const paths = await client.fetch(
     groq`*[_type == "post" && defined(slug.current)][].slug.current`
