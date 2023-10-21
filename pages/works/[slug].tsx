@@ -111,7 +111,7 @@ const Post = ({ post }: { post: Post }) => {
       <div className="py-8 max-w-7xl mx-auto">
         <Navbar color='black' />
         <article className='flex flex-col items-center mt-20 mb-10  px-5 lg:px-28 xl:px-0 gap-5 lg:gap-10'>
-          <h1 className={`${styles.title}`}>{title}</h1>
+          <h1 className='text-5xl md:text-6xl xl:text-8xl font-bold text-center'>{title}</h1>
           {categories && (
             <ul className='flex gap-2 flex-wrap  xl:-mt-4'>
               {categories.map(category => <li className='text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack' key={category}>{category}</li>)}

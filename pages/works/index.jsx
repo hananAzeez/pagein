@@ -20,7 +20,7 @@ const Works = () => {
 
               <div className="grid xl:grid-cols-2 gap-8 lg:gap-x-8 lg:gap-y-10 mt-8 md:mt-10">
                 {works.map((work) => (
-                  <a href={`works/${work.title.toLowerCase()}`} key={work.id}>
+                  <a href={`works/${work.title.toLowerCase().replace(/ /g, '-')}`} key={work.id}>
                   <div className="work1 cursor-pointer "  >
                     <img
                       src={`works/${work.image}`}
