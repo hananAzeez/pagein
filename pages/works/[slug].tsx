@@ -27,9 +27,40 @@ interface ImageComponentProps {
   };
 }
 
+interface BlockProps {
+  node: {
+    style: string;
+  };
+  children: React.ReactNode;
+}
+
+// Define an interface for inline elements with marks
+interface InlineProps {
+  children: React.ReactNode;
+}
+
+
 
 const ptComponents = {
+  // marks: {
+  //   strong: ({ children }: InlineProps): React.ReactNode => (
+  //     <strong className="custom-strong-style">{children}</strong>
+  //   ),
+  //   em: ({ children }: InlineProps): React.ReactNode => (
+  //     <em className="custom-em-style">{children}</em>
+  //   ),
+  // },
   types: {
+    // block: ({ node, children }: BlockProps): React.ReactNode => {
+    //   switch (node.style) {
+    //     case 'h2':
+    //       return <h2 className="custom-h2-style">{children}</h2>;
+    //     case 'h4':
+    //       return <h4 className="custom-h4-style">{children}</h4>;
+    //     default:
+    //       return <p className="custom-paragraph-style">{children}</p>;
+    //   }
+    // },
     image: ({ value }: ImageComponentProps): ReactNode => {
       if (!value?.asset?._ref) {
         return null;
@@ -79,12 +110,11 @@ const Post = ({ post }: { post: Post }) => {
     <main className=' overflow-hidden'>
       <div className="py-8 max-w-7xl mx-auto">
         <Navbar color='black' />
-        <article className='flex flex-col items-center my-10  px-5 lg:px-28 xl:px-0 gap-5 lg:gap-10'>
+        <article className='flex flex-col items-center mt-20 mb-10  px-5 lg:px-28 xl:px-0 gap-5 lg:gap-10'>
           <h1 className={`${styles.title}`}>{title}</h1>
           {categories && (
-            <ul>
-              Posted in
-              {categories.map(category => <li key={category}>{category}</li>)}
+            <ul className='flex gap-2 flex-wrap -mt-4'>
+              {categories.map(category => <li className='text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack' key={category}>{category}</li>)}
             </ul>
           )}
           {/* {authorImage && (
