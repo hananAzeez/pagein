@@ -3,7 +3,7 @@
 
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
-import {PortableText} from '@portabletext/react'
+import { PortableText} from '@portabletext/react'
 import client from '../../client'
 import styles from './work.module.css'
 import Footer from '../../components/footer'
@@ -39,6 +39,9 @@ interface InlineProps {
   children: React.ReactNode;
 }
 
+interface BlockComponentProps {
+  children: ReactNode;
+}
 
 
 const ptComponents = {
@@ -50,17 +53,8 @@ const ptComponents = {
   //     <em className="custom-em-style">{children}</em>
   //   ),
   // },
+
   types: {
-    // block: ({ node, children }: BlockProps): React.ReactNode => {
-    //   switch (node.style) {
-    //     case 'h2':
-    //       return <h2 className="custom-h2-style">{children}</h2>;
-    //     case 'h4':
-    //       return <h4 className="custom-h4-style">{children}</h4>;
-    //     default:
-    //       return <p className="custom-paragraph-style">{children}</p>;
-    //   }
-    // },
     image: ({ value }: ImageComponentProps): ReactNode => {
       if (!value?.asset?._ref) {
         return null;
@@ -68,7 +62,7 @@ const ptComponents = {
 
       const imageUrl = urlFor(value).auto('format').url(); // Extract the URL
       return (
-        <img className={styles.images}
+        <img className='w-full'
           alt={value.alt || ' '}
           loading="lazy"
           src={imageUrl}
@@ -77,6 +71,8 @@ const ptComponents = {
     }
   }
 }
+
+console.log('ptcomen' , ptComponents)
 
 interface Post {
   title?: string;
@@ -92,7 +88,7 @@ interface Post {
 }
 
 const Post = ({ post }: { post: Post }) => {
-  console.log(post)
+  // console.log(post)
   if (!post) {
     // Handle the case where 'post' is undefined
     return <div>Loading...</div>;

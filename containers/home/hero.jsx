@@ -582,7 +582,7 @@ const Hero = () => {
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
       <section className="works panel bg-offWhite py-20">
-        <div className="max-w-6xl 2xl:max-w-7xl mx-auto  px-5 xl:px-0">
+        <div className="lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto  px-5 xl:px-0">
           <div className="flex flex-col xl:flex-row items-center justify-between text-offBlack">
             <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight revealType">
               You might love what we built to our clients
@@ -626,7 +626,7 @@ const Hero = () => {
           </div>
         </div>
         <Link href="/works">
-          <div className="w-fit lg:hidden flex items-center justify-center gap-3 mx-auto py-3 px-6 mt-10 border border-offBlack rounded-full hover:bg-primary cursor-pointer transition-all duration-300">
+          <div className="w-fit xl:hidden flex items-center justify-center gap-3 mx-auto py-3 px-6 mt-10 border border-offBlack rounded-full hover:bg-primary cursor-pointer transition-all duration-300">
             <p className="text-lg ">View all</p>
             <RightArrow />
           </div>
@@ -668,7 +668,7 @@ const Hero = () => {
                     </div>
                   </div>
                   <Link href="/about">
-                    <button className="w-fit py-4 lg:py-7 px-10 lg:px-16 rounded-2xl bg-offBlack hover:bg-black transition-all duration-300 text-primary text-lg  lg:text-2xl flex items-center gap-2">
+                    <button className="w-fit py-4 xl:py-7 px-10 lg:px-16 rounded-2xl bg-offBlack hover:bg-black transition-all duration-300 text-primary text-lg  xl:text-2xl flex items-center gap-2">
                       Know more <RightArrowPrimary />{" "}
                     </button>
                   </Link>
