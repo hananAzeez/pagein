@@ -791,7 +791,7 @@ const Hero = () => {
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
       <section className="services bg-offWhite relative overflow-hidden scrollSection text-offBlack">
-        <div className="px-5 lg:px-0 w-screen py-20 xl:py-32">
+        <div className="md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0 py-20 xl:py-32">
           <div className=" w-full flex flex-col items-center px-2  text-center">
             <h2 className="font-bold text-4xl leading-[43px] lg:text-5xl xl:text-6xl xl:leading-[70px] text-center revealType">
               Are you looking for a{" "}
@@ -855,7 +855,7 @@ const Hero = () => {
         <div className="circ circ19 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[3800px]"></div>
         <div className="circ circ20 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[4500px]"></div>
         <div className="h-full w-full bg-darkBg backdrop-blur-sm bg ">
-          <div className="testimonials panel py-14 xl:py-24 w-screen h-full max-w-6xl 2xl:max-w-7xl mx-auto px-5 xl:px-0">
+          <div className="testimonials panel py-14 xl:py-24 w-screen h-full md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0">
             <h2 className="font-saira text-lg xl:text-2xl font-medium text-white">
               Trusted and Loved: Hear from Our Clients
             </h2>
@@ -956,7 +956,7 @@ const Hero = () => {
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           {/* \\\ CTA SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
-          <div className="cta  w-screen px-6 xl:px-0 pb-14 lg:pb-0">
+          <div className="cta md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0 pb-14 lg:pb-0">
             <div className=" panel pt-12 lg:pt-24 max-w-6xl 2xl:max-w-7xl mx-auto bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[80px] lg:rounded-b-[128px]">
               <div className="flex items-center justify-center gap-5 lg:gap-14 w-full">
                 <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
@@ -967,7 +967,7 @@ const Hero = () => {
                 </div>
                 <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
               </div>
-              <h2 className="text-center font-bold text-4xl lg:text-[90px] lg:leading-[96px] max-w-4xl">
+              <h2 className="text-center font-bold text-4xl md:text-5xl xl:text-[90px] lg:leading-[96px] max-w-4xl">
                 Let&apos;s Grow Your Digital Presence!
               </h2>
               <div className="cta-buttons flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
