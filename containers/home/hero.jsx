@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-// import { gsap } from "gsap";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { CustomEase } from "gsap/dist/CustomEase";
@@ -14,6 +13,7 @@ import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
 import Navbar from "../../components/navbar";
 import Link from "next/link";
+import { motion, useScroll } from "framer-motion"
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 gsap.registerPlugin(Observer);
@@ -31,6 +31,8 @@ const Hero = () => {
   const revealType = useRef();
   const mainServiceImage = useRef();
   // let mainServiceImage;
+
+  const scrollRef = useRef(null)
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
@@ -504,7 +506,9 @@ const Hero = () => {
       {/* \\\ WORKS SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-      <section className="works panel bg-offWhite py-20">
+      <motion.section initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ root: scrollRef }} className="works panel bg-offWhite py-20">
         <div className="lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto  px-5 xl:px-0">
           <div className="flex flex-col xl:flex-row items-center justify-between text-offBlack">
             <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight revealType">
@@ -554,7 +558,7 @@ const Hero = () => {
             <RightArrow />
           </div>
         </Link>
-      </section>
+      </motion.section>
 
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ NOTE SECTION */}
@@ -642,11 +646,11 @@ const Hero = () => {
                     <p className="text-18 col-span-2 !text-offBlack revealType">
                       {startup.desc}
                     </p>
-                    <a href={startup.link} target="_blank">
+                    {/* <a href={startup.link} target="_blank"> */}
                       <div className="flex items-center justify-start lg:justify-end">
                         <TopRightArrow />
                       </div>
-                    </a>
+                    {/* </a> */}
                   </div>
                 </a>
               ))}
