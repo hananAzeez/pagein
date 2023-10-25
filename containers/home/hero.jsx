@@ -34,18 +34,7 @@ const Hero = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      // const lenis = new Lenis();
-
-      // lenis.on("scroll", (e) => {
-      //   console.log(e);
-      // });
-
-      // function raf(time) {
-      //   lenis.raf(time);
-      //   requestAnimationFrame(raf);
-      // }
-
-      // requestAnimationFrame(raf);
+      
       // \\\\\\\\\\\\\\\\\\\\\\\
       // HERO SECTION
       // \\\\\\\\\\\\\\\\\\\\\\\
@@ -93,30 +82,6 @@ const Hero = () => {
       // \\\\\\\\\\\\\\\\\\\\\\\
       // SERVICES SECTION
       // \\\\\\\\\\\\\\\\\\\\\\\
-      // const circ1 = document.querySelector(".circ1");
-      // const circ2 = document.querySelector(".circ2");
-
-      // gsap.to(circ1, {
-      //   x: 300,
-      //   duration: 1.5,
-      //   scrollTrigger: {
-      //     trigger: ".circ1",
-      //     start: "top 80%",
-      //     end: "bottom 20%",
-      //     scrub: true,
-      //   },
-      // });
-
-      // gsap.to(circ2, {
-      //   x: -300,
-      //   duration: 1.5,
-      //   scrollTrigger: {
-      //     trigger: ".circ2",
-      //     start: "top 80%",
-      //     end: "bottom 20%",
-      //     scrub: true,
-      //   },
-      // });
 
       const servicesTitle = document.querySelectorAll(".s_title");
 
@@ -322,35 +287,6 @@ const Hero = () => {
         document.removeEventListener("mousemove", () => {});
       });
 
-      // \\\\\\\\\\\\\\\\\\\\\\\
-      // TESTIMONIALS SECTION
-      // \\\\\\\\\\\\\\\\\\\\\\\
-
-      const reviewProfiles = document.querySelector(".review-profiles");
-
-      // gsap.to(reviewProfiles, {
-      //   position: "fixed",
-      //   scrollTrigger: {
-      //     trigger: testimonials,
-      //     start: "top top",
-      //     end: "bottom bottom",
-      //     scrub: true
-      //   }
-      // })
-
-      // MOUSE CURSOR
-
-      //     gsap.set('.follower',{xPercent:-50,yPercent:-50});
-      // gsap.set('.cursor',{xPercent:-50,yPercent:-50});
-
-      // var follow = document.querySelector('.follower');
-      // var cur = document.querySelector('.cursor');
-
-      // window.addEventListener('mousemove',e => {
-      //     gsap.to(cur, {duration: 0.2, x:e.clientX,y:e.clientY});
-      //     gsap.to(follow, {duration: 0.9, x:e.clientX,y:e.clientY});
-      // });
-
       // FIXED CTA
       const fixedCta = document.querySelector(".fixed-cta");
       const sectionContainer = document.querySelector(".section-container");
@@ -367,20 +303,6 @@ const Hero = () => {
         ease: "power1.out",
         visibility: "visible",
       });
-      // FIXED CTA
-
-      // gsap.set(fixedCtaPc.current, { visibility: "hidden" });
-
-      // gsap.set(fixedCtaPc.current, { visibility: "hidden"})
-
-      //       gsap.to(fixedCtaPc.current, {
-      //     scrollTrigger: {
-      //       trigger: '.section-container',
-      //       start: '800px center',
-      //       scrub: 1, // Scrub the animation as you scroll
-      //     },
-      //     visibility: "visible",
-      //   })
 
       // TEXT REVEAL
       const splitTypes = document.querySelectorAll(".revealType");
@@ -405,6 +327,7 @@ const Hero = () => {
       // services
       // mainServiceImage = document.getElementById('mainServiceImage');
     }); // <- Scope!
+
     return () => ctx.revert(); // <- Cleanup!
   }, []);
 
