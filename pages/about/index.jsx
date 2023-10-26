@@ -6,7 +6,7 @@ import Navbar from "./../../components/navbar";
 const About = () => {
   return (
     <main className="bg-black overflow-x-hidden relative">
-      <div className=" bg-darkBg backdrop-blur-sm py-8 px-6 mx-auto lg:px-28">
+      <div className=" bg-darkBg  py-8 px-6 mx-auto lg:px-28">
         <Navbar color="black" />
         <h2 className="font-bold text-3xl lg:text-5xl pt-10 lg:pt-16 revealType text-center relative text-offWhite max-w-5xl !leading-tight mx-auto">
           Crafting Exceptional Tech Solutions for Visionary Startups and
