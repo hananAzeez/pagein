@@ -676,6 +676,7 @@ header .hamburger-menu .menu-layer .wrapper .menu-links .info p {
   height: 100vh;
   background: #0f0f0f;
   transform-origin: bottom;
+  z-index: 9999;
 }
 .slide-out {
   position: absolute;
@@ -685,4 +686,5 @@ header .hamburger-menu .menu-layer .wrapper .menu-links .info p {
   height: 100vh;
   background: #0f0f0f;
   transform-origin: top;
+  z-index: 9999;
 }

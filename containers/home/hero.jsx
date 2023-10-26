@@ -454,12 +454,12 @@ const Hero = () => {
             <img
               src="/images/hero-1.png"
               alt="mockup"
-              className="mr-3 mb-9 rotate-6 "
+              className="mr-3 mb-9 rotate-6 z-[1]"
             />
             <img
               src="/images/hero-2.png"
               alt="mockup"
-              className="mr-4 -rotate-[8deg] z-"
+              className="mr-4 -rotate-[8deg]"
             />
             <img
               src="/images/hero-3.png"
