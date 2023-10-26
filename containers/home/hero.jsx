@@ -454,12 +454,12 @@ const Hero = () => {
             <img
               src="/images/hero-1.png"
               alt="mockup"
-              className="mr-3 mb-9 rotate-6 z-[1]"
+              className="mr-3 mb-9 rotate-6 "
             />
             <img
               src="/images/hero-2.png"
               alt="mockup"
-              className="mr-4 -rotate-[8deg]"
+              className="mr-4 -rotate-[8deg] z-"
             />
             <img
               src="/images/hero-3.png"
@@ -506,9 +506,7 @@ const Hero = () => {
       {/* \\\ WORKS SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-      <motion.section initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ root: scrollRef }} className="works panel bg-offWhite py-20">
+      <section className="works panel bg-offWhite py-20">
         <div className="lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto  px-5 xl:px-0">
           <div className="flex flex-col xl:flex-row items-center justify-between text-offBlack">
             <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight revealType">
@@ -558,7 +556,7 @@ const Hero = () => {
             <RightArrow />
           </div>
         </Link>
-      </motion.section>
+      </section>
 
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ NOTE SECTION */}

@@ -665,3 +665,24 @@ header .hamburger-menu .menu-layer .wrapper .menu-links .info p {
 .hideCta {
   display: none;
 }
+
+
+/* PAGE TRANSITION*/
+.slide-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: bottom;
+}
+.slide-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: top;
+}
