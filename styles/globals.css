@@ -489,6 +489,27 @@ header .hamburger-menu .menu-layer .wrapper .menu-links .info p {
   }
 }
 
+@media (max-width: 1280px) {
+  header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li {
+    font-size: 72px;
+    font-weight: 700;
+    height: 110px;
+    /* width: 300px; */
+    text-align: left;
+  }
+  .container {
+    width: 100%;
+    max-width: 1024px;
+    /* height: 100vh; */
+    margin: 0 auto;
+  }
+  .container .wrapper {
+    padding: 0 96px;
+    /* height: 100vh; */
+  }
+}
+
+
 @media (max-width: 800px) {
   header .hamburger-menu .menu-layer .wrapper .menu-links .info {
     /* margin-top: 100px; */
