@@ -33,6 +33,10 @@ const Hero = () => {
   // let mainServiceImage;
 
   const scrollRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: scrollRef,
+    offset: ["end end", "start start"]
+  });
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
@@ -509,9 +513,9 @@ const Hero = () => {
       <section className="works panel bg-offWhite py-20">
         <div className="lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto  px-5 xl:px-0">
           <div className="flex flex-col xl:flex-row items-center justify-between text-offBlack">
-            <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight revealType">
+            <motion.h2 initial={{ cy: 20 }} whileInView={{ cy: -20}} className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight revealType">
               You might love what we built to our clients
-            </h2>
+            </motion.h2>
             <Link href="/works">
               <div className=" items-center justify-end gap-3 w-full xl:w-fit hidden xl:flex py-3 px-6 border border-offBlack rounded-full hover:bg-primary cursor-pointer transition-all duration-300">
                 <p className="text-xl text-right">View all</p>

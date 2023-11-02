@@ -43,12 +43,12 @@ const Navbar = ({ color }: { color: string }) => {
       </div>
 
       <div
-        className={`fixed-cta-pc hidden fixed top-7 right-36 py-3 bottom-0  items-center justify-center h-fit gap-4 lg:gap-5 z-[100] ${
+        className={`fixed-cta-pc hidden fixed top-9 xl:top-7 right-36 py-3 bottom-0  items-center justify-center h-fit gap-4 lg:gap-5 z-[100] ${
           showCta ? "lg:flex" : "lg:hidden"
         }`}
       >
         <a href="https://hf612bf58kc.typeform.com/to/UXwICQZ7" target="_blank">
-          <button className="bg-primary border border-offBlack py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
+          <button className="bg-primary border border-offBlack py-3 xl:py-4 px-6 xl:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
             Get a quote
           </button>
         </a>
@@ -57,7 +57,7 @@ const Navbar = ({ color }: { color: string }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 lg:py-4 px-6 lg:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
+          <button className="bg-offBlack text-white border border-white border-opacity-50 py-3 xl:py-4 px-6 xl:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-black transition-all duration-300">
             Talk to us
           </button>
         </a>
