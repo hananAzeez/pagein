@@ -2,10 +2,23 @@
 import Navbar from "./../../components/navbar";
 import { works } from "./../../utils/startups";
 import Footer from "./../../components/footer";
+import Meta from "../../components/metatags";
 
 const Works = () => {
   return (
     <main className="bg-offWhite">
+      <Meta
+        title="Our Works - Fiveweeks"
+        description="Explore our portfolio of web, app, UI/UX, and tech solutions."
+        keywords="Fiveweeks, Digital Agency, Works Showcase, Web Development, App Development, UI/UX Design, Tech Solutions"
+        ogTitle="Our Works - Fiveweeks"
+        ogDescription="Explore our portfolio of web, app, UI/UX, and tech solutions."
+        ogImage="meta/fiveweeks-works-page.png" // Use an appropriate image URL
+        ogURL="https://fiveweeks.studio/works" // Use your about page URL
+        twitterCard="summary_large_image"
+        twitterCreator="@HadiiAzeez" // Use your Twitter handle
+        canonicalURL="https://fiveweeks.studio/works" // Use your canonical URL
+      />
       <div className="section-container overflow-x-hidden relative">
         <section className="works px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
           <Navbar color="white" />
