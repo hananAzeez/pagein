@@ -14,6 +14,7 @@ import SplitType from "split-type";
 import Navbar from "../../components/navbar";
 import Link from "next/link";
 import { motion, useScroll } from "framer-motion"
+import Meta from './../../components/metatags';
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 gsap.registerPlugin(Observer);
@@ -342,6 +343,18 @@ const Hero = () => {
   }
   return (
     <div className="section-container overflow-x-hidden relative">
+      <Meta
+        title="Fiveweeks - Digital Agency | Web, App, UI/UX, and Tech Solutions"
+        description="We Make Amazing Web, App, UI/UX, and Tech Solutions. Transforming Ideas into Seamless Interfaces Since 2019. Partner with Us to Design, Build, and Deliver Extraordinary Digital Products and Services."
+        keywords="Fiveweeks, Digital Agency, Web Solutions, App Development, UI/UX Design, Tech Solutions"
+        ogTitle="Fiveweeks - Digital Agency"
+        ogDescription="Crafting Exceptional Tech Solutions for Visionary Startups and Founders"
+        ogImage="meta/fiveweeks-home-page.png" // Use an appropriate image URL
+        ogURL="https://fiveweeks.studio" // Use your about page URL
+        twitterCard="summary_large_image"
+        twitterCreator="@HadiiAzeez" // Use your Twitter handle
+        canonicalURL="https://fiveweeks.studio" // Use your canonical URL
+      />
       <section className="hero panel px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
         {/* fixed cta👇 */}
         <div className="hero-clipath"></div>
