@@ -1,11 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import Footer from "../../components/footer";
+import Meta from "../../components/metatags";
 import Navbar from "./../../components/navbar";
 
 const About = () => {
   return (
     <main className="bg-black overflow-x-hidden relative">
+      <Meta
+        title="About - Fiveweeks"
+        description="Learn About Fiveweeks - Transforming Ideas into Seamless Interfaces Since 20XX. Partner with Us to Design, Build, and Deliver Extraordinary Digital Products and Services."
+        keywords="About Fiveweeks, Digital Agency, Our Story, UI/UX Design, Tech Solutions, web, app"
+        ogTitle="About - Fiveweeks"
+        ogDescription="We are a digital agency specializing in creating amazing web, app, UI/UX, and tech solutions. Discover our story and our commitment to delivering excellence."
+        ogImage="meta/fiveweeks-about-page.png" // Use an appropriate image URL
+        ogURL="https://fiveweeks.studio/about" // Use your about page URL
+        twitterCard="summary_large_image"
+        twitterCreator="@HadiiAzeez" // Use your Twitter handle
+        canonicalURL="https://fiveweeks.studio/about" // Use your canonical URL
+      />
       <div className=" bg-darkBg  py-8 px-6 mx-auto lg:px-28">
         <Navbar color="black" />
         <h2 className="font-bold text-3xl lg:text-5xl pt-10 lg:pt-16 revealType text-center relative text-offWhite max-w-5xl !leading-tight mx-auto">
