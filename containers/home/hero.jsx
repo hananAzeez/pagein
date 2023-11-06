@@ -13,9 +13,9 @@ import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
 import Navbar from "../../components/navbar";
 import Link from "next/link";
-import { motion, useScroll, useAnimation  } from "framer-motion"
 import { useInView } from "react-intersection-observer";
 import Meta from './../../components/metatags';
+import AnimatedElement from './../../components/animatedElement';
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 gsap.registerPlugin(Observer);
@@ -34,11 +34,6 @@ const Hero = () => {
   const mainServiceImage = useRef();
   // let mainServiceImage;
 
-  const scrollRef = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: scrollRef,
-    offset: ["end end", "start start"]
-  });
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
@@ -342,23 +337,6 @@ const Hero = () => {
   function changeServiceImage(newImageSrc) {
     mainServiceImage.current.src = newImageSrc;
   }
-
-  const AnimatedElement = ({ children, delay = 0 }) => {
-    return (
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.3, ease: "easeOut", delay: delay }}
-        variants={{
-          visible: { opacity: 1, y: 0 },
-          hidden: { opacity: 0, y: 100 }
-        }}
-      >
-        {children}
-      </motion.div>
-    );
-  };
 
   return (
     <div className="section-container overflow-x-hidden relative">
@@ -962,10 +940,13 @@ const Hero = () => {
                 </div>
                 <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
               </div>
+            <AnimatedElement>
               <h2 className="text-center font-bold text-4xl md:text-5xl xl:text-[90px] lg:leading-[96px] max-w-4xl">
                 Let&apos;s Grow Your Digital Presence!
               </h2>
+            </AnimatedElement>
               <div className="cta-buttons flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
+                <AnimatedElement>
                 <a
                   href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
                   target="_blank"
@@ -974,6 +955,8 @@ const Hero = () => {
                     Get a Quote
                   </button>
                 </a>
+                </AnimatedElement>
+                <AnimatedElement delay={0.1}>
                 <a
                   href="https://wa.link/pg09my"
                   target="_blank"
@@ -983,6 +966,7 @@ const Hero = () => {
                     Talk To Us
                   </button>
                 </a>
+                </AnimatedElement>
               </div>
             </div>
 

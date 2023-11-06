@@ -175,7 +175,7 @@ export const works = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Viewfinders ",
     image: "viewfinders-1.png",
     link: "https://https://viewfinderswedding.com/",
@@ -191,7 +191,7 @@ export const works = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "Themesunited ",
     image: "themesunited-1.png",
     link: "https://https://themesunited.com/",
