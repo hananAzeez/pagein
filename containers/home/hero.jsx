@@ -13,7 +13,8 @@ import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
 import Navbar from "../../components/navbar";
 import Link from "next/link";
-import { motion, useScroll } from "framer-motion"
+import { motion, useScroll, useAnimation  } from "framer-motion"
+import { useInView } from "react-intersection-observer";
 import Meta from './../../components/metatags';
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
@@ -526,7 +527,14 @@ const Hero = () => {
       <section className="works panel bg-offWhite py-20">
         <div className="lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto  px-5 xl:px-0">
           <div className="flex flex-col xl:flex-row items-center justify-between text-offBlack">
-            <motion.h2 initial={{ cy: 20 }} whileInView={{ cy: -20}} className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight revealType">
+            <motion.h2 initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.3 }}
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 100 }
+      }} className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight revealType">
               You might love what we built to our clients
             </motion.h2>
             <Link href="/works">
