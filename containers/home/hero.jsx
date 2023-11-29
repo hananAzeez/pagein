@@ -931,7 +931,7 @@ const Hero = () => {
           {/* \\\ CTA SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           <div className="cta md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0 pb-14 lg:pb-0">
-            <div className=" panel pt-12 lg:pt-24 max-w-6xl 2xl:max-w-7xl mx-auto bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[80px] lg:rounded-b-[128px]">
+            <div className=" panel pt-12 lg:pt-24 max-w-6xl 2xl:max-w-7xl mx-auto bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[80px] lg:rounded-b-[128px]" style={{ backgroundImage: 'url(bg-marble.png)' }}>
               <div className="flex items-center justify-center gap-5 lg:gap-14 w-full">
                 <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
                 <div className="stars flex items-center gap-6">
@@ -941,11 +941,11 @@ const Hero = () => {
                 </div>
                 <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
               </div>
-            <AnimatedElement>
-              <h2 className="text-center font-bold text-4xl md:text-5xl xl:text-[90px] lg:leading-[96px] max-w-4xl">
-                Let&apos;s Grow Your Digital Presence!
-              </h2>
-            </AnimatedElement>
+              <AnimatedElement>
+                <h2 className="text-center font-bold text-4xl md:text-5xl xl:text-[90px] lg:leading-[96px] max-w-4xl">
+                  Let&apos;s Grow Your Digital Presence!
+                </h2>
+              </AnimatedElement>
               <div className="cta-buttons flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
                 <AnimatedElement>
                 <a
