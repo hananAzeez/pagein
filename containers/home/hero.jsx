@@ -582,10 +582,11 @@ const Hero = () => {
       {/* \\\ NOTE SECTION */}
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
-      <section className="bg-black ">
-        <div className=" bg-darkBg backdrop-blur-sm">
-          <div className="bg-primary py-14 md:py-20 xl:py-32">
-            <div className="flex flex-col lg:flex-row items-start gap-10 md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0">
+      <section className=" relative">
+        <div className="bg-primary">
+          <div className=" py-14 md:py-20 xl:py-32" style={{ background: 'url(bg-marble.png)'}}>
+              {/* <img src="bg-marble.png" alt="bg" className="absolute top-0 left-0 -z-" /> */}
+            <div className="flex flex-col lg:flex-row items-start gap-10 md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0 z-1">
               <img
                 src="icons/quote.svg"
                 alt="quote"
@@ -615,7 +616,7 @@ const Hero = () => {
                     </div>
                   </div>
                   <Link href="/about">
-                    <button className="w-fit py-4 xl:py-7 px-10 lg:px-16 rounded-2xl bg-offBlack hover:bg-black transition-all duration-300 text-primary text-lg  xl:text-2xl flex items-center gap-2">
+                    <button className="z-1 w-fit py-4 xl:py-7 px-10 lg:px-16 rounded-2xl bg-offBlack hover:bg-black transition-all duration-300 text-primary text-lg  xl:text-2xl flex items-center gap-2">
                       Know more <RightArrowPrimary />{" "}
                     </button>
                   </Link>

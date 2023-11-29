@@ -715,3 +715,9 @@ header .hamburger-menu .menu-layer .wrapper .menu-links .info p {
   transform-origin: top;
   z-index: 9999;
 }
+
+/* marble bg */
+.bg-marble {
+  background: url(/public/bg-marble.png);
+  background-size: cover;
+}
