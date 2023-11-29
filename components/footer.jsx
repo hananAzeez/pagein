@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="cta  w-screen  bg-black pb-14 lg:pb-0">
       <div className="h-full w-full bg-darkBg backdrop-blur-sm bg px-5 lg:px-0 pt-10 md:pt-20">
-        <div className=" panel pt-12 lg:pt-24 max-w-6xl 2xl:max-w-7xl mx-auto bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[80px] lg:rounded-b-[128px]">
+        <div className=" panel pt-12 lg:pt-24 max-w-6xl 2xl:max-w-7xl mx-auto bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[80px] lg:rounded-b-[128px]" style={{ backgroundImage: 'url(bg-marble.png)' }}>
           <div className="flex items-center justify-center gap-5 lg:gap-14 w-full">
             <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
             <div className="stars flex items-center gap-6">
