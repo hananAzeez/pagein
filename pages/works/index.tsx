@@ -1,11 +1,25 @@
 /* eslint-disable @next/next/no-img-element */
-import Navbar from "./../../components/navbar";
-import { works } from "./../../utils/startups";
-import Footer from "./../../components/footer";
+import Navbar from "../../components/navbar";
+import { works } from "../../utils/startups";
+import Footer from "../../components/footer";
 import Meta from "../../components/metatags";
-import AnimatedElement from './../../components/animatedElement';
+import AnimatedElement from '../../components/animatedElement';
+import client from '../../client'
+import Image from "next/image";
+import { SanityImageSource } from '@sanity/image-url/lib/types/types'
+import imageUrlBuilder from '@sanity/image-url'
+import ClientSideRoute from "../../components/clientSideRoute";
 
-const Works = () => {
+
+type Props = {
+  posts: Post[];
+}
+
+function urlFor (source: SanityImageSource) {
+  return imageUrlBuilder(client).image(source)
+}
+
+const Works = ({posts}: Props) => {
   return (
     <main className="bg-offWhite">
       <Meta
@@ -35,7 +49,39 @@ const Works = () => {
               </div>
 
               <div className="grid xl:grid-cols-2 gap-8 lg:gap-x-8 lg:gap-y-10 mt-8 md:mt-10">
-                {works.map((work, index) => (
+                {posts.map((work,index) => (
+                  <AnimatedElement key={work._id} delay={(index+1) % 2 === 0 ? 0.1 : 0}>
+                    <ClientSideRoute route={`/works/${work.slug.current}`}>
+                  <div className="work1 cursor-pointer "  >
+                    {/* <Image className="rounded-xl lg:rounded-2xl" src={urlFor(work.mainImage).url} alt={work.author.name} /> */}
+                    <img
+                      src={urlFor(work.mainImage).auto('format').url()}
+                      alt="works"
+                      className="rounded-xl lg:rounded-2xl"
+                    />
+                    <div className="mt-3 md:mt-6">
+                      <h6 className="text-2xl xl:text-4xl font-semibold revealType">
+                        {work.title}
+                      </h6>
+
+                      <div className="mt-3 flex gap-2 flex-wrap">
+                        {work.categories.map((tag) => (
+                          <p
+                            className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block"
+                            key={tag._id}
+                          >
+                            {tag.title}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  </ClientSideRoute>
+                  </AnimatedElement>
+                ))}
+              </div>
+              {/* <div className="grid xl:grid-cols-2 gap-8 lg:gap-x-8 lg:gap-y-10 mt-8 md:mt-10">
+                {works.map((work) => (
                   <AnimatedElement key={work.id} delay={work.id % 2 === 0 ? 0.1 : 0}>
                   <a href={`works/${work.title.toLowerCase().replace(/ /g, '-')}`} >
                   <div className="work1 cursor-pointer "  >
@@ -64,7 +110,7 @@ const Works = () => {
                   </a>
                   </AnimatedElement>
                 ))}
-              </div>
+              </div> */}
             </div>
           </section>
         </section>
@@ -75,3 +121,22 @@ const Works = () => {
 };
 
 export default Works;
+
+export async function getStaticProps() {
+  // Fetch data from Sanity
+  const query = '*[_type == "post"]{..., author->,categories[]->}';
+  // const query = groq`
+  // *[_type=='post'] {
+  //   ...,
+  //   author->,
+  //   categories[]->
+  // } | order{_createdAt desc}
+  // `
+  const posts = await client.fetch(query);
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}

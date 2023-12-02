@@ -6,7 +6,7 @@ import Navbar from "./../../components/navbar";
 
 const About = () => {
   return (
-    <main className="bg-black overflow-x-hidden relative">
+    <main className="bg-black overflow-x-hidden relative" >
       <Meta
         title="About - Fiveweeks"
         description="Learn About Fiveweeks - Transforming Ideas into Seamless Interfaces Since 20XX. Partner with Us to Design, Build, and Deliver Extraordinary Digital Products and Services."

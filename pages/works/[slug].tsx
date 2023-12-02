@@ -45,15 +45,6 @@ interface BlockComponentProps {
 
 
 const ptComponents = {
-  // marks: {
-  //   strong: ({ children }: InlineProps): React.ReactNode => (
-  //     <strong className="custom-strong-style">{children}</strong>
-  //   ),
-  //   em: ({ children }: InlineProps): React.ReactNode => (
-  //     <em className="custom-em-style">{children}</em>
-  //   ),
-  // },
-
   types: {
     image: ({ value }: ImageComponentProps): ReactNode => {
       if (!value?.asset?._ref) {
