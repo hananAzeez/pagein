@@ -125,13 +125,6 @@ export default Works;
 export async function getStaticProps() {
   // Fetch data from Sanity
   const query = '*[_type == "post"]{..., author->,categories[]->}';
-  // const query = groq`
-  // *[_type=='post'] {
-  //   ...,
-  //   author->,
-  //   categories[]->
-  // } | order{_createdAt desc}
-  // `
   const posts = await client.fetch(query);
 
   return {
