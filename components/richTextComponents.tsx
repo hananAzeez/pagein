@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
-import Link from "next/link";
-import { SanityImageSource } from '@sanity/image-url/lib/types/types'
 import imageUrlBuilder from '@sanity/image-url'
 import client from '../client'
+import { SanityImageSource } from '@sanity/image-url/lib/types/types'
 
 
 function urlFor (source: SanityImageSource) {
@@ -11,59 +9,45 @@ function urlFor (source: SanityImageSource) {
   }
 
   export const RichTextComponenets = {
-    types: {
-        image: ({value}: any) => {
-        return (
-            <div className="w-full">
-                <img
-                src={urlFor(value).auto('format').url()}
-                alt="work image"
-                />
-            </div>
-        )},
-        list: {
-            bullet: ({ children }: any) => (
-                <ul className="ml-10 py-5 list-disc space-y-5">{children}</ul>
-            ),
-            number: ({ children }: any) => (
-                <ol className="mt-lg list-decimal">{children}</ol>
-            )
-        },
-        block: {
-            h1: ({ children }: any) => (
-                <h1 className="text-5xl py-10 font-bold">{children}</h1>
-            ),
-            h2: ({ children }: any) => (
-                <h1 className="text-4xl py-10 font-bold">{children}</h1>
-            ),
-            h3: ({ children }: any) => (
-                <h1 className="text-3xl py-10 font-bold">{children}</h1>
-            ),
-            h4: ({ children }: any) => (
-                <h1 className="text-2xl py-10 font-bold">{children}</h1>
-            ),
+    h1: ({ children }: any) => (
+        <h1 className="text-5xl py-10 font-bold">{children}</h1>
+    ),
+    h2: ({ children }: any) => (
+        <h1 className="text-4xl py-10 font-bold">{children}</h1>
+    ),
+    h3: ({ children }: any) => (
+        <h1 className="text-3xl py-10 font-bold">{children}</h1>
+    ),
+    h4: ({ children }: any) => (
+        <h1 className="text-2xl py-10 font-bold">{children}</h1>
+    ),
+    normal: ({ children }: any) => (
+      <h1 className="text-lg py-1">{children}</h1>
+    ),
+    link: ({ href, children}: any) => (
+      <a href={href} className="text-green-700 hover:underline">{children}</a>
+    ),
 
-            blockquote: ({children}: any) => (
-                <blockquote className="border-l-primary border-l-4 pl-5 py-5 my-5">{children}</blockquote>
-            ),
-            arrayElement: ({ children }: any) => (
-                <div>
-                  {children.map((child: any, index: number) => (
-                    <p key={index}>{child.text}</p>
-                  ))}
-                </div>
-              ),
-        },
-        marks: {
-            link: ({ children, value }: any) => {
-                const rel = !value.href.startsWith("/") ? "noreferrer noopener" : undefined;
-
-                return (
-                    <Link href={value.href} rel={rel} className="underline decoration-primary hover:decoration-black">{children}</Link>
-                )
-            }
-        }
+    blockquote: ({children}: any) => (
+        <blockquote className="border-l-primary border-l-4 pl-5 py-5 my-5">{children}</blockquote>
+    ),
+  //   image: ({ children }: any) => (
+  //     <img className="w-full py-10" alt='blog-image' src={urlFor(children).auto('format').url()} />
+  // ),
+  image: ({ asset }: any) => {
+    // 'node' contains information about the image, including 'asset' and 'caption'
+    // const { asset, caption } = node;
+    console.log(asset)
     
-    }
+    return (
+      <div className="my-5">
+        <img
+          className="w-full h-auto"
+          src={urlFor(asset).auto('format').url()}
+          alt='blog image'
+        />
+      </div>
+    );
+  },
 
   }
