@@ -53,7 +53,6 @@ const Works = ({posts}: Props) => {
                   <AnimatedElement key={work._id} delay={(index+1) % 2 === 0 ? 0.1 : 0}>
                     <ClientSideRoute route={`/works/${work.slug.current}`}>
                   <div className="work1 cursor-pointer "  >
-                    {/* <Image className="rounded-xl lg:rounded-2xl" src={urlFor(work.mainImage).url} alt={work.author.name} /> */}
                     <img
                       src={urlFor(work.mainImage).auto('format').url()}
                       alt="works"
@@ -124,8 +123,11 @@ export default Works;
 
 export async function getStaticProps() {
   // Fetch data from Sanity
-  const query = '*[_type == "post"]{..., author->,categories[]->}';
-  const posts = await client.fetch(query);
+  const query = '*[_type == "author" && name == "fiveweeks"]{name,"posts": *[_type == "post" && author._ref in *[_type=="author" && name == "fiveweeks" ]._id ]{..., author->, categories[]->}}';
+  // const query = '*[_type == "post"]{..., author->,categories[]->}';
+  // const posts = await client.fetch(query);
+  const fiveweeksPosts = await client.fetch(query);
+  const posts = fiveweeksPosts[0].posts;
 
   return {
     props: {
