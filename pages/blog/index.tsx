@@ -60,7 +60,7 @@ const Works = ({posts}: Props) => {
                 {posts.map((blog,index) => (
                   <AnimatedElement key={blog._id} delay={(index+1) % 2 === 0 ? 0.1 : 0}>
                     <ClientSideRoute route={`/blog/${blog.slug.current}`}>
-                  <div className="cursor-pointer rounded-xl lg:rounded-2xl border border-offBlack border-opacity-60 bg-white bg-opacity-60"  >
+                  <div className="cursor-pointer rounded-xl lg:rounded-2xl border border-offBlack border-opacity-20 bg-white bg-opacity-60"  >
                     <div className="relative">
                     <img
                       src={urlFor(blog.mainImage).auto('format').url()}
@@ -82,7 +82,7 @@ const Works = ({posts}: Props) => {
                       <div className="flex items-center gap-5">
                       {blog.categories.map((tag) => (
                             <p
-                              className="text-sm md:text-base font-saira  py-1 px-6 rounded-full bg-primary border border-offBlack revealType inline-block"
+                              className="text-sm md:text-base font-saira  py-1 px-6 rounded-full bg-primary border border-offBlack border-opacity-10 revealType inline-block"
                               key={tag._id}
                             >
                               {tag.title}

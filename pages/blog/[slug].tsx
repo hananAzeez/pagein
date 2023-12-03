@@ -24,24 +24,24 @@ const Post = ({ post }: { post: Post }) => {
     // Handle the case where 'post' is undefined
     return <div>Loading...</div>;
   }
-
-  console.log(post.body)
-
   return (
     <main className=' overflow-hidden mx-auto'>
-      <div className="py-8 max-w-7xl mx-auto">
+      <div className="lg:px-28 py-8 px-5">
         <Navbar color='black' />
         <article className='flex flex-col mt-20 mb-10  px-5 lg:px-28 xl:px-0 max-w-5xl mx-auto'>
                     {post.categories && (
                         <ul className='flex gap-2 flex-wrap'>
-                            {post.categories.map(category => <li className='text-sm md:text-base font-saira  py-1 px-6 rounded-full border bg-primary border-offBlack border-opacity-10' key={category._id}>{category}</li>)}
+                            {post.categories.map(category => <li className='text-sm md:text-base font-saira  py-1 px-6 rounded-full border bg-primary border-offBlack border-opacity-10' key={category._id}>{category.toString()}</li>)}
                         </ul>
                     )}
                     <h1 className='mt-5 text-2xl md:text-3xl xl:text-4xl font-bold '>{post.title}</h1>
                     <div className="mt-8 flex gap-10 items-center">
                         <div className="flex flex-col gap-2">
                             <p className='text-grey text-sm'>Written by</p>
-                            <p className="text-lg">Fiveweeks</p>
+                            <div className="flex gap-2 items-center">
+                                {/* <img src={urlFor(post.author.image.asset).auto('format').url()} alt="author" className="max-w-[36px] rounded-full" /> */}
+                                <p className="text-lg">Fiveweeks</p>
+                            </div>
                         </div>
                         <div className="flex flex-col gap-2">
                             <p className='text-grey text-sm'>Published on</p>
@@ -70,10 +70,10 @@ const Post = ({ post }: { post: Post }) => {
                 <h1 className="text-3xl pt-8 font-bold">{children}</h1>
             ),
             h4: ({ children }: any) => (
-                <h1 className="text-2xl pt-8 font-bold">{children}</h1>
+                <h1 className="text-2xl pt-8 font-bold font-saira">{children}</h1>
             ),
             normal: ({ children }: any) => (
-              <p className="text-lg pt-4">{children}</p>
+              <p className="text-lg pt-4 font-saira">{children}</p>
             ),
             link: ({ href, children}: any) => (
               <a href={href} className="text-green-700 hover:underline">{children}</a>
@@ -113,7 +113,7 @@ const Post = ({ post }: { post: Post }) => {
 
 const query = groq`*[_type == "post" && slug.current == $slug][0]{
   ...,
-  "name": author->name,
+  author->,
   "categories": categories[]->title,
   "authorImage": author->image,
 }`

@@ -37,7 +37,6 @@ function urlFor (source: SanityImageSource) {
   image: ({ asset }: any) => {
     // 'node' contains information about the image, including 'asset' and 'caption'
     // const { asset, caption } = node;
-    console.log(asset)
     
     return (
       <div className="my-5">

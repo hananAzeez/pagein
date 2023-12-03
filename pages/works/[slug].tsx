@@ -25,7 +25,8 @@ const Post = ({ post }: { post: Post }) => {
     return <div>Loading...</div>;
   }
 
-  console.log(post.body)
+  console.log(post.categories)
+  const allCategory = post.categories;
 
   return (
     <main className=' overflow-hidden mx-auto'>
@@ -35,7 +36,7 @@ const Post = ({ post }: { post: Post }) => {
           <h1 className='text-5xl md:text-6xl xl:text-8xl font-bold text-center'>{post.title}</h1>
           {post.categories && (
             <ul className='flex gap-2 flex-wrap  xl:-mt-4'>
-              {post.categories.map(category => <li className='text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack' key={category._id}>{category}</li>)}
+              {allCategory.map(category => <li className='text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack' key={category._id}>{category.toString()}</li>)}
             </ul>
           )}
           <PortableText 
