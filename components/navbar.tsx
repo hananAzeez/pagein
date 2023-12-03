@@ -71,22 +71,22 @@ const Navbar = ({ color }: { color: string }) => {
         }  rounded-xl bg relative`}
       >
         <div className="nav-links flex items-center gap-8">
+          <Link href="/about">
+            {" "}
+            <p className="menu-links">About</p>
+          </Link>
           <Link href="/works">
             {" "}
             <p className="menu-links hover-this ">Works</p>
           </Link>
-          <a href="">
-            {" "}
-            <p className="menu-links hover-this">Services</p>
-          </a>
         </div>
         <Link href="/">
           <h1 className="text-3xl font-bold">fiveweeks</h1>
         </Link>
         <div className="nav-links flex items-center gap-8">
-          <Link href="/about">
+          <Link href="/blog">
             {" "}
-            <p className="menu-links">About</p>
+            <p className="menu-links">Blog</p>
           </Link>
           <a href="">
             {" "}
