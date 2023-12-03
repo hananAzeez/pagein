@@ -34,18 +34,24 @@ const Works = ({posts}: Props) => {
         />
 
       <div className="section-container overflow-x-hidden relative">
-        <section className="works px-5 mx-auto lg:px-28 bg-offWhite py-8 scrollSection relative ">
-          <Navbar color="white" />
+        <section className="mx-auto bg-offWhite scrollSection relative ">
+          <div className="w-full bg-offBlack text-white lg:px-28 py-8 px-5 flex items-center justify-center flex-col" style={{ backgroundImage: 'url(bg-marble.png)' }}>
+            <Navbar color="white" />
+              <AnimatedElement>
+                <h2 className="mt-10 text-center font-bold text-3xl leading-[43px] lg:text-4xl  lg:leading-[80px] w-full tracking-tight revealType">
+                Fiveweeks Blog
+                </h2>
+              </AnimatedElement>
+              <AnimatedElement>
+                <p className="mt-2 mb-10 text-center text-lg revealType font-saira xl:max-w-6xl 3xl:max-w-screen-2xl">
+                Dive into the art and science of web and app development through the eyes of Fiveweeks.   Our blog is your gateway to a world where creativity meets cutting-edge technology.   From insightful guides to industry trends, join us on a journey to discover the secrets   of exceptional digital experiences.
+                </p>
+              </AnimatedElement>
+
+          </div>
 
           <section className="works panel bg-offWhite">
-            <div className="max-w-6xl 2xl:max-w-7xl mx-auto py-20 px-5 xl:px-0">
-              {/* <div className="flex flex-col xl:flex-row items-center justify-between text-offBlack">
-                <AnimatedElement>
-                <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight revealType">
-                  You might love what we built to our clients
-                </h2>
-                </AnimatedElement>
-              </div> */}
+            <div className="max-w-6xl 2xl:max-w-7xl mx-auto pt-10 pb-20 px-5 xl:px-0">
 
               <div className="grid xl:grid-cols-2 gap-8 lg:gap-x-8 lg:gap-y-10 mt-8 md:mt-10">
                 {posts.map((work,index) => (
@@ -70,7 +76,7 @@ const Works = ({posts}: Props) => {
                       </div>
                     </div>
                     <div className="mt-3 md:mt-6">
-                      <h6 className="text-2xl xl:text-4xl font-semibold revealType">
+                      <h6 className="text-xl xl:text-3xl font-semibold revealType">
                         {work.title}
                       </h6>
 

@@ -44,6 +44,9 @@ module.exports = {
       borderRadius: {
         btn: "64px",
       },
+      screens: {
+        '3xl': '2000px'
+      }
     },
   },
   plugins: [],
