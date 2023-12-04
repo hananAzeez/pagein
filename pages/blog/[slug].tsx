@@ -28,7 +28,7 @@ const Post = ({ post }: { post: Post }) => {
     <main className=' overflow-hidden mx-auto'>
       <div className="lg:px-28 py-8 px-5">
         <Navbar color='black' />
-        <article className='flex flex-col mt-20 mb-10  px-5 lg:px-28 xl:px-0 max-w-5xl mx-auto'>
+        <article className='flex flex-col mt-10 lg:mt-20 mb-10  px-5 lg:px-28 xl:px-0 max-w-5xl mx-auto'>
                     {post.categories && (
                         <ul className='flex gap-2 flex-wrap'>
                             {post.categories.map(category => <li className='text-sm md:text-base font-saira  py-1 px-6 rounded-full border bg-primary border-offBlack border-opacity-10' key={category._id}>{category.toString()}</li>)}
