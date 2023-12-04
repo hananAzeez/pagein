@@ -48,7 +48,7 @@ const Navbar = ({ color }: { color: string }) => {
         }`}
       >
         <a href="https://hf612bf58kc.typeform.com/to/UXwICQZ7" target="_blank">
-          <button className="bg-primary border border-offBlack py-3 xl:py-4 px-6 xl:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300">
+          <button className="bg-primary border border-offBlack py-3 xl:py-4 px-6 xl:px-8 rounded-2xl text-base lg:text-lg font-bold hover:bg-opacity-80 transition-all duration-300 text-offBlack">
             Get a quote
           </button>
         </a>
@@ -88,10 +88,10 @@ const Navbar = ({ color }: { color: string }) => {
             {" "}
             <p className="menu-links">Blog</p>
           </Link>
-          <a href="">
+          <Link href="#">
             {" "}
             <p className="menu-links">Contact</p>
-          </a>
+          </Link>
         </div>
       </header>
       <header className="lg:hidden relative flex items-center justify-between">
