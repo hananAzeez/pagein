@@ -70,7 +70,7 @@ const Post = ({ post }: { post: Post }) => {
                 <h1 className="text-3xl pt-8 font-bold">{children}</h1>
             ),
             h4: ({ children }: any) => (
-                <h1 className="text-2xl pt-8 font-bold font-saira">{children}</h1>
+                <h1 className="text-2xl pt-8 font-bold">{children}</h1>
             ),
             normal: ({ children }: any) => (
               <p className="text-lg pt-4 font-saira">{children}</p>
