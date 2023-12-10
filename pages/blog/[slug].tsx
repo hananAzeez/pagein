@@ -82,9 +82,6 @@ const Post = ({ post }: { post: Post }) => {
             blockquote: ({children}: any) => (
                 <blockquote className="border-l-primary border-l-4 pl-5 py-5 my-5">{children}</blockquote>
             ),
-          //   image: ({ children }: any) => (
-          //     <img className="w-full py-10" alt='blog-image' src={urlFor(children).auto('format').url()} />
-          // ),
           image: ({ asset }: any) => {
             // 'node' contains information about the image, including 'asset' and 'caption'
             // const { asset, caption } = node;
