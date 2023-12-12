@@ -20,7 +20,21 @@ function urlFor (source: SanityImageSource) {
 }
 
 const Works = ({posts}: Props) => {
-  console.log('blog posts', posts)
+  // console.log('blog posts', posts)
+  const formatDate = (dateString: string) => {
+    const parts = dateString.split('-');
+    const day = parseInt(parts[2], 10);
+    const month = parseInt(parts[1], 10) - 1; // Months are zero-based in JavaScript Date object
+    const year = parseInt(parts[0], 10);
+  
+    const date = new Date(year, month, day);
+  
+    const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+    const formattedDate = date.toLocaleDateString('en-US', options);
+  
+    return formattedDate;
+  };
+
   return (
     <main className="bg-offWhite">
       <Meta
@@ -88,7 +102,7 @@ const Works = ({posts}: Props) => {
                               {tag.title}
                             </p>
                           ))}
-                          <p className="text-lg text-grey">{blog._createdAt.slice(0,10)}</p>
+                          <p className="text-lg text-grey">{formatDate(blog._createdAt.slice(0,10))}</p>
                           </div>
                         <h6 className="mt-5 text-xl xl:text-2xl font-bold revealType">
                           {blog.title}
