@@ -20,6 +20,20 @@ function urlFor (source: SanityImageSource) {
 
 const Post = ({ post }: { post: Post }) => {
   // console.log(post)
+  const formatDate = (dateString: string) => {
+    const parts = dateString.split('-');
+    const day = parseInt(parts[2], 10);
+    const month = parseInt(parts[1], 10) - 1; // Months are zero-based in JavaScript Date object
+    const year = parseInt(parts[0], 10);
+  
+    const date = new Date(year, month, day);
+  
+    const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+    const formattedDate = date.toLocaleDateString('en-US', options);
+  
+    return formattedDate;
+  };
+
   if (!post) {
     // Handle the case where 'post' is undefined
     return <div>Loading...</div>;
@@ -45,7 +59,7 @@ const Post = ({ post }: { post: Post }) => {
                         </div>
                         <div className="flex flex-col gap-2">
                             <p className='text-grey text-sm'>Published on</p>
-                            <p className="text-lg">{post._createdAt.slice(0,10)}</p>
+                            <p className="text-lg">{formatDate(post._createdAt.slice(0,10))}</p>
                         </div>
                     </div>
 
