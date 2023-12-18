@@ -186,6 +186,7 @@ const Footer = () => {
                         class="flex text-sm transition-all duration-200 "
                       >
                         {" "}
+                        +971 568331722 <br />
                         +91 70121 79326{" "}
                       </Link>
                     </li>
@@ -196,7 +197,7 @@ const Footer = () => {
                         class="flex text-sm transition-all duration-200 "
                       >
                         {" "}
-                        Koduvally, Kozhikode , <br /> 673572
+                       Dubai UAE
                       </Link>
                     </li>
                   </ul>
