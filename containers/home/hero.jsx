@@ -14,8 +14,8 @@ import SplitType from "split-type";
 import Navbar from "../../components/navbar";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import Meta from './../../components/metatags';
-import AnimatedElement from './../../components/animatedElement';
+import Meta from "./../../components/metatags";
+import AnimatedElement from "./../../components/animatedElement";
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 gsap.registerPlugin(Observer);
@@ -34,10 +34,8 @@ const Hero = () => {
   const mainServiceImage = useRef();
   // let mainServiceImage;
 
-
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      
       // \\\\\\\\\\\\\\\\\\\\\\\
       // HERO SECTION
       // \\\\\\\\\\\\\\\\\\\\\\\
@@ -524,48 +522,48 @@ const Hero = () => {
         <div className="lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto  px-5 xl:px-0">
           <div className="flex flex-col xl:flex-row items-center justify-between text-offBlack">
             <AnimatedElement>
-            <div className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight revealType">
-              You might love what we built to our clients
-            </div>
+              <div className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] !text-offBlack w-full max-w-4xl tracking-tight revealType">
+                You might love what we built to our clients
+              </div>
             </AnimatedElement>
             <AnimatedElement delay={0.1}>
-            <Link href="/works">
-              <div className=" items-center justify-end gap-3 w-full xl:w-fit hidden xl:flex py-3 px-6 border border-offBlack rounded-full hover:bg-primary cursor-pointer transition-all duration-300">
-                <p className="text-xl text-right">View all</p>
-                <RightArrow />
-              </div>
-            </Link>
+              <Link href="/works">
+                <div className=" items-center justify-end gap-3 w-full xl:w-fit hidden xl:flex py-3 px-6 border border-offBlack rounded-full hover:bg-primary cursor-pointer transition-all duration-300">
+                  <p className="text-xl text-right">View all</p>
+                  <RightArrow />
+                </div>
+              </Link>
             </AnimatedElement>
           </div>
 
           <div className="grid xl:grid-cols-2 gap-8 lg:gap-x-8 lg:gap-y-10 mt-8 md:mt-10">
             {works.slice(0, 4).map((work, index) => (
-              <AnimatedElement delay={index*0.1} key={work.id}>
-              <div className="work1 cursor-pointer " >
-                <a href={work.link} target="_blank">
-                  <img
-                    src={`works/${work.image}`}
-                    alt="works"
-                    className="rounded-xl lg:rounded-2xl"
-                  />
-                </a>
-                <div className="mt-3 md:mt-6">
-                  <h6 className="text-2xl xl:text-4xl font-semibold revealType">
-                    {work.title}
-                  </h6>
+              <AnimatedElement delay={index * 0.1} key={work.id}>
+                <div className="work1 cursor-pointer ">
+                  <a href={work.link} target="_blank">
+                    <img
+                      src={`works/${work.image}`}
+                      alt="works"
+                      className="rounded-xl lg:rounded-2xl"
+                    />
+                  </a>
+                  <div className="mt-3 md:mt-6">
+                    <h6 className="text-2xl xl:text-4xl font-semibold revealType">
+                      {work.title}
+                    </h6>
 
-                  <div className="mt-3 flex gap-2 flex-wrap">
-                    {work.tags.map((tag) => (
-                      <p
-                        className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block"
-                        key={tag.id}
-                      >
-                        {tag.title}
-                      </p>
-                    ))}
+                    <div className="mt-3 flex gap-2 flex-wrap">
+                      {work.tags.map((tag) => (
+                        <p
+                          className="text-sm md:text-base font-saira  py-2 px-8 rounded-full border border-offBlack revealType inline-block"
+                          key={tag.id}
+                        >
+                          {tag.title}
+                        </p>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
               </AnimatedElement>
             ))}
           </div>
@@ -584,8 +582,11 @@ const Hero = () => {
 
       <section className=" relative">
         <div className="bg-primary">
-          <div className=" py-14 md:py-20 xl:py-32" style={{ background: 'url(bg-marble.png)'}}>
-              {/* <img src="bg-marble.png" alt="bg" className="absolute top-0 left-0 -z-" /> */}
+          <div
+            className=" py-14 md:py-20 xl:py-32"
+            style={{ background: "url(bg-marble.png)" }}
+          >
+            {/* <img src="bg-marble.png" alt="bg" className="absolute top-0 left-0 -z-" /> */}
             <div className="flex flex-col lg:flex-row items-start gap-10 md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0 z-1">
               <img
                 src="icons/quote.svg"
@@ -594,10 +595,10 @@ const Hero = () => {
               />
               <div className=" text-offBlack">
                 <AnimatedElement>
-                <h2 className="font-semibold text-3xl leading-[40px] xl:text-6xl xl:leading-[77px] revealType">
-                  Our vision is to collaborate with founders who are tackling
-                  big problems that affect a lot of people.
-                </h2>
+                  <h2 className="font-semibold text-3xl leading-[40px] xl:text-6xl xl:leading-[77px] revealType">
+                    Our vision is to collaborate with founders who are tackling
+                    big problems that affect a lot of people.
+                  </h2>
                 </AnimatedElement>
                 <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end gap-10 mt-10 w-full">
                   <div className="max-w-xl">
@@ -637,48 +638,49 @@ const Hero = () => {
         <div className="startups panel h-full 2xl:h-screen xl:flex xl:items-center xl:justify-center max-w-6xl 2xl:max-w-7xl mx-auto relative px-5 xl:px-0 ">
           <div className="">
             <AnimatedElement>
-            <h2
-              className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16 revealType"
-              ref={revealType}
-            >
-              We run startups that helps thousands
-            </h2>
+              <h2
+                className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16 revealType"
+                ref={revealType}
+              >
+                We run startups that helps thousands
+              </h2>
             </AnimatedElement>
             <AnimatedElement>
-            <h6 className="revealType mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-offBlack">
-              Empowering Solutions Through In-house Startup Ventures. We Ideate
-              and create amazing tech products for solving user problems
-            </h6>
+              <h6 className="revealType mt-4 xl:mt-8 text-lg xl:text-2xl font-saira max-w-4xl text-offBlack">
+                Empowering Solutions Through In-house Startup Ventures. We
+                Ideate and create amazing tech products for solving user
+                problems
+              </h6>
             </AnimatedElement>
             <div className="startup-container flex flex-col py-16">
               {Startups.map((startup) => (
                 <AnimatedElement key={startup.id}>
-                <a href={startup.link} target="_blank" >
-                  <div
-                    className={`startup  grid grid-cols-1 lg:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer relative ${
-                      startup.id === 1 ? "border-y" : "border-b"
-                    } border-offBlack border-opacity-20 hover:bg-offBlack hover:bg-opacity-5`}
-                    key={startup.id}
-                  >
-                    <div className="img-wrapper">
-                      <img
-                        src={`/startups/${startup.image}`}
-                        alt="startup img"
-                      />
-                    </div>
-                    <h3 className="text-48 col-span-2 !text-offBlack revealType">
-                      {startup.title}
-                    </h3>
-                    <p className="text-18 col-span-2 !text-offBlack revealType">
-                      {startup.desc}
-                    </p>
-                    {/* <a href={startup.link} target="_blank"> */}
+                  <a href={startup.link} target="_blank">
+                    <div
+                      className={`startup  grid grid-cols-1 lg:grid-cols-5 gap-y-4 xl:gap-5 items-center justify-start py-6 px-4 xl:p-10 hover:cursor-pointer relative ${
+                        startup.id === 1 ? "border-y" : "border-b"
+                      } border-offBlack border-opacity-20 hover:bg-offBlack hover:bg-opacity-5`}
+                      key={startup.id}
+                    >
+                      <div className="img-wrapper">
+                        <img
+                          src={`/startups/${startup.image}`}
+                          alt="startup img"
+                        />
+                      </div>
+                      <h3 className="text-48 col-span-2 !text-offBlack revealType">
+                        {startup.title}
+                      </h3>
+                      <p className="text-18 col-span-2 !text-offBlack revealType">
+                        {startup.desc}
+                      </p>
+                      {/* <a href={startup.link} target="_blank"> */}
                       <div className="flex items-center justify-start lg:justify-end">
                         <TopRightArrow />
                       </div>
-                    {/* </a> */}
-                  </div>
-                </a>
+                      {/* </a> */}
+                    </div>
+                  </a>
                 </AnimatedElement>
               ))}
               {/* <img src="images/saavPopup.png" alt="product image" ref={saavPopup} className="w-[350px] startup-popup"/> */}
@@ -686,8 +688,6 @@ const Hero = () => {
           </div>
         </div>
       </section>
-
-
 
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       {/* \\\ SERVICES SECTION */}
@@ -697,46 +697,46 @@ const Hero = () => {
         <div className="steps panel h-full  bg-darkBg backdrop-blur-sm bg">
           <div className="md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0 py-20">
             <AnimatedElement>
-            <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px]w-full max-w-4xl tracking-tight">
-              Our Services
-            </h2>
+              <h2 className=" font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px]w-full max-w-4xl tracking-tight">
+                Our Services
+              </h2>
             </AnimatedElement>
             <div className="grid lg:grid-cols-3 gap-14 py-10 md:py-16">
               <AnimatedElement>
-              <div className="service-img col-span-1 bg-white rounded-3xl overflow-hidden hidden lg:block">
-                <img
-                  src="services/ui-ux-1.png"
-                  alt="service"
-                  className="bg-cover w-full h-full "
-                  id="mainServiceImage"
-                  ref={mainServiceImage}
-                />
-              </div>
+                <div className="service-img col-span-1 bg-white rounded-3xl overflow-hidden hidden lg:block">
+                  <img
+                    src="services/ui-ux-1.png"
+                    alt="service"
+                    className="bg-cover w-full h-full "
+                    id="mainServiceImage"
+                    ref={mainServiceImage}
+                  />
+                </div>
               </AnimatedElement>
               <div className="col-span-2 grid gap-10 h-fit !text-offWhite">
                 {services.map((service) => (
                   <AnimatedElement key={service.id}>
-                  <div
-                    className="service flex flex-col lg:flex-row gap-5 border-b border-offWhite border-opacity-30 pt-6 pb-12"
-                    onMouseEnter={() => changeServiceImage(service.image)}
-                  >
-                    <h3 className="text-4xl">0{service.id}</h3>
-                    <div className="h-56 overflow-hidden lg:hidden">
-                      <img
-                        src={service.mobile}
-                        alt="service"
-                        className=" w-full bg-bottom "
-                      />
+                    <div
+                      className="service flex flex-col lg:flex-row gap-5 border-b border-offWhite border-opacity-30 pt-6 pb-12"
+                      onMouseEnter={() => changeServiceImage(service.image)}
+                    >
+                      <h3 className="text-4xl">0{service.id}</h3>
+                      <div className="h-56 overflow-hidden lg:hidden">
+                        <img
+                          src={service.mobile}
+                          alt="service"
+                          className=" w-full bg-bottom "
+                        />
+                      </div>
+                      <div className="flex flex-col">
+                        <h3 className="text-4xl font-semibold tracking-[-1.44px] md:text-5xl col-span-2 revealType">
+                          {service.title}
+                        </h3>
+                        <p className="text-18 col-span-2  revealType mt-6 !text-offWhite">
+                          {service.desc}
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex flex-col">
-                      <h3 className="text-4xl font-semibold tracking-[-1.44px] md:text-5xl col-span-2 revealType">
-                        {service.title}
-                      </h3>
-                      <p className="text-18 col-span-2  revealType mt-6 !text-offWhite">
-                        {service.desc}
-                      </p>
-                    </div>
-                  </div>
                   </AnimatedElement>
                 ))}
               </div>
@@ -753,52 +753,50 @@ const Hero = () => {
         <div className="md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0 py-20 xl:py-32">
           <div className=" w-full flex flex-col items-center px-2  text-center">
             <AnimatedElement>
-            <h2 className="font-bold text-4xl leading-[43px] lg:text-5xl xl:text-6xl xl:leading-[70px] text-center revealType">
-              Are you looking for a{" "}
-            </h2>
-            <h2 className="relative w-full font-bold text-4xl leading-[43px] lg:text-5xl  xl:text-6xl xl:leading-[70px] text-center flex items-start justify-center ">
-              <span className="animate-text overflow-hidden align-bottom flex flex-col text-[#B3E208]">
-                <span className=" hidden animatingText ">Web&nbsp;</span>
-                <span className=" hidden animatingText ">App&nbsp;</span>
-                <span className=" hidden animatingText ">UI&nbsp;</span>
-                <span className=" hidden animatingText ">UX&nbsp;</span>
-              </span>
-              <span className=" inline-block overflow-hidden align-bottom">
-                <span className="inline-block revealType">Solution?</span>
-              </span>
-            </h2>
+              <h2 className="font-bold text-4xl leading-[43px] lg:text-5xl xl:text-6xl xl:leading-[70px] text-center revealType">
+                Are you looking for a{" "}
+              </h2>
+              <h2 className="relative w-full font-bold text-4xl leading-[43px] lg:text-5xl  xl:text-6xl xl:leading-[70px] text-center flex items-start justify-center ">
+                <span className="animate-text overflow-hidden align-bottom flex flex-col text-[#B3E208]">
+                  <span className=" hidden animatingText ">Web&nbsp;</span>
+                  <span className=" hidden animatingText ">App&nbsp;</span>
+                  <span className=" hidden animatingText ">UI&nbsp;</span>
+                  <span className=" hidden animatingText ">UX&nbsp;</span>
+                </span>
+                <span className=" inline-block overflow-hidden align-bottom">
+                  <span className="inline-block revealType">Solution?</span>
+                </span>
+              </h2>
             </AnimatedElement>
             <AnimatedElement>
-            <h6 className="text-lg md:text-2xl pt-8 font-saira max-w-3xl text-center revealType">
-              We just don&apos;t ghost you after delivering, we are committed to
-              make the product a success from the beginning to the end
-            </h6>
+              <h6 className="text-lg md:text-2xl pt-8 font-saira max-w-3xl text-center revealType">
+                We just don&apos;t ghost you after delivering, we are committed
+                to make the product a success from the beginning to the end
+              </h6>
             </AnimatedElement>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6 2xl:gap-10 max-w-6xl 2xl:max-w-7xl mx-auto pt-6 lg:pt-12 2xl:pt-16 text-offWhite">
             {Steps.map((step, index) => (
-              <AnimatedElement key={step.id} delay={index*0.1}>
-              <div
-                className="px-6 md:px-8 xl:px-10 py-7 md:py-10 xl:py-14 flex flex-col text-left bg-offBlack  rounded-[36px]"
-              >
-                <h6 className="text-3xl opacity-30 font-medium font-syne revealType">
-                  {step.step}
-                </h6>
-                <div className="my-6 md:my-8 flex items-center justify-center gap-5 w-full  bg-offBlack rounded-2xl">
-                  <img
-                    src={step.image}
-                    alt="process"
-                    className="bg-cover w-full h-full rounded-3xl"
-                  />
+              <AnimatedElement key={step.id} delay={index * 0.1}>
+                <div className="px-6 md:px-8 xl:px-10 py-7 md:py-10 xl:py-14 flex flex-col text-left bg-offBlack  rounded-[36px]">
+                  <h6 className="text-3xl opacity-30 font-medium font-syne revealType">
+                    {step.step}
+                  </h6>
+                  <div className="my-6 md:my-8 flex items-center justify-center gap-5 w-full  bg-offBlack rounded-2xl">
+                    <img
+                      src={step.image}
+                      alt="process"
+                      className="bg-cover w-full h-full rounded-3xl"
+                    />
+                  </div>
+                  <h6 className="text-2xl xl:text-4xl font-semibold revealType">
+                    {step.title}
+                  </h6>
+                  <p className="text-base md:text-lg xl:text-xl font-saira pt-4 md:pt-6 revealType">
+                    {step.desc}
+                  </p>
                 </div>
-                <h6 className="text-2xl xl:text-4xl font-semibold revealType">
-                  {step.title}
-                </h6>
-                <p className="text-base md:text-lg xl:text-xl font-saira pt-4 md:pt-6 revealType">
-                  {step.desc}
-                </p>
-              </div>
               </AnimatedElement>
             ))}
           </div>
@@ -810,8 +808,8 @@ const Hero = () => {
       {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
 
       <section className=" bg-black relative overflow-hidden scrollSection">
-        <div className="circ circ13 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72"></div>
-        <div className="circ circ14 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[600px]"></div>
+        <div className="circ circ13 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] hidden lg:absolute -left-72"></div>
+        <div className="circ circ14 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] hidden lg:absolute -right-72 top-[600px]"></div>
         <div className="circ circ15 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[1000px]"></div>
         <div className="circ circ16 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[1700px]"></div>
         <div className="circ circ17 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[2400px]"></div>
@@ -821,9 +819,9 @@ const Hero = () => {
         <div className="h-full w-full bg-darkBg backdrop-blur-sm bg ">
           <div className="testimonials panel py-14 xl:py-24 w-screen h-full md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0">
             <AnimatedElement>
-            <h2 className="font-saira text-lg xl:text-2xl font-medium text-white">
-              Trusted and Loved: Hear from Our Clients
-            </h2>
+              <h2 className="font-saira text-lg xl:text-2xl font-medium text-white">
+                Trusted and Loved: Hear from Our Clients
+              </h2>
             </AnimatedElement>
             {/* <h2 className="text-title-64 w-full max-w-4xl">
               Trusted and Loved: <br/>Hear from Our Clients
@@ -838,15 +836,15 @@ const Hero = () => {
                   />
                   <div className="text-white">
                     <AnimatedElement>
-                    <h4 className="text-48 revealType">
-                      Revolutionized our brand! fiveweeks transformed our
-                      website into a sales powerhouse. Exceptional work!
-                    </h4>
+                      <h4 className="text-48 revealType">
+                        Revolutionized our brand! fiveweeks transformed our
+                        website into a sales powerhouse. Exceptional work!
+                      </h4>
                     </AnimatedElement>
                     <AnimatedElement>
-                    <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
-                      Upwork client
-                    </h6>
+                      <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
+                        Upwork client
+                      </h6>
                     </AnimatedElement>
                     {/* <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
                       Tom hales
@@ -902,15 +900,15 @@ const Hero = () => {
                   />
                   <div className="text-white">
                     <AnimatedElement>
-                    <h4 className="text-48 revealType">
-                      The app they built for me exceeded my expectations in
-                      every way.
-                    </h4>
+                      <h4 className="text-48 revealType">
+                        The app they built for me exceeded my expectations in
+                        every way.
+                      </h4>
                     </AnimatedElement>
                     <AnimatedElement>
-                    <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
-                      Upwork client
-                    </h6>
+                      <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
+                        Upwork client
+                      </h6>
                     </AnimatedElement>
                     {/* <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
                       mohd salih
@@ -931,7 +929,10 @@ const Hero = () => {
           {/* \\\ CTA SECTION */}
           {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           <div className="cta md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0 pb-14 lg:pb-0">
-            <div className=" panel pt-12 lg:pt-24 max-w-6xl 2xl:max-w-7xl mx-auto bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[80px] lg:rounded-b-[128px]" style={{ backgroundImage: 'url(bg-marble.png)' }}>
+            <div
+              className=" panel pt-12 lg:pt-24 max-w-6xl 2xl:max-w-7xl mx-auto bg-primary w-full flex flex-col items-center justify-center gap-16 px-6 py-10 lg:p-20 rounded-b-[80px] lg:rounded-b-[128px]"
+              style={{ backgroundImage: "url(bg-marble.png)" }}
+            >
               <div className="flex items-center justify-center gap-5 lg:gap-14 w-full">
                 <div className="flex-1 w-full h-[1px] bg-grey bg-opacity-50" />
                 <div className="stars flex items-center gap-6">
@@ -948,25 +949,25 @@ const Hero = () => {
               </AnimatedElement>
               <div className="cta-buttons flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
                 <AnimatedElement>
-                <a
-                  href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
-                  target="_blank"
-                >
-                  <button className="py-3 lg:py-4 px-10 bg-offBlack text-primary rounded-btn text-lg lg:text-2xl border border-offBlack w-full lg:w-auto">
-                    Get a Quote
-                  </button>
-                </a>
+                  <a
+                    href="https://hf612bf58kc.typeform.com/to/UXwICQZ7"
+                    target="_blank"
+                  >
+                    <button className="py-3 lg:py-4 px-10 bg-offBlack text-primary rounded-btn text-lg lg:text-2xl border border-offBlack w-full lg:w-auto">
+                      Get a Quote
+                    </button>
+                  </a>
                 </AnimatedElement>
                 <AnimatedElement delay={0.1}>
-                <a
-                  href="https://wa.link/pg09my"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="py-3 lg:py-4 px-10  bg-primary text-offBlack border border-offBlack rounded-btn text-lg lg:text-2xl w-full lg:w-auto">
-                    Talk To Us
-                  </button>
-                </a>
+                  <a
+                    href="https://wa.link/pg09my"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="py-3 lg:py-4 px-10  bg-primary text-offBlack border border-offBlack rounded-btn text-lg lg:text-2xl w-full lg:w-auto">
+                      Talk To Us
+                    </button>
+                  </a>
                 </AnimatedElement>
               </div>
             </div>
