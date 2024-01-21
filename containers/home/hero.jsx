@@ -810,12 +810,12 @@ const Hero = () => {
       <section className=" bg-black relative overflow-hidden scrollSection">
         <div className="circ circ13 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] hidden lg:absolute -left-72"></div>
         <div className="circ circ14 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] hidden lg:absolute -right-72 top-[600px]"></div>
-        <div className="circ circ15 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[1000px]"></div>
-        <div className="circ circ16 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[1700px]"></div>
-        <div className="circ circ17 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[2400px]"></div>
-        <div className="circ circ18 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[3100px]"></div>
-        <div className="circ circ19 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -left-72 top-[3800px]"></div>
-        <div className="circ circ20 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] absolute -right-72 top-[4500px]"></div>
+        <div className="circ circ15 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] hidden lg:absolute -left-72 top-[1000px]"></div>
+        <div className="circ circ16 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] hidden lg:absolute -right-72 top-[1700px]"></div>
+        <div className="circ circ17 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] hidden lg:absolute -left-72 top-[2400px]"></div>
+        <div className="circ circ18 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] hidden lg:absolute -right-72 top-[3100px]"></div>
+        <div className="circ circ19 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] hidden lg:absolute -left-72 top-[3800px]"></div>
+        <div className="circ circ20 w-80 h-80 rounded-full bg-primary bg-opacity-60 blur-[120px] hidden lg:absolute -right-72 top-[4500px]"></div>
         <div className="h-full w-full bg-darkBg backdrop-blur-sm bg ">
           <div className="testimonials panel py-14 xl:py-24 w-screen h-full md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 lg:px-0">
             <AnimatedElement>
