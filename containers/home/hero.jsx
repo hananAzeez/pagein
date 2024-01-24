@@ -835,17 +835,9 @@ const Hero = () => {
                         Upwork client
                       </h6>
                     </AnimatedElement>
-                    {/* <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
-                      Tom hales
-                    </h6>
-                    <p className="opacity-70 mt-3 lg:mt-4 text-sm lg:textt-base font-saira">
-                      Entrepreneur
-                    </p>
-                    <p className="opacity-70 mt-1 lg:mt-2 text-sm lg:textt-base font-saira">
-                      Abony
-                    </p> */}
                   </div>
                 </div>
+                {/* CLIENT IMAGES */}
                 {/* <div className="flex gap-2 lg:gap-4 items-center">
                   <div className="h-full w-8 flex items-center justify-center">
                     <img
@@ -879,6 +871,7 @@ const Hero = () => {
                     </div>
                   </div>
                 </div> */}
+                {/* CLIENT IMAGES */}
               </div>
               <div className=" review flex items-center justify-between gap-5 lg:gap-32 py-20 lg:py-40 border-y-2 border-white border-opacity-10">
                 <div className="flex flex-col lg:flex-row gap-10 items-start">
@@ -899,15 +892,6 @@ const Hero = () => {
                         Upwork client
                       </h6>
                     </AnimatedElement>
-                    {/* <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
-                      mohd salih
-                    </h6>
-                    <p className="opacity-70 mt-3 lg:mt-4 text-sm lg:textt-base font-saira">
-                      Tech Entrepreneur
-                    </p>
-                    <p className="opacity-70 mt-1 lg:mt-2 text-sm lg:textt-base font-saira">
-                      Themes
-                    </p> */}
                   </div>
                 </div>
               </div>
