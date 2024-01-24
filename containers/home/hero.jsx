@@ -243,17 +243,6 @@ const Hero = () => {
       // GENERAL
       // \\\\\\\\\\\\\\\\\\\\\\\
 
-      const hero = document.querySelector(".hero");
-      const steps = document.querySelector(".steps");
-      const stepOne = document.querySelector(".stepOne");
-      const blueprints = document.querySelector(".blueprints");
-      const stepTwo = document.querySelector(".stepTwo");
-      const stepTwoImgs = document.querySelector(".stepTwoImgs");
-      const startups = document.querySelector(".startups");
-      const works = document.querySelector(".works");
-      const testimonials = document.querySelector(".testimonials");
-      const cta = document.querySelector(".cta");
-
       // \\\\\\\\\\\\\\\\\\\\\\\
       // STARTUPS SECTION
       // \\\\\\\\\\\\\\\\\\\\\\\
