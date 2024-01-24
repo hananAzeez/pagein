@@ -8,7 +8,13 @@ import TopRightArrow from "./../../components/icons/icons";
 import RightArrow, {
   RightArrowPrimary,
 } from "./../../components/icons/rightArrow";
-import { Startups, Steps, services, works } from "../../utils/startups";
+import {
+  Startups,
+  Steps,
+  services,
+  works,
+  testimonials,
+} from "../../utils/startups";
 import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
 import Navbar from "../../components/navbar";
@@ -816,29 +822,32 @@ const Hero = () => {
               Trusted and Loved: <br/>Hear from Our Clients
             </h2> */}
             <div className="reviews mt-10">
-              <div className=" review flex items-center justify-between gap-5  lg:gap-32 py-20 lg:py-40 border-y-2 border-white border-opacity-10">
-                <div className="flex flex-col lg:flex-row gap-10 items-start">
-                  <img
-                    src="icons/quote.svg"
-                    alt="quote"
-                    className="w-10 h-10 lg:w-auto lg:h-auto"
-                  />
-                  <div className="text-white">
-                    <AnimatedElement>
-                      <h4 className="text-48 revealType">
-                        Revolutionized our brand! fiveweeks transformed our
-                        website into a sales powerhouse. Exceptional work!
-                      </h4>
-                    </AnimatedElement>
-                    <AnimatedElement>
-                      <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
-                        Upwork client
-                      </h6>
-                    </AnimatedElement>
+              {testimonials.map((testimony) => (
+                <div
+                  className=" review flex items-center justify-between gap-5  lg:gap-32 py-20 lg:py-40 border-y-2 border-white border-opacity-10"
+                  key={testimony.id}
+                >
+                  <div className="flex flex-col lg:flex-row gap-10 items-start">
+                    <img
+                      src="icons/quote.svg"
+                      alt="quote"
+                      className="w-10 h-10 lg:w-auto lg:h-auto"
+                    />
+                    <div className="text-white">
+                      <AnimatedElement>
+                        <h4 className="text-48 revealType">
+                          {testimony.testimonial}
+                        </h4>
+                      </AnimatedElement>
+                      <AnimatedElement>
+                        <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
+                          {testimony.name}
+                        </h6>
+                      </AnimatedElement>
+                    </div>
                   </div>
-                </div>
-                {/* CLIENT IMAGES */}
-                {/* <div className="flex gap-2 lg:gap-4 items-center">
+                  {/* CLIENT IMAGES */}
+                  {/* <div className="flex gap-2 lg:gap-4 items-center">
                   <div className="h-full w-8 flex items-center justify-center">
                     <img
                       src="icons/leftSolidArrow.png"
@@ -871,30 +880,9 @@ const Hero = () => {
                     </div>
                   </div>
                 </div> */}
-                {/* CLIENT IMAGES */}
-              </div>
-              <div className=" review flex items-center justify-between gap-5 lg:gap-32 py-20 lg:py-40 border-y-2 border-white border-opacity-10">
-                <div className="flex flex-col lg:flex-row gap-10 items-start">
-                  <img
-                    src="icons/quote.svg"
-                    alt="quote"
-                    className="w-10 h-10 lg:w-auto lg:h-auto"
-                  />
-                  <div className="text-white">
-                    <AnimatedElement>
-                      <h4 className="text-48 revealType">
-                        The app they built for me exceeded my expectations in
-                        every way.
-                      </h4>
-                    </AnimatedElement>
-                    <AnimatedElement>
-                      <h6 className="mt-10 lg:mt-16 font-saira text-lg lg:text-2xl font-medium tracking-tight">
-                        Upwork client
-                      </h6>
-                    </AnimatedElement>
-                  </div>
+                  {/* CLIENT IMAGES */}
                 </div>
-              </div>
+              ))}
             </div>
           </div>
 

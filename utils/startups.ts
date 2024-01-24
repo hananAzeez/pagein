@@ -238,3 +238,18 @@ export const services = [
     mobile: "services/tech-solutions-m.png",
   },
 ];
+
+export const testimonials = [
+  {
+    id: 1,
+    testimonial:
+      "Revolutionized our brand! fiveweeks transformed our website into a sales powerhouse. Exceptional work! ",
+    name: "Upwork client",
+  },
+  {
+    id: 2,
+    testimonial:
+      "The app they built for me exceeded my expectations in every way.",
+    name: "Upwork client",
+  },
+];
