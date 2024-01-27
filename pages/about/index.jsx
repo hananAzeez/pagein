@@ -6,7 +6,7 @@ import Navbar from "./../../components/navbar";
 
 const About = () => {
   return (
-    <main className="bg-black overflow-x-hidden relative" >
+    <main className="bg-black overflow-x-hidden relative">
       <Meta
         title="About - Fiveweeks"
         description="Learn About Fiveweeks - Transforming Ideas into Seamless Interfaces Since 20XX. Partner with Us to Design, Build, and Deliver Extraordinary Digital Products and Services."
@@ -41,7 +41,13 @@ const About = () => {
         />
       </div>
 
-      <section className="bg-primary pt-32 px-6 xl:px-0 pb-10 lg:pb-20" style={{ backgroundImage: 'url(bg-marble.png)', backgroundSize: 'cover'}}>
+      <section
+        className="bg-primary pt-32 px-6 xl:px-0 pb-10 lg:pb-20"
+        style={{
+          backgroundImage: "url(bg-marble.png)",
+          backgroundSize: "cover",
+        }}
+      >
         <h6 className="text-center relative w-full text-offBlack text-base font-saira font-normal tracking-[0.64px]  lg:text-2xl lg:leading-normal lg:tracking-[-0.72px] max-w-3xl mx-auto py-4 lg:py-10">
           As the years rolled on, we found ourselves taking on more and more
           tech solution projects. Why? Because we saw a gap in the market. Many
