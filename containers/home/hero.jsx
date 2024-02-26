@@ -630,7 +630,7 @@ const Hero = () => {
       <section className="bg-offWhite relative">
         {/* <div class="cursor"></div>
 <div class="follower"></div> */}
-        <div className="startups panel py-10 lg:py-24 h-full 2xl:h-screen xl:flex xl:items-center xl:justify-center max-w-6xl 2xl:max-w-7xl mx-auto relative px-5 xl:px-0 ">
+        <div className="startups panel py-10 lg:py-24 h-full  xl:flex xl:items-center xl:justify-center max-w-6xl 2xl:max-w-7xl mx-auto relative px-5 xl:px-0 ">
           <div className="">
             <AnimatedElement>
               <h2
