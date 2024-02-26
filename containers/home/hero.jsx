@@ -630,11 +630,11 @@ const Hero = () => {
       <section className="bg-offWhite relative">
         {/* <div class="cursor"></div>
 <div class="follower"></div> */}
-        <div className="startups panel h-full 2xl:h-screen xl:flex xl:items-center xl:justify-center max-w-6xl 2xl:max-w-7xl mx-auto relative px-5 xl:px-0 ">
+        <div className="startups panel py-10 lg:py-24 h-full 2xl:h-screen xl:flex xl:items-center xl:justify-center max-w-6xl 2xl:max-w-7xl mx-auto relative px-5 xl:px-0 ">
           <div className="">
             <AnimatedElement>
               <h2
-                className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] pt-10 lg:pt-16 revealType"
+                className="text-offBlack font-bold text-4xl leading-[43px] lg:text-[64px] lg:leading-[80px] revealType"
                 ref={revealType}
               >
                 We run startups that helps thousands
@@ -647,7 +647,7 @@ const Hero = () => {
                 problems
               </h6>
             </AnimatedElement>
-            <div className="startup-container flex flex-col py-16">
+            <div className="startup-container flex flex-col pt-16">
               {Startups.map((startup) => (
                 <AnimatedElement key={startup.id}>
                   <a href={startup.link} target="_blank">
