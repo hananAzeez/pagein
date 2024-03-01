@@ -12,6 +12,7 @@ import Navbar from "../../components/navbar";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { ReactNode } from "react";
 import { RichTextComponenets } from "../../components/richTextComponents";
+import Meta from "../../components/metatags";
 
 function urlFor(source: SanityImageSource) {
   return imageUrlBuilder(client).image(source);
@@ -47,6 +48,18 @@ const Post = ({ post }: { post: Post }) => {
   }
   return (
     <main className=" overflow-hidden mx-auto">
+      <Meta
+        title={post.title}
+        description="Discover our latest blog posts covering web design, app development, UI/UX trends, and technology insights."
+        keywords="Fiveweeks, Blog, Web Design, App Development, UI/UX, Technology Insights"
+        ogTitle={post.title}
+        ogDescription="Discover our latest blog posts covering web design, app development, UI/UX trends, and technology insights."
+        ogImage={urlFor(post.mainImage).auto("format").url()} // Use an appropriate image URL
+        ogURL={`https://fiveweeks.studio/blog/${post.slug}`} // Use your blog page URL
+        twitterCard="summary_large_image"
+        twitterCreator="@HadiiAzeez" // Use your Twitter handle
+        canonicalURL={`https://fiveweeks.studio/blog/${post.slug}`} // Use your canonical URL
+      />
       <div className="lg:px-28 py-8 px-5">
         <Navbar color="black" />
         <article className="flex flex-col mt-10 lg:mt-20 mb-10  px-5 lg:px-28 xl:px-0 max-w-5xl mx-auto">
