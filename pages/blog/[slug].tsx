@@ -50,7 +50,7 @@ const Post = ({ post }: { post: Post }) => {
     <main className=" overflow-hidden mx-auto">
       <Meta
         title={post.title}
-        description="Discover our latest blog posts covering web design, app development, UI/UX trends, and technology insights."
+        description={post?.description}
         keywords="Fiveweeks, Blog, Web Design, App Development, UI/UX, Technology Insights"
         ogTitle={post.title}
         ogDescription="Discover our latest blog posts covering web design, app development, UI/UX trends, and technology insights."
